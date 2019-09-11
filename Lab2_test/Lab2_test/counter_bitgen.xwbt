@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/troy/Lab2_test/Lab2_test/counter.ncd
+OUTFILE=/home/troy/Lab2_test/Lab2_test/counter.bit
+FAMILY=Spartan6
+PART=xc6slx9-3csg324
+WORKINGDIR=/home/troy/Lab2_test/Lab2_test
+LICENSE=WebPack
+USER_INFO=175375681_0_0_270

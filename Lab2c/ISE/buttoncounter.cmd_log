@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "/home/troy/Lab2c/ISE/buttoncounter.xst" -ofn "/home/troy/Lab2c/ISE/buttoncounter.syr" 
+xst -intstyle ise -ifn "/home/troy/Lab2c/ISE/buttoncounter.xst" -ofn "/home/troy/Lab2c/ISE/buttoncounter.syr" 
+xst -intstyle ise -ifn "/home/troy/Lab2c/ISE/buttoncounter.xst" -ofn "/home/troy/Lab2c/ISE/buttoncounter.syr" 
+xst -intstyle ise -ifn "/home/troy/Lab2c/ISE/buttoncounter.xst" -ofn "/home/troy/Lab2c/ISE/buttoncounter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/troy/Lab2c/counter.ucf -p xc6slx9-csg324-3 buttoncounter.ngc buttoncounter.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o buttoncounter_map.ncd buttoncounter.ngd buttoncounter.pcf 
+par -w -intstyle ise -ol high -mt off buttoncounter_map.ncd buttoncounter.ncd buttoncounter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml buttoncounter.twx buttoncounter.ncd -o buttoncounter.twr buttoncounter.pcf 
+bitgen -intstyle ise -f buttoncounter.ut buttoncounter.ncd 

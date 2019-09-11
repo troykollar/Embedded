@@ -1,0 +1,436 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> 
+Reading design: counter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "counter.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "counter"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-csg324
+
+---- Source Options
+Top Module Name                    : counter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/troy/Lab2a/counter.v" into library work
+Parsing module <counter>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <counter>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <counter>.
+    Related source file is "/home/troy/Lab2a/counter.v".
+    Found 64-bit register for signal <leds>.
+    Found 64-bit adder for signal <leds[63]_GND_1_o_add_2_OUT> created at line 11.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  64 D-type flip-flop(s).
+Unit <counter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 64-bit adder                                          : 1
+# Registers                                            : 1
+ 64-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <leds>: 1 register on signal <leds>.
+Unit <counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 64-bit up counter                                     : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <leds_32> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_33> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_34> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_35> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_36> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_37> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_38> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_39> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_40> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_41> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_42> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_43> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_44> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_45> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_46> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_47> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_48> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_49> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_50> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_51> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_52> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_53> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_54> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_55> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_56> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_57> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_58> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_59> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_60> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_61> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_62> of sequential type is unconnected in block <counter>.
+WARNING:Xst:2677 - Node <leds_63> of sequential type is unconnected in block <counter>.
+
+Optimizing unit <counter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block counter, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : counter.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 98
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 31
+#      MUXCY                       : 31
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 32
+#      FDR                         : 31
+#      FDS                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              32  out of  11440     0%  
+ Number of Slice LUTs:                   33  out of   5720     0%  
+    Number used as Logic:                33  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     33
+   Number with an unused Flip Flop:       1  out of     33     3%  
+   Number with an unused LUT:             0  out of     33     0%  
+   Number of fully used LUT-FF pairs:    32  out of     33    96%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    200     5%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 32    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.256ns (Maximum Frequency: 443.292MHz)
+   Minimum input arrival time before clock: 3.728ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.256ns (frequency: 443.292MHz)
+  Total number of paths / destination ports: 528 / 32
+-------------------------------------------------------------------------
+Delay:               2.256ns (Levels of Logic = 33)
+  Source:            leds_0 (FF)
+  Destination:       leds_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: leds_0 to leds_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.447   0.579  leds_0 (leds_0)
+     INV:I->O              1   0.206   0.000  Mcount_leds_lut<0>_INV_0 (Mcount_leds_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcount_leds_cy<0> (Mcount_leds_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<1> (Mcount_leds_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<2> (Mcount_leds_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<3> (Mcount_leds_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<4> (Mcount_leds_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<5> (Mcount_leds_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<6> (Mcount_leds_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<7> (Mcount_leds_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<8> (Mcount_leds_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<9> (Mcount_leds_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<10> (Mcount_leds_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<11> (Mcount_leds_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<12> (Mcount_leds_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<13> (Mcount_leds_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<14> (Mcount_leds_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<15> (Mcount_leds_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<16> (Mcount_leds_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<17> (Mcount_leds_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<18> (Mcount_leds_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<19> (Mcount_leds_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<20> (Mcount_leds_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<21> (Mcount_leds_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<22> (Mcount_leds_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<23> (Mcount_leds_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<24> (Mcount_leds_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<25> (Mcount_leds_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<26> (Mcount_leds_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<27> (Mcount_leds_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<28> (Mcount_leds_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_leds_cy<29> (Mcount_leds_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  Mcount_leds_cy<30> (Mcount_leds_cy<30>)
+     XORCY:CI->O           1   0.180   0.000  Mcount_leds_xor<31> (Result<31>)
+     FDR:D                     0.102          leds_31
+    ----------------------------------------
+    Total                      2.256ns (1.677ns logic, 0.579ns route)
+                                       (74.3% logic, 25.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              3.728ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       leds_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to leds_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  reset_IBUF (reset_IBUF)
+     INV:I->O             32   0.206   1.291  reset_inv1_INV_0 (reset_inv)
+     FDR:R                     0.430          leds_1
+    ----------------------------------------
+    Total                      3.728ns (1.858ns logic, 1.870ns route)
+                                       (49.8% logic, 50.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            leds_31 (FF)
+  Destination:       outleds<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: leds_31 to outleds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.616  leds_31 (leds_31)
+     OBUF:I->O                 2.571          outleds_7_OBUF (outleds<7>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.256|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 10.36 secs
+ 
+--> 
+
+
+Total memory usage is 394464 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   32 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
