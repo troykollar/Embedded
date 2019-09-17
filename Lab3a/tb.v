@@ -3,8 +3,8 @@
 module tb ();
 
 reg clk;
-reg reset;
-wire [7:0] counter_value;
+reg button;
+wire button_out;
 
 
 initial clk = 0;
@@ -12,20 +12,23 @@ initial forever #5 clk = ~clk;
 
 initial
   begin
-         reset <= 0;
-#500    reset <= 1;
-#50000    $display("made it to 6000 @ %t", $time);
+#0	button = 0;
+#700	button = 1;
+#1000  	button = 0;
+#1500 	button = 1;
+#2000	button = 0;
+#6000    $display("made it to 6000 @ %t", $time);
 
-#50000   $finish;
+#6000   $finish;
   end
 
-always @(counter_value)
-    $display("counter value is now %x at time %t",counter_value, $time);
 
-counter count1 (
+debounce_button button1 (
+                 .button(button),
                  .clk(clk),
-                 .reset(reset),
-                 .outleds(counter_value));
+		 .button_out(button_out)
+ );
+
 
 
 initial 
