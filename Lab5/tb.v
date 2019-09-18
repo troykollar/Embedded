@@ -9,6 +9,7 @@ reg sw1;
 reg sw2;
 reg button;
 wire detected_signal;
+wire [7:0] outleds;
 
 initial clk = 0;
 initial forever #5 clk = ~clk;
@@ -44,7 +45,8 @@ state_machine state1 (
 		 .sw2(sw2),
 		 .button(button),
 		 .clk(clk),
-                 .detected_signal(detected_signal));
+                 .detected_signal(detected_signal),
+	 	 .outleds(outleds));
 
 
 initial 
