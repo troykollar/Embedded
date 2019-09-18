@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "/home/troy/Embedded/Lab3a/Test/ISE_Files/debounce_count.xst" -ofn "/home/troy/Embedded/Lab3a/Test/ISE_Files/debounce_count.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/troy/Embedded/Lab3a/Test/counter.ucf -p xc6slx9-csg324-3 debounce_count.ngc debounce_count.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o debounce_count_map.ncd debounce_count.ngd debounce_count.pcf 
+par -w -intstyle ise -ol high -mt off debounce_count_map.ncd debounce_count.ncd debounce_count.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml debounce_count.twx debounce_count.ncd -o debounce_count.twr debounce_count.pcf 
+bitgen -intstyle ise -f debounce_count.ut debounce_count.ncd 
+xst -intstyle ise -ifn "/home/troy/Embedded/Lab3a/Test/ISE_Files/debounce_count.xst" -ofn "/home/troy/Embedded/Lab3a/Test/ISE_Files/debounce_count.syr" 
+xst -intstyle ise -ifn "/home/troy/Embedded/Lab3a/Test/ISE_Files/debounce_count.xst" -ofn "/home/troy/Embedded/Lab3a/Test/ISE_Files/debounce_count.syr" 
+xst -intstyle ise -ifn "/home/troy/Embedded/Lab3a/Test/ISE_Files/debounce_count.xst" -ofn "/home/troy/Embedded/Lab3a/Test/ISE_Files/debounce_count.syr" 

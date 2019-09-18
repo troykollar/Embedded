@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="751" delta="new" >"/home/troy/Embedded/Lab3a/Test/debounce.v" Line 2: Redeclaration of ansi port <arg fmt="%s" index="1">outleds</arg> is not allowed
+</msg>
+
+<msg type="error" file="HDLCompiler" num="711" delta="new" >"/home/troy/Embedded/Lab3a/Test/debounce.v" Line 2: Found more than one declaration of port &lt;<arg fmt="%s" index="1">outleds</arg>&gt;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/troy/Embedded/Lab3a/Test/debounce.v" Line 12: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="719" delta="old" >"/home/troy/Embedded/Lab3a/Test/debounce.v" Line 2: Port declaration not allowed in <arg fmt="%s" index="1">debounce_count</arg> with formal port declaration list
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1059" delta="new" >"/home/troy/Embedded/Lab3a/Test/debounce.v" Line 12: <arg fmt="%s" index="1">outleds</arg> is an unknown type
+</msg>
+
+<msg type="error" file="HDLCompiler" num="598" delta="old" >"/home/troy/Embedded/Lab3a/Test/debounce.v" Line 1: Module &lt;<arg fmt="%s" index="1">debounce_count</arg>&gt; ignored due to previous errors.
+</msg>
+
+</messages>
+
