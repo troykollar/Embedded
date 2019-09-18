@@ -18,6 +18,8 @@ initial
 #0	button <= 0;
 #0	sw1 <= 0;
 #0	sw2 <= 0;
+#0	reset <= 1;
+#100	reset <= 0;
 #500	sw1 <= 1;
 #500	sw2 <= 1;
 
