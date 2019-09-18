@@ -8,13 +8,16 @@ reg [3:0] state = 4'b0000;
 always @(button)
 	case(state)
 		0:
-			if (sw1 && sw2)		state <= 1;
+			if (!reset)		state <= 0;
+			else if (sw1 && sw2)	state <= 1;
 			else			state <= 0;
 		1:
-			if (sw1 && sw2)		state <= 2;
+			if (!reset)		state <= 0;
+			else if (sw1 && sw2)	state <= 2;
 			else			state <= 0;
 		2:
-			if (sw1 && sw2)		state <= 15;
+			if (!reset)		state <= 0;
+			else if (sw1 && sw2)		state <= 15;
 			else			state <= 0;
 	endcase
 
