@@ -21,15 +21,45 @@ initial
 #0	sw2 <= 0;
 #0	reset <= 1;
 #100	reset <= 0;
-#500	sw1 <= 1;
-#500	sw2 <= 1;
+#50	sw1 <= 1;
+#5	sw2 <= 1;
 
-#600	button <= 1;
-#605	button <= 0;
-#610	button <= 1;
-#615	button <= 0;
-#620	button <= 1;
-#625	button <= 0;
+#10	button <= 1;
+#5	button <= 0;
+#10	button <= 1;
+#5	button <= 0;
+#10	button <= 1;
+#5	button <= 0;
+
+#5	reset <= 1;
+#5	button <= 1;
+#5	reset <= 0;
+
+#5	sw1 <= 0;
+#0	sw2 <= 1;
+
+#5	button <= 1;
+#5	button <= 0;	//Entered (1)
+#10	button <= 1;
+#5	button <= 0;	//Entered (1)(1)
+
+#5	sw1 <= 1;
+#0	sw2 <= 0;
+
+#10	button <= 1;
+#5	button <= 0;	//Entered (1)(1)(0)
+
+#5	sw1 <= 0;
+#0	sw2 <= 1;
+
+#10	button <= 1;
+#5	button <= 0;	//Entered (1)(1)(0)(1)
+
+#10	sw1 <= 1;
+#0	sw2 <= 0;
+
+#10	button <= 1;
+#5	button <= 0;	//Entered (1)(1)(0)(1)(0)
 
 #6000    $display("made it to 6000 @ %t", $time);
 
