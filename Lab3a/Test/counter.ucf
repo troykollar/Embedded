@@ -95,8 +95,8 @@ CONFIG VCCAUX = "3.3" ;
 ###################################################################################################################################################
 #                                              Push Buttons Switches                                                                              #
 ################################################################################################################################################### 
-    NET "button"                  LOC = M18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW1    IO_L47N_LDC_M1DQ1_1         Sch = SW1 
-    #NET "Switch[4]"                  LOC = L18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW2    IO_L46N_FOE_B_M1DQ3_1       Sch = SW2
+    NET "Switch5"                  LOC = M18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW1    IO_L47N_LDC_M1DQ1_1         Sch = SW1 
+    NET "Switch4"                  LOC = L18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW2    IO_L46N_FOE_B_M1DQ3_1       Sch = SW2
     #NET "Switch[3]"                  LOC = M16     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW3    IO_L47P_FWE_B_M1DQ0_1       Sch = SW3
     #NET "Switch[2]"                  LOC = L17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW4    IO_L46P_FCS_B_M1DQ2_1       Sch = SW4
     #NET "Switch[1]"                  LOC = K17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW5    IO_L45P_A1_M1LDQS_1         Sch = SW5
@@ -129,18 +129,18 @@ CONFIG VCCAUX = "3.3" ;
 #                                               Seven Segment Display                                                                             #
 ################################################################################################################################################### 
 
-    #NET "SevenSegment[0]"            LOC = A3      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #a    IO_L4N_0                Sch = 7Seg_0  
-    #NET "SevenSegment[1]"            LOC = B4      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #b    IO_L5P_0                Sch = 7Seg_1
-    #NET "SevenSegment[2]"            LOC = A4      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #c    IO_L5N_0                Sch = 7Seg_2
-    #NET "SevenSegment[3]"            LOC = C4      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #d    IO_L1N_VREF_0           Sch = 7Seg_4
-    #NET "SevenSegment[4]"            LOC = C5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #e    IO_L6P_0                Sch = 7Seg_5
-    #NET "SevenSegment[5]"            LOC = D6      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #f    IO_L3P_0                Sch = 7Seg_6
-    #NET "SevenSegment[6]"            LOC = C6      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #g    IO_L3N_0                Sch = 7Seg_7
-    #NET "SevenSegment[7]"            LOC = A5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #dot  IO_L6N_0                Sch = 7Seg_3
+    NET "cathodes[0]"            LOC = A3      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #a    IO_L4N_0                Sch = 7Seg_0  
+    NET "cathodes[1]"            LOC = B4      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #b    IO_L5P_0                Sch = 7Seg_1
+    NET "cathodes[2]"            LOC = A4      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #c    IO_L5N_0                Sch = 7Seg_2
+    NET "cathodes[3]"            LOC = C4      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #d    IO_L1N_VREF_0           Sch = 7Seg_4
+    NET "cathodes[4]"            LOC = C5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #e    IO_L6P_0                Sch = 7Seg_5
+    NET "cathodes[5]"            LOC = D6      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #f    IO_L3P_0                Sch = 7Seg_6
+    NET "cathodes[6]"            LOC = C6      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #g    IO_L3N_0                Sch = 7Seg_7
+    NET "cathodes[7]"            LOC = A5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #dot  IO_L6N_0                Sch = 7Seg_3
         
-    #NET "SevenSegmentEnable[2]"      LOC = B3      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   # IO_L4P_0                    Sch = 7Seg_1en  #Enables for Seven Segment
-    #NET "SevenSegmentEnable[1]"      LOC = A2      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   # IO_L2N_0                    Sch = 7Seg_2en
-    #NET "SevenSegmentEnable[0]"      LOC = B2      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   # IO_L2P_0                    Sch = 7Seg_3en
+    NET "anodes[2]"      LOC = B3      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   # IO_L4P_0                    Sch = 7Seg_1en  #Enables for Seven Segment
+    NET "anodes[1]"      LOC = A2      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   # IO_L2N_0                    Sch = 7Seg_2en
+    NET "anodes[0]"      LOC = B2      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   # IO_L2P_0                    Sch = 7Seg_3en
 
 ###################################################################################################################################################
 #                                                    Audio                                                                                        #

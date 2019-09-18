@@ -29,6 +29,44 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="counter.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_BIN" xil_pn:name="counter.bin"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="counter.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="counter.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="counter.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="counter.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="counter.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="counter.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="counter.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="counter.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="counter.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="counter.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="counter.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="counter.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="counter.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="counter.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="counter.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="counter.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="counter.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="counter.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="counter.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="counter.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="counter.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="counter.xst"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="counter_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="counter_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="counter_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="counter_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="counter_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="counter_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="counter_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="counter_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="counter_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="counter_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="counter_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="counter_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="counter_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="counter_xst.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="debounce_count.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_BIN" xil_pn:name="debounce_count.bin"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="debounce_count.bit" xil_pn:subbranch="FPGAConfiguration"/>
@@ -79,11 +117,11 @@
     <transform xil_pn:end_ts="1568764251" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1568764251">
       <status xil_pn:value="SuccessfullyRun"/>
     </transform>
-    <transform xil_pn:end_ts="1568764251" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7735323589102696542" xil_pn:start_ts="1568764251">
+    <transform xil_pn:end_ts="1568767162" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2849575172457081685" xil_pn:start_ts="1568767162">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1568764251" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="5915444456232094019" xil_pn:start_ts="1568764251">
+    <transform xil_pn:end_ts="1568767162" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-1585971807286859562" xil_pn:start_ts="1568767162">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -91,7 +129,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1568764251" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="6052202532557841188" xil_pn:start_ts="1568764251">
+    <transform xil_pn:end_ts="1568767162" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="7621271980930979095" xil_pn:start_ts="1568767162">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -99,99 +137,87 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1568764251" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="8075187982957829261" xil_pn:start_ts="1568764251">
+    <transform xil_pn:end_ts="1568767162" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="3717769343480970080" xil_pn:start_ts="1568767162">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1568766261" xil_pn:in_ck="5337650025321920052" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-5628227063861625998" xil_pn:start_ts="1568766244">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1568767185" xil_pn:in_ck="-8301988524313524786" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="8888266589101684901" xil_pn:start_ts="1568767162">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="debounce_count.lso"/>
-      <outfile xil_pn:name="debounce_count.ngc"/>
-      <outfile xil_pn:name="debounce_count.prj"/>
-      <outfile xil_pn:name="debounce_count.syr"/>
-      <outfile xil_pn:name="debounce_count.xst"/>
-      <outfile xil_pn:name="debounce_count_xst.xrpt"/>
+      <outfile xil_pn:name="counter.lso"/>
+      <outfile xil_pn:name="counter.ngc"/>
+      <outfile xil_pn:name="counter.ngr"/>
+      <outfile xil_pn:name="counter.prj"/>
+      <outfile xil_pn:name="counter.stx"/>
+      <outfile xil_pn:name="counter.syr"/>
+      <outfile xil_pn:name="counter.xst"/>
+      <outfile xil_pn:name="counter_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1568766261" xil_pn:in_ck="-8326030688095893193" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3276828783460178481" xil_pn:start_ts="1568766261">
+    <transform xil_pn:end_ts="1568767185" xil_pn:in_ck="-8326030688095893193" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1262981262287326530" xil_pn:start_ts="1568767185">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1568764289" xil_pn:in_ck="-4109731180633969334" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3675967037338045988" xil_pn:start_ts="1568764273">
+    <transform xil_pn:end_ts="1568767199" xil_pn:in_ck="-2304268927615946787" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-7804946225429923433" xil_pn:start_ts="1568767185">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="debounce_count.bld"/>
-      <outfile xil_pn:name="debounce_count.ngd"/>
-      <outfile xil_pn:name="debounce_count_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="counter.bld"/>
+      <outfile xil_pn:name="counter.ngd"/>
+      <outfile xil_pn:name="counter_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1568764310" xil_pn:in_ck="-4109731180633969333" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1405206279585514545" xil_pn:start_ts="1568764289">
+    <transform xil_pn:end_ts="1568767227" xil_pn:in_ck="-2304268927615946786" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1405206279585514545" xil_pn:start_ts="1568767199">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="debounce_count.pcf"/>
-      <outfile xil_pn:name="debounce_count_map.map"/>
-      <outfile xil_pn:name="debounce_count_map.mrp"/>
-      <outfile xil_pn:name="debounce_count_map.ncd"/>
-      <outfile xil_pn:name="debounce_count_map.ngm"/>
-      <outfile xil_pn:name="debounce_count_map.xrpt"/>
-      <outfile xil_pn:name="debounce_count_summary.xml"/>
-      <outfile xil_pn:name="debounce_count_usage.xml"/>
+      <outfile xil_pn:name="counter.pcf"/>
+      <outfile xil_pn:name="counter_map.map"/>
+      <outfile xil_pn:name="counter_map.mrp"/>
+      <outfile xil_pn:name="counter_map.ncd"/>
+      <outfile xil_pn:name="counter_map.ngm"/>
+      <outfile xil_pn:name="counter_map.xrpt"/>
+      <outfile xil_pn:name="counter_summary.xml"/>
+      <outfile xil_pn:name="counter_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1568764345" xil_pn:in_ck="-2259751730119464476" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1568764310">
+    <transform xil_pn:end_ts="1568767260" xil_pn:in_ck="1309430114831875575" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1568767227">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-      <outfile xil_pn:name="debounce_count.ncd"/>
-      <outfile xil_pn:name="debounce_count.pad"/>
-      <outfile xil_pn:name="debounce_count.par"/>
-      <outfile xil_pn:name="debounce_count.ptwx"/>
-      <outfile xil_pn:name="debounce_count.unroutes"/>
-      <outfile xil_pn:name="debounce_count.xpi"/>
-      <outfile xil_pn:name="debounce_count_pad.csv"/>
-      <outfile xil_pn:name="debounce_count_pad.txt"/>
-      <outfile xil_pn:name="debounce_count_par.xrpt"/>
+      <outfile xil_pn:name="counter.ncd"/>
+      <outfile xil_pn:name="counter.pad"/>
+      <outfile xil_pn:name="counter.par"/>
+      <outfile xil_pn:name="counter.ptwx"/>
+      <outfile xil_pn:name="counter.unroutes"/>
+      <outfile xil_pn:name="counter.xpi"/>
+      <outfile xil_pn:name="counter_pad.csv"/>
+      <outfile xil_pn:name="counter_pad.txt"/>
+      <outfile xil_pn:name="counter_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1568764366" xil_pn:in_ck="-7617922442779431984" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="6587536580693756888" xil_pn:start_ts="1568764345">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1568767279" xil_pn:in_ck="156947386046789251" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="6587536580693756888" xil_pn:start_ts="1568767260">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
-      <outfile xil_pn:name="debounce_count.bgn"/>
-      <outfile xil_pn:name="debounce_count.bin"/>
-      <outfile xil_pn:name="debounce_count.bit"/>
-      <outfile xil_pn:name="debounce_count.drc"/>
-      <outfile xil_pn:name="debounce_count.ut"/>
+      <outfile xil_pn:name="counter.bgn"/>
+      <outfile xil_pn:name="counter.bin"/>
+      <outfile xil_pn:name="counter.bit"/>
+      <outfile xil_pn:name="counter.drc"/>
+      <outfile xil_pn:name="counter.ut"/>
       <outfile xil_pn:name="usage_statistics_webtalk.html"/>
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1568764345" xil_pn:in_ck="-4109731180633969465" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1568764333">
+    <transform xil_pn:end_ts="1568767260" xil_pn:in_ck="-2304268927615946918" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1568767247">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
-      <outfile xil_pn:name="debounce_count.twr"/>
-      <outfile xil_pn:name="debounce_count.twx"/>
+      <outfile xil_pn:name="counter.twr"/>
+      <outfile xil_pn:name="counter.twx"/>
     </transform>
   </transforms>
 

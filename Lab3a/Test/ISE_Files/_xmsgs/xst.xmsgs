@@ -5,22 +5,91 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="new" >"/home/troy/Embedded/Lab3a/Test/debounce.v" Line 2: Redeclaration of ansi port <arg fmt="%s" index="1">outleds</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/troy/Embedded/Lab3a/Test/seven_seg.v" Line 47: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="711" delta="new" >"/home/troy/Embedded/Lab3a/Test/debounce.v" Line 2: Found more than one declaration of port &lt;<arg fmt="%s" index="1">outleds</arg>&gt;.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/troy/Embedded/Lab3a/Test/seven_seg.v" Line 48: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"/home/troy/Embedded/Lab3a/Test/debounce.v" Line 12: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/troy/Embedded/Lab3a/Test/seven_seg.v" Line 69: Signal &lt;<arg fmt="%s" index="1">anodes</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="719" delta="old" >"/home/troy/Embedded/Lab3a/Test/debounce.v" Line 2: Port declaration not allowed in <arg fmt="%s" index="1">debounce_count</arg> with formal port declaration list
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/troy/Embedded/Lab3a/Test/seven_seg.v" Line 99: Signal &lt;<arg fmt="%s" index="1">cathode_select</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="1059" delta="new" >"/home/troy/Embedded/Lab3a/Test/debounce.v" Line 12: <arg fmt="%s" index="1">outleds</arg> is an unknown type
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0104</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="old" >"/home/troy/Embedded/Lab3a/Test/debounce.v" Line 1: Module &lt;<arg fmt="%s" index="1">debounce_count</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_32</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_33</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_34</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_35</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_36</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_37</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_38</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_39</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
 </msg>
 
 </messages>

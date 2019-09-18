@@ -9,8 +9,6 @@ module debounce_count(input button, input reset, clk, outleds);
 	reg [7:0] outleds;
 
 	parameter DEBOUNCE_DELAY = 32'd0_500_000;   /// 10nS * 1M = 10mS
-	
-	outleds <= answer;
 
 	always @(posedge clk)   button_reg   <= button;
 	always @(posedge clk)   button_sync  <= !button_reg;
@@ -27,4 +25,13 @@ module debounce_count(input button, input reset, clk, outleds);
 		if (button_click)	answer <= answer + 1;
 		else if (!reset)	answer <= 0;
 		else			answer <= answer;
+		
+	always @(answer)
+		case(cathode_select)
+			0: outleds <= 8'b0000_0000;
+			1: outleds <= 8'b0000_0000;
+			2: outleds <= 8'b0000_0000;
+			3: outleds <= 8'b0000_0000;
+			4: outleds <= 8'b0000_0000;
+			5: outleds <= 8'b0000_0000;
 endmodule
