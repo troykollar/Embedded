@@ -47,7 +47,9 @@ always @(posedge clk)
 		if(button_click) answer <= answer + 1;
 		else if(button_click2) answer <= answer- 1;
 		else if(!reset) answer <= 0;
-		else 						 answer <= answer;
+		else			answer <= answer;
+always @(posedge clk)
+		outleds = answer[7:0];
 		
 
  
@@ -93,27 +95,6 @@ always @(cathode_select)
 			 4'hd:  cathodes = {8'b10100001};
 			 4'he:  cathodes = {8'b10000110};
 			 4'hf:  cathodes = {8'b10001110};
-     endcase
-	  
-always @(answer)
-		case(cathode_select)
-	       0: outleds <= 8'b0000_0000;
-			 1: outleds <= 8'b0000_0001;
-			 2: outleds <= 8'b0000_0010;
-			 3: outleds <= 8'b0000_0011;
-			 4: outleds <= 8'b0000_0100;
-			 5: outleds <= 8'b0000_0101;
-			 6: outleds <= 8'b0000_0110;
-			 7: outleds <= 8'b0000_0111;
-			 8: outleds <= 8'b0000_1000;
-			 9: outleds <= 8'b0000_1001;
-			 10: outleds <= 8'b0000_1010;
-			 11: outleds <= 8'b0000_1011;
-			 12: outleds <= 8'b0000_1100;
-			 13: outleds <= 8'b0000_1101;
-			 14: outleds <= 8'b0000_1110;
-			 15: outleds <= 8'b0000_1111;
-			 
      endcase
        
 endmodule 
