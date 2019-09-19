@@ -138,6 +138,8 @@
     <transform xil_pn:end_ts="1568858855" xil_pn:in_ck="-3520516054590439576" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1405206279585514545" xil_pn:start_ts="1568858841">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="state_machine.pcf"/>
       <outfile xil_pn:name="state_machine_map.map"/>
@@ -163,7 +165,7 @@
       <outfile xil_pn:name="state_machine_pad.txt"/>
       <outfile xil_pn:name="state_machine_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1568858892" xil_pn:in_ck="994692738916043032" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="4970201210546912173" xil_pn:start_ts="1568858879">
+    <transform xil_pn:end_ts="1568859107" xil_pn:in_ck="994692738916043032" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="4970201210546912173" xil_pn:start_ts="1568859094">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
