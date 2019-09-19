@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module state_machine(input wire clk, input wire sw1, input wire sw2, input wire button, input wire reset, output reg detected_signal, output reg [7:0] outleds = 8'b0000_0000);
+module state_machine(input clk, input sw1, input sw2, input button, input reset, output reg detected_signal, output reg [7:0] outleds = 8'b0000_0000);
 
 //Debounce Button Code//
 reg 			button_reg;
