@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-09-18T21:51:47</DateModified>
+  <DateModified>2019-09-18T22:37:26</DateModified>
   <ModuleName>state_machine</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2019-09-18T22:35:13</SummaryTimeStamp>
   <SavedFilePath>/home/troy/Embedded/Lab5/iseconfig/state_machine.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/troy/Embedded/Lab5</ImplementationReportsDirectory>
   <DateInitialized>2019-09-18T21:51:46</DateInitialized>
