@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "/home/troy/Embedded/Lab5/state_machine.xst" -ofn "/home/troy/Embedded/Lab5/state_machine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc6slx9-csg324-3 state_machine.ngc state_machine.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc6slx9-csg324-3 state_machine.ngc state_machine.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o state_machine_map.ncd state_machine.ngd state_machine.pcf 
+xst -intstyle ise -ifn "/home/troy/Embedded/Lab5/state_machine.xst" -ofn "/home/troy/Embedded/Lab5/state_machine.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter.ucf -p xc6slx9-csg324-3 state_machine.ngc state_machine.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o state_machine_map.ncd state_machine.ngd state_machine.pcf 
+par -w -intstyle ise -ol high -mt off state_machine_map.ncd state_machine.ncd state_machine.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml state_machine.twx state_machine.ncd -o state_machine.twr state_machine.pcf -ucf counter.ucf 
+bitgen -intstyle ise -f state_machine.ut state_machine.ncd 
