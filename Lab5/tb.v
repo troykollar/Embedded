@@ -33,12 +33,13 @@ initial
 
 #5	reset <= 1;
 #5	button <= 1;
+#5	button <= 0;
 #5	reset <= 0;
 
 #5	sw1 <= 0;
 #0	sw2 <= 1;
 
-#5	button <= 1;
+#10	button <= 1;
 #5	button <= 0;	//Entered (1)
 #10	button <= 1;
 #5	button <= 0;	//Entered (1)(1)
