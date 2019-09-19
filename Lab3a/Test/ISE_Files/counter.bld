@@ -1,10 +1,9 @@
 Release 14.7 ngdbuild P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Command Line: /home/troy/ISE/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild
--intstyle ise -dd _ngo -nt timestamp -uc
-/home/troy/Embedded/Lab3a/Test/counter.ucf -p xc6slx9-csg324-3 counter.ngc
-counter.ngd
+Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
+ise -dd _ngo -nt timestamp -uc /home/troy/Embedded/Lab3a/Test/counter.ucf -p
+xc6slx9-csg324-3 counter.ngc counter.ngd
 
 Reading NGO file "/home/troy/Embedded/Lab3a/Test/ISE_Files/counter.ngc" ...
 Gathering constraint information from source properties...
@@ -37,7 +36,7 @@ NGDBUILD Design Results Summary:
 Total memory usage is 409376 kilobytes
 
 Writing NGD file "counter.ngd" ...
-Total REAL time to NGDBUILD completion:  9 sec
-Total CPU time to NGDBUILD completion:   7 sec
+Total REAL time to NGDBUILD completion:  7 sec
+Total CPU time to NGDBUILD completion:   5 sec
 
 Writing NGDBUILD log file "counter.bld"...

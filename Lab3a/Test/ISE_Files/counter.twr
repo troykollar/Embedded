@@ -2,8 +2,8 @@
 Release 14.7 Trace  (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/home/troy/ISE/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3
--n 3 -fastpaths -xml counter.twx counter.ncd -o counter.twr counter.pcf
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml counter.twx counter.ncd -o counter.twr counter.pcf
 
 Design file:              counter.ncd
 Physical constraint file: counter.pcf
@@ -28,19 +28,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 10 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 7917 paths analyzed, 614 endpoints analyzed, 0 failing endpoints
+ 7925 paths analyzed, 622 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.862ns.
+ Minimum period is   4.631ns.
 --------------------------------------------------------------------------------
 
-Paths for end point answer_5 (SLICE_X14Y40.SR), 64 paths
+Paths for end point answer_11 (SLICE_X12Y34.CIN), 304 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     5.138ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               button_count2_2 (FF)
-  Destination:          answer_5 (FF)
+Slack (setup path):     5.369ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               button1_count_24 (FF)
+  Destination:          answer_11 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.791ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.036ns (0.593 - 0.629)
+  Data Path Delay:      4.584ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.012ns (0.241 - 0.253)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -51,35 +51,43 @@ Slack (setup path):     5.138ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: button_count2_2 to answer_5
+  Maximum Data Path at Slow Process Corner: button1_count_24 to answer_11
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X18Y30.CQ      Tcko                  0.408   button_count2<3>
-                                                       button_count2_2
-    SLICE_X19Y32.D1      net (fanout=4)        0.686   button_count2<2>
-    SLICE_X19Y32.D       Tilo                  0.259   N40
-                                                       button_click2<31>15_SW0
-    SLICE_X19Y33.A1      net (fanout=1)        0.763   N40
-    SLICE_X19Y33.A       Tilo                  0.259   button_click2<31>12
-                                                       _n0080_SW0
-    SLICE_X17Y38.B1      net (fanout=1)        0.850   N12
-    SLICE_X17Y38.B       Tilo                  0.259   button_click<31>12
-                                                       _n0080
-    SLICE_X14Y40.SR      net (fanout=3)        0.852   _n0080
-    SLICE_X14Y40.CLK     Tsrck                 0.455   answer<7>
-                                                       answer_5
+    SLICE_X16Y36.AQ      Tcko                  0.447   button1_count<27>
+                                                       button1_count_24
+    SLICE_X17Y36.A1      net (fanout=2)        0.603   button1_count<24>
+    SLICE_X17Y36.A       Tilo                  0.259   button_click<31>14
+                                                       button_click<31>14
+    SLICE_X17Y33.A1      net (fanout=2)        0.793   button_click<31>14
+    SLICE_X17Y33.A       Tilo                  0.259   button_click<31>11
+                                                       button_click<31>15
+    SLICE_X17Y33.C2      net (fanout=13)       0.453   button_click<31>1
+    SLICE_X17Y33.C       Tilo                  0.259   button_click<31>11
+                                                       Mcount_answer_lut<0>
+    SLICE_X12Y32.A3      net (fanout=1)        0.736   Mcount_answer_lut<0>
+    SLICE_X12Y32.COUT    Topcya                0.379   answer<3>
+                                                       Mcount_answer_lut<0>_rt
+                                                       Mcount_answer_cy<3>
+    SLICE_X12Y33.CIN     net (fanout=1)        0.003   Mcount_answer_cy<3>
+    SLICE_X12Y33.COUT    Tbyp                  0.076   answer<7>
+                                                       Mcount_answer_cy<7>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   Mcount_answer_cy<7>
+    SLICE_X12Y34.CLK     Tcinck                0.314   answer<11>
+                                                       Mcount_answer_xor<11>
+                                                       answer_11
     -------------------------------------------------  ---------------------------
-    Total                                      4.791ns (1.640ns logic, 3.151ns route)
-                                                       (34.2% logic, 65.8% route)
+    Total                                      4.584ns (1.993ns logic, 2.591ns route)
+                                                       (43.5% logic, 56.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.225ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               button_count2_29 (FF)
-  Destination:          answer_5 (FF)
+Slack (setup path):     5.512ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               button1_count_23 (FF)
+  Destination:          answer_11 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.720ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.020ns (0.230 - 0.250)
+  Data Path Delay:      4.439ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.241 - 0.255)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -90,35 +98,43 @@ Slack (setup path):     5.225ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: button_count2_29 to answer_5
+  Maximum Data Path at Slow Process Corner: button1_count_23 to answer_11
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X18Y37.BQ      Tcko                  0.408   button_count2<31>
-                                                       button_count2_29
-    SLICE_X19Y32.D5      net (fanout=4)        0.615   button_count2<29>
-    SLICE_X19Y32.D       Tilo                  0.259   N40
-                                                       button_click2<31>15_SW0
-    SLICE_X19Y33.A1      net (fanout=1)        0.763   N40
-    SLICE_X19Y33.A       Tilo                  0.259   button_click2<31>12
-                                                       _n0080_SW0
-    SLICE_X17Y38.B1      net (fanout=1)        0.850   N12
-    SLICE_X17Y38.B       Tilo                  0.259   button_click<31>12
-                                                       _n0080
-    SLICE_X14Y40.SR      net (fanout=3)        0.852   _n0080
-    SLICE_X14Y40.CLK     Tsrck                 0.455   answer<7>
-                                                       answer_5
+    SLICE_X16Y35.DQ      Tcko                  0.447   button1_count<23>
+                                                       button1_count_23
+    SLICE_X17Y36.A3      net (fanout=2)        0.458   button1_count<23>
+    SLICE_X17Y36.A       Tilo                  0.259   button_click<31>14
+                                                       button_click<31>14
+    SLICE_X17Y33.A1      net (fanout=2)        0.793   button_click<31>14
+    SLICE_X17Y33.A       Tilo                  0.259   button_click<31>11
+                                                       button_click<31>15
+    SLICE_X17Y33.C2      net (fanout=13)       0.453   button_click<31>1
+    SLICE_X17Y33.C       Tilo                  0.259   button_click<31>11
+                                                       Mcount_answer_lut<0>
+    SLICE_X12Y32.A3      net (fanout=1)        0.736   Mcount_answer_lut<0>
+    SLICE_X12Y32.COUT    Topcya                0.379   answer<3>
+                                                       Mcount_answer_lut<0>_rt
+                                                       Mcount_answer_cy<3>
+    SLICE_X12Y33.CIN     net (fanout=1)        0.003   Mcount_answer_cy<3>
+    SLICE_X12Y33.COUT    Tbyp                  0.076   answer<7>
+                                                       Mcount_answer_cy<7>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   Mcount_answer_cy<7>
+    SLICE_X12Y34.CLK     Tcinck                0.314   answer<11>
+                                                       Mcount_answer_xor<11>
+                                                       answer_11
     -------------------------------------------------  ---------------------------
-    Total                                      4.720ns (1.640ns logic, 3.080ns route)
-                                                       (34.7% logic, 65.3% route)
+    Total                                      4.439ns (1.993ns logic, 2.446ns route)
+                                                       (44.9% logic, 55.1% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.265ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               button_count2_0 (FF)
-  Destination:          answer_5 (FF)
+Slack (setup path):     5.528ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               button1_count_26 (FF)
+  Destination:          answer_11 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.664ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.036ns (0.593 - 0.629)
+  Data Path Delay:      4.425ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.012ns (0.241 - 0.253)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -129,38 +145,46 @@ Slack (setup path):     5.265ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: button_count2_0 to answer_5
+  Maximum Data Path at Slow Process Corner: button1_count_26 to answer_11
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X18Y30.AQ      Tcko                  0.408   button_count2<3>
-                                                       button_count2_0
-    SLICE_X19Y32.D3      net (fanout=4)        0.559   button_count2<0>
-    SLICE_X19Y32.D       Tilo                  0.259   N40
-                                                       button_click2<31>15_SW0
-    SLICE_X19Y33.A1      net (fanout=1)        0.763   N40
-    SLICE_X19Y33.A       Tilo                  0.259   button_click2<31>12
-                                                       _n0080_SW0
-    SLICE_X17Y38.B1      net (fanout=1)        0.850   N12
-    SLICE_X17Y38.B       Tilo                  0.259   button_click<31>12
-                                                       _n0080
-    SLICE_X14Y40.SR      net (fanout=3)        0.852   _n0080
-    SLICE_X14Y40.CLK     Tsrck                 0.455   answer<7>
-                                                       answer_5
+    SLICE_X16Y36.CQ      Tcko                  0.447   button1_count<27>
+                                                       button1_count_26
+    SLICE_X17Y36.A2      net (fanout=2)        0.444   button1_count<26>
+    SLICE_X17Y36.A       Tilo                  0.259   button_click<31>14
+                                                       button_click<31>14
+    SLICE_X17Y33.A1      net (fanout=2)        0.793   button_click<31>14
+    SLICE_X17Y33.A       Tilo                  0.259   button_click<31>11
+                                                       button_click<31>15
+    SLICE_X17Y33.C2      net (fanout=13)       0.453   button_click<31>1
+    SLICE_X17Y33.C       Tilo                  0.259   button_click<31>11
+                                                       Mcount_answer_lut<0>
+    SLICE_X12Y32.A3      net (fanout=1)        0.736   Mcount_answer_lut<0>
+    SLICE_X12Y32.COUT    Topcya                0.379   answer<3>
+                                                       Mcount_answer_lut<0>_rt
+                                                       Mcount_answer_cy<3>
+    SLICE_X12Y33.CIN     net (fanout=1)        0.003   Mcount_answer_cy<3>
+    SLICE_X12Y33.COUT    Tbyp                  0.076   answer<7>
+                                                       Mcount_answer_cy<7>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   Mcount_answer_cy<7>
+    SLICE_X12Y34.CLK     Tcinck                0.314   answer<11>
+                                                       Mcount_answer_xor<11>
+                                                       answer_11
     -------------------------------------------------  ---------------------------
-    Total                                      4.664ns (1.640ns logic, 3.024ns route)
-                                                       (35.2% logic, 64.8% route)
+    Total                                      4.425ns (1.993ns logic, 2.432ns route)
+                                                       (45.0% logic, 55.0% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point answer_4 (SLICE_X14Y40.SR), 64 paths
+Paths for end point answer_9 (SLICE_X12Y34.CIN), 304 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     5.149ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               button_count2_2 (FF)
-  Destination:          answer_4 (FF)
+Slack (setup path):     5.379ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               button1_count_24 (FF)
+  Destination:          answer_9 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.780ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.036ns (0.593 - 0.629)
+  Data Path Delay:      4.574ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.012ns (0.241 - 0.253)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -171,35 +195,43 @@ Slack (setup path):     5.149ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: button_count2_2 to answer_4
+  Maximum Data Path at Slow Process Corner: button1_count_24 to answer_9
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X18Y30.CQ      Tcko                  0.408   button_count2<3>
-                                                       button_count2_2
-    SLICE_X19Y32.D1      net (fanout=4)        0.686   button_count2<2>
-    SLICE_X19Y32.D       Tilo                  0.259   N40
-                                                       button_click2<31>15_SW0
-    SLICE_X19Y33.A1      net (fanout=1)        0.763   N40
-    SLICE_X19Y33.A       Tilo                  0.259   button_click2<31>12
-                                                       _n0080_SW0
-    SLICE_X17Y38.B1      net (fanout=1)        0.850   N12
-    SLICE_X17Y38.B       Tilo                  0.259   button_click<31>12
-                                                       _n0080
-    SLICE_X14Y40.SR      net (fanout=3)        0.852   _n0080
-    SLICE_X14Y40.CLK     Tsrck                 0.444   answer<7>
-                                                       answer_4
+    SLICE_X16Y36.AQ      Tcko                  0.447   button1_count<27>
+                                                       button1_count_24
+    SLICE_X17Y36.A1      net (fanout=2)        0.603   button1_count<24>
+    SLICE_X17Y36.A       Tilo                  0.259   button_click<31>14
+                                                       button_click<31>14
+    SLICE_X17Y33.A1      net (fanout=2)        0.793   button_click<31>14
+    SLICE_X17Y33.A       Tilo                  0.259   button_click<31>11
+                                                       button_click<31>15
+    SLICE_X17Y33.C2      net (fanout=13)       0.453   button_click<31>1
+    SLICE_X17Y33.C       Tilo                  0.259   button_click<31>11
+                                                       Mcount_answer_lut<0>
+    SLICE_X12Y32.A3      net (fanout=1)        0.736   Mcount_answer_lut<0>
+    SLICE_X12Y32.COUT    Topcya                0.379   answer<3>
+                                                       Mcount_answer_lut<0>_rt
+                                                       Mcount_answer_cy<3>
+    SLICE_X12Y33.CIN     net (fanout=1)        0.003   Mcount_answer_cy<3>
+    SLICE_X12Y33.COUT    Tbyp                  0.076   answer<7>
+                                                       Mcount_answer_cy<7>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   Mcount_answer_cy<7>
+    SLICE_X12Y34.CLK     Tcinck                0.304   answer<11>
+                                                       Mcount_answer_xor<11>
+                                                       answer_9
     -------------------------------------------------  ---------------------------
-    Total                                      4.780ns (1.629ns logic, 3.151ns route)
-                                                       (34.1% logic, 65.9% route)
+    Total                                      4.574ns (1.983ns logic, 2.591ns route)
+                                                       (43.4% logic, 56.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.236ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               button_count2_29 (FF)
-  Destination:          answer_4 (FF)
+Slack (setup path):     5.522ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               button1_count_23 (FF)
+  Destination:          answer_9 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.709ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.020ns (0.230 - 0.250)
+  Data Path Delay:      4.429ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.241 - 0.255)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -210,35 +242,43 @@ Slack (setup path):     5.236ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: button_count2_29 to answer_4
+  Maximum Data Path at Slow Process Corner: button1_count_23 to answer_9
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X18Y37.BQ      Tcko                  0.408   button_count2<31>
-                                                       button_count2_29
-    SLICE_X19Y32.D5      net (fanout=4)        0.615   button_count2<29>
-    SLICE_X19Y32.D       Tilo                  0.259   N40
-                                                       button_click2<31>15_SW0
-    SLICE_X19Y33.A1      net (fanout=1)        0.763   N40
-    SLICE_X19Y33.A       Tilo                  0.259   button_click2<31>12
-                                                       _n0080_SW0
-    SLICE_X17Y38.B1      net (fanout=1)        0.850   N12
-    SLICE_X17Y38.B       Tilo                  0.259   button_click<31>12
-                                                       _n0080
-    SLICE_X14Y40.SR      net (fanout=3)        0.852   _n0080
-    SLICE_X14Y40.CLK     Tsrck                 0.444   answer<7>
-                                                       answer_4
+    SLICE_X16Y35.DQ      Tcko                  0.447   button1_count<23>
+                                                       button1_count_23
+    SLICE_X17Y36.A3      net (fanout=2)        0.458   button1_count<23>
+    SLICE_X17Y36.A       Tilo                  0.259   button_click<31>14
+                                                       button_click<31>14
+    SLICE_X17Y33.A1      net (fanout=2)        0.793   button_click<31>14
+    SLICE_X17Y33.A       Tilo                  0.259   button_click<31>11
+                                                       button_click<31>15
+    SLICE_X17Y33.C2      net (fanout=13)       0.453   button_click<31>1
+    SLICE_X17Y33.C       Tilo                  0.259   button_click<31>11
+                                                       Mcount_answer_lut<0>
+    SLICE_X12Y32.A3      net (fanout=1)        0.736   Mcount_answer_lut<0>
+    SLICE_X12Y32.COUT    Topcya                0.379   answer<3>
+                                                       Mcount_answer_lut<0>_rt
+                                                       Mcount_answer_cy<3>
+    SLICE_X12Y33.CIN     net (fanout=1)        0.003   Mcount_answer_cy<3>
+    SLICE_X12Y33.COUT    Tbyp                  0.076   answer<7>
+                                                       Mcount_answer_cy<7>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   Mcount_answer_cy<7>
+    SLICE_X12Y34.CLK     Tcinck                0.304   answer<11>
+                                                       Mcount_answer_xor<11>
+                                                       answer_9
     -------------------------------------------------  ---------------------------
-    Total                                      4.709ns (1.629ns logic, 3.080ns route)
-                                                       (34.6% logic, 65.4% route)
+    Total                                      4.429ns (1.983ns logic, 2.446ns route)
+                                                       (44.8% logic, 55.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.276ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               button_count2_0 (FF)
-  Destination:          answer_4 (FF)
+Slack (setup path):     5.538ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               button1_count_26 (FF)
+  Destination:          answer_9 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.653ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.036ns (0.593 - 0.629)
+  Data Path Delay:      4.415ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.012ns (0.241 - 0.253)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -249,38 +289,46 @@ Slack (setup path):     5.276ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: button_count2_0 to answer_4
+  Maximum Data Path at Slow Process Corner: button1_count_26 to answer_9
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X18Y30.AQ      Tcko                  0.408   button_count2<3>
-                                                       button_count2_0
-    SLICE_X19Y32.D3      net (fanout=4)        0.559   button_count2<0>
-    SLICE_X19Y32.D       Tilo                  0.259   N40
-                                                       button_click2<31>15_SW0
-    SLICE_X19Y33.A1      net (fanout=1)        0.763   N40
-    SLICE_X19Y33.A       Tilo                  0.259   button_click2<31>12
-                                                       _n0080_SW0
-    SLICE_X17Y38.B1      net (fanout=1)        0.850   N12
-    SLICE_X17Y38.B       Tilo                  0.259   button_click<31>12
-                                                       _n0080
-    SLICE_X14Y40.SR      net (fanout=3)        0.852   _n0080
-    SLICE_X14Y40.CLK     Tsrck                 0.444   answer<7>
-                                                       answer_4
+    SLICE_X16Y36.CQ      Tcko                  0.447   button1_count<27>
+                                                       button1_count_26
+    SLICE_X17Y36.A2      net (fanout=2)        0.444   button1_count<26>
+    SLICE_X17Y36.A       Tilo                  0.259   button_click<31>14
+                                                       button_click<31>14
+    SLICE_X17Y33.A1      net (fanout=2)        0.793   button_click<31>14
+    SLICE_X17Y33.A       Tilo                  0.259   button_click<31>11
+                                                       button_click<31>15
+    SLICE_X17Y33.C2      net (fanout=13)       0.453   button_click<31>1
+    SLICE_X17Y33.C       Tilo                  0.259   button_click<31>11
+                                                       Mcount_answer_lut<0>
+    SLICE_X12Y32.A3      net (fanout=1)        0.736   Mcount_answer_lut<0>
+    SLICE_X12Y32.COUT    Topcya                0.379   answer<3>
+                                                       Mcount_answer_lut<0>_rt
+                                                       Mcount_answer_cy<3>
+    SLICE_X12Y33.CIN     net (fanout=1)        0.003   Mcount_answer_cy<3>
+    SLICE_X12Y33.COUT    Tbyp                  0.076   answer<7>
+                                                       Mcount_answer_cy<7>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   Mcount_answer_cy<7>
+    SLICE_X12Y34.CLK     Tcinck                0.304   answer<11>
+                                                       Mcount_answer_xor<11>
+                                                       answer_9
     -------------------------------------------------  ---------------------------
-    Total                                      4.653ns (1.629ns logic, 3.024ns route)
-                                                       (35.0% logic, 65.0% route)
+    Total                                      4.415ns (1.983ns logic, 2.432ns route)
+                                                       (44.9% logic, 55.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point answer_6 (SLICE_X14Y40.SR), 64 paths
+Paths for end point answer_10 (SLICE_X12Y34.CIN), 304 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     5.172ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               button_count2_2 (FF)
-  Destination:          answer_6 (FF)
+Slack (setup path):     5.410ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               button1_count_24 (FF)
+  Destination:          answer_10 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.757ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.036ns (0.593 - 0.629)
+  Data Path Delay:      4.543ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.012ns (0.241 - 0.253)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -291,35 +339,43 @@ Slack (setup path):     5.172ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: button_count2_2 to answer_6
+  Maximum Data Path at Slow Process Corner: button1_count_24 to answer_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X18Y30.CQ      Tcko                  0.408   button_count2<3>
-                                                       button_count2_2
-    SLICE_X19Y32.D1      net (fanout=4)        0.686   button_count2<2>
-    SLICE_X19Y32.D       Tilo                  0.259   N40
-                                                       button_click2<31>15_SW0
-    SLICE_X19Y33.A1      net (fanout=1)        0.763   N40
-    SLICE_X19Y33.A       Tilo                  0.259   button_click2<31>12
-                                                       _n0080_SW0
-    SLICE_X17Y38.B1      net (fanout=1)        0.850   N12
-    SLICE_X17Y38.B       Tilo                  0.259   button_click<31>12
-                                                       _n0080
-    SLICE_X14Y40.SR      net (fanout=3)        0.852   _n0080
-    SLICE_X14Y40.CLK     Tsrck                 0.421   answer<7>
-                                                       answer_6
+    SLICE_X16Y36.AQ      Tcko                  0.447   button1_count<27>
+                                                       button1_count_24
+    SLICE_X17Y36.A1      net (fanout=2)        0.603   button1_count<24>
+    SLICE_X17Y36.A       Tilo                  0.259   button_click<31>14
+                                                       button_click<31>14
+    SLICE_X17Y33.A1      net (fanout=2)        0.793   button_click<31>14
+    SLICE_X17Y33.A       Tilo                  0.259   button_click<31>11
+                                                       button_click<31>15
+    SLICE_X17Y33.C2      net (fanout=13)       0.453   button_click<31>1
+    SLICE_X17Y33.C       Tilo                  0.259   button_click<31>11
+                                                       Mcount_answer_lut<0>
+    SLICE_X12Y32.A3      net (fanout=1)        0.736   Mcount_answer_lut<0>
+    SLICE_X12Y32.COUT    Topcya                0.379   answer<3>
+                                                       Mcount_answer_lut<0>_rt
+                                                       Mcount_answer_cy<3>
+    SLICE_X12Y33.CIN     net (fanout=1)        0.003   Mcount_answer_cy<3>
+    SLICE_X12Y33.COUT    Tbyp                  0.076   answer<7>
+                                                       Mcount_answer_cy<7>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   Mcount_answer_cy<7>
+    SLICE_X12Y34.CLK     Tcinck                0.273   answer<11>
+                                                       Mcount_answer_xor<11>
+                                                       answer_10
     -------------------------------------------------  ---------------------------
-    Total                                      4.757ns (1.606ns logic, 3.151ns route)
-                                                       (33.8% logic, 66.2% route)
+    Total                                      4.543ns (1.952ns logic, 2.591ns route)
+                                                       (43.0% logic, 57.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.259ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               button_count2_29 (FF)
-  Destination:          answer_6 (FF)
+Slack (setup path):     5.553ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               button1_count_23 (FF)
+  Destination:          answer_10 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.686ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.020ns (0.230 - 0.250)
+  Data Path Delay:      4.398ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.014ns (0.241 - 0.255)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -330,35 +386,43 @@ Slack (setup path):     5.259ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: button_count2_29 to answer_6
+  Maximum Data Path at Slow Process Corner: button1_count_23 to answer_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X18Y37.BQ      Tcko                  0.408   button_count2<31>
-                                                       button_count2_29
-    SLICE_X19Y32.D5      net (fanout=4)        0.615   button_count2<29>
-    SLICE_X19Y32.D       Tilo                  0.259   N40
-                                                       button_click2<31>15_SW0
-    SLICE_X19Y33.A1      net (fanout=1)        0.763   N40
-    SLICE_X19Y33.A       Tilo                  0.259   button_click2<31>12
-                                                       _n0080_SW0
-    SLICE_X17Y38.B1      net (fanout=1)        0.850   N12
-    SLICE_X17Y38.B       Tilo                  0.259   button_click<31>12
-                                                       _n0080
-    SLICE_X14Y40.SR      net (fanout=3)        0.852   _n0080
-    SLICE_X14Y40.CLK     Tsrck                 0.421   answer<7>
-                                                       answer_6
+    SLICE_X16Y35.DQ      Tcko                  0.447   button1_count<23>
+                                                       button1_count_23
+    SLICE_X17Y36.A3      net (fanout=2)        0.458   button1_count<23>
+    SLICE_X17Y36.A       Tilo                  0.259   button_click<31>14
+                                                       button_click<31>14
+    SLICE_X17Y33.A1      net (fanout=2)        0.793   button_click<31>14
+    SLICE_X17Y33.A       Tilo                  0.259   button_click<31>11
+                                                       button_click<31>15
+    SLICE_X17Y33.C2      net (fanout=13)       0.453   button_click<31>1
+    SLICE_X17Y33.C       Tilo                  0.259   button_click<31>11
+                                                       Mcount_answer_lut<0>
+    SLICE_X12Y32.A3      net (fanout=1)        0.736   Mcount_answer_lut<0>
+    SLICE_X12Y32.COUT    Topcya                0.379   answer<3>
+                                                       Mcount_answer_lut<0>_rt
+                                                       Mcount_answer_cy<3>
+    SLICE_X12Y33.CIN     net (fanout=1)        0.003   Mcount_answer_cy<3>
+    SLICE_X12Y33.COUT    Tbyp                  0.076   answer<7>
+                                                       Mcount_answer_cy<7>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   Mcount_answer_cy<7>
+    SLICE_X12Y34.CLK     Tcinck                0.273   answer<11>
+                                                       Mcount_answer_xor<11>
+                                                       answer_10
     -------------------------------------------------  ---------------------------
-    Total                                      4.686ns (1.606ns logic, 3.080ns route)
-                                                       (34.3% logic, 65.7% route)
+    Total                                      4.398ns (1.952ns logic, 2.446ns route)
+                                                       (44.4% logic, 55.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.299ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               button_count2_0 (FF)
-  Destination:          answer_6 (FF)
+Slack (setup path):     5.569ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               button1_count_26 (FF)
+  Destination:          answer_10 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.630ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.036ns (0.593 - 0.629)
+  Data Path Delay:      4.384ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.012ns (0.241 - 0.253)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -369,96 +433,77 @@ Slack (setup path):     5.299ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: button_count2_0 to answer_6
+  Maximum Data Path at Slow Process Corner: button1_count_26 to answer_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X18Y30.AQ      Tcko                  0.408   button_count2<3>
-                                                       button_count2_0
-    SLICE_X19Y32.D3      net (fanout=4)        0.559   button_count2<0>
-    SLICE_X19Y32.D       Tilo                  0.259   N40
-                                                       button_click2<31>15_SW0
-    SLICE_X19Y33.A1      net (fanout=1)        0.763   N40
-    SLICE_X19Y33.A       Tilo                  0.259   button_click2<31>12
-                                                       _n0080_SW0
-    SLICE_X17Y38.B1      net (fanout=1)        0.850   N12
-    SLICE_X17Y38.B       Tilo                  0.259   button_click<31>12
-                                                       _n0080
-    SLICE_X14Y40.SR      net (fanout=3)        0.852   _n0080
-    SLICE_X14Y40.CLK     Tsrck                 0.421   answer<7>
-                                                       answer_6
+    SLICE_X16Y36.CQ      Tcko                  0.447   button1_count<27>
+                                                       button1_count_26
+    SLICE_X17Y36.A2      net (fanout=2)        0.444   button1_count<26>
+    SLICE_X17Y36.A       Tilo                  0.259   button_click<31>14
+                                                       button_click<31>14
+    SLICE_X17Y33.A1      net (fanout=2)        0.793   button_click<31>14
+    SLICE_X17Y33.A       Tilo                  0.259   button_click<31>11
+                                                       button_click<31>15
+    SLICE_X17Y33.C2      net (fanout=13)       0.453   button_click<31>1
+    SLICE_X17Y33.C       Tilo                  0.259   button_click<31>11
+                                                       Mcount_answer_lut<0>
+    SLICE_X12Y32.A3      net (fanout=1)        0.736   Mcount_answer_lut<0>
+    SLICE_X12Y32.COUT    Topcya                0.379   answer<3>
+                                                       Mcount_answer_lut<0>_rt
+                                                       Mcount_answer_cy<3>
+    SLICE_X12Y33.CIN     net (fanout=1)        0.003   Mcount_answer_cy<3>
+    SLICE_X12Y33.COUT    Tbyp                  0.076   answer<7>
+                                                       Mcount_answer_cy<7>
+    SLICE_X12Y34.CIN     net (fanout=1)        0.003   Mcount_answer_cy<7>
+    SLICE_X12Y34.CLK     Tcinck                0.273   answer<11>
+                                                       Mcount_answer_xor<11>
+                                                       answer_10
     -------------------------------------------------  ---------------------------
-    Total                                      4.630ns (1.606ns logic, 3.024ns route)
-                                                       (34.7% logic, 65.3% route)
+    Total                                      4.384ns (1.952ns logic, 2.432ns route)
+                                                       (44.5% logic, 55.5% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 10 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point answer_3 (SLICE_X14Y39.CX), 1 path
+Paths for end point button2_count_31 (SLICE_X14Y36.D6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.441ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               answer_2 (FF)
-  Destination:          answer_3 (FF)
+Slack (hold path):      0.462ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               button2_count_31 (FF)
+  Destination:          button2_count_31 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.441ns (Levels of Logic = 1)
+  Data Path Delay:      0.462ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: answer_2 to answer_3
+  Minimum Data Path at Fast Process Corner: button2_count_31 to button2_count_31
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y39.CQ      Tcko                  0.200   answer<3>
-                                                       answer_2
-    SLICE_X14Y39.CX      net (fanout=3)        0.099   answer<2>
-    SLICE_X14Y39.CLK     Tckdi       (-Th)    -0.142   answer<3>
-                                                       Mcount_answer_cy<3>
-                                                       answer_3
+    SLICE_X14Y36.DQ      Tcko                  0.200   button2_count<31>
+                                                       button2_count_31
+    SLICE_X14Y36.D6      net (fanout=2)        0.025   button2_count<31>
+    SLICE_X14Y36.CLK     Tah         (-Th)    -0.237   button2_count<31>
+                                                       button2_count<31>_rt
+                                                       Mcount_button2_count_xor<31>
+                                                       button2_count_31
     -------------------------------------------------  ---------------------------
-    Total                                      0.441ns (0.342ns logic, 0.099ns route)
-                                                       (77.6% logic, 22.4% route)
+    Total                                      0.462ns (0.437ns logic, 0.025ns route)
+                                                       (94.6% logic, 5.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point answer_7 (SLICE_X14Y40.CX), 1 path
+Paths for end point answer_11 (SLICE_X12Y34.CX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.445ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               answer_6 (FF)
-  Destination:          answer_7 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.445ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 10.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: answer_6 to answer_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X14Y40.CQ      Tcko                  0.200   answer<7>
-                                                       answer_6
-    SLICE_X14Y40.CX      net (fanout=3)        0.103   answer<6>
-    SLICE_X14Y40.CLK     Tckdi       (-Th)    -0.142   answer<7>
-                                                       Mcount_answer_cy<7>
-                                                       answer_7
-    -------------------------------------------------  ---------------------------
-    Total                                      0.445ns (0.342ns logic, 0.103ns route)
-                                                       (76.9% logic, 23.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point answer_11 (SLICE_X14Y41.CX), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.445ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.497ns (requirement - (clock path skew + uncertainty - data path))
   Source:               answer_10 (FF)
   Destination:          answer_11 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.445ns (Levels of Logic = 1)
+  Data Path Delay:      0.497ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
@@ -468,15 +513,43 @@ Slack (hold path):      0.445ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y41.CQ      Tcko                  0.200   answer<11>
+    SLICE_X12Y34.CQ      Tcko                  0.234   answer<11>
                                                        answer_10
-    SLICE_X14Y41.CX      net (fanout=3)        0.103   answer<10>
-    SLICE_X14Y41.CLK     Tckdi       (-Th)    -0.142   answer<11>
+    SLICE_X12Y34.CX      net (fanout=3)        0.132   answer<10>
+    SLICE_X12Y34.CLK     Tckdi       (-Th)    -0.131   answer<11>
                                                        Mcount_answer_xor<11>
                                                        answer_11
     -------------------------------------------------  ---------------------------
-    Total                                      0.445ns (0.342ns logic, 0.103ns route)
-                                                       (76.9% logic, 23.1% route)
+    Total                                      0.497ns (0.365ns logic, 0.132ns route)
+                                                       (73.4% logic, 26.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point answer_9 (SLICE_X12Y34.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.504ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               answer_8 (FF)
+  Destination:          answer_9 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.504ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: answer_8 to answer_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y34.AQ      Tcko                  0.234   answer<11>
+                                                       answer_8
+    SLICE_X12Y34.AX      net (fanout=3)        0.128   answer<8>
+    SLICE_X12Y34.CLK     Tckdi       (-Th)    -0.142   answer<11>
+                                                       Mcount_answer_xor<11>
+                                                       answer_9
+    -------------------------------------------------  ---------------------------
+    Total                                      0.504ns (0.376ns logic, 0.128ns route)
+                                                       (74.6% logic, 25.4% route)
 
 --------------------------------------------------------------------------------
 
@@ -493,17 +566,17 @@ Slack: 8.270ns (period - min period limit)
 Slack: 9.570ns (period - min period limit)
   Period: 10.000ns
   Min period limit: 0.430ns (2325.581MHz) (Tcp)
-  Physical resource: answer<3>/CLK
-  Logical resource: answer_0/CK
-  Location pin: SLICE_X14Y39.CLK
+  Physical resource: button2_count<3>/CLK
+  Logical resource: button2_count_0/CK
+  Location pin: SLICE_X14Y29.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 9.570ns (period - min period limit)
   Period: 10.000ns
   Min period limit: 0.430ns (2325.581MHz) (Tcp)
-  Physical resource: answer<3>/CLK
-  Logical resource: answer_1/CK
-  Location pin: SLICE_X14Y39.CLK
+  Physical resource: button2_count<3>/CLK
+  Logical resource: button2_count_1/CK
+  Location pin: SLICE_X14Y29.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -520,7 +593,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.862|         |         |         |
+clk            |    4.631|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -529,16 +602,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 7917 paths, 0 nets, and 400 connections
+Constraints cover 7925 paths, 0 nets, and 409 connections
 
 Design statistics:
-   Minimum period:   4.862ns{1}   (Maximum frequency: 205.677MHz)
+   Minimum period:   4.631ns{1}   (Maximum frequency: 215.936MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue Sep 17 20:40:58 2019 
+Analysis completed Wed Sep 18 21:01:44 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Tue Sep 17 20:40:27 2019">
+<application name="pn" timeStamp="Wed Sep 18 21:01:22 2019">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="9D451F653595CE22515C4485F397A294" type="project"/>
-<property name="ProjectIteration" value="2" type="project"/>
+<property name="ProjectIteration" value="3" type="project"/>
 <property name="ProjectFile" value="/home/troy/Embedded/Lab3a/Test/ISE_Files/ISE_Files.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2019-09-17T19:50:12" type="project"/>
 </section>
@@ -24,9 +24,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2019-09-17T19:50:12" type="design"/>
 <property name="PROP_intWbtProjectID" value="9D451F653595CE22515C4485F397A294" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="2" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="3" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
+<property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
 <property name="PROP_DevFamily" value="Spartan6" type="design"/>
 <property name="PROP_xilxBitgCfg_GenOpt_BinaryFile" value="true" type="process"/>

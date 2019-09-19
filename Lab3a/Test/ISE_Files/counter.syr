@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: counter.prj
@@ -116,10 +116,9 @@ Parsing module <counter>.
 =========================================================================
 
 Elaborating module <counter>.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab3a/Test/seven_seg.v" Line 47: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab3a/Test/seven_seg.v" Line 48: Result of 32-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab3a/Test/seven_seg.v" Line 69: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab3a/Test/seven_seg.v" Line 99: Signal <cathode_select> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab3a/Test/seven_seg.v" Line 36: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab3a/Test/seven_seg.v" Line 37: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab3a/Test/seven_seg.v" Line 60: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -127,27 +126,28 @@ WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab3a/Test/seven_seg.v" Line 99: S
 
 Synthesizing Unit <counter>.
     Related source file is "/home/troy/Embedded/Lab3a/Test/seven_seg.v".
-        DEBOUNCE_DELAY = 32'b00000000000001111010000100100000
+        DEBOUNCE_DELAY1 = 32'b00000000000001111010000100100000
         DEBOUNCE_DELAY2 = 32'b00000000000001111010000100100000
-    Found 1-bit register for signal <button_sync>.
-    Found 1-bit register for signal <button_reg2>.
-    Found 1-bit register for signal <button_sync2>.
-    Found 32-bit register for signal <button_count>.
-    Found 32-bit register for signal <button_count2>.
+    Found 1-bit register for signal <button1_sync>.
+    Found 1-bit register for signal <button2_reg>.
+    Found 1-bit register for signal <button2_sync>.
+    Found 32-bit register for signal <button1_count>.
+    Found 32-bit register for signal <button2_count>.
     Found 12-bit register for signal <answer>.
+    Found 8-bit register for signal <outleds>.
     Found 40-bit register for signal <counter>.
     Found 3-bit register for signal <anodes>.
-    Found 1-bit register for signal <button_reg>.
-    Found 32-bit adder for signal <button_count[31]_GND_1_o_add_9_OUT> created at line 39.
-    Found 32-bit adder for signal <button_count2[31]_GND_1_o_add_14_OUT> created at line 44.
-    Found 12-bit adder for signal <answer[11]_GND_1_o_add_19_OUT> created at line 47.
-    Found 40-bit adder for signal <counter[39]_GND_1_o_add_26_OUT> created at line 57.
-    Found 12-bit subtractor for signal <GND_1_o_GND_1_o_sub_21_OUT<11:0>> created at line 48.
-    Found 16x16-bit Read Only RAM for signal <_n0104>
+    Found 1-bit register for signal <button1_reg>.
+    Found 32-bit adder for signal <button1_count[31]_GND_1_o_add_9_OUT> created at line 28.
+    Found 32-bit adder for signal <button2_count[31]_GND_1_o_add_14_OUT> created at line 33.
+    Found 12-bit adder for signal <answer[11]_GND_1_o_add_19_OUT> created at line 36.
+    Found 40-bit adder for signal <counter[39]_GND_1_o_add_28_OUT> created at line 48.
+    Found 12-bit subtractor for signal <GND_1_o_GND_1_o_sub_21_OUT<11:0>> created at line 37.
+    Found 16x8-bit Read Only RAM for signal <cathodes>
     Summary:
 	inferred   1 RAM(s).
 	inferred   4 Adder/Subtractor(s).
-	inferred 123 D-type flip-flop(s).
+	inferred 131 D-type flip-flop(s).
 Unit <counter> synthesized.
 
 =========================================================================
@@ -155,17 +155,18 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 16x16-bit single-port Read Only RAM                   : 1
+ 16x8-bit single-port Read Only RAM                    : 1
 # Adders/Subtractors                                   : 4
  12-bit addsub                                         : 1
  32-bit adder                                          : 2
  40-bit adder                                          : 1
-# Registers                                            : 9
+# Registers                                            : 10
  1-bit register                                        : 4
  12-bit register                                       : 1
  3-bit register                                        : 1
  32-bit register                                       : 2
  40-bit register                                       : 1
+ 8-bit register                                        : 1
 
 =========================================================================
 
@@ -176,17 +177,17 @@ Macro Statistics
 
 Synthesizing (advanced) Unit <counter>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
-The following registers are absorbed into counter <button_count>: 1 register on signal <button_count>.
-The following registers are absorbed into counter <button_count2>: 1 register on signal <button_count2>.
+The following registers are absorbed into counter <button1_count>: 1 register on signal <button1_count>.
+The following registers are absorbed into counter <button2_count>: 1 register on signal <button2_count>.
 The following registers are absorbed into counter <answer>: 1 register on signal <answer>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0104> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_cathodes> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <cathode_select> |          |
+    |     addrA          | connected to signal <cathod_S>      |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to signal <cathodes>      |          |
     -----------------------------------------------------------------------
@@ -197,13 +198,13 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 16x16-bit single-port distributed Read Only RAM       : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
 # Counters                                             : 4
  12-bit updown counter                                 : 1
  32-bit up counter                                     : 2
  40-bit up counter                                     : 1
-# Registers                                            : 7
- Flip-Flops                                            : 7
+# Registers                                            : 15
+ Flip-Flops                                            : 15
 
 =========================================================================
 
@@ -247,8 +248,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 99
- Flip-Flops                                            : 99
+# Registers                                            : 107
+ Flip-Flops                                            : 107
 
 =========================================================================
 
@@ -282,8 +283,8 @@ Primitive and Black Box Usage:
 #      MUXCY                       : 88
 #      VCC                         : 1
 #      XORCY                       : 92
-# FlipFlops/Latches                : 99
-#      FD                          : 4
+# FlipFlops/Latches                : 107
+#      FD                          : 12
 #      FDR                         : 16
 #      FDRE                        : 77
 #      FDSE                        : 2
@@ -300,15 +301,15 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              99  out of  11440     0%  
+ Number of Slice Registers:             107  out of  11440     0%  
  Number of Slice LUTs:                  137  out of   5720     2%  
     Number used as Logic:               137  out of   5720     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    139
-   Number with an unused Flip Flop:      40  out of    139    28%  
-   Number with an unused LUT:             2  out of    139     1%  
-   Number of fully used LUT-FF pairs:    97  out of    139    69%  
+ Number of LUT Flip Flop pairs used:    144
+   Number with an unused Flip Flop:      37  out of    144    25%  
+   Number with an unused LUT:             7  out of    144     4%  
+   Number of fully used LUT-FF pairs:   100  out of    144    69%  
    Number of unique control sets:         6
 
 IO Utilization: 
@@ -339,7 +340,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 99    |
+clk                                | BUFGP                  | 107   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -352,7 +353,7 @@ Speed Grade: -3
 
    Minimum period: 5.450ns (Maximum Frequency: 183.482MHz)
    Minimum input arrival time before clock: 3.744ns
-   Maximum output required time after clock: 6.161ns
+   Maximum output required time after clock: 6.132ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -362,23 +363,23 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 5.450ns (frequency: 183.482MHz)
-  Total number of paths / destination ports: 7917 / 252
+  Total number of paths / destination ports: 7925 / 260
 -------------------------------------------------------------------------
 Delay:               5.450ns (Levels of Logic = 3)
-  Source:            button_count_24 (FF)
-  Destination:       button_count_0 (FF)
+  Source:            button1_count_24 (FF)
+  Destination:       button1_count_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: button_count_24 to button_count_0
+  Data Path: button1_count_24 to button1_count_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.447   0.981  button_count_24 (button_count_24)
+     FDRE:C->Q             2   0.447   0.981  button1_count_24 (button1_count_24)
      LUT6:I0->O            2   0.203   0.864  button_click<31>14 (button_click<31>14)
      LUT6:I2->O           13   0.203   0.933  button_click<31>15 (button_click<31>1)
      LUT6:I5->O           32   0.205   1.291  button_done_inv (button_done_inv)
-     FDRE:CE                   0.322          button_count_0
+     FDRE:CE                   0.322          button1_count_0
     ----------------------------------------
     Total                      5.450ns (1.380ns logic, 4.070ns route)
                                        (25.3% logic, 74.7% route)
@@ -405,9 +406,9 @@ Offset:              3.744ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 195 / 14
+  Total number of paths / destination ports: 179 / 18
 -------------------------------------------------------------------------
-Offset:              6.161ns (Levels of Logic = 3)
+Offset:              6.132ns (Levels of Logic = 3)
   Source:            anodes_1 (FF)
   Destination:       cathodes<6> (PAD)
   Source Clock:      clk rising
@@ -417,12 +418,12 @@ Offset:              6.161ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDSE:C->Q             6   0.447   1.109  anodes_1 (anodes_1)
-     LUT6:I0->O            8   0.203   1.050  cathode_select<1>1 (outleds_3_OBUF)
-     LUT4:I0->O            1   0.203   0.579  Mram__n010451 (cathodes_5_OBUF)
+     LUT6:I0->O            7   0.203   1.021  cathod_S<1>1 (cathod_S<3>)
+     LUT4:I0->O            1   0.203   0.579  Mram_cathodes51 (cathodes_5_OBUF)
      OBUF:I->O                 2.571          cathodes_5_OBUF (cathodes<5>)
     ----------------------------------------
-    Total                      6.161ns (3.424ns logic, 2.737ns route)
-                                       (55.6% logic, 44.4% route)
+    Total                      6.132ns (3.424ns logic, 2.708ns route)
+                                       (55.8% logic, 44.2% route)
 
 =========================================================================
 
@@ -440,15 +441,15 @@ clk            |    5.450|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 12.69 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 9.49 secs
  
 --> 
 
 
-Total memory usage is 395092 kilobytes
+Total memory usage is 394708 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   28 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 
