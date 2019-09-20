@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> 
 Reading design: counter.prj
@@ -120,32 +120,30 @@ WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 2
 WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 44: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 43: Assignment to cathod_S ignored, since the identifier is never used
 WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 54: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 56: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 56: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 57: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 58: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 61: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 62: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 63: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 66: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 67: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 68: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 71: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 72: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 73: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 76: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 60: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 61: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 64: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 65: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 66: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 69: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 70: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 71: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 74: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 75: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 76: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 77: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 78: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 79: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 82: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 83: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 84: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 87: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 80: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 81: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 82: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 85: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 86: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 87: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 88: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 89: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 90: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 95: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 96: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 103: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 93: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 94: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 101: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -488,15 +486,15 @@ clk            |    4.405|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 12.97 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 12.93 secs
  
 --> 
 
 
-Total memory usage is 395028 kilobytes
+Total memory usage is 395068 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   94 (   0 filtered)
+Number of warnings :   92 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
