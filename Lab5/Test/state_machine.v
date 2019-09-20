@@ -21,10 +21,6 @@ always @(posedge clk)
 		if(button_click) answer <= answer + 1;
 		else if(!reset) answer <= 0;
 		else			answer <= answer;
-always @(posedge clk)
-		outleds = answer[7:0];
-		
-
  
 reg   [39:0]                      counter;
 always @(posedge clk)             
@@ -49,7 +45,7 @@ always @(cathod_S or answer)
       endcase
 		
 		
-reg [3:0] state = 4'b0000;		
+reg [7:0] state = 8'b00000000;		
 always @(cathod_S or answer)
 	case(state)
 		0:
@@ -93,6 +89,9 @@ always @(cathod_S or answer)
 			if (!reset)		state <= 0;
 			else			state <= state;
 	endcase
+	
+always @(posedge clk)
+	outleds[3:0] <= state;
 		
 
 //wire dp = 1; //!(anodes == 4'b1011); 
