@@ -53,13 +53,11 @@ reg [3:0] state = 4'b0000;
 always @(cathod_S or answer)
 	case(state)
 		0:
-			if (!reset)		state <= 0;
-			else if (sw1 && sw2)	state <= 1;
+			if (sw1 && sw2)	state <= 1;
 			else if (!sw1 && sw2)	state <= 3;
 			else			state <= 0;
 		1:
-			if (!reset)		state <= 0;
-			else if (sw1 && sw2)	state <= 2;
+			if (sw1 && sw2)	state <= 2;
 			else if (!sw1 && sw2)	state <= 3;
 			else			state <= 0;
 		2:
@@ -101,7 +99,7 @@ always @(cathod_S or answer)
 
 always @(cathod_S)
 		case(state)
-	       0:  cathodes = {8'b11111111};
+	       0:  cathodes = {8'b11000000};
 			 1:  cathodes = {8'b11111001};
 			 2:  cathodes = {8'b10100100};
 			 3:  cathodes = {8'b10110000};
