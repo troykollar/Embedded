@@ -91,7 +91,7 @@ always @(cathod_S or answer)
 	endcase
 	
 always @(posedge clk)
-	outleds[3:0] <= state;
+	outleds[7:0] <= state;
 		
 
 //wire dp = 1; //!(anodes == 4'b1011); 
