@@ -101,7 +101,7 @@ always @(cathod_S or answer)
 
 always @(cathod_S)
 		case(state)
-	       0:  cathodes = {8'b11000000};
+	       0:  cathodes = {8'b11111111};
 			 1:  cathodes = {8'b11111001};
 			 2:  cathodes = {8'b10100100};
 			 3:  cathodes = {8'b10110000};
