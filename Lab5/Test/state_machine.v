@@ -5,6 +5,7 @@ reg button1_sync;
 reg [31:0]	button1_count;
 reg   [11:0]   answer;   
 parameter DEBOUNCE_DELAY1 = 32'd0_500_000;   /// 10nS * 1M = 10mS
+reg [7:0] state = 8'b00000000;
 
 always @(posedge clk)   button1_reg   <= Switch4;
 always @(posedge clk)   button1_sync  <= !button1_reg;
@@ -36,17 +37,17 @@ always @(posedge clk)
 
 reg [3:0] cathod_S;
 
+/*
 always @(cathod_S or answer)
        case({anodes})
-	      3'b011:  cathod_S = answer[11:8]; 
-	      3'b101:  cathod_S = answer[7:4]; 
-	      3'b110:  cathod_S = answer[3:0]; 
+	      //3'b011:  cathod_S = answer[11:8]; 
+	      //3'b101:  cathod_S = answer[7:4]; 
+	      3'b110:  cathod_S = state[3:0]; 
 	      default:  cathod_S = 4'h0; 
       endcase
-		
-		
-reg [7:0] state = 8'b00000000;		
-always @(cathod_S or answer)
+*/	
+				
+always @(answer)
 	case(state)
 		0:
 			if (sw1 && sw2)	state <= 1;
@@ -89,14 +90,10 @@ always @(cathod_S or answer)
 			if (!reset)		state <= 0;
 			else			state <= state;
 	endcase
-	
-always @(posedge clk)
-	outleds[7:0] <= state;
-		
 
 //wire dp = 1; //!(anodes == 4'b1011); 
 
-always @(cathod_S)
+always @(answer)
 		case(state)
 	       0:  cathodes = {8'b11000000};
 			 1:  cathodes = {8'b11111001};
