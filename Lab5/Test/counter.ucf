@@ -89,8 +89,8 @@ CONFIG VCCAUX = "3.3" ;
     #NET "DPSwitch[3]"                LOC = D18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 5   IO_L31N_A18_M1A12_1        Sch = DP4
     #NET "DPSwitch[4]"                LOC = E18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 4   IO_L33N_A14_M1A4_1         Sch = DP5
     #NET "DPSwitch[5]"                LOC = E16     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 3   IO_L33P_A15_M1A10_1        Sch = DP6
-    #NET "DPSwitch[6]"                LOC = F18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 2   IO_L35N_A10_M1A2_1         Sch = DP7
-    #NET "DPSwitch[7]"                LOC = F17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 1   IO_L35P_A11_M1A7_1         Sch = DP8
+    NET "sw2"                LOC = F18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 2   IO_L35N_A10_M1A2_1         Sch = DP7
+    NET "sw1"                LOC = F17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 1   IO_L35P_A11_M1A7_1         Sch = DP8
      
 ###################################################################################################################################################
 #                                              Push Buttons Switches                                                                              #

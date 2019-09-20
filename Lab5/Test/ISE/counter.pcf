@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Sep 19 19:00:38 2019
+// Written by: Map P.20131013 on Thu Sep 19 19:53:51 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -11,7 +11,9 @@ COMP "cathodes<1>" LOCATE = SITE "B4" LEVEL 1;
 COMP "anodes<1>" LOCATE = SITE "A2" LEVEL 1;
 COMP "cathodes<2>" LOCATE = SITE "A4" LEVEL 1;
 COMP "anodes<2>" LOCATE = SITE "B3" LEVEL 1;
+COMP "sw1" LOCATE = SITE "F17" LEVEL 1;
 COMP "cathodes<3>" LOCATE = SITE "C4" LEVEL 1;
+COMP "sw2" LOCATE = SITE "F18" LEVEL 1;
 COMP "cathodes<4>" LOCATE = SITE "C5" LEVEL 1;
 COMP "cathodes<5>" LOCATE = SITE "D6" LEVEL 1;
 COMP "cathodes<6>" LOCATE = SITE "C6" LEVEL 1;

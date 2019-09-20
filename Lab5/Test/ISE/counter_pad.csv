@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (lin64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Thu Sep 19 19:01:01 2019
+#Thu Sep 19 19:54:13 2019
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -125,8 +125,8 @@ F13,,IOBM,IO_L63P_SCP7_0,UNUSED,,0,,,,,,,,,
 F14,,IOBM,IO_L30P_A21_M1RESET_1,UNUSED,,1,,,,,,,,,
 F15,,IOBM,IO_L1P_A25_1,UNUSED,,1,,,,,,,,,
 F16,,IOBS,IO_L1N_A24_VREF_1,UNUSED,,1,,,,,,,,,
-F17,,IOBM,IO_L35P_A11_M1A7_1,UNUSED,,1,,,,,,,,,
-F18,,IOBS,IO_L35N_A10_M1A2_1,UNUSED,,1,,,,,,,,,
+F17,sw1,IOB,IO_L35P_A11_M1A7_1,INPUT,LVCMOS33,1,,,PULLUP,NONE,,LOCATED,NO,NONE,
+F18,sw2,IOB,IO_L35N_A10_M1A2_1,INPUT,LVCMOS33,1,,,PULLUP,NONE,,LOCATED,NO,NONE,
 G1,,IOBS,IO_L46N_M3CLKN_3,UNUSED,,3,,,,,,,,,
 G2,,,GND,,,,,,,,,,,,
 G3,,IOBM,IO_L46P_M3CLK_3,UNUSED,,3,,,,,,,,,

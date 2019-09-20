@@ -1,4 +1,4 @@
-module counter(input clk, input Switch4, input reset, output reg [2:0] anodes, output reg [7:0] cathodes, output reg [7:0] outleds);
+module counter(input clk, input Switch4, input reset, input sw1, input sw2, output reg [2:0] anodes, output reg [7:0] cathodes, output reg [7:0] outleds);
 
 reg button1_reg;
 reg button1_sync;
@@ -47,27 +47,76 @@ always @(cathod_S or answer)
 	      3'b110:  cathod_S = answer[3:0]; 
 	      default:  cathod_S = 4'h0; 
       endcase
+		
+		
+reg [3:0] state = 4'b0000;		
+always @(cathod_S or answer)
+	case(state)
+		0:
+			if (!reset)		state <= 0;
+			else if (sw1 && sw2)	state <= 1;
+			else if (!sw1 && sw2)	state <= 3;
+			else			state <= 0;
+		1:
+			if (!reset)		state <= 0;
+			else if (sw1 && sw2)	state <= 2;
+			else if (!sw1 && sw2)	state <= 3;
+			else			state <= 0;
+		2:
+			if (!reset)		state <= 0;
+			else if (sw1 && sw2)	state <= 7;
+			else if (!sw1 && sw2)	state <= 3;
+			else			state <= 0;
+		3:
+			if (!reset)		state <= 0;
+			else if (!sw1 && sw2)	state <= 4;
+			else if (sw1 && sw2)	state <= 1;
+			else			state <= 0;
+		4:
+			if (!reset)		state <= 0;
+			else if (!sw1 && sw2)	state <= state;
+			else if (sw1 && !sw2)	state <= 5;
+			else if (sw1 && sw2)	state <= 1;
+			else			state <= 0;
+		5:
+			if (!reset)		state <= 0;
+			else if (!sw1 && sw2)	state <= 6;
+			else if (sw1 && sw2)	state <= 1;
+			else			state <= 0;
+		6:
+			if (!reset)		state <= 0;
+			else if (!sw1 && sw2)	state <= 4;
+			else if (sw1 && !sw2)	state <= 8;
+			else if (sw1 && sw2)	state <= 1;
+			else			state <= 0;
+		7:	state <= 0;
+		8:	state <= 0;
+		15:
+			if (!reset)		state <= 0;
+			else			state <= state;
+	endcase
+		
 
 //wire dp = 1; //!(anodes == 4'b1011); 
 
 always @(cathod_S)
-		case(cathod_S)
-	       4'h0:  cathodes = {8'b11000000};
-			 4'h1:  cathodes = {8'b11111001};
-			 4'h2:  cathodes = {8'b10100100};
-			 4'h3:  cathodes = {8'b10110000};
-			 4'h4:  cathodes = {8'b10011001};
-			 4'h5:  cathodes = {8'b10010010};
-			 4'h6:  cathodes = {8'b10000010};
-			 4'h7:  cathodes = {8'b11111000};
-			 4'h8:  cathodes = {8'b10000000};
-			 4'h9:  cathodes = {8'b10011000};
-			 4'ha:  cathodes = {8'b10001000};
-			 4'hb:  cathodes = {8'b10000011};
-			 4'hc:  cathodes = {8'b11000110};
-			 4'hd:  cathodes = {8'b10100001};
-			 4'he:  cathodes = {8'b10000110};
-			 4'hf:  cathodes = {8'b10001110};
+		case(state)
+	       0:  cathodes = {8'b11000000};
+			 1:  cathodes = {8'b11111001};
+			 2:  cathodes = {8'b10100100};
+			 3:  cathodes = {8'b10110000};
+			 4:  cathodes = {8'b10011001};
+			 5:  cathodes = {8'b10010010};
+			 6:  cathodes = {8'b10000010};
+			 7:  cathodes = {8'b11111000};
+			 8:  cathodes = {8'b10000000};
+			 //4'h9:  cathodes = {8'b10011000};
+			 //4'ha:  cathodes = {8'b10001000};
+			 //4'hb:  cathodes = {8'b10000011};
+			 //4'hc:  cathodes = {8'b11000110};
+			 //4'hd:  cathodes = {8'b10100001};
+			 //4'he:  cathodes = {8'b10000110};
+			 //4'hf:  cathodes = {8'b10001110};
      endcase
        
 endmodule 
