@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 Reading design: counter.prj
@@ -116,34 +116,26 @@ Parsing module <counter>.
 =========================================================================
 
 Elaborating module <counter>.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 21: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 44: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 43: Assignment to cathod_S ignored, since the identifier is never used
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 54: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 56: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 57: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 22: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 42: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 45: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 41: Assignment to cathod_S ignored, since the identifier is never used
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 51: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 57: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 58: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 59: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 60: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 61: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 64: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 63: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 64: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 65: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 66: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 69: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 68: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 69: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 70: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 71: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 74: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 75: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 76: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 77: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 80: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 81: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 82: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 85: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 86: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 87: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 88: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 93: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 94: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 101: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 76: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 77: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 81: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 86: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -152,16 +144,14 @@ WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 10
 Synthesizing Unit <counter>.
     Related source file is "/home/troy/Embedded/Lab5/Test/state_machine.v".
         DEBOUNCE_DELAY1 = 32'b00000000000001111010000100100000
-    Found 1-bit register for signal <button1_sync>.
-    Found 32-bit register for signal <button1_count>.
-    Found 12-bit register for signal <answer>.
-    Found 8-bit register for signal <outleds>.
+WARNING:Xst:647 - Input <Switch4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 40-bit register for signal <counter>.
     Found 3-bit register for signal <anodes>.
-    Found 1-bit register for signal <button1_reg>.
-    Found 32-bit adder for signal <button1_count[31]_GND_1_o_add_5_OUT> created at line 18.
-    Found 12-bit adder for signal <answer[11]_GND_1_o_add_10_OUT> created at line 21.
-    Found 40-bit adder for signal <counter[39]_GND_1_o_add_17_OUT> created at line 32.
+    Found 40-bit adder for signal <counter[39]_GND_1_o_add_15_OUT> created at line 29.
+WARNING:Xst:737 - Found 1-bit latch for signal <state<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <state<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <state<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <state<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <state<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -175,31 +165,26 @@ WARNING:Xst:737 - Found 1-bit latch for signal <cathodes<2>>. Latches may be gen
 WARNING:Xst:737 - Found 1-bit latch for signal <cathodes<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cathodes<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred   3 Adder/Subtractor(s).
-	inferred  97 D-type flip-flop(s).
-	inferred  12 Latch(s).
-	inferred   8 Multiplexer(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred  16 Latch(s).
+	inferred  37 Multiplexer(s).
 Unit <counter> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 3
- 12-bit adder                                          : 1
- 32-bit adder                                          : 1
+# Adders/Subtractors                                   : 1
  40-bit adder                                          : 1
-# Registers                                            : 7
- 1-bit register                                        : 2
- 12-bit register                                       : 1
+# Registers                                            : 2
  3-bit register                                        : 1
- 32-bit register                                       : 1
  40-bit register                                       : 1
- 8-bit register                                        : 1
-# Latches                                              : 12
- 1-bit latch                                           : 12
-# Multiplexers                                         : 8
- 1-bit 2-to-1 multiplexer                              : 8
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Multiplexers                                         : 37
+ 1-bit 2-to-1 multiplexer                              : 24
+ 8-bit 2-to-1 multiplexer                              : 13
 
 =========================================================================
 
@@ -207,59 +192,34 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1293 - FF/Latch <state_3> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_2> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_1> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cathodes_7> (without init value) has a constant value of 1 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_6> (without init value) has a constant value of 1 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_5> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_4> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_3> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_0> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_2> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_1> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_0> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <counter>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
-The following registers are absorbed into counter <button1_count>: 1 register on signal <button1_count>.
-The following registers are absorbed into counter <answer>: 1 register on signal <answer>.
 Unit <counter> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 3
- 12-bit up counter                                     : 1
- 32-bit up counter                                     : 1
+# Counters                                             : 1
  40-bit up counter                                     : 1
-# Registers                                            : 13
- Flip-Flops                                            : 13
-# Multiplexers                                         : 8
- 1-bit 2-to-1 multiplexer                              : 8
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+# Multiplexers                                         : 37
+ 1-bit 2-to-1 multiplexer                              : 24
+ 8-bit 2-to-1 multiplexer                              : 13
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <state_3> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_2> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_1> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cathodes_7> (without init value) has a constant value of 1 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_6> (without init value) has a constant value of 1 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_5> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_2> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_4> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_3> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_1> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_0> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_0> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <answer_8> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <answer_9> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <answer_10> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <answer_11> of sequential type is unconnected in block <counter>.
+WARNING:Xst:1293 - FF/Latch <state_7> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <state_6> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <state_5> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <state_4> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <counter_16> of sequential type is unconnected in block <counter>.
 WARNING:Xst:2677 - Node <counter_17> of sequential type is unconnected in block <counter>.
 WARNING:Xst:2677 - Node <counter_18> of sequential type is unconnected in block <counter>.
@@ -289,7 +249,7 @@ Optimizing unit <counter> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block counter, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block counter, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -297,8 +257,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 69
- Flip-Flops                                            : 69
+# Registers                                            : 19
+ Flip-Flops                                            : 19
 
 =========================================================================
 
@@ -321,25 +281,26 @@ Top Level Output File Name         : counter.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 191
+# BELS                             : 74
 #      GND                         : 1
-#      INV                         : 6
-#      LUT1                        : 53
-#      LUT2                        : 2
-#      LUT4                        : 1
-#      LUT6                        : 18
-#      MUXCY                       : 53
+#      INV                         : 2
+#      LUT1                        : 15
+#      LUT2                        : 1
+#      LUT3                        : 2
+#      LUT4                        : 11
+#      LUT5                        : 1
+#      LUT6                        : 9
+#      MUXCY                       : 15
 #      VCC                         : 1
-#      XORCY                       : 56
-# FlipFlops/Latches                : 69
-#      FD                          : 18
-#      FDR                         : 16
-#      FDRE                        : 33
-#      FDSE                        : 2
+#      XORCY                       : 16
+# FlipFlops/Latches                : 30
+#      FDR                         : 17
+#      FDS                         : 2
+#      LD                          : 11
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 21
-#      IBUF                        : 2
+# IO Buffers                       : 22
+#      IBUF                        : 3
 #      OBUF                        : 19
 
 Device utilization summary:
@@ -349,20 +310,21 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              69  out of  11440     0%  
- Number of Slice LUTs:                   80  out of   5720     1%  
-    Number used as Logic:                80  out of   5720     1%  
+ Number of Slice Registers:              23  out of  11440     0%  
+ Number of Slice LUTs:                   41  out of   5720     0%  
+    Number used as Logic:                41  out of   5720     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     91
-   Number with an unused Flip Flop:      22  out of     91    24%  
-   Number with an unused LUT:            11  out of     91    12%  
-   Number of fully used LUT-FF pairs:    58  out of     91    63%  
-   Number of unique control sets:         4
+ Number of LUT Flip Flop pairs used:     41
+   Number with an unused Flip Flop:      18  out of     41    43%  
+   Number with an unused LUT:             0  out of     41     0%  
+   Number of fully used LUT-FF pairs:    23  out of     41    56%  
+   Number of unique control sets:         3
 
 IO Utilization: 
  Number of IOs:                          24
- Number of bonded IOBs:                  22  out of    200    11%  
+ Number of bonded IOBs:                  23  out of    200    11%  
+    IOB Flip Flops/Latches:               7
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -385,11 +347,17 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 69    |
------------------------------------+------------------------+-------+
+-------------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                       | Clock buffer(FF name)  | Load  |
+-------------------------------------------------------------------+------------------------+-------+
+state[7]_PWR_2_o_Select_52_o(Mmux_state[7]_PWR_2_o_Select_52_o21:O)| NONE(*)(state_3)       | 4     |
+_n0282(out1:O)                                                     | NONE(*)(cathodes_6)    | 7     |
+clk                                                                | BUFGP                  | 19    |
+-------------------------------------------------------------------+------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -399,9 +367,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.405ns (Maximum Frequency: 227.000MHz)
-   Minimum input arrival time before clock: 3.758ns
-   Maximum output required time after clock: 3.634ns
+   Minimum period: 2.695ns (Maximum Frequency: 371.002MHz)
+   Minimum input arrival time before clock: 3.643ns
+   Maximum output required time after clock: 4.026ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -409,53 +377,96 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.405ns (frequency: 227.000MHz)
-  Total number of paths / destination ports: 2080 / 135
+Timing constraint: Default period analysis for Clock 'state[7]_PWR_2_o_Select_52_o'
+  Clock period: 2.060ns (frequency: 485.413MHz)
+  Total number of paths / destination ports: 16 / 4
 -------------------------------------------------------------------------
-Delay:               4.405ns (Levels of Logic = 2)
-  Source:            button1_count_30 (FF)
-  Destination:       button1_count_0 (FF)
+Delay:               2.060ns (Levels of Logic = 1)
+  Source:            state_2 (LATCH)
+  Destination:       state_3 (LATCH)
+  Source Clock:      state[7]_PWR_2_o_Select_52_o falling
+  Destination Clock: state[7]_PWR_2_o_Select_52_o falling
+
+  Data Path: state_2 to state_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              14   0.498   1.322  state_2 (state_2)
+     LUT6:I0->O            1   0.203   0.000  Mmux__n02791 (_n0279<5>)
+     LD:D                      0.037          state_3
+    ----------------------------------------
+    Total                      2.060ns (0.738ns logic, 1.322ns route)
+                                       (35.8% logic, 64.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.695ns (frequency: 371.002MHz)
+  Total number of paths / destination ports: 193 / 19
+-------------------------------------------------------------------------
+Delay:               2.695ns (Levels of Logic = 2)
+  Source:            anodes_0 (FF)
+  Destination:       anodes_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: button1_count_30 to button1_count_0
+  Data Path: anodes_0 to anodes_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             3   0.447   1.015  button1_count_30 (button1_count_30)
-     LUT6:I0->O            1   0.203   0.924  button_click<31>15_SW0 (N27)
-     LUT6:I1->O           32   0.203   1.291  button_done_inv (button_done_inv)
-     FDRE:CE                   0.322          button1_count_0
+     FDR:C->Q              4   0.447   0.931  anodes_0 (anodes_0)
+     LUT4:I0->O            1   0.203   0.808  anode_clk<15>3_SW0 (N7)
+     LUT6:I3->O            1   0.205   0.000  anodes_0_rstpot (anodes_0_rstpot)
+     FDR:D                     0.102          anodes_0
     ----------------------------------------
-    Total                      4.405ns (1.175ns logic, 3.230ns route)
-                                       (26.7% logic, 73.3% route)
+    Total                      2.695ns (0.957ns logic, 1.738ns route)
+                                       (35.5% logic, 64.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'state[7]_PWR_2_o_Select_52_o'
+  Total number of paths / destination ports: 15 / 4
+-------------------------------------------------------------------------
+Offset:              3.334ns (Levels of Logic = 3)
+  Source:            sw2 (PAD)
+  Destination:       state_1 (LATCH)
+  Destination Clock: state[7]_PWR_2_o_Select_52_o falling
+
+  Data Path: sw2 to state_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.912  sw2_IBUF (sw2_IBUF)
+     LUT3:I0->O            3   0.205   0.755  reset_inv_mmx_out1 (reset_inv_mmx_out)
+     LUT5:I3->O            1   0.203   0.000  Mmux__n027931 (_n0279<7>)
+     LD:D                      0.037          state_1
+    ----------------------------------------
+    Total                      3.334ns (1.667ns logic, 1.667ns route)
+                                       (50.0% logic, 50.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 28 / 28
+  Total number of paths / destination ports: 19 / 19
 -------------------------------------------------------------------------
-Offset:              3.758ns (Levels of Logic = 2)
+Offset:              3.643ns (Levels of Logic = 2)
   Source:            reset (PAD)
-  Destination:       anodes_0 (FF)
+  Destination:       counter_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: reset to anodes_0
+  Data Path: reset to counter_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             9   1.222   0.829  reset_IBUF (reset_IBUF)
+     IBUF:I->O             5   1.222   0.714  reset_IBUF (reset_IBUF)
      INV:I->O             19   0.206   1.071  reset_inv1_INV_0 (reset_inv)
-     FDRE:R                    0.430          anodes_0
+     FDR:R                     0.430          counter_0
     ----------------------------------------
-    Total                      3.758ns (1.858ns logic, 1.900ns route)
-                                       (49.4% logic, 50.6% route)
+    Total                      3.643ns (1.858ns logic, 1.785ns route)
+                                       (51.0% logic, 49.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 11 / 11
+  Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              3.634ns (Levels of Logic = 1)
+Offset:              3.701ns (Levels of Logic = 1)
   Source:            anodes_2 (FF)
   Destination:       anodes<2> (PAD)
   Source Clock:      clk rising
@@ -464,37 +475,91 @@ Offset:              3.634ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDSE:C->Q             2   0.447   0.616  anodes_2 (anodes_2)
+     FDS:C->Q              4   0.447   0.683  anodes_2 (anodes_2)
      OBUF:I->O                 2.571          anodes_2_OBUF (anodes<2>)
     ----------------------------------------
-    Total                      3.634ns (3.018ns logic, 0.616ns route)
-                                       (83.0% logic, 17.0% route)
+    Total                      3.701ns (3.018ns logic, 0.683ns route)
+                                       (81.6% logic, 18.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock '_n0282'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            cathodes_6 (LATCH)
+  Destination:       cathodes<6> (PAD)
+  Source Clock:      _n0282 falling
+
+  Data Path: cathodes_6 to cathodes<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  cathodes_6 (cathodes_6)
+     OBUF:I->O                 2.571          cathodes_6_OBUF (cathodes<6>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'state[7]_PWR_2_o_Select_52_o'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.026ns (Levels of Logic = 1)
+  Source:            state_3 (LATCH)
+  Destination:       outleds<3> (PAD)
+  Source Clock:      state[7]_PWR_2_o_Select_52_o falling
+
+  Data Path: state_3 to outleds<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              14   0.498   0.957  state_3 (state_3)
+     OBUF:I->O                 2.571          outleds_3_OBUF (outleds<3>)
+    ----------------------------------------
+    Total                      4.026ns (3.069ns logic, 0.957ns route)
+                                       (76.2% logic, 23.8% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock _n0282
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+state[7]_PWR_2_o_Select_52_o|         |         |    1.943|         |
+----------------------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.405|         |         |         |
+clk            |    2.695|         |         |         |
 ---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock state[7]_PWR_2_o_Select_52_o
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+state[7]_PWR_2_o_Select_52_o|         |         |    2.060|         |
+----------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 12.93 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 11.92 secs
  
 --> 
 
 
-Total memory usage is 395068 kilobytes
+Total memory usage is 395036 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   92 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   67 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

@@ -37,36 +37,22 @@ always @(posedge clk)
 
 reg [3:0] cathod_S;
 
-/*
+
 always @(cathod_S or answer)
        case({anodes})
-	      //3'b011:  cathod_S = answer[11:8]; 
-	      //3'b101:  cathod_S = answer[7:4]; 
+	      3'b011:  cathod_S = state[11:8]; 
+	      3'b101:  cathod_S = state[7:4]; 
 	      3'b110:  cathod_S = state[3:0]; 
 	      default:  cathod_S = 4'h0; 
       endcase
-*/	
-				
-always @(answer)
+	
+	
+always @(answer or cathod_S)
 	case(state)
-		0:
-			if (sw1 && sw2)	state <= 1;
-			else if (!sw1 && sw2)	state <= 3;
-			else			state <= 0;
-		1:
-			if (sw1 && sw2)	state <= 2;
-			else if (!sw1 && sw2)	state <= 3;
-			else			state <= 0;
-		2:
-			if (!reset)		state <= 0;
-			else if (sw1 && sw2)	state <= 7;
-			else if (!sw1 && sw2)	state <= 3;
-			else			state <= 0;
-		3:
-			if (!reset)		state <= 0;
-			else if (!sw1 && sw2)	state <= 4;
-			else if (sw1 && sw2)	state <= 1;
-			else			state <= 0;
+		0:	state <= 1;
+		1:	state <= 2;
+		2:	state <= 3;
+		3: state <= 4;
 		4:
 			if (!reset)		state <= 0;
 			else if (!sw1 && sw2)	state <= state;
@@ -90,20 +76,23 @@ always @(answer)
 			if (!reset)		state <= 0;
 			else			state <= state;
 	endcase
+	
+always @(answer)
+	outleds <= state;
 
 //wire dp = 1; //!(anodes == 4'b1011); 
 
 always @(answer)
-		case(state)
-	       0:  cathodes = {8'b11000000};
-			 1:  cathodes = {8'b11111001};
-			 2:  cathodes = {8'b10100100};
-			 3:  cathodes = {8'b10110000};
-			 4:  cathodes = {8'b10011001};
-			 5:  cathodes = {8'b10010010};
-			 6:  cathodes = {8'b10000010};
-			 7:  cathodes = {8'b11111000};
-			 8:  cathodes = {8'b10000000};
+		case(cathod_S)
+	       4'h0:  cathodes = {8'b11000000};
+			 4'h1:  cathodes = {8'b11111001};
+			 4'h2:  cathodes = {8'b10100100};
+			 4'h3:  cathodes = {8'b10110000};
+			 4'h4:  cathodes = {8'b10011001};
+			 4'h5:  cathodes = {8'b10010010};
+			 4'h6:  cathodes = {8'b10000010};
+			 4'h7:  cathodes = {8'b11111000};
+			 4'h8:  cathodes = {8'b10000000};
 			 //4'h9:  cathodes = {8'b10011000};
 			 //4'ha:  cathodes = {8'b10001000};
 			 //4'hb:  cathodes = {8'b10000011};

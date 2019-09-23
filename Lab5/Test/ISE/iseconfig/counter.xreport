@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-09-19T18:54:18</DateModified>
+  <DateModified>2019-09-23T16:09:25</DateModified>
   <ModuleName>counter</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/troy/Embedded/Lab5/Test/ISE/iseconfig/counter.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/troy/Embedded/Lab5/Test/ISE</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/troy/Embedded/Lab5/Test/ISE/</ImplementationReportsDirectory>
   <DateInitialized>2019-09-19T18:54:17</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

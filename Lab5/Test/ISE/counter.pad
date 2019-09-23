@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Fri Sep 20 13:14:01 2019
+Mon Sep 23 16:33:30 2019
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -21,8 +21,8 @@ Pinout by Pin Number:
 Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|Drive (mA)|Slew Rate|Termination|IOB Delay|Voltage|Constraint|IO Register|Signal Integrity|
 A1|||GND||||||||||||
 A2|anodes<1>|IOB|IO_L2N_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|NO|NONE|
-A3|cathodes<0>|IOB|IO_L4N_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|NO|NONE|
-A4|cathodes<2>|IOB|IO_L5N_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|NO|NONE|
+A3|cathodes<0>|IOB|IO_L4N_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|YES|NONE|
+A4|cathodes<2>|IOB|IO_L5N_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|YES|NONE|
 A5|cathodes<7>|IOB|IO_L6N_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|NO|NONE|
 A6||IOBS|IO_L8N_VREF_0|UNUSED||0|||||||||
 A7||IOBS|IO_L10N_0|UNUSED||0|||||||||
@@ -40,7 +40,7 @@ A18|||GND||||||||||||
 B1|||VCCAUX||||||||3.3||||
 B2|anodes<0>|IOB|IO_L2P_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|NO|NONE|
 B3|anodes<2>|IOB|IO_L4P_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|NO|NONE|
-B4|cathodes<1>|IOB|IO_L5P_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|NO|NONE|
+B4|cathodes<1>|IOB|IO_L5P_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|YES|NONE|
 B5|||VCCO_0|||0|||||3.30||||
 B6||IOBM|IO_L8P_0|UNUSED||0|||||||||
 B7|||GND||||||||||||
@@ -58,9 +58,9 @@ B18|||TMS||||||||||||
 C1||IOBS|IO_L83N_VREF_3|UNUSED||3|||||||||
 C2||IOBM|IO_L83P_3|UNUSED||3|||||||||
 C3|||GND||||||||||||
-C4|cathodes<3>|IOB|IO_L1N_VREF_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|NO|NONE|
-C5|cathodes<4>|IOB|IO_L6P_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|NO|NONE|
-C6|cathodes<6>|IOB|IO_L3N_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|NO|NONE|
+C4|cathodes<3>|IOB|IO_L1N_VREF_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|YES|NONE|
+C5|cathodes<4>|IOB|IO_L6P_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|YES|NONE|
+C6|cathodes<6>|IOB|IO_L3N_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|YES|NONE|
 C7||IOBM|IO_L10P_0|UNUSED||0|||||||||
 C8||IOBS|IO_L11N_0|UNUSED||0|||||||||
 C9||IOBS|IO_L34N_GCLK18_0|UNUSED||0|||||||||
@@ -78,7 +78,7 @@ D2||IOBM|IO_L52P_M3A8_3|UNUSED||3|||||||||
 D3||IOBS|IO_L54N_M3A11_3|UNUSED||3|||||||||
 D4||IOBM|IO_L1P_HSWAPEN_0|UNUSED||0|||||||||
 D5|||GND||||||||||||
-D6|cathodes<5>|IOB|IO_L3P_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|NO|NONE|
+D6|cathodes<5>|IOB|IO_L3P_0|OUTPUT|LVCMOS33|0|8|FAST||||LOCATED|YES|NONE|
 D7|||VCCO_0|||0|||||3.30||||
 D8||IOBM|IO_L11P_0|UNUSED||0|||||||||
 D9||IOBM|IO_L34P_GCLK19_0|UNUSED||0|||||||||
