@@ -47,37 +47,38 @@ always @(cathod_S or answer)
       endcase
 	
 	
-always @(answer or cathod_S)
-	case(state)
-		0:	state <= 1;
-		1:	state <= 2;
-		2:	state <= 3;
-		3: state <= 4;
-		4:
-			if (!reset)		state <= 0;
-			else if (!sw1 && sw2)	state <= state;
-			else if (sw1 && !sw2)	state <= 5;
-			else if (sw1 && sw2)	state <= 1;
-			else			state <= 0;
-		5:
-			if (!reset)		state <= 0;
-			else if (!sw1 && sw2)	state <= 6;
-			else if (sw1 && sw2)	state <= 1;
-			else			state <= 0;
-		6:
-			if (!reset)		state <= 0;
-			else if (!sw1 && sw2)	state <= 4;
-			else if (sw1 && !sw2)	state <= 8;
-			else if (sw1 && sw2)	state <= 1;
-			else			state <= 0;
-		7:	state <= 0;
-		8:	state <= 0;
-		15:
-			if (!reset)		state <= 0;
-			else			state <= state;
-	endcase
+always @(posedge clk)
+	if (button_click)
+		case(state)
+			0:	state <= 1;
+			1:	state <= 2;
+			2:	state <= 3;
+			3: state <= 4;
+			4:
+				if (!reset)		state <= 0;
+				else if (!sw1 && sw2)	state <= state;
+				else if (sw1 && !sw2)	state <= 5;
+				else if (sw1 && sw2)	state <= 1;
+				else			state <= 0;
+			5:
+				if (!reset)		state <= 0;
+				else if (!sw1 && sw2)	state <= 6;
+				else if (sw1 && sw2)	state <= 1;
+				else			state <= 0;
+			6:
+				if (!reset)		state <= 0;
+				else if (!sw1 && sw2)	state <= 4;
+				else if (sw1 && !sw2)	state <= 8;
+				else if (sw1 && sw2)	state <= 1;
+				else			state <= 0;
+			7:	state <= 0;
+			8:	state <= 0;
+			15:
+				if (!reset)		state <= 0;
+				else			state <= state;
+		endcase
 	
-always @(answer)
+always @(posedge clk)
 	outleds <= state[7:0];
 
 //wire dp = 1; //!(anodes == 4'b1011); 
