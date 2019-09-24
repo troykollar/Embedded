@@ -1,16 +1,16 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Sep 23 16:33:52 2019
+Mon Sep 23 20:05:31 2019
 
 drc -z counter.ncd counter.pcf
 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net _n0282 is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   state[7]_PWR_2_o_Select_52_o is sourced by a combinatorial pin. This is not
+   state[11]_PWR_2_o_Select_52_o is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net _n0193<0> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 DRC detected 0 errors and 2 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
