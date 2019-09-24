@@ -1,0 +1,33 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Sep 23 21:45:46 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "cathodes<0>" LOCATE = SITE "A3" LEVEL 1;
+COMP "anodes<0>" LOCATE = SITE "B2" LEVEL 1;
+COMP "cathodes<1>" LOCATE = SITE "B4" LEVEL 1;
+COMP "anodes<1>" LOCATE = SITE "A2" LEVEL 1;
+COMP "cathodes<2>" LOCATE = SITE "A4" LEVEL 1;
+COMP "anodes<2>" LOCATE = SITE "B3" LEVEL 1;
+COMP "cathodes<3>" LOCATE = SITE "C4" LEVEL 1;
+COMP "sw1" LOCATE = SITE "F17" LEVEL 1;
+COMP "sw2" LOCATE = SITE "F18" LEVEL 1;
+COMP "cathodes<4>" LOCATE = SITE "C5" LEVEL 1;
+COMP "cathodes<5>" LOCATE = SITE "D6" LEVEL 1;
+COMP "cathodes<6>" LOCATE = SITE "C6" LEVEL 1;
+COMP "cathodes<7>" LOCATE = SITE "A5" LEVEL 1;
+COMP "outleds<0>" LOCATE = SITE "T18" LEVEL 1;
+COMP "outleds<1>" LOCATE = SITE "T17" LEVEL 1;
+COMP "Switch4" LOCATE = SITE "L18" LEVEL 1;
+COMP "outleds<2>" LOCATE = SITE "U18" LEVEL 1;
+COMP "outleds<3>" LOCATE = SITE "U17" LEVEL 1;
+COMP "outleds<4>" LOCATE = SITE "N16" LEVEL 1;
+COMP "outleds<5>" LOCATE = SITE "N15" LEVEL 1;
+COMP "outleds<6>" LOCATE = SITE "P16" LEVEL 1;
+COMP "outleds<7>" LOCATE = SITE "P15" LEVEL 1;
+COMP "reset" LOCATE = SITE "K18" LEVEL 1;
+NET "clk_BUFGP/IBUFG" PERIOD = 10 ns HIGH 50%;
+SCHEMATIC END;
+
