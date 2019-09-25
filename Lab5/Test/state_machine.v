@@ -47,35 +47,18 @@ always @(cathod_S or answer)
       endcase
 	
 	
-always @(posedge button_click)
-	case(state)
-		0:	state <= 1;
-		1:	state <= 2;
-		2:	state <= 3;
-		3: state <= 4;
-		4:
-			if (!reset)		state <= 0;
-			else if (!sw1 && sw2)	state <= state;
-			else if (sw1 && !sw2)	state <= 5;
-			else if (sw1 && sw2)	state <= 1;
-			else			state <= 0;
-		5:
-			if (!reset)		state <= 0;
-			else if (!sw1 && sw2)	state <= 6;
-			else if (sw1 && sw2)	state <= 1;
-			else			state <= 0;
-		6:
-			if (!reset)		state <= 0;
-			else if (!sw1 && sw2)	state <= 4;
-			else if (sw1 && !sw2)	state <= 8;
-			else if (sw1 && sw2)	state <= 1;
-			else			state <= 0;
-		7:	state <= 0;
-		8:	state <= 0;
-		15:
-			if (!reset)		state <= 0;
-			else			state <= state;
-	endcase
+always @(button_click or reset)
+	if (!reset)	state <= 0;
+	else
+		case(state)
+			0:
+				if (sw1 && sw2) state <= 1;
+				else					state <= 0;
+			1:	if (sw1 && sw2) state <= 2;
+				else					state <= 0;
+			2:	if (sw1 && sw2)	state <= 3;
+				else 					state <= 0;
+		endcase
 	
 always @(posedge clk)
 	outleds <= state[7:0];

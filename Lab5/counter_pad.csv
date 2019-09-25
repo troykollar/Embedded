@@ -1,7 +1,7 @@
 #Release 14.7 - par P.20131013 (lin64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Mon Sep 23 21:46:00 2019
+#Tue Sep 24 21:42:34 2019
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -323,8 +323,8 @@ U13,,IOBM,IO_L14P_D11_2,UNUSED,,2,,,,,,,,,
 U14,,,VCCO_2,,,2,,,,,any******,,,,
 U15,,,NC,,,,,,,,,,,,
 U16,,IOBM,IO_L2P_CMPCLK_2,UNUSED,,2,,,,,,,,,
-U17,outleds<3>,IOB,IO_L52P_M1DQ14_1,OUTPUT,LVCMOS33,1,8,FAST,,,,LOCATED,YES,NONE,
-U18,outleds<2>,IOB,IO_L52N_M1DQ15_1,OUTPUT,LVCMOS33,1,8,FAST,,,,LOCATED,YES,NONE,
+U17,outleds<3>,IOB,IO_L52P_M1DQ14_1,OUTPUT,LVCMOS33,1,8,FAST,,,,LOCATED,NO,NONE,
+U18,outleds<2>,IOB,IO_L52N_M1DQ15_1,OUTPUT,LVCMOS33,1,8,FAST,,,,LOCATED,NO,NONE,
 V1,,,GND,,,,,,,,,,,,
 V2,,,PROGRAM_B_2,,,,,,,,,,,,
 V3,,IOBS,IO_L65N_CSO_B_2,UNUSED,,2,,,,,,,,,
