@@ -1,4 +1,4 @@
-module counter(input clk, input Switch4, input reset, input sw1, input sw2, output reg [2:0] anodes, output reg [7:0] cathodes, output reg [7:0] outleds);
+module counter(input clk, input Switch4, input reset, input sw1, input sw2, input sw8, output reg [2:0] anodes, output reg [7:0] cathodes, output reg [7:0] outleds);
 
 reg button1_reg;
 reg button1_sync;
@@ -51,18 +51,44 @@ always @(posedge clk)
 	if (button_click)
 		case(state)
 			0:
-				if (sw1 && sw2) state <= 1;
+				if (!sw1 && !sw2 && sw8) state <= 1;
+				else if (sw1 && sw2 && !sw8)	state <= 4;
 				else					state <= 0;
-			1:	if (sw1 && sw2) state <= 2;
+			1:	if (!sw1 && !sw2) state <= 2;
 				else					state <= 0;
-			2:	if (sw1 && sw2)	state <= 3;
+			2:	if (!sw1 && !sw2)	state <= 3;
 				else 					state <= 0;
+			3: state <= 0;
+			4: if (!sw1 && !sw2 && sw8) state <= 1;
+				else if (sw1 && sw2 && !sw8)	state <= 5;
+				else											state <= 0;
+			5:	if (!sw1 && !sw2 && sw8) state <= 1;
+				else if (sw1 && sw2 && !sw8)	state <= state;
+				else if (sw1 && sw2 && sw8)		state <= 6;
+				else											state <= 0;
+			6:	if (!sw1 && !sw2 && sw8) state <= 1;
+				else if (sw1 && sw2 && !sw8)	state <= 7;
+				else											state <= 0;
+			7:	if (!sw1 && !sw2 && sw8) state <= 1;
+				else if (sw1 && sw2 && sw8)	state <= 8;
+				else										state <= 0;
+			8:	state <= 0;
 		endcase
 	else if (!reset)				state <= 0;
 	else								state <= state;	
 	
 always @(posedge clk)
-	outleds <= state[7:0];
+	case(state)
+		1: outleds <= state[7:0];
+		2: outleds <= state[7:0];
+		4: outleds <= state[7:0];
+		5: outleds <= state[7:0];
+		6: outleds <= state[7:0];
+		7: outleds <= state[7:0];
+		9: outleds <= state[7:0];
+		3:	outleds <= 8'b11111111;
+		8:	outleds <= 8'b11111111;
+	endcase
 
 //wire dp = 1; //!(anodes == 4'b1011); 
 

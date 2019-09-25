@@ -83,7 +83,7 @@ CONFIG VCCAUX = "3.3" ;
 ###################################################################################################################################################
 #                                                 DIP Switches                                                                                    #
 ################################################################################################################################################### 
-    #NET "DPSwitch[0]"                LOC = C17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 8   IO_L29P_A23_M1A13_1        Sch = DP1   
+    NET "sw8"                LOC = C17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 8   IO_L29P_A23_M1A13_1        Sch = DP1   
     #NET "DPSwitch[1]"                LOC = C18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 7   IO_L29N_A22_M1A14_1        Sch = DP2
     #NET "DPSwitch[2]"                LOC = D17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 6   IO_L31P_A19_M1CKE_1        Sch = DP3
     #NET "DPSwitch[3]"                LOC = D18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 5   IO_L31N_A18_M1A12_1        Sch = DP4
