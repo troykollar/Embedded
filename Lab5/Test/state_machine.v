@@ -47,9 +47,8 @@ always @(cathod_S or answer)
       endcase
 	
 	
-always @(button_click or reset)
-	if (!reset)	state <= 0;
-	else
+always @(posedge clk)
+	if (button_click)
 		case(state)
 			0:
 				if (sw1 && sw2) state <= 1;
@@ -59,6 +58,8 @@ always @(button_click or reset)
 			2:	if (sw1 && sw2)	state <= 3;
 				else 					state <= 0;
 		endcase
+	else if (!reset)				state <= 0;
+	else								state <= state;	
 	
 always @(posedge clk)
 	outleds <= state[7:0];

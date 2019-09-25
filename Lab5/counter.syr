@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Reading design: counter.prj
@@ -121,11 +121,7 @@ WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 42
 WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 43: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 44: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 45: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 53: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 55: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 57: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 59: Signal <sw1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 69: Signal <cathod_S> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 70: Signal <cathod_S> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -134,24 +130,29 @@ WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab5/Test/state_machine.v" Line 69
 Synthesizing Unit <counter>.
     Related source file is "/home/troy/Embedded/Lab5/Test/state_machine.v".
         DEBOUNCE_DELAY1 = 32'b00000000000001111010000100100000
-WARNING:Xst:647 - Input <Switch4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <button1_sync>.
+    Found 32-bit register for signal <button1_count>.
     Found 40-bit register for signal <counter>.
     Found 3-bit register for signal <anodes>.
+    Found 12-bit register for signal <state>.
     Found 8-bit register for signal <outleds>.
+    Found 1-bit register for signal <button1_reg>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | _n0094 (positive)                              |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000000000000                                   |
+    | Power Up State     | 000000000000                                   |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <button1_count[31]_GND_1_o_add_5_OUT> created at line 19.
     Found 40-bit adder for signal <counter[39]_GND_1_o_add_15_OUT> created at line 29.
-    Found 12-bit 3-to-1 multiplexer for signal <_n0089> created at line 53.
-WARNING:Xst:737 - Found 1-bit latch for signal <state<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <state<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <state<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <state<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <state<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <state<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <state<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <state<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <state<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cathodes<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cathodes<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cathodes<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -161,26 +162,31 @@ WARNING:Xst:737 - Found 1-bit latch for signal <cathodes<2>>. Latches may be gen
 WARNING:Xst:737 - Found 1-bit latch for signal <cathodes<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cathodes<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  51 D-type flip-flop(s).
-	inferred  20 Latch(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  85 D-type flip-flop(s).
+	inferred   8 Latch(s).
 	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
 Unit <counter> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
  40-bit adder                                          : 1
-# Registers                                            : 3
+# Registers                                            : 6
+ 1-bit register                                        : 2
  3-bit register                                        : 1
+ 32-bit register                                       : 1
  40-bit register                                       : 1
  8-bit register                                        : 1
-# Latches                                              : 20
- 1-bit latch                                           : 20
+# Latches                                              : 8
+ 1-bit latch                                           : 8
 # Multiplexers                                         : 1
- 12-bit 3-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
 
 =========================================================================
 
@@ -189,44 +195,49 @@ Macro Statistics
 =========================================================================
 
 WARNING:Xst:1710 - FF/Latch <cathodes_7> (without init value) has a constant value of 1 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-
-Synthesizing (advanced) Unit <counter>.
-The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
-Unit <counter> synthesized (advanced).
-
-=========================================================================
-Advanced HDL Synthesis Report
-
-Macro Statistics
-# Counters                                             : 1
- 40-bit up counter                                     : 1
-# Registers                                            : 11
- Flip-Flops                                            : 11
-
-=========================================================================
-
-=========================================================================
-*                         Low Level Synthesis                           *
-=========================================================================
-WARNING:Xst:1710 - FF/Latch <cathodes_1> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cathodes_7> (without init value) has a constant value of 1 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_3> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_4> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_2> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_6> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_7> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_5> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_9> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_10> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_8> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <state_11> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outleds_2> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outleds_3> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outleds_4> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outleds_5> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outleds_6> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <outleds_7> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <cathodes_3> in Unit <counter> is equivalent to the following FF/Latch, which will be removed : <cathodes_0> 
+WARNING:Xst:2404 -  FFs/Latches <outleds<7:2>> (without init value) have a constant value of 0 in block <counter>.
+
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <button1_count>: 1 register on signal <button1_count>.
+Unit <counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 32-bit up counter                                     : 1
+ 40-bit up counter                                     : 1
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+# Multiplexers                                         : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <cathodes_7> (without init value) has a constant value of 1 in block <counter>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with sequential encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ 000000000000 | 00
+ 000000000001 | 01
+ 000000000010 | 10
+ 000000000011 | 11
+--------------------------
+WARNING:Xst:1710 - FF/Latch <cathodes_1> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <counter_16> of sequential type is unconnected in block <counter>.
 WARNING:Xst:2677 - Node <counter_17> of sequential type is unconnected in block <counter>.
 WARNING:Xst:2677 - Node <counter_18> of sequential type is unconnected in block <counter>.
@@ -251,17 +262,18 @@ WARNING:Xst:2677 - Node <counter_36> of sequential type is unconnected in block 
 WARNING:Xst:2677 - Node <counter_37> of sequential type is unconnected in block <counter>.
 WARNING:Xst:2677 - Node <counter_38> of sequential type is unconnected in block <counter>.
 WARNING:Xst:2677 - Node <counter_39> of sequential type is unconnected in block <counter>.
+INFO:Xst:2261 - The FF/Latch <cathodes_3> in Unit <counter> is equivalent to the following FF/Latch, which will be removed : <cathodes_0> 
 
 Optimizing unit <counter> ...
-WARNING:Xst:1294 - Latch <cathodes_4> is equivalent to a wire in block <counter>.
 WARNING:Xst:1294 - Latch <cathodes_6> is equivalent to a wire in block <counter>.
 WARNING:Xst:1294 - Latch <cathodes_5> is equivalent to a wire in block <counter>.
+WARNING:Xst:1294 - Latch <cathodes_4> is equivalent to a wire in block <counter>.
 WARNING:Xst:1294 - Latch <cathodes_3> is equivalent to a wire in block <counter>.
 WARNING:Xst:1294 - Latch <cathodes_2> is equivalent to a wire in block <counter>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block counter, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block counter, actual ratio is 1.
 
 Final Macro Processing ...
 
@@ -269,8 +281,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 21
- Flip-Flops                                            : 21
+# Registers                                            : 57
+ Flip-Flops                                            : 57
 
 =========================================================================
 
@@ -293,26 +305,26 @@ Top Level Output File Name         : counter.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 66
+# BELS                             : 167
 #      GND                         : 1
-#      INV                         : 2
-#      LUT1                        : 15
-#      LUT2                        : 1
-#      LUT4                        : 7
+#      INV                         : 5
+#      LUT1                        : 46
+#      LUT2                        : 2
+#      LUT4                        : 2
 #      LUT5                        : 3
-#      LUT6                        : 5
-#      MUXCY                       : 15
+#      LUT6                        : 13
+#      MUXCY                       : 46
 #      VCC                         : 1
-#      XORCY                       : 16
-# FlipFlops/Latches                : 23
-#      FD                          : 2
-#      FDR                         : 17
-#      FDS                         : 2
-#      LDC                         : 2
+#      XORCY                       : 48
+# FlipFlops/Latches                : 57
+#      FD                          : 6
+#      FDR                         : 16
+#      FDRE                        : 33
+#      FDSE                        : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 22
-#      IBUF                        : 3
+# IO Buffers                       : 23
+#      IBUF                        : 4
 #      OBUF                        : 19
 
 Device utilization summary:
@@ -322,21 +334,20 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              21  out of  11440     0%  
- Number of Slice LUTs:                   33  out of   5720     0%  
-    Number used as Logic:                33  out of   5720     0%  
+ Number of Slice Registers:              57  out of  11440     0%  
+ Number of Slice LUTs:                   71  out of   5720     1%  
+    Number used as Logic:                71  out of   5720     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     33
-   Number with an unused Flip Flop:      12  out of     33    36%  
-   Number with an unused LUT:             0  out of     33     0%  
-   Number of fully used LUT-FF pairs:    21  out of     33    63%  
-   Number of unique control sets:         3
+ Number of LUT Flip Flop pairs used:     75
+   Number with an unused Flip Flop:      18  out of     75    24%  
+   Number with an unused LUT:             4  out of     75     5%  
+   Number of fully used LUT-FF pairs:    53  out of     75    70%  
+   Number of unique control sets:         4
 
 IO Utilization: 
  Number of IOs:                          24
- Number of bonded IOBs:                  23  out of    200    11%  
-    IOB Flip Flops/Latches:               2
+ Number of bonded IOBs:                  24  out of    200    12%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -362,13 +373,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-_n0080(out1:O)                     | NONE(*)(state_1)       | 2     |
-clk                                | BUFGP                  | 21    |
+clk                                | BUFGP                  | 57    |
 -----------------------------------+------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -378,9 +384,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.699ns (Maximum Frequency: 370.563MHz)
-   Minimum input arrival time before clock: 3.550ns
-   Maximum output required time after clock: 5.011ns
+   Minimum period: 4.405ns (Maximum Frequency: 227.000MHz)
+   Minimum input arrival time before clock: 3.579ns
+   Maximum output required time after clock: 4.955ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -388,95 +394,53 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock '_n0080'
-  Clock period: 1.645ns (frequency: 608.069MHz)
-  Total number of paths / destination ports: 4 / 2
--------------------------------------------------------------------------
-Delay:               1.645ns (Levels of Logic = 1)
-  Source:            state_0 (LATCH)
-  Destination:       state_1 (LATCH)
-  Source Clock:      _n0080 falling
-  Destination Clock: _n0080 falling
-
-  Data Path: state_0 to state_1
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q              8   0.498   0.907  state_0 (state_0)
-     LUT4:I2->O            1   0.203   0.000  Mmux__n008921 (_n0089<12>)
-     LDC:D                     0.037          state_0
-    ----------------------------------------
-    Total                      1.645ns (0.738ns logic, 0.907ns route)
-                                       (44.9% logic, 55.1% route)
-
-=========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 2.699ns (frequency: 370.562MHz)
-  Total number of paths / destination ports: 193 / 19
+  Clock period: 4.405ns (frequency: 227.000MHz)
+  Total number of paths / destination ports: 1842 / 123
 -------------------------------------------------------------------------
-Delay:               2.699ns (Levels of Logic = 2)
-  Source:            anodes_1 (FF)
-  Destination:       anodes_0 (FF)
+Delay:               4.405ns (Levels of Logic = 2)
+  Source:            button1_count_4 (FF)
+  Destination:       button1_count_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: anodes_1 to anodes_0
+  Data Path: button1_count_4 to button1_count_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q              9   0.447   0.934  anodes_1 (anodes_1)
-     LUT4:I2->O            1   0.203   0.808  anode_clk<15>3_SW0 (N3)
-     LUT6:I3->O            1   0.205   0.000  anodes_0_rstpot (anodes_0_rstpot)
-     FDR:D                     0.102          anodes_0
+     FDRE:C->Q             3   0.447   1.015  button1_count_4 (button1_count_4)
+     LUT6:I0->O            1   0.203   0.924  button_click<31>15_SW1 (N12)
+     LUT6:I1->O           32   0.203   1.291  button_done_inv (button_done_inv)
+     FDRE:CE                   0.322          button1_count_0
     ----------------------------------------
-    Total                      2.699ns (0.957ns logic, 1.742ns route)
-                                       (35.5% logic, 64.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock '_n0080'
-  Total number of paths / destination ports: 6 / 4
--------------------------------------------------------------------------
-Offset:              3.550ns (Levels of Logic = 2)
-  Source:            reset (PAD)
-  Destination:       state_1 (LATCH)
-  Destination Clock: _n0080 falling
-
-  Data Path: reset to state_1
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  reset_IBUF (reset_IBUF)
-     INV:I->O             21   0.206   1.113  reset_inv1_INV_0 (reset_inv)
-     LDC:CLR                   0.430          state_0
-    ----------------------------------------
-    Total                      3.550ns (1.858ns logic, 1.691ns route)
-                                       (52.3% logic, 47.7% route)
+    Total                      4.405ns (1.175ns logic, 3.230ns route)
+                                       (26.7% logic, 73.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 19 / 19
+  Total number of paths / destination ports: 26 / 22
 -------------------------------------------------------------------------
-Offset:              3.550ns (Levels of Logic = 2)
+Offset:              3.579ns (Levels of Logic = 2)
   Source:            reset (PAD)
-  Destination:       counter_0 (FF)
+  Destination:       anodes_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: reset to counter_0
+  Data Path: reset to anodes_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  reset_IBUF (reset_IBUF)
-     INV:I->O             21   0.206   1.113  reset_inv1_INV_0 (reset_inv)
-     FDR:R                     0.430          counter_0
+     IBUF:I->O             3   1.222   0.650  reset_IBUF (reset_IBUF)
+     INV:I->O             19   0.206   1.071  reset_inv1_INV_0 (reset_inv)
+     FDRE:R                    0.430          anodes_0
     ----------------------------------------
-    Total                      3.550ns (1.858ns logic, 1.691ns route)
-                                       (52.3% logic, 47.7% route)
+    Total                      3.579ns (1.858ns logic, 1.721ns route)
+                                       (51.9% logic, 48.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 23 / 11
+  Total number of paths / destination ports: 33 / 11
 -------------------------------------------------------------------------
-Offset:              5.011ns (Levels of Logic = 2)
+Offset:              4.955ns (Levels of Logic = 2)
   Source:            anodes_0 (FF)
   Destination:       cathodes<3> (PAD)
   Source Clock:      clk rising
@@ -485,67 +449,38 @@ Offset:              5.011ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              9   0.447   1.174  anodes_0 (anodes_0)
-     LUT5:I0->O            2   0.203   0.616  _n0194<3>1 (cathodes_0_OBUF)
+     FDRE:C->Q             7   0.447   1.118  anodes_0 (anodes_0)
+     LUT5:I0->O            2   0.203   0.616  _n0192<3>1 (cathodes_0_OBUF)
      OBUF:I->O                 2.571          cathodes_3_OBUF (cathodes<3>)
     ----------------------------------------
-    Total                      5.011ns (3.221ns logic, 1.790ns route)
-                                       (64.3% logic, 35.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock '_n0080'
-  Total number of paths / destination ports: 10 / 6
--------------------------------------------------------------------------
-Offset:              4.997ns (Levels of Logic = 2)
-  Source:            state_0 (LATCH)
-  Destination:       cathodes<2> (PAD)
-  Source Clock:      _n0080 falling
-
-  Data Path: state_0 to cathodes<2>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q              8   0.498   1.147  state_0 (state_0)
-     LUT5:I0->O            1   0.203   0.579  _n0198<3>1 (cathodes_2_OBUF)
-     OBUF:I->O                 2.571          cathodes_2_OBUF (cathodes<2>)
-    ----------------------------------------
-    Total                      4.997ns (3.272ns logic, 1.725ns route)
-                                       (65.5% logic, 34.5% route)
+    Total                      4.955ns (3.221ns logic, 1.734ns route)
+                                       (65.0% logic, 35.0% route)
 
 =========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock _n0080
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-_n0080         |         |         |    1.645|         |
----------------+---------+---------+---------+---------+
-
 Clock to Setup on destination clock clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-_n0080         |         |    1.402|         |         |
-clk            |    2.699|         |         |         |
+clk            |    4.405|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 8.14 secs
+Total CPU time to Xst completion: 8.34 secs
  
 --> 
 
 
-Total memory usage is 395432 kilobytes
+Total memory usage is 395440 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   79 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :   53 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 
