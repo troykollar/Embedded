@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue Sep 24 22:15:39 2019
+Mapped Date    : Tue Sep 24 22:20:31 2019
 
 Design Summary
 --------------
@@ -110,7 +110,7 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:PhysDesignRules:372 - Gated clock. Clock net _n0215<0> is sourced by a
+WARNING:PhysDesignRules:372 - Gated clock. Clock net _n0211<0> is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 

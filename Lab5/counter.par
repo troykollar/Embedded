@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-troy-VirtualBox::  Tue Sep 24 22:15:55 2019
+troy-VirtualBox::  Tue Sep 24 22:20:46 2019
 
 par -w -intstyle ise -ol high -mt off counter_map.ncd counter.ncd counter.pcf 
 
@@ -90,8 +90,8 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 6 secs 
-Finished initial Timing Analysis.  REAL time: 6 secs 
+Starting initial Timing Analysis.  REAL time: 5 secs 
+Finished initial Timing Analysis.  REAL time: 5 secs 
 
 Starting Router
 
@@ -138,7 +138,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |           clk_BUFGP | BUFGMUX_X3Y13| No   |   17 |  0.039     |  1.108      |
 +---------------------+--------------+------+------+------------+-------------+
-|           _n0215<0> |         Local|      |    7 |  0.631     |  1.758      |
+|           _n0211<0> |         Local|      |    7 |  0.631     |  1.758      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing

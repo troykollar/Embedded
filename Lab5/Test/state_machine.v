@@ -79,6 +79,7 @@ always @(posedge clk)
 	
 always @(posedge clk)
 	case(state)
+		0:	outleds <= state[7:0];
 		1: outleds <= state[7:0];
 		2: outleds <= state[7:0];
 		4: outleds <= state[7:0];
