@@ -1,4 +1,4 @@
-module counter(input clk, input Switch4, input Switch5, input reset, output reg [2:0] anodes, output reg [7:0] cathodes, output reg [7:0] outleds);
+module reflex(input clk, input Switch4, input Switch5, input reset, output reg [2:0] anodes, output reg [7:0] cathodes, output reg [7:0] outleds);
 
 reg button1_reg;
 reg button2_reg;
