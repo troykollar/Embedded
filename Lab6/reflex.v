@@ -7,8 +7,12 @@ reg button2_sync;
 reg [31:0]	button1_count;
 reg [31:0]  button2_count;
 reg   [11:0]   answer;   
-parameter DEBOUNCE_DELAY1 = 32'd0_500_000;   /// 10nS * 1M = 10mS
-parameter DEBOUNCE_DELAY2 = 32'd0_500_000;   /// 10nS * 1M = 10mS
+
+parameter DEBOUNCE_DELAY1 = 32'd0_000_050;	//Use for simulation
+parameter DEBOUNCE_DELAY2 = 32'd0_000_050;	//Use for simulation
+//parameter DEBOUNCE_DELAY1 = 32'd0_500_000;   /// 10nS * 1M = 10mS -- Use for
+//synthesis
+//parameter DEBOUNCE_DELAY2 = DEBOUNCE_DELAY_1;   /// 10nS * 1M = 10mS -- Use for syntheis
 
 //Switch4 = ready_switch
 //Switch5 = fire_switch
@@ -19,18 +23,20 @@ always @(posedge clk)   button1_sync  <= !button1_reg;
 always @(posedge clk)   button2_reg   <= Switch5;
 always @(posedge clk)   button2_sync  <= !button2_reg;
 
-assign                  button_done  = (button1_count == DEBOUNCE_DELAY1); 
-assign                  ready_click = (button1_count == DEBOUNCE_DELAY1 - 1); 
+assign                  button_done  = (button1_count == DEBOUNCE_DELAY1);	
+assign                  ready_click = (button1_count == DEBOUNCE_DELAY1 - 1);
 
 assign                  button_done2  = (button2_count == DEBOUNCE_DELAY2); 
 assign                  fire_click = (button2_count == DEBOUNCE_DELAY2 - 1); 
 
-reg [63:0] 	sythesis_delay_multiplier = 64'd1_000_000_000;
-reg [63:0]	simulation_delay_multiplier = 64'd100;
+//reg [63:0] 	delay_multiplier = 64'd1_000_000_000;	//Use for synthesis
+reg [63:0]	delay_multiplier = 64'd10;		//Use for simulation
 
 reg delay_started = 0;
 reg light_fired = 0;
-reg [64:0] delay_status = 0;
+reg [63:0] delay_status = 0;
+reg [63:0] time_delay = 0;
+reg [63:0] reflex_time = 0;	//In number of clock pulses
 
 //Used for debounce button Switch4 logic
 always@(posedge clk)
@@ -48,32 +54,43 @@ always@(posedge clk)
  //Decides what the delay will be. For simulation vs. synthesis purposes will be multiplied by different factors
 reg [2:0] rand_delay_num = 0;
 always @(posedge clk)
-   case(rand_delay_num)
-		3'd0: rand_delay_num <= 1;
-		3'd1: rand_delay_num <= 2;
-		3'd2: rand_delay_num <= 3;
-		3'd3: rand_delay_num <= 4;
-		3'd4: rand_delay_num <= 1;
-	endcase
-	
-//assign	time_delay = rand_delay_num * sythesis_delay_multiplier;	//For synthesis	
-assign	time_delay = rand_delay_num * simulation_delay_multiplier;	//For simulation
-	
+	begin
+   		case(rand_delay_num)
+			3'd0: rand_delay_num <= 1;
+			3'd1: rand_delay_num <= 2;
+			3'd2: rand_delay_num <= 3;
+			3'd3: rand_delay_num <= 4;
+			3'd4: rand_delay_num <= 1;
+		endcase
+end
+
+always @(ready_click)
+	begin
+		time_delay = rand_delay_num * delay_multiplier;
+		light_fired = 0;
+		delay_started = 1;
+	end
+
 always @(posedge clk)
-	if(ready_click) 		delay_started <= 1;
-	else if(light_fired) 	delay_started <= 0;
-	else if(!reset) 		delay_started <= 0;
-	else					delay_started <= delay_started;
+	if (light_fired) 	reflex_time <= reflex_time + 1;
+	else			reflex_time <= 0;	
 		
 always @(posedge clk)
-	if (delay_started)	delay_status <= delay_status + 1
-	else if(delay_status == time_delay)
+begin
+	if (delay_started)	delay_status <= delay_status + 1;
+	else			delay_status <= 0;
+
+	if(delay_status == time_delay)
 		begin
-			delay_status <= 0;
+			delay_started <= 0;
 			light_fired <= 1;
 		end
-	else				delay_status <= delay_status;
-			
+	else		
+		begin
+			delay_started <= delay_started;
+			light_fired <= light_fired;
+		end
+end			
 	
 	
  

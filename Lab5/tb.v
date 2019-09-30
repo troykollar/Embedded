@@ -33,7 +33,7 @@ initial
 
 #5	reset <= 1;
 #5	button <= 1;
-#5	button <= 0;
+#5	button <= 1;
 #5	reset <= 0;
 
 #5	sw1 <= 0;
