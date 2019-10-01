@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/troy/Embedded/Lab6/ISE/reflex.xst" -ofn "/home/troy/Embedded/Lab6/ISE/reflex.syr" 

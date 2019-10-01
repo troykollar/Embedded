@@ -29,8 +29,8 @@ assign                  ready_click = (button1_count == DEBOUNCE_DELAY1 - 1);
 assign                  button_done2  = (button2_count == DEBOUNCE_DELAY2); 
 assign                  fire_click = (button2_count == DEBOUNCE_DELAY2 - 1); 
 
-//reg [63:0] 	delay_multiplier = 64'd1_000_000_000;	//Use for synthesis
-reg [63:0]	delay_multiplier = 64'd10;		//Use for simulation
+reg [63:0] 	delay_multiplier = 64'd1_000_000_000;	//Use for synthesis
+//reg [63:0]	delay_multiplier = 64'd10;		//Use for simulation
 reg [11:0]	time_display;
 
 reg delay_started = 0;

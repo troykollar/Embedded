@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="872" delta="new" >"/home/troy/Embedded/Lab6/reflex.v" Line 32: Using initial value of <arg fmt="%s" index="1">delay_multiplier</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/troy/Embedded/Lab6/reflex.v" Line 27: Assignment to <arg fmt="%s" index="1">ready_click</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/troy/Embedded/Lab6/reflex.v" Line 70: Signal &lt;<arg fmt="%s" index="1">rand_delay_num</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/troy/Embedded/Lab6/reflex.v" Line 96: Assignment to <arg fmt="%s" index="1">time_display</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/troy/Embedded/Lab6/reflex.v" Line 122: Signal &lt;<arg fmt="%s" index="1">anodes</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/troy/Embedded/Lab6/reflex.v" Line 123: Signal &lt;<arg fmt="%s" index="1">reflex_time</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/troy/Embedded/Lab6/reflex.v" Line 124: Signal &lt;<arg fmt="%s" index="1">reflex_time</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/troy/Embedded/Lab6/reflex.v" Line 125: Signal &lt;<arg fmt="%s" index="1">reflex_time</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1401" delta="new" >"/home/troy/Embedded/Lab6/reflex.v" Line 68: Signal <arg fmt="%s" index="1">delay_started</arg> in unit <arg fmt="%s" index="2">reflex</arg> is connected to following multiple drivers:
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1401" delta="new" >"/home/troy/Embedded/Lab6/reflex.v" Line 79: Signal <arg fmt="%s" index="1">time_delay[63]</arg> in unit <arg fmt="%s" index="2">reflex</arg> is connected to following multiple drivers:
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"/home/troy/Embedded/Lab6/reflex.v" Line 1: Empty module &lt;<arg fmt="%s" index="1">reflex</arg>&gt; remains a black box.
+</msg>
+
+</messages>
+
