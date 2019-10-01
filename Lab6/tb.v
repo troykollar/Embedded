@@ -19,6 +19,8 @@ initial
 	sw5 <= 1;
 #100	reset <= 1;
 #100	sw4 <= 0;
+#700	sw4 <= 1;	
+#300	sw5 <= 0;
 
 if ($time % 1000 == 0)	$display("made it to ", $time);
 

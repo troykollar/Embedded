@@ -31,6 +31,7 @@ assign                  fire_click = (button2_count == DEBOUNCE_DELAY2 - 1);
 
 //reg [63:0] 	delay_multiplier = 64'd1_000_000_000;	//Use for synthesis
 reg [63:0]	delay_multiplier = 64'd10;		//Use for simulation
+reg [11:0]	time_display;
 
 reg delay_started = 0;
 reg light_fired = 0;
@@ -91,8 +92,17 @@ begin
 			light_fired <= light_fired;
 		end
 end			
-	
-	
+
+always @(posedge clk)
+begin
+	if (fire_click)
+	begin
+		delay_started <= 0;
+		light_fired <= 0;
+		time_display <= delay_status[11:0];
+	end
+end
+
  
 reg   [39:0]                      counter;
 always @(posedge clk)             
@@ -110,9 +120,9 @@ reg [3:0] cathod_S;
 
 always @(cathod_S or answer)
        case({anodes})
-	      3'b011:  cathod_S = answer[11:8]; 
-	      3'b101:  cathod_S = answer[7:4]; 
-	      3'b110:  cathod_S = answer[3:0]; 
+	      3'b011:  cathod_S = reflex_time[11:8]; 
+	      3'b101:  cathod_S = reflex_time[7:4]; 
+	      3'b110:  cathod_S = reflex_time[3:0]; 
 	      default:  cathod_S = 4'h0; 
       endcase
 
