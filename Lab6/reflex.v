@@ -1,18 +1,18 @@
 module reflex(input clk, input Switch4, input Switch5, input reset, output reg [2:0] anodes, output reg [7:0] cathodes, output reg [7:0] outleds);
 
+//******************Debounce Button Logic***********************************************
 reg button1_reg;
 reg button2_reg;
 reg button1_sync;
 reg button2_sync;
 reg [31:0]	button1_count;
-reg [31:0]  button2_count;
-reg   [11:0]   answer;   
+reg [31:0]  button2_count;  
 
 parameter DEBOUNCE_DELAY1 = 32'd0_000_050;	//Use for simulation
 parameter DEBOUNCE_DELAY2 = 32'd0_000_050;	//Use for simulation
 //parameter DEBOUNCE_DELAY1 = 32'd0_500_000;   /// 10nS * 1M = 10mS -- Use for
 //synthesis
-//parameter DEBOUNCE_DELAY2 = DEBOUNCE_DELAY_1;   /// 10nS * 1M = 10mS -- Use for syntheis
+//parameter DEBOUNCE_DELAY2 = DEBOUNCE_DELAY_1;   /// 10nS * 1M = 10mS -- Use for synthesis
 
 //Switch4 = ready_switch
 //Switch5 = fire_switch
@@ -29,30 +29,24 @@ assign                  ready_click = (button1_count == DEBOUNCE_DELAY1 - 1);
 assign                  button_done2  = (button2_count == DEBOUNCE_DELAY2); 
 assign                  fire_click = (button2_count == DEBOUNCE_DELAY2 - 1); 
 
-reg [63:0] 	delay_multiplier = 64'd1_000_000_000;	//Use for synthesis
-//reg [63:0]	delay_multiplier = 64'd10;		//Use for simulation
-reg [11:0]	time_display;
-
-reg delay_started = 0;
-reg light_fired = 0;
-reg [63:0] delay_status = 0;
-reg [63:0] time_delay = 0;
-reg [63:0] reflex_time = 0;	//In number of clock pulses
-
-//Used for debounce button Switch4 logic
 always@(posedge clk)
 		if(!button1_sync)  button1_count <= 0;
 		else if (button_done) button1_count <= button1_count;
 		else 					button1_count <= button1_count + 1;
-
-//Used for debounce button Switch5 logic
+		
 always@(posedge clk)
 	if(!button2_sync)  		button2_count <= 0;
 	else if (button_done2) 	button2_count <= button2_count;
 	else 					button2_count <= button2_count + 1;
-			
+//***********************End of Debounce Logic*****************************************************
 
- //Decides what the delay will be. For simulation vs. synthesis purposes will be multiplied by different factors
+//********************************Ready click and delay********************************************
+reg [63:0] 	delay_status;
+reg [63:0]	reflex_time;
+reg [63:0]	time_delay;
+reg [16:0]	time_delay_multiplier = 10;	//Change for synthesis
+
+//Decides what the delay will be
 reg [2:0] rand_delay_num = 0;
 always @(posedge clk)
 	begin
@@ -64,6 +58,31 @@ always @(posedge clk)
 			3'd4: rand_delay_num <= 1;
 		endcase
 end
+
+always @(posedge clk)
+	case(state)
+		0:			//Before ready_click
+			begin
+				delay_status <= 0;
+				reflex_time <= 0;
+				if (ready_click)	state <= 1;
+				else				state <= state;
+			end
+		1:			//ready_click occurred, waiting for light after delay
+			begin
+				delay_status <= delay_status + 1;
+				reflex_time <= 0;
+				if (delay_status == time_delay)	state <= 2;
+				else							state <= state;
+			end
+		2:			//Light fired, begin counting delay
+			begin
+				reflex_time <= reflex_time + 1;
+				light_fired <= 1;
+				if (fire_click)					state <= 3;
+				else							state <= state;
+			end
+		3:
 
 always @(ready_click)
 	begin
