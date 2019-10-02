@@ -83,19 +83,19 @@ CONFIG VCCAUX = "3.3" ;
 ###################################################################################################################################################
 #                                                 DIP Switches                                                                                    #
 ################################################################################################################################################### 
-    NET "sw8"                LOC = C17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 8   IO_L29P_A23_M1A13_1        Sch = DP1   
+    #NET "sw8"                LOC = C17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 8   IO_L29P_A23_M1A13_1        Sch = DP1   
     #NET "DPSwitch[1]"                LOC = C18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 7   IO_L29N_A22_M1A14_1        Sch = DP2
     #NET "DPSwitch[2]"                LOC = D17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 6   IO_L31P_A19_M1CKE_1        Sch = DP3
     #NET "DPSwitch[3]"                LOC = D18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 5   IO_L31N_A18_M1A12_1        Sch = DP4
     #NET "DPSwitch[4]"                LOC = E18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 4   IO_L33N_A14_M1A4_1         Sch = DP5
     #NET "DPSwitch[5]"                LOC = E16     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 3   IO_L33P_A15_M1A10_1        Sch = DP6
-    NET "sw2"                LOC = F18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 2   IO_L35N_A10_M1A2_1         Sch = DP7
-    NET "sw1"                LOC = F17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 1   IO_L35P_A11_M1A7_1         Sch = DP8
+    #NET "sw2"                LOC = F18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 2   IO_L35N_A10_M1A2_1         Sch = DP7
+    #NET "sw1"                LOC = F17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 1   IO_L35P_A11_M1A7_1         Sch = DP8
      
 ###################################################################################################################################################
 #                                              Push Buttons Switches                                                                              #
 ################################################################################################################################################### 
-    #NET "Switch5"                  LOC = M18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW1    IO_L47N_LDC_M1DQ1_1         Sch = SW1 
+    NET "Switch5"                  LOC = M18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW1    IO_L47N_LDC_M1DQ1_1         Sch = SW1 
     NET "Switch4"                  LOC = L18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW2    IO_L46N_FOE_B_M1DQ3_1       Sch = SW2
     #NET "Switch[3]"                  LOC = M16     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW3    IO_L47P_FWE_B_M1DQ0_1       Sch = SW3
     #NET "Switch[2]"                  LOC = L17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW4    IO_L46P_FCS_B_M1DQ2_1       Sch = SW4

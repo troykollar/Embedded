@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 Reading design: reflex.prj
@@ -110,36 +110,1021 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file "/home/troy/Embedded/Lab6/reflex.v" into library work
 Parsing module <reflex>.
+WARNING:HDLCompiler:568 - "/home/troy/Embedded/Lab6/reflex.v" Line 46: Constant value is truncated to fit in <16> bits.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
 Elaborating module <reflex>.
-WARNING:HDLCompiler:872 - "/home/troy/Embedded/Lab6/reflex.v" Line 32: Using initial value of delay_multiplier since it is never assigned
-WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Lab6/reflex.v" Line 27: Assignment to ready_click ignored, since the identifier is never used
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 70: Signal <rand_delay_num> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Lab6/reflex.v" Line 96: Assignment to time_display ignored, since the identifier is never used
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 122: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 123: Signal <reflex_time> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 124: Signal <reflex_time> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 125: Signal <reflex_time> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-ERROR:HDLCompiler:1401 - "/home/troy/Embedded/Lab6/reflex.v" Line 68: Signal delay_started in unit reflex is connected to following multiple drivers:
-Driver 0: output signal delay_started of instance Flip-Flop (delay_started).
-Driver 1: output signal delay_started of instance Flip-Flop (_i000034).
-Driver 2: output signal of instance Power (PWR_1_o_BUF_33).
-ERROR:HDLCompiler:1401 - "/home/troy/Embedded/Lab6/reflex.v" Line 79: Signal time_delay[63] in unit reflex is connected to following multiple drivers:
-Driver 0: output signal of instance Ground (GND_1_o_BUF_1).
-Driver 1: output signal time_delay[63] of instance Flip-Flop (light_fired).
-Driver 2: output signal time_delay[63] of instance Flip-Flop (_i000035).
-Module reflex remains a blackbox, due to errors in its contents
-WARNING:HDLCompiler:1499 - "/home/troy/Embedded/Lab6/reflex.v" Line 1: Empty module <reflex> remains a black box.
+WARNING:HDLCompiler:872 - "/home/troy/Embedded/Lab6/reflex.v" Line 46: Using initial value of time_delay_multiplier since it is never assigned
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 93: Result of 64-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 131: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 132: Signal <time_display> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 133: Signal <time_display> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 134: Signal <time_display> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <reflex>.
+    Related source file is "/home/troy/Embedded/Lab6/reflex.v".
+        DEBOUNCE_DELAY1 = 32'b00000000000001111010000100100000
+        DEBOUNCE_DELAY2 = 32'b00000000000001111010001100010100
+    Found 1-bit register for signal <button1_sync>.
+    Found 1-bit register for signal <button2_reg>.
+    Found 1-bit register for signal <button2_sync>.
+    Found 32-bit register for signal <button1_count>.
+    Found 32-bit register for signal <button2_count>.
+    Found 3-bit register for signal <rand_delay_num>.
+    Found 1-bit register for signal <led>.
+    Found 12-bit register for signal <time_display>.
+    Found 64-bit register for signal <reflex_time>.
+    Found 3-bit register for signal <state>.
+    Found 32-bit register for signal <delay_status>.
+    Found 32-bit register for signal <time_delay>.
+    Found 8-bit register for signal <outleds>.
+    Found 40-bit register for signal <counter>.
+    Found 3-bit register for signal <anodes>.
+    Found 1-bit register for signal <button1_reg>.
+    Found finite state machine <FSM_0> for signal <rand_delay_num>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <button1_count[31]_GND_1_o_add_9_OUT> created at line 34.
+    Found 32-bit adder for signal <button2_count[31]_GND_1_o_add_14_OUT> created at line 39.
+    Found 32-bit adder for signal <delay_status[31]_GND_1_o_add_28_OUT> created at line 83.
+    Found 64-bit adder for signal <reflex_time[63]_GND_1_o_add_32_OUT> created at line 92.
+    Found 40-bit adder for signal <counter[39]_GND_1_o_add_53_OUT> created at line 119.
+    Found 3x16-bit multiplier for signal <rand_delay_num[2]_PWR_1_o_MuLt_24_OUT> created at line 76.
+    Found 16x8-bit Read Only RAM for signal <cathodes>
+    Found 32-bit comparator equal for signal <delay_status[31]_time_delay[31]_equal_30_o> created at line 84
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred 260 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   5 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <reflex> synthesized.
+
+Synthesizing Unit <div_64u_17u>.
+    Related source file is "".
+    Found 81-bit adder for signal <GND_3_o_b[16]_add_1_OUT> created at line 0.
+    Found 80-bit adder for signal <GND_3_o_b[16]_add_3_OUT> created at line 0.
+    Found 79-bit adder for signal <GND_3_o_b[16]_add_5_OUT> created at line 0.
+    Found 78-bit adder for signal <GND_3_o_b[16]_add_7_OUT> created at line 0.
+    Found 77-bit adder for signal <GND_3_o_b[16]_add_9_OUT> created at line 0.
+    Found 76-bit adder for signal <GND_3_o_b[16]_add_11_OUT> created at line 0.
+    Found 75-bit adder for signal <GND_3_o_b[16]_add_13_OUT> created at line 0.
+    Found 74-bit adder for signal <GND_3_o_b[16]_add_15_OUT> created at line 0.
+    Found 73-bit adder for signal <GND_3_o_b[16]_add_17_OUT> created at line 0.
+    Found 72-bit adder for signal <GND_3_o_b[16]_add_19_OUT> created at line 0.
+    Found 71-bit adder for signal <GND_3_o_b[16]_add_21_OUT> created at line 0.
+    Found 70-bit adder for signal <GND_3_o_b[16]_add_23_OUT> created at line 0.
+    Found 69-bit adder for signal <GND_3_o_b[16]_add_25_OUT> created at line 0.
+    Found 68-bit adder for signal <GND_3_o_b[16]_add_27_OUT> created at line 0.
+    Found 67-bit adder for signal <GND_3_o_b[16]_add_29_OUT> created at line 0.
+    Found 66-bit adder for signal <GND_3_o_b[16]_add_31_OUT> created at line 0.
+    Found 65-bit adder for signal <GND_3_o_b[16]_add_33_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_b[16]_add_35_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_37_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_39_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_41_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_43_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_45_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_47_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_49_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_51_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_53_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_55_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_57_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_59_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_61_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_63_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_65_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_67_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_69_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_71_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_73_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_75_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_77_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_79_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_81_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_83_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_85_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_87_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_89_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_91_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_93_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_95_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_97_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_99_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_101_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_103_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_105_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_107_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_109_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_111_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_113_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_115_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_117_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_119_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_121_OUT> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_123_OUT[63:0]> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_125_OUT[63:0]> created at line 0.
+    Found 64-bit adder for signal <a[63]_GND_3_o_add_127_OUT[63:0]> created at line 0.
+    Found 81-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 80-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 79-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 78-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 77-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 76-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 75-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 74-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 73-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 72-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 71-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 70-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 69-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 68-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 67-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 66-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 65-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0034> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0035> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0036> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0037> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0038> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0039> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0040> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0041> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0042> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0043> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0044> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0045> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0046> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0047> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0048> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0049> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0050> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0051> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0052> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0053> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0054> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0055> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0056> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0057> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0058> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0059> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0060> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0061> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0062> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0063> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0064> created at line 0
+    Found 64-bit comparator lessequal for signal <BUS_0065> created at line 0
+    Summary:
+	inferred  64 Adder/Subtractor(s).
+	inferred  65 Comparator(s).
+	inferred 3907 Multiplexer(s).
+Unit <div_64u_17u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port Read Only RAM                    : 1
+# Multipliers                                          : 1
+ 16x3-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 69
+ 32-bit adder                                          : 3
+ 40-bit adder                                          : 1
+ 64-bit adder                                          : 48
+ 65-bit adder                                          : 1
+ 66-bit adder                                          : 1
+ 67-bit adder                                          : 1
+ 68-bit adder                                          : 1
+ 69-bit adder                                          : 1
+ 70-bit adder                                          : 1
+ 71-bit adder                                          : 1
+ 72-bit adder                                          : 1
+ 73-bit adder                                          : 1
+ 74-bit adder                                          : 1
+ 75-bit adder                                          : 1
+ 76-bit adder                                          : 1
+ 77-bit adder                                          : 1
+ 78-bit adder                                          : 1
+ 79-bit adder                                          : 1
+ 80-bit adder                                          : 1
+ 81-bit adder                                          : 1
+# Registers                                            : 14
+ 1-bit register                                        : 5
+ 12-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 4
+ 40-bit register                                       : 1
+ 64-bit register                                       : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 66
+ 32-bit comparator equal                               : 1
+ 64-bit comparator lessequal                           : 48
+ 65-bit comparator lessequal                           : 1
+ 66-bit comparator lessequal                           : 1
+ 67-bit comparator lessequal                           : 1
+ 68-bit comparator lessequal                           : 1
+ 69-bit comparator lessequal                           : 1
+ 70-bit comparator lessequal                           : 1
+ 71-bit comparator lessequal                           : 1
+ 72-bit comparator lessequal                           : 1
+ 73-bit comparator lessequal                           : 1
+ 74-bit comparator lessequal                           : 1
+ 75-bit comparator lessequal                           : 1
+ 76-bit comparator lessequal                           : 1
+ 77-bit comparator lessequal                           : 1
+ 78-bit comparator lessequal                           : 1
+ 79-bit comparator lessequal                           : 1
+ 80-bit comparator lessequal                           : 1
+ 81-bit comparator lessequal                           : 1
+# Multiplexers                                         : 3912
+ 1-bit 2-to-1 multiplexer                              : 3904
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+ 64-bit 2-to-1 multiplexer                             : 5
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <time_delay_19> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_20> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_21> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_22> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_23> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_24> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_25> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_26> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_27> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_28> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_29> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_30> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_31> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <reflex>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <button1_count>: 1 register on signal <button1_count>.
+The following registers are absorbed into counter <button2_count>: 1 register on signal <button2_count>.
+	Found pipelined multiplier on signal <rand_delay_num[2]_PWR_1_o_MuLt_24_OUT>:INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_cathodes> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <cathod_S>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <cathodes>      |          |
+    -----------------------------------------------------------------------
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_rand_delay_num[2]_PWR_1_o_MuLt_24_OUT by adding 1 register level(s).
+Unit <reflex> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
+# Multipliers                                          : 1
+ 16x3-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 66
+ 32-bit adder                                          : 1
+ 64-bit adder                                          : 65
+# Counters                                             : 3
+ 32-bit up counter                                     : 2
+ 40-bit up counter                                     : 1
+# Registers                                            : 156
+ Flip-Flops                                            : 156
+# Comparators                                          : 66
+ 32-bit comparator equal                               : 1
+ 64-bit comparator lessequal                           : 48
+ 65-bit comparator lessequal                           : 1
+ 66-bit comparator lessequal                           : 1
+ 67-bit comparator lessequal                           : 1
+ 68-bit comparator lessequal                           : 1
+ 69-bit comparator lessequal                           : 1
+ 70-bit comparator lessequal                           : 1
+ 71-bit comparator lessequal                           : 1
+ 72-bit comparator lessequal                           : 1
+ 73-bit comparator lessequal                           : 1
+ 74-bit comparator lessequal                           : 1
+ 75-bit comparator lessequal                           : 1
+ 76-bit comparator lessequal                           : 1
+ 77-bit comparator lessequal                           : 1
+ 78-bit comparator lessequal                           : 1
+ 79-bit comparator lessequal                           : 1
+ 80-bit comparator lessequal                           : 1
+ 81-bit comparator lessequal                           : 1
+# Multiplexers                                         : 3912
+ 1-bit 2-to-1 multiplexer                              : 3904
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+ 64-bit 2-to-1 multiplexer                             : 5
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <time_delay_19> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_20> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_21> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_22> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_23> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_24> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_25> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_26> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_27> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_28> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_29> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_30> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_31> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <outleds_0> in Unit <reflex> is equivalent to the following 7 FFs/Latches, which will be removed : <outleds_1> <outleds_2> <outleds_3> <outleds_4> <outleds_5> <outleds_6> <outleds_7> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <rand_delay_num[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_1> on signal <state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+WARNING:Xst:1293 - FF/Latch <time_delay_0> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_1> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_2> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_3> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_4> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_5> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_6> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_7> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_8> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <counter_16> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_17> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_18> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_19> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_20> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_21> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_22> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_23> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_24> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_25> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_26> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_27> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_28> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_29> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_30> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_31> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_32> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_33> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_34> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_35> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_36> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_37> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_38> of sequential type is unconnected in block <reflex>.
+WARNING:Xst:2677 - Node <counter_39> of sequential type is unconnected in block <reflex>.
+
+Optimizing unit <reflex> ...
+
+Optimizing unit <div_64u_17u> ...
+WARNING:Xst:1293 - FF/Latch <time_delay_18> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <time_delay_9> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <time_delay_14> 
+INFO:Xst:2261 - The FF/Latch <time_delay_10> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <time_delay_12> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block reflex, actual ratio is 81.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 210
+ Flip-Flops                                            : 210
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : reflex.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 8433
+#      GND                         : 1
+#      INV                         : 64
+#      LUT1                        : 176
+#      LUT2                        : 34
+#      LUT3                        : 1018
+#      LUT4                        : 146
+#      LUT5                        : 2710
+#      LUT6                        : 352
+#      MUXCY                       : 2106
+#      MUXF7                       : 4
+#      VCC                         : 1
+#      XORCY                       : 1821
+# FlipFlops/Latches                : 210
+#      FD                          : 8
+#      FDE                         : 119
+#      FDR                         : 19
+#      FDRE                        : 64
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 3
+#      OBUF                        : 19
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             210  out of  11440     1%  
+ Number of Slice LUTs:                 4500  out of   5720    78%  
+    Number used as Logic:              4500  out of   5720    78%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4516
+   Number with an unused Flip Flop:    4306  out of   4516    95%  
+   Number with an unused LUT:            16  out of   4516     0%  
+   Number of fully used LUT-FF pairs:   194  out of   4516     4%  
+   Number of unique control sets:        13
+
+IO Utilization: 
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of    200    11%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 210   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 179.535ns (Maximum Frequency: 5.570MHz)
+   Minimum input arrival time before clock: 3.635ns
+   Maximum output required time after clock: 6.132ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 179.535ns (frequency: 5.570MHz)
+  Total number of paths / destination ports: 5221966819347284233312065391674112431138967109195993930543258116109767711237432401723392 / 455
+-------------------------------------------------------------------------
+Delay:               179.535ns (Levels of Logic = 362)
+  Source:            reflex_time_63 (FF)
+  Destination:       time_display_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: reflex_time_63 to time_display_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             14   0.447   1.062  reflex_time_63 (reflex_time_63)
+     LUT2:I0->O            5   0.203   0.819  reflex_time[63]_PWR_1_o_div_33/o<47>11 (reflex_time[63]_PWR_1_o_div_33/o<47>1)
+     LUT6:I4->O           47   0.203   1.505  reflex_time[63]_PWR_1_o_div_33/o<47>13 (reflex_time[63]_PWR_1_o_div_33/o<47>)
+     LUT3:I2->O           20   0.205   1.321  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_2652_o1581 (reflex_time[63]_PWR_1_o_div_33/a[62]_a[63]_MUX_2590_o)
+     LUT6:I3->O            1   0.205   0.000  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_2716_o1501_SW0_SW0_G (N789)
+     MUXF7:I1->O           1   0.140   0.684  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_2716_o1501_SW0_SW0 (N535)
+     LUT6:I4->O           10   0.203   0.857  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_2716_o1501 (reflex_time[63]_PWR_1_o_div_33/a[55]_a[63]_MUX_2661_o)
+     LUT6:I5->O           13   0.205   0.933  reflex_time[63]_PWR_1_o_div_33/o<45>22 (reflex_time[63]_PWR_1_o_div_33/o<45>21)
+     LUT6:I5->O           56   0.205   1.588  reflex_time[63]_PWR_1_o_div_33/o<45>23 (reflex_time[63]_PWR_1_o_div_33/o<45>)
+     LUT3:I2->O            2   0.205   0.864  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_2780_o1491 (reflex_time[63]_PWR_1_o_div_33/a[54]_a[63]_MUX_2726_o)
+     LUT6:I2->O           31   0.203   1.278  reflex_time[63]_PWR_1_o_div_33/o<44>23 (reflex_time[63]_PWR_1_o_div_33/o<44>22)
+     LUT6:I5->O           36   0.205   1.349  reflex_time[63]_PWR_1_o_div_33/o<44>24 (reflex_time[63]_PWR_1_o_div_33/o<44>)
+     LUT6:I5->O           12   0.205   1.137  reflex_time[63]_PWR_1_o_div_33/o<43>22 (reflex_time[63]_PWR_1_o_div_33/o<43>21)
+     LUT5:I2->O           56   0.205   1.588  reflex_time[63]_PWR_1_o_div_33/o<43>24 (reflex_time[63]_PWR_1_o_div_33/o<43>)
+     LUT5:I4->O            2   0.205   0.721  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_2908_o1581 (reflex_time[63]_PWR_1_o_div_33/a[62]_a[63]_MUX_2846_o)
+     LUT5:I3->O           37   0.203   1.363  reflex_time[63]_PWR_1_o_div_33/o<42>21 (reflex_time[63]_PWR_1_o_div_33/o<42>2)
+     LUT5:I4->O           29   0.205   1.250  reflex_time[63]_PWR_1_o_div_33/o<42>24 (reflex_time[63]_PWR_1_o_div_33/o<42>)
+     LUT6:I5->O           13   0.205   1.037  reflex_time[63]_PWR_1_o_div_33/o<41>23 (reflex_time[63]_PWR_1_o_div_33/o<41>22)
+     LUT5:I3->O           42   0.203   1.434  reflex_time[63]_PWR_1_o_div_33/o<41>24 (reflex_time[63]_PWR_1_o_div_33/o<41>)
+     LUT3:I2->O            4   0.205   0.912  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3036_o1531 (reflex_time[63]_PWR_1_o_div_33/a[58]_a[63]_MUX_2978_o)
+     LUT5:I2->O           32   0.205   1.292  reflex_time[63]_PWR_1_o_div_33/o<40>31 (reflex_time[63]_PWR_1_o_div_33/o<40>3)
+     LUT6:I5->O           29   0.205   1.250  reflex_time[63]_PWR_1_o_div_33/o<40>35 (reflex_time[63]_PWR_1_o_div_33/o<40>)
+     LUT6:I5->O           28   0.205   1.235  reflex_time[63]_PWR_1_o_div_33/o<39>33 (reflex_time[63]_PWR_1_o_div_33/o<39>32)
+     LUT5:I4->O            4   0.205   0.684  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3164_o1531_SW0 (N559)
+     LUT6:I5->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3164_o1531 (reflex_time[63]_PWR_1_o_div_33/a[58]_a[63]_MUX_3106_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<38>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<38>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<38>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<38>_cy<3>)
+     MUXCY:CI->O          80   0.213   1.746  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<38>_cy<4> (reflex_time[63]_PWR_1_o_div_33/o<38>)
+     LUT5:I4->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3228_o1421 (reflex_time[63]_PWR_1_o_div_33/a[48]_a[63]_MUX_3180_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<37>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<37>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<37>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<37>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<37>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<37>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<37>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<37>_cy<3>)
+     MUXCY:CI->O          70   0.213   1.680  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<37>_cy<4> (reflex_time[63]_PWR_1_o_div_33/o<37>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3292_o1481 (reflex_time[63]_PWR_1_o_div_33/a[53]_a[63]_MUX_3239_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<36>_lut<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<36>_lut<2>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<36>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<36>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<36>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<36>_cy<3>)
+     MUXCY:CI->O          85   0.213   1.779  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<36>_cy<4> (reflex_time[63]_PWR_1_o_div_33/o<36>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3356_o1401 (reflex_time[63]_PWR_1_o_div_33/a[46]_a[63]_MUX_3310_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<35>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<35>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<35>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<35>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<35>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<35>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<35>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<35>_cy<3>)
+     MUXCY:CI->O          78   0.213   1.733  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<35>_cy<4> (reflex_time[63]_PWR_1_o_div_33/o<35>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3420_o1491 (reflex_time[63]_PWR_1_o_div_33/a[54]_a[63]_MUX_3366_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<34>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<34>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<34>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<34>_cy<3>)
+     MUXCY:CI->O          94   0.213   1.838  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<34>_cy<4> (reflex_time[63]_PWR_1_o_div_33/o<34>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3484_o1381 (reflex_time[63]_PWR_1_o_div_33/a[44]_a[63]_MUX_3440_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<33>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<33>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<33>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<33>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<33>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<33>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<33>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<33>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<33>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<33>_cy<4>)
+     MUXCY:CI->O          83   0.213   1.766  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<33>_cy<5> (reflex_time[63]_PWR_1_o_div_33/o<33>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3548_o1471 (reflex_time[63]_PWR_1_o_div_33/a[52]_a[63]_MUX_3496_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<32>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<32>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<32>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<32>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<32>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<32>_cy<4>)
+     MUXCY:CI->O         101   0.213   1.880  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<32>_cy<5> (reflex_time[63]_PWR_1_o_div_33/o<32>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3612_o1361 (reflex_time[63]_PWR_1_o_div_33/a[42]_a[63]_MUX_3570_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<31>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<31>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<31>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<31>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<31>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<31>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<31>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<31>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<31>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<31>_cy<4>)
+     MUXCY:CI->O          89   0.213   1.805  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<31>_cy<5> (reflex_time[63]_PWR_1_o_div_33/o<31>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3676_o1451 (reflex_time[63]_PWR_1_o_div_33/a[50]_a[63]_MUX_3626_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<30>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<30>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<30>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<30>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<30>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<30>_cy<4>)
+     MUXCY:CI->O         110   0.213   1.904  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<30>_cy<5> (reflex_time[63]_PWR_1_o_div_33/o<30>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3740_o1341 (reflex_time[63]_PWR_1_o_div_33/a[40]_a[63]_MUX_3700_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<29>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<29>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<29>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<29>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<29>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<29>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<29>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<29>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<29>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<29>_cy<4>)
+     MUXCY:CI->O          96   0.213   1.851  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<29>_cy<5> (reflex_time[63]_PWR_1_o_div_33/o<29>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3804_o1421 (reflex_time[63]_PWR_1_o_div_33/a[48]_a[63]_MUX_3756_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<28>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<28>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<28>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<28>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<28>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<28>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<28>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<28>_cy<5>)
+     MUXCY:CI->O         117   0.213   1.922  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<28>_cy<6> (reflex_time[63]_PWR_1_o_div_33/o<28>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3868_o1311 (reflex_time[63]_PWR_1_o_div_33/a[38]_a[63]_MUX_3830_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_cy<5>)
+     MUXCY:CI->O         101   0.213   1.880  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<27>_cy<6> (reflex_time[63]_PWR_1_o_div_33/o<27>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3932_o1401 (reflex_time[63]_PWR_1_o_div_33/a[46]_a[63]_MUX_3886_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<26>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<26>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<26>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<26>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<26>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<26>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<26>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<26>_cy<5>)
+     MUXCY:CI->O         125   0.213   1.943  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<26>_cy<6> (reflex_time[63]_PWR_1_o_div_33/o<26>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_3996_o1291 (reflex_time[63]_PWR_1_o_div_33/a[36]_a[63]_MUX_3960_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_cy<5>)
+     MUXCY:CI->O         108   0.213   1.899  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<25>_cy<6> (reflex_time[63]_PWR_1_o_div_33/o<25>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4060_o1381 (reflex_time[63]_PWR_1_o_div_33/a[44]_a[63]_MUX_4016_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<24>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<24>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<24>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<24>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<24>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<24>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<24>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<24>_cy<5>)
+     MUXCY:CI->O         134   0.213   1.967  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<24>_cy<6> (reflex_time[63]_PWR_1_o_div_33/o<24>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4124_o1271 (reflex_time[63]_PWR_1_o_div_33/a[34]_a[63]_MUX_4090_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<6>)
+     MUXCY:CI->O         113   0.213   1.912  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<23>_cy<7> (reflex_time[63]_PWR_1_o_div_33/o<23>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4188_o1361 (reflex_time[63]_PWR_1_o_div_33/a[42]_a[63]_MUX_4146_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<22>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<22>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<22>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<22>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<22>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<22>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<22>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<22>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<22>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<22>_cy<6>)
+     MUXCY:CI->O         141   0.213   1.985  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<22>_cy<7> (reflex_time[63]_PWR_1_o_div_33/o<22>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4252_o1251 (reflex_time[63]_PWR_1_o_div_33/a[32]_a[63]_MUX_4220_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<6>)
+     MUXCY:CI->O         119   0.213   1.928  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<21>_cy<7> (reflex_time[63]_PWR_1_o_div_33/o<21>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4316_o1341 (reflex_time[63]_PWR_1_o_div_33/a[40]_a[63]_MUX_4276_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<20>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<20>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<20>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<20>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<20>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<20>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<20>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<20>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<20>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<20>_cy<6>)
+     MUXCY:CI->O         150   0.213   2.009  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<20>_cy<7> (reflex_time[63]_PWR_1_o_div_33/o<20>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4380_o1231 (reflex_time[63]_PWR_1_o_div_33/a[30]_a[63]_MUX_4350_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<6>)
+     MUXCY:CI->O         126   0.213   1.946  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<19>_cy<7> (reflex_time[63]_PWR_1_o_div_33/o<19>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4444_o1311 (reflex_time[63]_PWR_1_o_div_33/a[38]_a[63]_MUX_4406_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_cy<7>)
+     MUXCY:CI->O         157   0.213   2.015  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<18>_cy<8> (reflex_time[63]_PWR_1_o_div_33/o<18>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4508_o1201 (reflex_time[63]_PWR_1_o_div_33/a[28]_a[63]_MUX_4480_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<7>)
+     MUXCY:CI->O         131   0.213   1.959  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<17>_cy<8> (reflex_time[63]_PWR_1_o_div_33/o<17>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4572_o1291 (reflex_time[63]_PWR_1_o_div_33/a[36]_a[63]_MUX_4536_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_cy<7>)
+     MUXCY:CI->O         165   0.213   2.022  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<16>_cy<8> (reflex_time[63]_PWR_1_o_div_33/o<16>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4636_o1181 (reflex_time[63]_PWR_1_o_div_33/a[26]_a[63]_MUX_4610_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<7>)
+     MUXCY:CI->O         138   0.213   1.977  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<15>_cy<8> (reflex_time[63]_PWR_1_o_div_33/o<15>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4700_o1271 (reflex_time[63]_PWR_1_o_div_33/a[34]_a[63]_MUX_4666_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_cy<7>)
+     MUXCY:CI->O         174   0.213   2.030  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<14>_cy<8> (reflex_time[63]_PWR_1_o_div_33/o<14>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4764_o1161 (reflex_time[63]_PWR_1_o_div_33/a[24]_a[63]_MUX_4740_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<8>)
+     MUXCY:CI->O         143   0.213   1.990  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<13>_cy<9> (reflex_time[63]_PWR_1_o_div_33/o<13>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4828_o1251 (reflex_time[63]_PWR_1_o_div_33/a[32]_a[63]_MUX_4796_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<8>)
+     MUXCY:CI->O         181   0.213   2.037  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<12>_cy<9> (reflex_time[63]_PWR_1_o_div_33/o<12>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4892_o1141 (reflex_time[63]_PWR_1_o_div_33/a[22]_a[63]_MUX_4870_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<8>)
+     MUXCY:CI->O         150   0.258   2.009  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<11>_cy<9> (n0091<11>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_4956_o1231 (reflex_time[63]_PWR_1_o_div_33/a[30]_a[63]_MUX_4926_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<8>)
+     MUXCY:CI->O         191   0.258   2.046  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<10>_cy<9> (n0091<10>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_5020_o1121 (reflex_time[63]_PWR_1_o_div_33/a[20]_a[63]_MUX_5000_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<8>)
+     MUXCY:CI->O         157   0.258   2.015  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<9>_cy<9> (n0091<9>)
+     LUT5:I4->O            5   0.205   1.059  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_5084_o1201 (reflex_time[63]_PWR_1_o_div_33/a[28]_a[63]_MUX_5056_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_lut<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<9> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<9>)
+     MUXCY:CI->O         198   0.258   2.052  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<8>_cy<10> (n0091<8>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_5148_o191 (reflex_time[63]_PWR_1_o_div_33/a[18]_a[63]_MUX_5130_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<9> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<9>)
+     MUXCY:CI->O         162   0.258   2.020  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<7>_cy<10> (n0091<7>)
+     LUT3:I2->O            4   0.205   1.028  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_5212_o181 (reflex_time[63]_PWR_1_o_div_33/a[17]_a[63]_MUX_5195_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<9> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<9>)
+     MUXCY:CI->O         207   0.258   2.056  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<6>_cy<10> (n0091<6>)
+     LUT3:I2->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_5276_o171 (reflex_time[63]_PWR_1_o_div_33/a[16]_a[63]_MUX_5260_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<9> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<9>)
+     MUXCY:CI->O         169   0.258   2.026  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<5>_cy<10> (n0091<5>)
+     LUT3:I2->O            4   0.205   1.028  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_5340_o161 (reflex_time[63]_PWR_1_o_div_33/a[15]_a[63]_MUX_5325_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<9> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<9>)
+     MUXCY:CI->O         215   0.258   2.058  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<4>_cy<10> (n0091<4>)
+     LUT3:I2->O            4   0.205   1.028  reflex_time[63]_PWR_1_o_div_33/Mmux_a[0]_a[63]_MUX_5404_o155 (reflex_time[63]_PWR_1_o_div_33/a[14]_a[63]_MUX_5390_o)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_lut<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<9> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<10> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<10>)
+     MUXCY:CI->O         219   0.258   2.059  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<3>_cy<11> (n0091<3>)
+     LUT5:I4->O            3   0.205   0.995  reflex_time[63]_PWR_1_o_div_33/Mmux_n939734 (reflex_time[63]_PWR_1_o_div_33/n9397<11>)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_lut<0> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<0> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<9> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<10> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<10>)
+     MUXCY:CI->O         172   0.258   2.029  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<2>_cy<11> (n0091<2>)
+     LUT5:I4->O            2   0.205   0.961  reflex_time[63]_PWR_1_o_div_33/Mmux_n940123 (reflex_time[63]_PWR_1_o_div_33/n9401<10>)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_lut<0> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<0> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<9> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<10> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<10>)
+     MUXCY:CI->O          59   0.258   1.607  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<1>_cy<11> (n0091<1>)
+     LUT5:I4->O            2   0.205   0.961  reflex_time[63]_PWR_1_o_div_33/Mmux_n9144641 (reflex_time[63]_PWR_1_o_div_33/n9144<9>)
+     LUT5:I0->O            1   0.203   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_lut<0> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<0> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<1> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<2> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<3> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<4> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<5> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<6> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<7> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<8> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<9> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<10> (reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<10>)
+     MUXCY:CI->O           1   0.258   0.000  reflex_time[63]_PWR_1_o_div_33/Mcompar_o<0>_cy<11> (n0091<0>)
+     FDE:D                     0.102          time_display_0
+    ----------------------------------------
+    Total                    179.535ns (40.131ns logic, 139.405ns route)
+                                       (22.4% logic, 77.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 26 / 26
+-------------------------------------------------------------------------
+Offset:              3.635ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       counter_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   1.222   0.773  reset_IBUF (reset_IBUF)
+     INV:I->O             16   0.206   1.004  reset_inv1_INV_0 (reset_inv)
+     FDR:R                     0.430          counter_0
+    ----------------------------------------
+    Total                      3.635ns (1.858ns logic, 1.776ns route)
+                                       (51.1% logic, 48.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 179 / 18
+-------------------------------------------------------------------------
+Offset:              6.132ns (Levels of Logic = 3)
+  Source:            anodes_1 (FF)
+  Destination:       cathodes<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: anodes_1 to cathodes<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.447   1.109  anodes_1 (anodes_1)
+     LUT6:I0->O            7   0.203   1.021  cathod_S<10>1 (cathod_S<2>)
+     LUT4:I0->O            1   0.203   0.579  Mram_cathodes111 (cathodes_1_OBUF)
+     OBUF:I->O                 2.571          cathodes_1_OBUF (cathodes<1>)
+    ----------------------------------------
+    Total                      6.132ns (3.424ns logic, 2.708ns route)
+                                       (55.8% logic, 44.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |  179.535|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 155.00 secs
+Total CPU time to Xst completion: 123.31 secs
+ 
 --> 
 
 
-Total memory usage is 321856 kilobytes
+Total memory usage is 541948 kilobytes
 
-Number of errors   :    2 (   0 filtered)
-Number of warnings :    9 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   67 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

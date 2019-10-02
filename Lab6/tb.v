@@ -11,24 +11,22 @@ wire [7:0] outleds;
 
 initial clk = 0;
 initial forever #5 clk = ~clk;
+initial forever #5 counter_value = counter_value + 1;
 
 initial
-  begin	  
-  	reset <= 0;
+  begin	
 	sw4 <= 1;
 	sw5 <= 1;
-#100	reset <= 1;
-#100	sw4 <= 0;
-#700	sw4 <= 1;	
-#300	sw5 <= 0;
-
-if ($time % 1000 == 0)	$display("made it to ", $time);
-
-#8_000_000   $finish;
+	#100	sw4 <= 0;
+	#800	sw4 <= 1;
+	#10000	sw5 <= 0;
+	#800	sw5 <= 1;
+	#8_000_000   $finish;
   end
 
 always @(counter_value)
-    $display("counter value is now %x at time %t",counter_value, $time);
+	if (counter_value%1000 == 0)
+		$display("counter value is now %x at time %t",counter_value, $time);
 
 reflex reflex1 (
                  .reset(reset),

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-10-01T12:30:52</DateModified>
+  <DateModified>2019-10-02T09:55:15</DateModified>
   <ModuleName>reflex</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/troy/Embedded/Lab6/ISE/iseconfig/reflex.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/troy/Embedded/Lab6/ISE</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/troy/Embedded/Lab6/ISE/</ImplementationReportsDirectory>
   <DateInitialized>2019-10-01T12:30:51</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
