@@ -32,10 +32,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 426740 kilobytes
+Total memory usage is 409292 kilobytes
 
 Writing NGD file "reflex.ngd" ...
-Total REAL time to NGDBUILD completion:  20 sec
-Total CPU time to NGDBUILD completion:   16 sec
+Total REAL time to NGDBUILD completion:  9 sec
+Total CPU time to NGDBUILD completion:   7 sec
 
 Writing NGDBUILD log file "reflex.bld"...

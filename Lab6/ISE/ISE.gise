@@ -23,22 +23,35 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="reflex.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_BIN" xil_pn:name="reflex.bin"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="reflex.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="reflex.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="reflex.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="reflex.drc" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="reflex.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="reflex.ncd" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="reflex.ngc"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="reflex.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="reflex.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="reflex.pad"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="reflex.par" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="reflex.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="reflex.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="reflex.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="reflex.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="reflex.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="reflex.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="reflex.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="reflex.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="reflex.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="reflex.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="reflex.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="reflex_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="reflex_guide.ncd" xil_pn:origination="imported"/>
@@ -48,10 +61,15 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="reflex_map.ngm" xil_pn:subbranch="Map"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="reflex_map.xrpt"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="reflex_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="reflex_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="reflex_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="reflex_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="reflex_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="reflex_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="reflex_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="reflex_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
@@ -86,7 +104,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1570028312" xil_pn:in_ck="72658655874127573" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="3001337909648631691" xil_pn:start_ts="1570028204">
+    <transform xil_pn:end_ts="1570152222" xil_pn:in_ck="72658655874127573" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="3001337909648631691" xil_pn:start_ts="1570152201">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -104,11 +122,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1570028792" xil_pn:in_ck="-8326030688095893193" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="5069202361958669096" xil_pn:start_ts="1570028792">
+    <transform xil_pn:end_ts="1570152311" xil_pn:in_ck="-8326030688095893193" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="5069202361958669096" xil_pn:start_ts="1570152311">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1570028810" xil_pn:in_ck="4961785336534303267" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="988909194175671709" xil_pn:start_ts="1570028792">
+    <transform xil_pn:end_ts="1570152325" xil_pn:in_ck="4961785336534303267" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="988909194175671709" xil_pn:start_ts="1570152311">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -117,9 +135,8 @@
       <outfile xil_pn:name="reflex.ngd"/>
       <outfile xil_pn:name="reflex_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1570029029" xil_pn:in_ck="4961785336534303268" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1405206279585514545" xil_pn:start_ts="1570028810">
+    <transform xil_pn:end_ts="1570152356" xil_pn:in_ck="4961785336534303268" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1405206279585514545" xil_pn:start_ts="1570152325">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="reflex.pcf"/>
@@ -131,13 +148,39 @@
       <outfile xil_pn:name="reflex_summary.xml"/>
       <outfile xil_pn:name="reflex_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1570029402" xil_pn:in_ck="-4570494278191561923" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1570029029">
-      <status xil_pn:value="AbortedRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
+    <transform xil_pn:end_ts="1570152388" xil_pn:in_ck="-4570494278191561923" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1570152356">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="reflex.ncd"/>
+      <outfile xil_pn:name="reflex.pad"/>
       <outfile xil_pn:name="reflex.par"/>
+      <outfile xil_pn:name="reflex.ptwx"/>
+      <outfile xil_pn:name="reflex.unroutes"/>
+      <outfile xil_pn:name="reflex.xpi"/>
+      <outfile xil_pn:name="reflex_pad.csv"/>
+      <outfile xil_pn:name="reflex_pad.txt"/>
+      <outfile xil_pn:name="reflex_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1570152411" xil_pn:in_ck="5437447148750761" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="4970201210546912173" xil_pn:start_ts="1570152388">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="reflex.bgn"/>
+      <outfile xil_pn:name="reflex.bin"/>
+      <outfile xil_pn:name="reflex.bit"/>
+      <outfile xil_pn:name="reflex.drc"/>
+      <outfile xil_pn:name="reflex.ut"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1570152388" xil_pn:in_ck="4961785336534303136" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1570152376">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="reflex.twr"/>
+      <outfile xil_pn:name="reflex.twx"/>
     </transform>
   </transforms>
 

@@ -1,49 +1,10 @@
-module reflex(input clk, input Switch4, input Switch5, input reset, output reg [2:0] anodes, output reg [7:0] cathodes, output reg [7:0] outleds);
-
-//******************Debounce Button Logic***********************************************
-reg button1_reg;
-reg button2_reg;
-reg button1_sync;
-reg button2_sync;
-reg [31:0]	button1_count;
-reg [31:0]  button2_count;  
-
-//parameter DEBOUNCE_DELAY1 = 32'd0_000_050;	//Use for simulation
-//parameter DEBOUNCE_DELAY2 = 32'd0_000_050;	//Use for simulation
-parameter DEBOUNCE_DELAY1 = 32'd0_500_000;   /// 10nS * 1M = 10mS -- Use for synthesis
-parameter DEBOUNCE_DELAY2 = 32'd0_500_500;   /// 10nS * 1M = 10mS -- Use for synthesis
-
-//Switch4 = ready_switch
-//Switch5 = fire_switch
-
-always @(posedge clk)   button1_reg   <= Switch4;
-always @(posedge clk)   button1_sync  <= !button1_reg;
-
-always @(posedge clk)   button2_reg   <= Switch5;
-always @(posedge clk)   button2_sync  <= !button2_reg;
-
-assign                  button_done  = (button1_count == DEBOUNCE_DELAY1);	
-assign                  ready_click = (button1_count == DEBOUNCE_DELAY1 - 1);
-
-assign                  button_done2  = (button2_count == DEBOUNCE_DELAY2); 
-assign                  fire_click = (button2_count == DEBOUNCE_DELAY2 - 1); 
-
-always@(posedge clk)
-		if(!button1_sync)  button1_count <= 0;
-		else if (button_done) button1_count <= button1_count;
-		else 					button1_count <= button1_count + 1;
-		
-always@(posedge clk)
-	if(!button2_sync)  		button2_count <= 0;
-	else if (button_done2) 	button2_count <= button2_count;
-	else 					button2_count <= button2_count + 1;
-//***********************End of Debounce Logic*****************************************************
+module reflex(input clk, input ready_click, input fire_click, input reset, output reg [2:0] anodes, output reg [7:0] cathodes, output reg [7:0] outleds);
 
 //********************************Ready click and delay********************************************
-reg [31:0] 	delay_status;
+reg [28:0] 	delay_status;
 reg [63:0]	reflex_time;
-reg [31:0]	time_delay = 0;
-reg [31:0]	time_delay_multiplier = 16'd1000000000;	//Change for synthesis
+reg [28:0]	time_delay = 0;
+reg [26:0]	time_delay_multiplier = 29'd10;	//Change for synthesis
 reg led = 0;
 reg [2:0]	state = 0;
 reg [11:0]	time_display = 0;
@@ -51,72 +12,88 @@ reg [11:0]	time_display = 0;
 //Decides what the delay will be
 reg [2:0] rand_delay_num = 0;
 always @(posedge clk)
-	begin
-   		case(rand_delay_num)
-			3'd0: rand_delay_num <= 1;
-			3'd1: rand_delay_num <= 2;
-			3'd2: rand_delay_num <= 3;
-			3'd3: rand_delay_num <= 4;
-			3'd4: rand_delay_num <= 1;
-		endcase
-end
+	case(rand_delay_num)
+		3'd0: rand_delay_num <= 1;
+		3'd1: rand_delay_num <= 2;
+		3'd2: rand_delay_num <= 3;
+		3'd3: rand_delay_num <= 4;
+		3'd4: rand_delay_num <= 1;
+	endcase
 
 always @(posedge clk)
 	case(state)
 		0:			//Before ready_click
 			begin
+				led <= 0;
 				delay_status <= 0;
-				reflex_time <= 0;
-				if (ready_click)	state <= 1;
+				if (!ready_click)	state <= 1;
 				else if (!reset)	state <= 0;
-				else					state <= state;
+				else if (!fire_click)	state <= 5;
+				else			state <= state;
 			end
 		1:			//Delay is selected
 			begin
+				led <= 0;
+				delay_status <= 0;
 				time_delay <= rand_delay_num * time_delay_multiplier;
-				if (time_delay == 0)		state <= state;
+				if (time_delay == 0)			state <= state;
 				else if (!reset)			state <= 0;
-				else							state <= 2;
+				else if (!fire_click)			state <= 5;
+				else					state <= 2;
 			end
 		2:			//Waiting for time to reach delay
 			begin
+				led <= 0;
 				delay_status <= delay_status + 1;
-				if (delay_status == time_delay)	state <= 3;
-				else if (!reset)						state <= 0;
-				else										state <= state;
+				if (delay_status == time_delay)		state <= 3;
+				else if (!reset)			state <= 0;
+				else if (!fire_click)			state <= 5;
+				else if (!ready_click)			state <= 1;
+				else					state <= state;
 			end
 		3:			//Delay has been reached, fire light and begin counting for reflex time
 			begin
 				led <= 1;
 				delay_status <= 0;
-				reflex_time <= reflex_time + 1;
-				time_display <= reflex_time / 100000;	//reflex_time increments every 10 ns, divide by 10^5 for ms
-				if (fire_click)		state <= 4;
-				else if (!reset)		state <= 0;
-				else						state <= state;
+				if (!fire_click)	state <= 4;
+				else if(!ready_click)	state <= 1;	
+				else if (!reset)	state <= 0;
+				else			state <= state;
 			end	
 		4:			//Fire button has been clicked. Stop reflex timer and behave similar to state 0
 			begin
 				led <= 0;
-				time_display <= time_display;
-				reflex_time <= 0;
-				if (ready_click)		state <= 1;
-				else						state <= state;
+				delay_status <= 0;
+				if (!ready_click)		state <= 1;
+				else				state <= state;
 			end
 	endcase			
 //**********************End of state machine logic*******************************
 
+//*********************Count the number of ms passed************************
+reg [16:0] nsTimer = 0;
+reg [11:0] msCounted = 0;
+always @(posedge clk)
+	case(state)
+	3:	
+		begin
+			nsTimer <= nsTimer + 1;
+			if (nsTimer == 100000)	msCounted <= msCounted + 1;
+			else			msCounted <= msCounted;
+		end
+	default:	msCounted <= msCounted;
+	endcase
 
 //**********************Turn on outleds when led == 1****************************
 always @(posedge clk)
 	if (led == 1)	outleds <= 8'b1111_1111;
-	else				outleds <= 8'b0000_0000;
+	else		outleds <= 8'b0000_0000;
 
 //**********************Seven seg logic****************************************** 
 reg [39:0]	counter;
 always @(posedge clk)             
 	if(!reset)	counter <= 0;
-	else			counter <= counter + 1;
+	else		counter <= counter + 1;
                                   
 wire anode_clk = (counter[15:0] == 16'h8000);
 
@@ -129,9 +106,9 @@ reg [3:0] cathod_S;
 
 always @(cathod_S)
        case({anodes})
-	      3'b011:  cathod_S = time_display[11:8]; 
-	      3'b101:  cathod_S = time_display[7:4]; 
-	      3'b110:  cathod_S = time_display[3:0]; 
+	      3'b011:  cathod_S = msCounted[11:8]; 
+	      3'b101:  cathod_S = msCounted[7:4]; 
+	      3'b110:  cathod_S = msCounted[3:0]; 
 	      default:  cathod_S = 4'h0; 
       endcase
 

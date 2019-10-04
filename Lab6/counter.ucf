@@ -95,8 +95,8 @@ CONFIG VCCAUX = "3.3" ;
 ###################################################################################################################################################
 #                                              Push Buttons Switches                                                                              #
 ################################################################################################################################################### 
-    NET "Switch5"                  LOC = M18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW1    IO_L47N_LDC_M1DQ1_1         Sch = SW1 
-    NET "Switch4"                  LOC = L18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW2    IO_L46N_FOE_B_M1DQ3_1       Sch = SW2
+    NET "fire_click"                  LOC = M18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW1    IO_L47N_LDC_M1DQ1_1         Sch = SW1 
+    NET "ready_click"                  LOC = L18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW2    IO_L46N_FOE_B_M1DQ3_1       Sch = SW2
     #NET "Switch[3]"                  LOC = M16     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW3    IO_L47P_FWE_B_M1DQ0_1       Sch = SW3
     #NET "Switch[2]"                  LOC = L17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW4    IO_L46P_FCS_B_M1DQ2_1       Sch = SW4
     #NET "Switch[1]"                  LOC = K17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; #SW5    IO_L45P_A1_M1LDQS_1         Sch = SW5

@@ -10,40 +10,40 @@ Target Device  : xc6slx9
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Wed Oct  2 11:42:46 2019
+Mapped Date    : Thu Oct  3 21:25:28 2019
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    0
 Slice Logic Utilization:
-  Number of Slice Registers:                   210 out of  11,440    1%
-    Number used as Flip Flops:                 210
+  Number of Slice Registers:                    94 out of  11,440    1%
+    Number used as Flip Flops:                  94
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      4,116 out of   5,720   71%
-    Number used as logic:                    4,110 out of   5,720   71%
-      Number using O6 output only:           2,050
-      Number using O5 output only:             176
-      Number using O5 and O6:                1,884
+  Number of Slice LUTs:                        139 out of   5,720    2%
+    Number used as logic:                      135 out of   5,720    2%
+      Number using O6 output only:              41
+      Number using O5 output only:              66
+      Number using O5 and O6:                   28
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
-    Number used exclusively as route-thrus:      6
+    Number used exclusively as route-thrus:      4
       Number with same-slice register load:      0
-      Number with same-slice carry load:         6
+      Number with same-slice carry load:         4
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,137 out of   1,430   79%
-  Number of MUXCYs used:                     2,292 out of   2,860   80%
-  Number of LUT Flip Flop pairs used:        4,119
-    Number with an unused Flip Flop:         3,961 out of   4,119   96%
-    Number with an unused LUT:                   3 out of   4,119    1%
-    Number of fully used LUT-FF pairs:         155 out of   4,119    3%
-    Number of unique control sets:              13
+  Number of occupied Slices:                    46 out of   1,430    3%
+  Number of MUXCYs used:                        88 out of   2,860    3%
+  Number of LUT Flip Flop pairs used:          144
+    Number with an unused Flip Flop:            67 out of     144   46%
+    Number with an unused LUT:                   5 out of     144    3%
+    Number of fully used LUT-FF pairs:          72 out of     144   50%
+    Number of unique control sets:               6
     Number of slice register sites lost
-      to control set restrictions:              38 out of  11,440    1%
+      to control set restrictions:              18 out of  11,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -80,11 +80,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.30
+Average Fanout of Non-Clock Nets:                2.59
 
-Peak Memory Usage:  756 MB
-Total REAL time to MAP completion:  4 mins 59 secs 
-Total CPU time to MAP completion:   4 mins 8 secs 
+Peak Memory Usage:  665 MB
+Total REAL time to MAP completion:  26 secs 
+Total CPU time to MAP completion:   21 secs 
 
 Table of Contents
 -----------------
@@ -107,16 +107,6 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Pack:1653 - At least one timing constraint is impossible to meet because component delays alone exceed the constraint. A timing
-   constraint summary below shows the failing constraints (preceded with an Asterisk (*)). Please use the Timing Analyzer (GUI) or TRCE
-   (command line) with the Mapped NCD and PCF files to identify which constraints and paths are failing because of the component delays
-   alone. If the failing path(s) is mapped to Xilinx components as expected, consider relaxing the constraint. If it is not mapped to
-   components as expected, re-evaluate your HDL and how synthesis is optimizing the path. To allow the tools to bypass this error, set the
-   environment variable XIL_TIMING_ALLOW_IMPOSSIBLE to 1.
-
-
-   For more information about the Timing Analyzer, consult the Xilinx Timing Analyzer Reference manual; for more information on TRCE,
-   consult the Xilinx Command Line Tools User Guide "TRACE" chapter.
 
 Section 3 - Informational
 -------------------------
@@ -146,27 +136,6 @@ VCC 		XST_VCC
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
 
-Section 11 - Timing Report
---------------------------
-INFO:Timing:3284 - This timing report was generated using estimated delay 
-   information.  For accurate numbers, please refer to the post Place and Route 
-   timing report.
-Asterisk (*) preceding a constraint indicates it was not met.
-   This may be due to a setup or hold violation.
-
-----------------------------------------------------------------------------------------------------------
-  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
-                                            |             |    Slack   | Achievable | Errors |    Score   
-----------------------------------------------------------------------------------------------------------
-* NET "clk_BUFGP/IBUFG" PERIOD = 10 ns HIGH | SETUP       |   -35.598ns|    45.598ns|     184|     5538653
-   50%                                      | HOLD        |     0.071ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-
-
-1 constraint not met.
-
-
-
 Section 6 - IOB Properties
 --------------------------
 
@@ -174,8 +143,6 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Switch4                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
-| Switch5                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
 | anodes<0>                          | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | anodes<1>                          | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | anodes<2>                          | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
@@ -188,6 +155,7 @@ Section 6 - IOB Properties
 | cathodes<6>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | cathodes<7>                        | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | clk                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| fire_click                         | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
 | outleds<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | outleds<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | outleds<2>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
@@ -196,6 +164,7 @@ Section 6 - IOB Properties
 | outleds<5>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | outleds<6>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
 | outleds<7>                         | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          |          |
+| ready_click                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
 | reset                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
