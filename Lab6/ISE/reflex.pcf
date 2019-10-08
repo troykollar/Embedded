@@ -1,9 +1,12 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Oct 03 21:25:54 2019
+// Written by: Map P.20131013 on Tue Oct 08 15:27:02 2019
 //! **************************************************************************
 
 SCHEMATIC START;
 CONFIG VCCAUX = "3.3";
+COMP "outleds<6>" LOCATE = SITE "P16" LEVEL 1;
+COMP "outleds<7>" LOCATE = SITE "P15" LEVEL 1;
+COMP "reset" LOCATE = SITE "K18" LEVEL 1;
 COMP "clk" LOCATE = SITE "V10" LEVEL 1;
 COMP "fire_click" LOCATE = SITE "M18" LEVEL 1;
 COMP "cathodes<0>" LOCATE = SITE "A3" LEVEL 1;
@@ -24,9 +27,6 @@ COMP "outleds<2>" LOCATE = SITE "U18" LEVEL 1;
 COMP "outleds<3>" LOCATE = SITE "U17" LEVEL 1;
 COMP "outleds<4>" LOCATE = SITE "N16" LEVEL 1;
 COMP "outleds<5>" LOCATE = SITE "N15" LEVEL 1;
-COMP "outleds<6>" LOCATE = SITE "P16" LEVEL 1;
-COMP "outleds<7>" LOCATE = SITE "P15" LEVEL 1;
-COMP "reset" LOCATE = SITE "K18" LEVEL 1;
 NET "clk_BUFGP/IBUFG" PERIOD = 10 ns HIGH 50%;
 SCHEMATIC END;
 

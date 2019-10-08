@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: reflex.prj
@@ -120,10 +120,10 @@ WARNING:HDLCompiler:872 - "/home/troy/Embedded/Lab6/reflex.v" Line 7: Using init
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 47: Result of 30-bit expression is truncated to fit in 29-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 80: Result of 18-bit expression is truncated to fit in 17-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 81: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 108: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 109: Signal <msCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 110: Signal <msCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 111: Signal <msCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 103: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 104: Signal <msCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 105: Signal <msCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 106: Signal <msCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -131,13 +131,12 @@ WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 111: Signal <m
 
 Synthesizing Unit <reflex>.
     Related source file is "/home/troy/Embedded/Lab6/reflex.v".
-    Found 1-bit register for signal <led>.
+    Found 8-bit register for signal <outleds>.
     Found 29-bit register for signal <delay_status>.
     Found 3-bit register for signal <state>.
     Found 29-bit register for signal <time_delay>.
     Found 17-bit register for signal <nsTimer>.
     Found 12-bit register for signal <msCounted>.
-    Found 8-bit register for signal <outleds>.
     Found 40-bit register for signal <counter>.
     Found 3-bit register for signal <anodes>.
     Found 3-bit register for signal <rand_delay_num>.
@@ -146,7 +145,7 @@ Synthesizing Unit <reflex>.
     | States             | 6                                              |
     | Transitions        | 20                                             |
     | Inputs             | 5                                              |
-    | Outputs            | 5                                              |
+    | Outputs            | 12                                             |
     | Clock              | clk (rising_edge)                              |
     | Power Up State     | 000                                            |
     | Encoding           | auto                                           |
@@ -164,9 +163,9 @@ Synthesizing Unit <reflex>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 29-bit adder for signal <delay_status[28]_GND_1_o_add_12_OUT> created at line 47.
-    Found 17-bit adder for signal <nsTimer[16]_GND_1_o_add_30_OUT> created at line 80.
-    Found 12-bit adder for signal <msCounted[11]_GND_1_o_add_32_OUT> created at line 81.
-    Found 40-bit adder for signal <counter[39]_GND_1_o_add_44_OUT> created at line 96.
+    Found 17-bit adder for signal <nsTimer[16]_GND_1_o_add_31_OUT> created at line 80.
+    Found 12-bit adder for signal <msCounted[11]_GND_1_o_add_33_OUT> created at line 81.
+    Found 40-bit adder for signal <counter[39]_GND_1_o_add_41_OUT> created at line 91.
     Found 3x4-bit multiplier for signal <rand_delay_num[2]_PWR_1_o_MuLt_7_OUT> created at line 38.
     Found 16x8-bit Read Only RAM for signal <cathodes>
     Found 29-bit comparator equal for signal <delay_status[28]_time_delay[28]_equal_14_o> created at line 48
@@ -174,7 +173,7 @@ Synthesizing Unit <reflex>.
 	inferred   1 RAM(s).
 	inferred   1 Multiplier(s).
 	inferred   4 Adder/Subtractor(s).
-	inferred 139 D-type flip-flop(s).
+	inferred 138 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 	inferred   4 Multiplexer(s).
 	inferred   2 Finite State Machine(s).
@@ -193,8 +192,7 @@ Macro Statistics
  17-bit adder                                          : 1
  29-bit adder                                          : 1
  40-bit adder                                          : 1
-# Registers                                            : 8
- 1-bit register                                        : 1
+# Registers                                            : 7
  12-bit register                                       : 1
  17-bit register                                       : 1
  29-bit register                                       : 2
@@ -269,8 +267,8 @@ Macro Statistics
  12-bit up counter                                     : 1
  17-bit up counter                                     : 1
  40-bit up counter                                     : 1
-# Registers                                            : 70
- Flip-Flops                                            : 70
+# Registers                                            : 69
+ Flip-Flops                                            : 69
 # Comparators                                          : 1
  29-bit comparator equal                               : 1
 # Multiplexers                                         : 4
@@ -305,7 +303,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_10> has 
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_9> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_8> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <time_delay_7> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <outleds_0> in Unit <reflex> is equivalent to the following 7 FFs/Latches, which will be removed : <outleds_1> <outleds_2> <outleds_3> <outleds_4> <outleds_5> <outleds_6> <outleds_7> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <FSM_1> on signal <rand_delay_num[1:3]> with user encoding.
 -------------------
@@ -354,6 +351,9 @@ WARNING:Xst:2677 - Node <counter_36> of sequential type is unconnected in block 
 WARNING:Xst:2677 - Node <counter_37> of sequential type is unconnected in block <reflex>.
 WARNING:Xst:2677 - Node <counter_38> of sequential type is unconnected in block <reflex>.
 WARNING:Xst:2677 - Node <counter_39> of sequential type is unconnected in block <reflex>.
+INFO:Xst:2261 - The FF/Latch <outleds_1> in Unit <reflex> is equivalent to the following 3 FFs/Latches, which will be removed : <outleds_2> <outleds_5> <outleds_6> 
+INFO:Xst:2261 - The FF/Latch <outleds_0> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <outleds_7> 
+INFO:Xst:2261 - The FF/Latch <outleds_3> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <outleds_4> 
 
 Optimizing unit <reflex> ...
 WARNING:Xst:1293 - FF/Latch <time_delay_6> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
@@ -372,8 +372,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 94
- Flip-Flops                                            : 94
+# Registers                                            : 95
+ Flip-Flops                                            : 95
 
 =========================================================================
 
@@ -396,21 +396,21 @@ Top Level Output File Name         : reflex.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 315
+# BELS                             : 317
 #      GND                         : 1
 #      INV                         : 6
 #      LUT1                        : 70
 #      LUT2                        : 8
-#      LUT3                        : 16
+#      LUT3                        : 18
 #      LUT4                        : 39
 #      LUT5                        : 5
 #      LUT6                        : 17
 #      MUXCY                       : 78
 #      VCC                         : 1
 #      XORCY                       : 74
-# FlipFlops/Latches                : 94
-#      FD                          : 12
-#      FDE                         : 66
+# FlipFlops/Latches                : 95
+#      FD                          : 11
+#      FDE                         : 68
 #      FDR                         : 16
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -425,15 +425,15 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              94  out of  11440     0%  
- Number of Slice LUTs:                  161  out of   5720     2%  
-    Number used as Logic:               161  out of   5720     2%  
+ Number of Slice Registers:              95  out of  11440     0%  
+ Number of Slice LUTs:                  163  out of   5720     2%  
+    Number used as Logic:               163  out of   5720     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    166
-   Number with an unused Flip Flop:      72  out of    166    43%  
-   Number with an unused LUT:             5  out of    166     3%  
-   Number of fully used LUT-FF pairs:    89  out of    166    53%  
+ Number of LUT Flip Flop pairs used:    167
+   Number with an unused Flip Flop:      72  out of    167    43%  
+   Number with an unused LUT:             4  out of    167     2%  
+   Number of fully used LUT-FF pairs:    91  out of    167    54%  
    Number of unique control sets:         6
 
 IO Utilization: 
@@ -464,7 +464,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 94    |
+clk                                | BUFGP                  | 95    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -487,7 +487,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 3.734ns (frequency: 267.816MHz)
-  Total number of paths / destination ports: 1685 / 160
+  Total number of paths / destination ports: 1696 / 163
 -------------------------------------------------------------------------
 Delay:               3.734ns (Levels of Logic = 3)
   Source:            nsTimer_3 (FF)
@@ -500,8 +500,8 @@ Delay:               3.734ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q              2   0.447   0.981  nsTimer_3 (nsTimer_3)
-     LUT6:I0->O            1   0.203   0.684  _n0154_inv2 (_n0154_inv2)
-     LUT5:I3->O           12   0.203   0.909  _n0154_inv4_rstpot (_n0154_inv4_rstpot)
+     LUT6:I0->O            1   0.203   0.684  _n0151_inv2 (_n0151_inv2)
+     LUT5:I3->O           12   0.203   0.909  _n0151_inv4_rstpot (_n0151_inv4_rstpot)
      LUT3:I2->O            1   0.205   0.000  msCounted_0_dpot (msCounted_0_dpot)
      FDE:D                     0.102          msCounted_0
     ----------------------------------------
@@ -565,15 +565,15 @@ clk            |    3.734|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 12.96 secs
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 11.66 secs
  
 --> 
 
 
-Total memory usage is 395272 kilobytes
+Total memory usage is 395280 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   78 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 

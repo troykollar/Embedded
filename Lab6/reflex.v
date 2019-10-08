@@ -24,7 +24,7 @@ always @(posedge clk)
 	case(state)
 		0:			//Before ready_click
 			begin
-				led <= 0;
+				outleds <= 8'b1000_0001;
 				delay_status <= 0;
 				if (!ready_click)	state <= 1;
 				else if (!reset)	state <= 0;
@@ -33,7 +33,7 @@ always @(posedge clk)
 			end
 		1:			//Delay is selected
 			begin
-				led <= 0;
+				outleds <= 8'b0001_1000;
 				delay_status <= 0;
 				time_delay <= rand_delay_num * time_delay_multiplier;
 				if (time_delay == 0)			state <= state;
@@ -43,7 +43,7 @@ always @(posedge clk)
 			end
 		2:			//Waiting for time to reach delay
 			begin
-				led <= 0;
+				outleds <= 8'b1001_1001;
 				delay_status <= delay_status + 1;
 				if (delay_status == time_delay)		state <= 3;
 				else if (!reset)			state <= 0;
@@ -53,7 +53,7 @@ always @(posedge clk)
 			end
 		3:			//Delay has been reached, fire light and begin counting for reflex time
 			begin
-				led <= 1;
+				outleds <= 8'b1111_1111;
 				delay_status <= 0;
 				if (!fire_click)	state <= 4;
 				else if(!ready_click)	state <= 1;	
@@ -62,7 +62,7 @@ always @(posedge clk)
 			end	
 		4:			//Fire button has been clicked. Stop reflex timer and behave similar to state 0
 			begin
-				led <= 0;
+				outleds <= 8'b0000_0000;
 				delay_status <= 0;
 				if (!ready_click)		state <= 1;
 				else				state <= state;
@@ -83,11 +83,6 @@ always @(posedge clk)
 		end
 	default:	msCounted <= msCounted;
 	endcase
-
-//**********************Turn on outleds when led == 1****************************
-always @(posedge clk)
-	if (led == 1)	outleds <= 8'b1111_1111;
-	else		outleds <= 8'b0000_0000;
 
 //**********************Seven seg logic****************************************** 
 reg [39:0]	counter;
