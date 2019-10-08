@@ -4,8 +4,7 @@ module reflex(input clk, input ready_click, input fire_click, input reset, outpu
 reg [28:0] 	delay_status;
 reg [63:0]	reflex_time;
 reg [28:0]	time_delay = 0;
-reg [26:0]	time_delay_multiplier = 29'd10;	//Change for synthesis
-reg led = 0;
+reg [26:0]	time_delay_multiplier = 29'd100000000;	//Change for synthesis
 reg [2:0]	state = 0;
 reg [11:0]	time_display = 0;
 
@@ -24,9 +23,10 @@ always @(posedge clk)
 	case(state)
 		0:			//Before ready_click
 			begin
-				outleds <= 8'b1000_0001;
+				outleds <= 8'b0000_0000;
 				delay_status <= 0;
-				if (!ready_click)	state <= 1;
+				if (ready_click && fire_click)	state <= state;
+				else if (!ready_click && fire_click)	state <= 1;
 				else if (!reset)	state <= 0;
 				else if (!fire_click)	state <= 5;
 				else			state <= state;
@@ -36,14 +36,18 @@ always @(posedge clk)
 				outleds <= 8'b0001_1000;
 				delay_status <= 0;
 				time_delay <= rand_delay_num * time_delay_multiplier;
-				if (time_delay == 0)			state <= state;
-				else if (!reset)			state <= 0;
+				if (!reset)			state <= 0;
 				else if (!fire_click)			state <= 5;
 				else					state <= 2;
 			end
 		2:			//Waiting for time to reach delay
 			begin
-				outleds <= 8'b1001_1001;
+				case (time_delay)
+					100000000:	outleds <= 8'b0000_0001;
+					200000000:	outleds <= 8'b0000_0011;
+					300000000:	outleds <= 8'b0000_0111;
+					400000000:	outleds <= 8'b0000_1111;
+				endcase
 				delay_status <= delay_status + 1;
 				if (delay_status == time_delay)		state <= 3;
 				else if (!reset)			state <= 0;
@@ -65,24 +69,76 @@ always @(posedge clk)
 				outleds <= 8'b0000_0000;
 				delay_status <= 0;
 				if (!ready_click)		state <= 1;
+				else if(!reset)		state <= 0;
 				else				state <= state;
+			end
+		5:
+			begin
+				outleds <= 8'b1010_0101;
+				if (!reset)			state <= 0;
+				else					state <= state;
 			end
 	endcase			
 //**********************End of state machine logic*******************************
 
 //*********************Count the number of ms passed************************
 reg [16:0] nsTimer = 0;
-reg [11:0] msCounted = 0;
+reg [3:0] msCounted = 0;
+reg [3:0] tenMsCounted = 0;
+reg [3:0] hundredMsCounted = 0;
+	
 always @(posedge clk)
 	case(state)
-	3:	
+	0:
 		begin
-			nsTimer <= nsTimer + 1;
-			if (nsTimer == 100000)	msCounted <= msCounted + 1;
-			else			msCounted <= msCounted;
+			nsTimer <= 0;
+			msCounted <= 0;
+			tenMsCounted <= 0;
+			hundredMsCounted <= 0;
 		end
-	default:	msCounted <= msCounted;
+	3:
+		begin
+			begin
+				if (nsTimer == 100000 && msCounted !== 10 && tenMsCounted !== 10 && hundredMsCounted !== 10)
+					begin
+						nsTimer <= 0;
+						msCounted <= msCounted + 1;
+						tenMsCounted <= tenMsCounted;
+						hundredMsCounted <= hundredMsCounted;
+					end
+				else if (nsTimer == 100000 && msCounted == 10 && tenMsCounted !== 10 && hundredMsCounted !== 10)
+					begin
+						nsTimer <= 0;
+						msCounted <= 0;
+						tenMsCounted <= tenMsCounted + 1;
+						hundredMsCounted <= hundredMsCounted;
+					end
+				else if (nsTimer == 100000 && msCounted == 10 && tenMsCounted == 10 && hundredMsCounted !== 10)
+					begin
+						nsTimer <= 0;
+						msCounted <= 0;
+						tenMsCounted <= 0;
+						hundredMsCounted <= hundredMsCounted;
+					end
+				else if (nsTimer == 100000 && msCounted == 10 && tenMsCounted == 10 && hundredMsCounted == 10)
+					begin
+						nsTimer <= 0;
+						msCounted <= 0;
+						tenMsCounted <= 0;
+						hundredMsCounted <= 0;
+					end
+				else
+					begin
+						nsTimer <= nsTimer + 1;
+						msCounted <= msCounted;
+						tenMsCounted <= tenMsCounted;
+						hundredMsCounted <= hundredMsCounted;
+					end
+			end
+		end
 	endcase
+	
+
 
 //**********************Seven seg logic****************************************** 
 reg [39:0]	counter;
@@ -100,10 +156,18 @@ always @(posedge clk)
 reg [3:0] cathod_S;
 
 always @(cathod_S)
+	if (state !== 5)
        case({anodes})
-	      3'b011:  cathod_S = msCounted[11:8]; 
-	      3'b101:  cathod_S = msCounted[7:4]; 
-	      3'b110:  cathod_S = msCounted[3:0]; 
+			3'b011:  cathod_S = hundredMsCounted[3:0]; 
+	      3'b101:  cathod_S = tenMsCounted[3:0]; 
+	      3'b110:  cathod_S = msCounted[3:0];
+	      default:  cathod_S = 4'h0; 
+      endcase
+	else
+		case({anodes})
+			3'b011:  cathod_S = 4'hd; 
+	      3'b101:  cathod_S = 4'he; 
+	      3'b110:  cathod_S = 4'hd; 
 	      default:  cathod_S = 4'h0; 
       endcase
 
