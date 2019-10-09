@@ -122,6 +122,9 @@ always @(posedge clk)
 					hundredMsCounted <= hundredMsCounted + 1;
 				end
 			else	hundredMsCounted <= hundredMsCounted;
+			
+			if (hundredMsCounted == 10)	hundredMsCounted <= 0;
+			else									hundredMsCounted <= hundredMsCounted + 1;
 		end
 	endcase
 	

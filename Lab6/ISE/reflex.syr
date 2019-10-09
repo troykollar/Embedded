@@ -4,14 +4,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.08 secs
  
 --> 
@@ -122,12 +122,13 @@ WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 104: Result o
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 108: Result of 18-bit expression is truncated to fit in 17-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 115: Result of 5-bit expression is truncated to fit in 4-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 122: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 146: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 147: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 148: Signal <hundredMsCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 149: Signal <tenMsCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 150: Signal <msCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 154: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 127: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 149: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 150: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 151: Signal <hundredMsCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 152: Signal <tenMsCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 153: Signal <msCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 157: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -172,9 +173,9 @@ Synthesizing Unit <reflex>.
     Found 4-bit adder for signal <msCounted[3]_GND_1_o_add_39_OUT> created at line 104.
     Found 17-bit adder for signal <nsTimer[16]_GND_1_o_add_40_OUT> created at line 108.
     Found 4-bit adder for signal <tenMsCounted[3]_GND_1_o_add_44_OUT> created at line 115.
-    Found 4-bit adder for signal <hundredMsCounted[3]_GND_1_o_add_48_OUT> created at line 122.
-    Found 40-bit adder for signal <counter[39]_GND_1_o_add_63_OUT> created at line 134.
-    Found 3x27-bit multiplier for signal <n0099> created at line 38.
+    Found 4-bit adder for signal <hundredMsCounted[3]_GND_1_o_add_52_OUT> created at line 127.
+    Found 40-bit adder for signal <counter[39]_GND_1_o_add_66_OUT> created at line 137.
+    Found 3x27-bit multiplier for signal <n0100> created at line 38.
     Found 16x8-bit Read Only RAM for signal <cathodes>
     Found 29-bit comparator equal for signal <delay_status[28]_time_delay[28]_equal_19_o> created at line 52
     Summary:
@@ -227,7 +228,7 @@ Macro Statistics
 
 Synthesizing (advanced) Unit <reflex>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
-	Found pipelined multiplier on signal <n0099>:
+	Found pipelined multiplier on signal <n0100>:
 		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
 		Pushing register(s) into the multiplier macro.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_cathodes> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -298,16 +299,16 @@ Optimizing FSM <FSM_0> on signal <state[1:3]> with user encoding.
  011   | 011
  100   | 100
 -------------------
-WARNING:Xst:1710 - FF/Latch <Mmult_n0099_29> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0099_28> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0099_27> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0099_26> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0099_25> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0099_24> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0099_23> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0099_22> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0099_18> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0099_17> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mmult_n0100_29> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0100_28> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0100_27> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0100_26> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0100_25> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0100_24> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0100_23> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0100_22> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0100_18> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0100_17> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <counter_16> of sequential type is unconnected in block <reflex>.
 WARNING:Xst:2677 - Node <counter_17> of sequential type is unconnected in block <reflex>.
 WARNING:Xst:2677 - Node <counter_18> of sequential type is unconnected in block <reflex>.
@@ -332,15 +333,15 @@ WARNING:Xst:2677 - Node <counter_36> of sequential type is unconnected in block 
 WARNING:Xst:2677 - Node <counter_37> of sequential type is unconnected in block <reflex>.
 WARNING:Xst:2677 - Node <counter_38> of sequential type is unconnected in block <reflex>.
 WARNING:Xst:2677 - Node <counter_39> of sequential type is unconnected in block <reflex>.
-WARNING:Xst:2677 - Node <Mmult_n0099_0> of sequential type is unconnected in block <reflex>.
-INFO:Xst:2261 - The FF/Latch <Mmult_n0099_21> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <Mmult_n0099_16> 
+WARNING:Xst:2677 - Node <Mmult_n0100_0> of sequential type is unconnected in block <reflex>.
+INFO:Xst:2261 - The FF/Latch <Mmult_n0100_21> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <Mmult_n0100_16> 
 
 Optimizing unit <reflex> ...
-INFO:Xst:2261 - The FF/Latch <Mmult_n0099_10> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <Mmult_n0099_2> 
-INFO:Xst:2261 - The FF/Latch <Mmult_n0099_11> in Unit <reflex> is equivalent to the following 2 FFs/Latches, which will be removed : <Mmult_n0099_9> <Mmult_n0099_3> 
-INFO:Xst:2261 - The FF/Latch <Mmult_n0099_12> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <Mmult_n0099_4> 
-INFO:Xst:2261 - The FF/Latch <Mmult_n0099_14> in Unit <reflex> is equivalent to the following 4 FFs/Latches, which will be removed : <Mmult_n0099_13> <Mmult_n0099_7> <Mmult_n0099_6> <Mmult_n0099_5> 
 INFO:Xst:2261 - The FF/Latch <outleds_5> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <outleds_7> 
+INFO:Xst:2261 - The FF/Latch <Mmult_n0100_10> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <Mmult_n0100_2> 
+INFO:Xst:2261 - The FF/Latch <Mmult_n0100_11> in Unit <reflex> is equivalent to the following 2 FFs/Latches, which will be removed : <Mmult_n0100_9> <Mmult_n0100_3> 
+INFO:Xst:2261 - The FF/Latch <Mmult_n0100_12> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <Mmult_n0100_4> 
+INFO:Xst:2261 - The FF/Latch <Mmult_n0100_14> in Unit <reflex> is equivalent to the following 4 FFs/Latches, which will be removed : <Mmult_n0100_13> <Mmult_n0100_7> <Mmult_n0100_6> <Mmult_n0100_5> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -379,13 +380,13 @@ Top Level Output File Name         : reflex.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 398
+# BELS                             : 399
 #      GND                         : 1
 #      INV                         : 5
 #      LUT1                        : 60
 #      LUT2                        : 21
 #      LUT3                        : 23
-#      LUT4                        : 49
+#      LUT4                        : 50
 #      LUT5                        : 10
 #      LUT6                        : 65
 #      MUXCY                       : 85
@@ -410,14 +411,14 @@ Selected Device : 6slx9csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             105  out of  11440     0%  
- Number of Slice LUTs:                  233  out of   5720     4%  
-    Number used as Logic:               233  out of   5720     4%  
+ Number of Slice LUTs:                  234  out of   5720     4%  
+    Number used as Logic:               234  out of   5720     4%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    239
-   Number with an unused Flip Flop:     134  out of    239    56%  
-   Number with an unused LUT:             6  out of    239     2%  
-   Number of fully used LUT-FF pairs:    99  out of    239    41%  
+ Number of LUT Flip Flop pairs used:    240
+   Number with an unused Flip Flop:     135  out of    240    56%  
+   Number with an unused LUT:             6  out of    240     2%  
+   Number of fully used LUT-FF pairs:    99  out of    240    41%  
    Number of unique control sets:         6
 
 IO Utilization: 
@@ -471,7 +472,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 4.119ns (frequency: 242.760MHz)
-  Total number of paths / destination ports: 2584 / 154
+  Total number of paths / destination ports: 2580 / 154
 -------------------------------------------------------------------------
 Delay:               4.119ns (Levels of Logic = 4)
   Source:            msCounted_3 (FF)
@@ -485,9 +486,9 @@ Delay:               4.119ns (Levels of Logic = 4)
     ----------------------------------------  ------------
      FD:C->Q               5   0.447   0.962  msCounted_3 (msCounted_3)
      LUT4:I0->O            9   0.203   1.174  GND_1_o_GND_1_o_equal_44_o<3>1 (GND_1_o_GND_1_o_equal_44_o)
-     LUT6:I1->O            1   0.203   0.000  state[2]_GND_1_o_select_55_OUT<1>311_G (N64)
-     MUXF7:I1->O           4   0.140   0.684  state[2]_GND_1_o_select_55_OUT<1>311 (state[2]_GND_1_o_select_55_OUT<1>31)
-     LUT6:I5->O            1   0.205   0.000  state[2]_GND_1_o_select_55_OUT<3>1 (state[2]_GND_1_o_select_55_OUT<1>)
+     LUT6:I1->O            1   0.203   0.000  state[2]_GND_1_o_select_58_OUT<1>311_G (N66)
+     MUXF7:I1->O           4   0.140   0.684  state[2]_GND_1_o_select_58_OUT<1>311 (state[2]_GND_1_o_select_58_OUT<1>31)
+     LUT6:I5->O            1   0.205   0.000  state[2]_GND_1_o_select_58_OUT<3>1 (state[2]_GND_1_o_select_58_OUT<1>)
      FD:D                      0.102          msCounted_1
     ----------------------------------------
     Total                      4.119ns (1.300ns logic, 2.819ns route)
@@ -552,14 +553,14 @@ clk            |    4.119|         |         |         |
 
 
 Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 11.86 secs
+Total CPU time to Xst completion: 12.37 secs
  
 --> 
 
 
-Total memory usage is 396768 kilobytes
+Total memory usage is 396780 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   47 (   0 filtered)
+Number of warnings :   48 (   0 filtered)
 Number of infos    :    7 (   0 filtered)
 
