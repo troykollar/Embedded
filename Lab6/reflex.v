@@ -98,43 +98,22 @@ always @(posedge clk)
 		end
 	3:
 		begin
-			begin
-				if (nsTimer == 100000 && msCounted !== 10 && tenMsCounted !== 10 && hundredMsCounted !== 10)
-					begin
-						nsTimer <= 0;
-						msCounted <= msCounted + 1;
-						tenMsCounted <= tenMsCounted;
-						hundredMsCounted <= hundredMsCounted;
-					end
-				else if (nsTimer == 100000 && msCounted == 10 && tenMsCounted !== 10 && hundredMsCounted !== 10)
-					begin
-						nsTimer <= 0;
-						msCounted <= 0;
-						tenMsCounted <= tenMsCounted + 1;
-						hundredMsCounted <= hundredMsCounted;
-					end
-				else if (nsTimer == 100000 && msCounted == 10 && tenMsCounted == 10 && hundredMsCounted !== 10)
-					begin
-						nsTimer <= 0;
-						msCounted <= 0;
-						tenMsCounted <= 0;
-						hundredMsCounted <= hundredMsCounted;
-					end
-				else if (nsTimer == 100000 && msCounted == 10 && tenMsCounted == 10 && hundredMsCounted == 10)
-					begin
-						nsTimer <= 0;
-						msCounted <= 0;
-						tenMsCounted <= 0;
-						hundredMsCounted <= 0;
-					end
-				else
-					begin
-						nsTimer <= nsTimer + 1;
-						msCounted <= msCounted;
-						tenMsCounted <= tenMsCounted;
-						hundredMsCounted <= hundredMsCounted;
-					end
-			end
+			if (nsTimer == 100000)		msCounted <= msCounted + 1;
+			else								msCounted <= msCounted;
+			
+			if (msCounted == 10)
+				begin
+					msCounted <= 0;
+					tenMsCounted <= tenMsCounted + 1;
+				end
+			else	tenMsCounted <= tenMsCounted;
+			
+			if (tenMsCounted == 10)
+				begin
+					tenMsCounted <= 0;
+					hundredMsCounted <= hundredMsCounted + 1;
+				end
+			else	hundredMsCounted <= hundredMsCounted;
 		end
 	endcase
 	

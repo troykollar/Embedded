@@ -118,15 +118,15 @@ Parsing module <reflex>.
 Elaborating module <reflex>.
 WARNING:HDLCompiler:872 - "/home/troy/Embedded/Lab6/reflex.v" Line 7: Using initial value of time_delay_multiplier since it is never assigned
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 51: Result of 30-bit expression is truncated to fit in 29-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 105: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 113: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 132: Result of 18-bit expression is truncated to fit in 17-bit target.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 159: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 160: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 161: Signal <hundredMsCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 162: Signal <tenMsCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 163: Signal <msCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 167: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 101: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 107: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Lab6/reflex.v" Line 114: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 138: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 139: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 140: Signal <hundredMsCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 141: Signal <tenMsCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 142: Signal <msCounted> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Lab6/reflex.v" Line 146: Signal <anodes> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -145,7 +145,7 @@ Synthesizing Unit <reflex>.
     Found 40-bit register for signal <counter>.
     Found 3-bit register for signal <anodes>.
     Found 3-bit register for signal <rand_delay_num>.
-    Found finite state machine <FSM_2> for signal <rand_delay_num>.
+    Found finite state machine <FSM_1> for signal <rand_delay_num>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
     | Transitions        | 5                                              |
@@ -168,11 +168,11 @@ Synthesizing Unit <reflex>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 29-bit adder for signal <delay_status[28]_GND_1_o_add_17_OUT> created at line 51.
-    Found 4-bit adder for signal <msCounted[3]_GND_1_o_add_42_OUT> created at line 105.
-    Found 4-bit adder for signal <tenMsCounted[3]_GND_1_o_add_47_OUT> created at line 113.
-    Found 17-bit adder for signal <nsTimer[16]_GND_1_o_add_56_OUT> created at line 132.
-    Found 40-bit adder for signal <counter[39]_GND_1_o_add_85_OUT> created at line 147.
-    Found 3x27-bit multiplier for signal <n0124> created at line 38.
+    Found 4-bit adder for signal <msCounted[3]_GND_1_o_add_39_OUT> created at line 101.
+    Found 4-bit adder for signal <tenMsCounted[3]_GND_1_o_add_42_OUT> created at line 107.
+    Found 4-bit adder for signal <hundredMsCounted[3]_GND_1_o_add_46_OUT> created at line 114.
+    Found 40-bit adder for signal <counter[39]_GND_1_o_add_61_OUT> created at line 126.
+    Found 3x27-bit multiplier for signal <n0097> created at line 38.
     Found 16x8-bit Read Only RAM for signal <cathodes>
     Found 29-bit comparator equal for signal <delay_status[28]_time_delay[28]_equal_19_o> created at line 52
     Summary:
@@ -181,7 +181,7 @@ Synthesizing Unit <reflex>.
 	inferred   5 Adder/Subtractor(s).
 	inferred 138 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred  27 Multiplexer(s).
+	inferred  16 Multiplexer(s).
 	inferred   2 Finite State Machine(s).
 Unit <reflex> synthesized.
 
@@ -194,9 +194,8 @@ Macro Statistics
 # Multipliers                                          : 1
  27x3-bit multiplier                                   : 1
 # Adders/Subtractors                                   : 5
- 17-bit adder                                          : 1
  29-bit adder                                          : 1
- 4-bit adder                                           : 2
+ 4-bit adder                                           : 3
  40-bit adder                                          : 1
 # Registers                                            : 9
  17-bit register                                       : 1
@@ -207,12 +206,11 @@ Macro Statistics
  8-bit register                                        : 1
 # Comparators                                          : 1
  29-bit comparator equal                               : 1
-# Multiplexers                                         : 27
+# Multiplexers                                         : 16
  1-bit 2-to-1 multiplexer                              : 4
- 17-bit 2-to-1 multiplexer                             : 4
  29-bit 2-to-1 multiplexer                             : 3
  3-bit 2-to-1 multiplexer                              : 1
- 4-bit 2-to-1 multiplexer                              : 12
+ 4-bit 2-to-1 multiplexer                              : 5
  8-bit 2-to-1 multiplexer                              : 3
 # FSMs                                                 : 2
 
@@ -222,10 +220,27 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1293 - FF/Latch <nsTimer_16> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_15> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_14> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_13> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_12> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_11> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_10> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_9> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_8> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_7> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_6> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_5> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_4> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_3> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_2> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_1> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_0> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <reflex>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
-	Found pipelined multiplier on signal <n0124>:
+	Found pipelined multiplier on signal <n0097>:
 		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
 		Pushing register(s) into the multiplier macro.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_cathodes> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -250,21 +265,19 @@ Macro Statistics
 # Multipliers                                          : 1
  27x3-bit registered multiplier                        : 1
 # Adders/Subtractors                                   : 4
- 17-bit adder                                          : 1
  29-bit adder                                          : 1
- 4-bit adder                                           : 2
+ 4-bit adder                                           : 3
 # Counters                                             : 1
  40-bit up counter                                     : 1
 # Registers                                            : 69
  Flip-Flops                                            : 69
 # Comparators                                          : 1
  29-bit comparator equal                               : 1
-# Multiplexers                                         : 27
+# Multiplexers                                         : 16
  1-bit 2-to-1 multiplexer                              : 4
- 17-bit 2-to-1 multiplexer                             : 4
  29-bit 2-to-1 multiplexer                             : 3
  3-bit 2-to-1 multiplexer                              : 1
- 4-bit 2-to-1 multiplexer                              : 12
+ 4-bit 2-to-1 multiplexer                              : 5
  8-bit 2-to-1 multiplexer                              : 3
 # FSMs                                                 : 2
 
@@ -273,8 +286,25 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1293 - FF/Latch <nsTimer_16> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_15> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_14> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_13> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_12> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_11> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_10> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_9> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_8> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_7> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_6> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_5> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_4> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_3> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_2> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_1> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <nsTimer_0> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_2> on signal <rand_delay_num[1:3]> with user encoding.
+Optimizing FSM <FSM_1> on signal <rand_delay_num[1:3]> with user encoding.
 -------------------
  State | Encoding
 -------------------
@@ -296,16 +326,16 @@ Optimizing FSM <FSM_0> on signal <state[1:3]> with user encoding.
  011   | 011
  100   | 100
 -------------------
-WARNING:Xst:1710 - FF/Latch <Mmult_n0124_29> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0124_28> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0124_27> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0124_26> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0124_25> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0124_24> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0124_23> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0124_22> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0124_18> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0124_17> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mmult_n0097_29> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0097_28> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0097_27> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0097_26> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0097_25> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0097_24> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0097_23> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0097_22> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0097_18> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_n0097_17> (without init value) has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <counter_16> of sequential type is unconnected in block <reflex>.
 WARNING:Xst:2677 - Node <counter_17> of sequential type is unconnected in block <reflex>.
 WARNING:Xst:2677 - Node <counter_18> of sequential type is unconnected in block <reflex>.
@@ -330,27 +360,46 @@ WARNING:Xst:2677 - Node <counter_36> of sequential type is unconnected in block 
 WARNING:Xst:2677 - Node <counter_37> of sequential type is unconnected in block <reflex>.
 WARNING:Xst:2677 - Node <counter_38> of sequential type is unconnected in block <reflex>.
 WARNING:Xst:2677 - Node <counter_39> of sequential type is unconnected in block <reflex>.
-WARNING:Xst:2677 - Node <Mmult_n0124_0> of sequential type is unconnected in block <reflex>.
-INFO:Xst:2261 - The FF/Latch <Mmult_n0124_21> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <Mmult_n0124_16> 
+WARNING:Xst:2677 - Node <Mmult_n0097_0> of sequential type is unconnected in block <reflex>.
+INFO:Xst:2261 - The FF/Latch <Mmult_n0097_21> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <Mmult_n0097_16> 
 
 Optimizing unit <reflex> ...
-WARNING:Xst:1293 - FF/Latch <fsmfake3_0> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <fsmfake3_1> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <fsmfake3_2> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <fsmfake3_3> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <fsmfake3_0> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <fsmfake3_1> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <fsmfake3_2> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <fsmfake3_3> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <hundredMsCounted_0> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <msCounted_0> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <msCounted_1> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <msCounted_2> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <msCounted_3> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tenMsCounted_0> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tenMsCounted_1> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tenMsCounted_2> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tenMsCounted_3> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <hundredMsCounted_1> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hundredMsCounted_2> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hundredMsCounted_3> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <hundredMsCounted_0> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hundredMsCounted_1> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hundredMsCounted_2> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <hundredMsCounted_3> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <msCounted_0> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <msCounted_1> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <msCounted_2> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <msCounted_3> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tenMsCounted_0> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tenMsCounted_1> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tenMsCounted_2> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <tenMsCounted_3> has a constant value of 0 in block <reflex>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <Mmult_n0097_10> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <Mmult_n0097_2> 
+INFO:Xst:2261 - The FF/Latch <Mmult_n0097_11> in Unit <reflex> is equivalent to the following 2 FFs/Latches, which will be removed : <Mmult_n0097_9> <Mmult_n0097_3> 
+INFO:Xst:2261 - The FF/Latch <Mmult_n0097_12> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <Mmult_n0097_4> 
+INFO:Xst:2261 - The FF/Latch <Mmult_n0097_14> in Unit <reflex> is equivalent to the following 4 FFs/Latches, which will be removed : <Mmult_n0097_13> <Mmult_n0097_7> <Mmult_n0097_6> <Mmult_n0097_5> 
 INFO:Xst:2261 - The FF/Latch <outleds_5> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <outleds_7> 
-INFO:Xst:2261 - The FF/Latch <Mmult_n0124_10> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <Mmult_n0124_2> 
-INFO:Xst:2261 - The FF/Latch <Mmult_n0124_11> in Unit <reflex> is equivalent to the following 2 FFs/Latches, which will be removed : <Mmult_n0124_9> <Mmult_n0124_3> 
-INFO:Xst:2261 - The FF/Latch <Mmult_n0124_12> in Unit <reflex> is equivalent to the following FF/Latch, which will be removed : <Mmult_n0124_4> 
-INFO:Xst:2261 - The FF/Latch <Mmult_n0124_14> in Unit <reflex> is equivalent to the following 4 FFs/Latches, which will be removed : <Mmult_n0124_13> <Mmult_n0124_7> <Mmult_n0124_6> <Mmult_n0124_5> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block reflex, actual ratio is 4.
+Found area constraint ratio of 100 (+ 5) on block reflex, actual ratio is 3.
+FlipFlop state_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop state_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop state_FSM_FFd3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -358,8 +407,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 96
- Flip-Flops                                            : 96
+# Registers                                            : 74
+ Flip-Flops                                            : 74
 
 =========================================================================
 
@@ -382,21 +431,21 @@ Top Level Output File Name         : reflex.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 387
+# BELS                             : 289
 #      GND                         : 1
-#      INV                         : 5
-#      LUT1                        : 60
+#      INV                         : 4
+#      LUT1                        : 44
 #      LUT2                        : 19
-#      LUT3                        : 22
-#      LUT4                        : 54
-#      LUT5                        : 18
-#      LUT6                        : 50
-#      MUXCY                       : 85
-#      MUXF7                       : 3
+#      LUT3                        : 20
+#      LUT4                        : 38
+#      LUT5                        : 9
+#      LUT6                        : 27
+#      MUXCY                       : 69
+#      MUXF7                       : 5
 #      VCC                         : 1
-#      XORCY                       : 69
-# FlipFlops/Latches                : 96
-#      FD                          : 31
+#      XORCY                       : 52
+# FlipFlops/Latches                : 74
+#      FD                          : 9
 #      FDE                         : 49
 #      FDR                         : 16
 # Clock Buffers                    : 1
@@ -412,15 +461,15 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              96  out of  11440     0%  
- Number of Slice LUTs:                  228  out of   5720     3%  
-    Number used as Logic:               228  out of   5720     3%  
+ Number of Slice Registers:              74  out of  11440     0%  
+ Number of Slice LUTs:                  161  out of   5720     2%  
+    Number used as Logic:               161  out of   5720     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    231
-   Number with an unused Flip Flop:     135  out of    231    58%  
-   Number with an unused LUT:             3  out of    231     1%  
-   Number of fully used LUT-FF pairs:    93  out of    231    40%  
+ Number of LUT Flip Flop pairs used:    166
+   Number with an unused Flip Flop:      92  out of    166    55%  
+   Number with an unused LUT:             5  out of    166     3%  
+   Number of fully used LUT-FF pairs:    69  out of    166    41%  
    Number of unique control sets:         6
 
 IO Utilization: 
@@ -451,7 +500,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 96    |
+clk                                | BUFGP                  | 74    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -462,9 +511,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.099ns (Maximum Frequency: 196.115MHz)
-   Minimum input arrival time before clock: 3.741ns
-   Maximum output required time after clock: 7.949ns
+   Minimum period: 3.828ns (Maximum Frequency: 261.233MHz)
+   Minimum input arrival time before clock: 3.718ns
+   Maximum output required time after clock: 5.687ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -473,55 +522,53 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.099ns (frequency: 196.115MHz)
-  Total number of paths / destination ports: 2878 / 145
+  Clock period: 3.828ns (frequency: 261.233MHz)
+  Total number of paths / destination ports: 1638 / 123
 -------------------------------------------------------------------------
-Delay:               5.099ns (Levels of Logic = 4)
-  Source:            nsTimer_11 (FF)
-  Destination:       nsTimer_0 (FF)
+Delay:               3.828ns (Levels of Logic = 3)
+  Source:            Mmult_n0097_19 (FF)
+  Destination:       outleds_2 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: nsTimer_11 to nsTimer_0
+  Data Path: Mmult_n0097_19 to outleds_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               3   0.447   0.995  nsTimer_11 (nsTimer_11)
-     LUT5:I0->O            3   0.203   0.879  GND_1_o_GND_1_o_equal_53_o<16>3 (GND_1_o_GND_1_o_equal_53_o<16>2)
-     LUT6:I3->O            9   0.205   0.830  GND_1_o_GND_1_o_AND_742_o11 (GND_1_o_GND_1_o_AND_742_o1)
-     LUT5:I4->O           17   0.205   1.028  state[2]_GND_1_o_select_76_OUT<0>31 (state[2]_GND_1_o_select_76_OUT<0>3)
-     LUT6:I5->O            1   0.205   0.000  state[2]_GND_1_o_select_76_OUT<0>1 (state[2]_GND_1_o_select_76_OUT<0>)
-     FD:D                      0.102          nsTimer_0
+     FDE:C->Q              5   0.447   0.962  Mmult_n0097_19 (Mmult_n0097_19)
+     LUT4:I0->O            2   0.203   0.617  time_delay[28]_GND_1_o_equal_12_o<28>_SW0 (N2)
+     LUT6:I5->O            6   0.205   1.089  time_delay[28]_GND_1_o_equal_12_o<28> (time_delay[28]_GND_1_o_equal_12_o)
+     LUT6:I1->O            1   0.203   0.000  Mmux_state[2]_outleds[7]_wide_mux_29_OUT3 (state[2]_outleds[7]_wide_mux_29_OUT<2>)
+     FDE:D                     0.102          outleds_2
     ----------------------------------------
-    Total                      5.099ns (1.367ns logic, 3.732ns route)
-                                       (26.8% logic, 73.2% route)
+    Total                      3.828ns (1.160ns logic, 2.668ns route)
+                                       (30.3% logic, 69.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 36 / 25
+  Total number of paths / destination ports: 50 / 28
 -------------------------------------------------------------------------
-Offset:              3.741ns (Levels of Logic = 3)
+Offset:              3.718ns (Levels of Logic = 2)
   Source:            reset (PAD)
-  Destination:       state_FSM_FFd1 (FF)
+  Destination:       counter_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: reset to state_FSM_FFd1
+  Data Path: reset to counter_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            10   1.222   1.201  reset_IBUF (reset_IBUF)
-     LUT5:I0->O            1   0.203   0.808  state_FSM_FFd1-In1_SW2 (N32)
-     LUT5:I2->O            1   0.205   0.000  state_FSM_FFd1-In2 (state_FSM_FFd1-In)
-     FD:D                      0.102          state_FSM_FFd1
+     IBUF:I->O            10   1.222   0.856  reset_IBUF (reset_IBUF)
+     INV:I->O             16   0.206   1.004  reset_inv1_INV_0 (reset_inv)
+     FDR:R                     0.430          counter_0
     ----------------------------------------
-    Total                      3.741ns (1.732ns logic, 2.009ns route)
-                                       (46.3% logic, 53.7% route)
+    Total                      3.718ns (1.858ns logic, 1.860ns route)
+                                       (50.0% logic, 50.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 249 / 18
+  Total number of paths / destination ports: 36 / 16
 -------------------------------------------------------------------------
-Offset:              7.949ns (Levels of Logic = 4)
+Offset:              5.687ns (Levels of Logic = 2)
   Source:            state_FSM_FFd3 (FF)
   Destination:       cathodes<5> (PAD)
   Source Clock:      clk rising
@@ -530,14 +577,12 @@ Offset:              7.949ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              82   0.447   2.103  state_FSM_FFd3 (state_FSM_FFd3)
-     LUT5:I0->O            2   0.203   0.617  Mmux_cathod_S<2>121 (Mmux_cathod_S<2>12)
-     LUT6:I5->O            7   0.205   1.021  Mmux_cathod_S<2>11 (cathod_S<2>)
-     LUT4:I0->O            1   0.203   0.579  Mram_cathodes111 (cathodes_1_OBUF)
-     OBUF:I->O                 2.571          cathodes_1_OBUF (cathodes<1>)
+     FD:C->Q              47   0.447   1.849  state_FSM_FFd3 (state_FSM_FFd3)
+     LUT5:I0->O            2   0.203   0.616  Mram_cathodes321 (Mram_cathodes32)
+     OBUF:I->O                 2.571          cathodes_5_OBUF (cathodes<5>)
     ----------------------------------------
-    Total                      7.949ns (3.629ns logic, 4.320ns route)
-                                       (45.7% logic, 54.3% route)
+    Total                      5.687ns (3.221ns logic, 2.466ns route)
+                                       (56.6% logic, 43.4% route)
 
 =========================================================================
 
@@ -549,21 +594,21 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.099|         |         |         |
+clk            |    3.828|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 13.08 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 10.56 secs
  
 --> 
 
 
-Total memory usage is 396428 kilobytes
+Total memory usage is 396612 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   54 (   0 filtered)
+Number of warnings :  104 (   0 filtered)
 Number of infos    :    7 (   0 filtered)
 
