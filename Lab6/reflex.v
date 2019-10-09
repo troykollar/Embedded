@@ -98,8 +98,16 @@ always @(posedge clk)
 		end
 	3:
 		begin
-			if (nsTimer == 100000)		msCounted <= msCounted + 1;
-			else								msCounted <= msCounted;
+			if (nsTimer == 100000)
+				begin
+					nsTimer <= 0;
+					msCounted <= msCounted + 1;
+				end
+			else			
+				begin
+					nsTimer <= nsTimer + 1;
+					msCounted <= msCounted;
+				end
 			
 			if (msCounted == 10)
 				begin
