@@ -84,8 +84,8 @@ always @(posedge clk)
 //*********************Count the number of ms passed************************
 reg [16:0] nsTimer = 0;
 reg [3:0] msCounted = 0;
-reg [3:0] tenMsCounted = 0;
-reg [3:0] hundredMsCounted = 0;
+reg [3:0] ten_ms = 0;
+reg [3:0] hundred_ms = 0;
 	
 always @(posedge clk)
 	case(state)
@@ -93,38 +93,63 @@ always @(posedge clk)
 		begin
 			nsTimer <= 0;
 			msCounted <= 0;
-			tenMsCounted <= 0;
-			hundredMsCounted <= 0;
+			ten_ms <= 0;
+			hundred_ms <= 0;
+		end
+	1:
+		begin
+			nsTimer <= 0;
+			msCounted <= 0;
+			ten_ms <= 0;
+			hundred_ms <= 0;
+		end
+	2:
+		begin
+			nsTimer <= 0;
+			msCounted <= 0;
+			ten_ms <= 0;
+			hundred_ms <= 0;
 		end
 	3:
 		begin
 			if (nsTimer == 100000)
-				begin
-					nsTimer <= 0;
-					msCounted <= msCounted + 1;
-				end
-			else			
+				if (msCounted < 4'h9)
+					begin
+						nsTimer <= 0;
+						msCounted <= msCounted + 1;
+						ten_ms <= ten_ms;
+						hundred_ms <= hundred_ms;
+					end
+				else
+					if (ten_ms < 4'h9)
+						begin
+							nsTimer <= 0;
+							msCounted <= 0;
+							ten_ms <= ten_ms + 1;
+							hundred_ms <= hundred_ms;
+						end
+					else
+						if (hundred_ms < 4'h9)
+							begin
+								nsTimer <= 0;
+								msCounted <= 0;
+								ten_ms <= 0;
+								hundred_ms <= hundred_ms + 1;
+							end
+						else
+							begin
+								nsTimer <= 0;
+								msCounted <= 0;
+								ten_ms <= 0;
+								hundred_ms <= 0;
+							end
+			else
 				begin
 					nsTimer <= nsTimer + 1;
 					msCounted <= msCounted;
+					ten_ms <= ten_ms;
+					hundred_ms <= hundred_ms;
 				end
-			
-			if (msCounted == 10)
-				begin
-					msCounted <= 0;
-					tenMsCounted <= tenMsCounted + 1;
-				end
-			else	tenMsCounted <= tenMsCounted;
-			
-			if (tenMsCounted == 10)
-				begin
-					tenMsCounted <= 0;
-					hundredMsCounted <= hundredMsCounted + 1;
-				end
-			else	hundredMsCounted <= hundredMsCounted;
-			
-			if (hundredMsCounted == 10)	hundredMsCounted <= 0;
-			else									hundredMsCounted <= hundredMsCounted + 1;
 		end
 	endcase
 	
@@ -147,17 +172,17 @@ reg [3:0] cathod_S;
 
 always @(cathod_S)
 	if (state !== 5)
-       case({anodes})
-			3'b011:  cathod_S = hundredMsCounted[3:0]; 
-	      3'b101:  cathod_S = tenMsCounted[3:0]; 
-	      3'b110:  cathod_S = msCounted[3:0];
-	      default:  cathod_S = 4'h0; 
-      endcase
+		 case({anodes})
+			3'b011:  cathod_S = hundred_ms; 
+			3'b101:  cathod_S = ten_ms; 
+			3'b110:  cathod_S = msCounted;
+			default:  cathod_S = 4'h0; 
+		endcase
 	else
 		case({anodes})
-			3'b011:  cathod_S = 4'hd; 
-	      3'b101:  cathod_S = 4'he; 
-	      3'b110:  cathod_S = 4'hd; 
+			3'b011:  cathod_S = 4'h0; 
+	      3'b101:  cathod_S = 4'h0; 
+	      3'b110:  cathod_S = 4'hf; 
 	      default:  cathod_S = 4'h0; 
       endcase
 
