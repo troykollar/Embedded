@@ -13,7 +13,8 @@ reg [7:0] vert7 = 8'b0000_0000;
 reg [2:0] timeState = 0;	//Keep track of time which determines car locations
 reg [24:0] timeCounter = 0;	//Count the number of clock pulses to keep track of time
 
-reg [2:0] froggerVerticalState = 0;	//Keep track of what vertical level frogger is on
+reg [2:0] froggerVerticalState = 7;	//Keep track of what vertical level frogger is on
+reg [7:0] froggerHorizState = 8'b0001_0000;	//Keep track of what horizontal level frogger is on
 reg win = 0;	//Turns to 1 when reaching the top of the level
 
 //Increase timeState, depending on simulation vs. synthesis
@@ -95,10 +96,45 @@ always @(posedge clk)
 	if (froggerVerticalState == 0) 	win <= 1;
 	else				win <= 0;
 
-//Control frogger position
+//Control frogger vertical position
 always @(posedge clk)
 	if (!up)	froggerVerticalState <= froggerVerticalState - 1;
 	else if (!down) froggerVerticalState <= froggerVerticalState + 1;
 	else	froggerVerticalState <= froggerVerticalState;
+//Control frogger horizontal position
+always @(posedge clk)
+	if (froggerHorizState == 8'b1000_0000)
+		if (!right)	froggerHorizState <= 8'b0100_0000;
+		else		froggerHorizState <= froggerHorizState;
+	else if (froggerHorizState == 8'b0000_0001)
+		if (!left)	froggerHorizState <= 8'b0000_0010;
+		else		froggerHorizState <= froggerHorizState;
+	else
+		if (!right)	froggerHorizState <= froggerHorizState >> 1;
+		else if (!left)	froggerHorizState <= froggerHorizState << 1;
+		else		froggerHorizState <= froggerHorizState;
+
+reg dead = 0;	//possibly remove, use for simulation
+always @(posedge clk)
+	if (froggerVerticalState == 6)
+		if ((vert6 & froggerHorizState) !== 0) 	dead <= 1;
+		else					dead <= dead;
+	else if (froggerVerticalState == 5)
+		if ((vert6 & froggerHorizState) !== 0)	dead <= 1;
+		else					dead <= dead;
+	else if (froggerVerticalState == 3)
+		if ((vert3 & froggerHorizState) !== 0)	dead <= 1;
+		else					dead <= dead;
+	else if (froggerVerticalState == 2)
+		if ((vert2 & froggerHorizState) !== 0)	dead <= 1;
+		else					dead <= dead;
+	else if (froggerVerticalState == 1)
+		if ((vert1 & froggerHorizState) !== 0)	dead <= 1;
+		else					dead <= dead;
+	else						dead <= dead;
+
+reg [7:0] andedReg;	//Remove when synthesizing
+always @(posedge clk)
+	andedReg <= froggerHorizState & vert6;
 
 endmodule
