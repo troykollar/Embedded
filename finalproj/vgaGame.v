@@ -17,12 +17,14 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 
 	//Increase timeState, depending on simulation vs. synthesis
 	always @(posedge clk)
-		if (timeCounter == 100000000) //Change to 100 million for synthesis
-			begin
-				timeCounter <= 0;
-				timeState <= timeState + 1;
-			end
-		else	timeCounter <= timeCounter + 1;
+		if (!reset) timeState <= 0;
+		else
+			if (timeCounter == 100000000) //Change to 100 million for synthesis
+				begin
+					timeCounter <= 0;
+					timeState <= timeState + 1;
+				end
+			else	timeCounter <= timeCounter + 1;
 
 	//Move vert1 cars based on timeState
 	always @(posedge clk)
@@ -37,7 +39,7 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 			7: vert1 <= 8'b1110_1110;
 		endcase
 
-	//Move vert1 cars based on timeState
+	//Move vert2 cars based on timeState
 	always @(posedge clk)
 		case (timeState)
 					0: vert2 <= 8'b1000_1000;
@@ -258,13 +260,39 @@ module VGAWrite(
    always @(posedge clk_25)
    begin
 		if (inDisplayArea)
-			if (CounterY < 60)	//Top of screen shown in white because it's safe
+			if (CounterY < 60)	//Top of screen shown in black because no cars
+				pixel <= 3'b000;
+			else if (CounterY < 120)
 				if ((drawHorizPosition & vert1) !== 0)
 					pixel <= 3'b100;
 				else
-					pixel <= 3'b111;
+					pixel <= 3'b000;
+			else if (CounterY < 180)
+				if ((drawHorizPosition & vert2) !== 0)
+					pixel <= 3'b100;
+				else
+					pixel <= 3'b000;
+			else if (CounterY < 240)
+				if ((drawHorizPosition & vert3) !== 0)
+					pixel <= 3'b100;
+				else
+					pixel <= 3'b000;
+			else if (CounterY < 300)
+				pixel <= 3'b111;
+			else if (CounterY < 360)
+				if ((drawHorizPosition & vert5) !== 0)
+					pixel <= 3'b100;
+				else
+					pixel <= 3'b000;
+			else if (CounterY < 420)
+				if ((drawHorizPosition & vert6) !== 0)
+					pixel <= 3'b100;
+				else
+					pixel <= 3'b000;
+			else if (CounterY < 480)
+				pixel <= 3'b000;
 			else
-				pixel <= CounterX[9:6];
+				pixel <= 3'b111;
 		else // if it's not to display, go dark
 			pixel <= 3'b000;
     end
