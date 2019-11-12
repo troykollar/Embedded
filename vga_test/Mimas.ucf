@@ -102,11 +102,11 @@ TIMESPEC TS_GCLK1 = PERIOD "GCLK1" 100 MHz HIGH 50%;
 # Buttons
 ############################################################################
 
-    #NET "buttons[1]"         LOC = M18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW1
-    #NET "buttons[2]"         LOC = L18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW2
-    #NET "buttons[3]"         LOC = M16 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW3
-    #NET "buttons[4]"         LOC = L17 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW4
-    #NET "buttons[5]"         LOC = K17 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW5
+    NET "sw1"         LOC = M18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW1
+    NET "sw2"         LOC = L18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW2
+    NET "sw3"         LOC = M16 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW3
+    NET "sw4"         LOC = L17 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW4
+    NET "sw5"         LOC = K17 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW5
     #NET "buttons[6]"         LOC = K18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW6
 
 ############################################################################

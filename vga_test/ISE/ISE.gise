@@ -108,7 +108,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="VGADemo.lso"/>
       <outfile xil_pn:name="VGADemo.ngc"/>
@@ -129,6 +131,7 @@
     <transform xil_pn:end_ts="1573584059" xil_pn:in_ck="3716470927491485975" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2151640494393468390" xil_pn:start_ts="1573584049">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="VGADemo.bld"/>
       <outfile xil_pn:name="VGADemo.ngd"/>
       <outfile xil_pn:name="VGADemo_ngdbuild.xrpt"/>
@@ -138,6 +141,9 @@
     <transform xil_pn:end_ts="1573584078" xil_pn:in_ck="3716470927491485976" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1405206279585514545" xil_pn:start_ts="1573584059">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="VGADemo.pcf"/>
       <outfile xil_pn:name="VGADemo_map.map"/>
       <outfile xil_pn:name="VGADemo_map.mrp"/>
@@ -151,6 +157,7 @@
     <transform xil_pn:end_ts="1573584101" xil_pn:in_ck="-2749239558414930895" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1573584078">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="VGADemo.ncd"/>
       <outfile xil_pn:name="VGADemo.pad"/>
       <outfile xil_pn:name="VGADemo.par"/>
@@ -165,6 +172,7 @@
     <transform xil_pn:end_ts="1573584116" xil_pn:in_ck="135105457577025574" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="4970201210546912173" xil_pn:start_ts="1573584101">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="VGADemo.bgn"/>
       <outfile xil_pn:name="VGADemo.bin"/>
       <outfile xil_pn:name="VGADemo.bit"/>
@@ -178,6 +186,7 @@
     <transform xil_pn:end_ts="1573584101" xil_pn:in_ck="3716470927491485844" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1573584092">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="VGADemo.twr"/>
       <outfile xil_pn:name="VGADemo.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

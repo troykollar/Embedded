@@ -73,7 +73,7 @@ module VGADemo(
     always @(posedge clk_25)
     begin
       if (inDisplayArea)
-			if (CounterY < 60)
+			if (CounterY < 60)	//Top of screen shown in white because it's safe
 				pixel <= 3'b111;
 			else
 				pixel <= CounterX[9:6];
