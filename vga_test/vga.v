@@ -1,10 +1,10 @@
 module hvsync_generator(
-    input clk,
-    output vga_h_sync,
-    output vga_v_sync,
-    output reg inDisplayArea,
-    output reg [9:0] CounterX,
-    output reg [8:0] CounterY
+	input clk,
+	output vga_h_sync,
+	output vga_v_sync,
+	output reg inDisplayArea,
+	output reg [9:0] CounterX,
+	output reg [8:0] CounterY
   );
     reg vga_HS, vga_VS;
 
@@ -52,7 +52,7 @@ module VGADemo(
 );
 
 	 
-	 wire clk_25 = (clk_counter == 2'd3);
+	 wire clk_25 = clk_counter == 2'd3;
 	 reg [1:0] clk_counter = 0;
 	 always @(posedge clk)
 			clk_counter = clk_counter + 1;
@@ -72,9 +72,12 @@ module VGADemo(
     always @(posedge clk_25)
     begin
       if (inDisplayArea)
-        pixel <= CounterX[9:6];
-      else // if it's not to display, go dark
-        pixel <= 3'b000;
+			if (CounterX < 60)
+				pixel <= 3'b111;
+			else
+				pixel <= CounterX[9:6];
+		else // if it's not to display, go dark
+			pixel <= 3'b000;
     end
 
 endmodule
