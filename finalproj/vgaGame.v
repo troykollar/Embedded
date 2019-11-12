@@ -190,10 +190,11 @@ endmodule	//************************************
 //Writing to VGA==================================
 module VGAWrite(
     input clk,
-	 input up,
-	 input down,
-	 input left,
-	 input right,
+	 input sw4,
+	 input sw3,
+	 input sw1,
+	 input sw2,
+	 input sw5,
     output reg [2:0] pixel,
     output hsync_out,
     output vsync_out
