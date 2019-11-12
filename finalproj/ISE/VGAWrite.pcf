@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Nov 12 14:28:05 2019
+// Written by: Map P.20131013 on Tue Nov 12 14:33:06 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -12,8 +12,16 @@ COMP "hsync_out" LOCATE = SITE "B12" LEVEL 1;
 COMP "pixel<0>" LOCATE = SITE "A9" LEVEL 1;
 TIMEGRP GCLK1 = BEL "drawHorizPosition_0" BEL "drawHorizPosition_1" BEL
         "drawHorizPosition_2" BEL "drawHorizPosition_4" BEL
-        "drawHorizPosition_5" BEL "drawHorizPosition_6" BEL "clk_counter_0"
-        BEL "clk_counter_1" BEL "clk_BUFGP/BUFG";
+        "drawHorizPosition_5" BEL "drawHorizPosition_6" BEL
+        "hvsync/CounterY_8" BEL "hvsync/CounterY_7" BEL "hvsync/CounterY_6"
+        BEL "hvsync/CounterY_5" BEL "hvsync/CounterY_4" BEL
+        "hvsync/CounterY_3" BEL "hvsync/CounterY_2" BEL "hvsync/CounterY_1"
+        BEL "hvsync/CounterY_0" BEL "pixel_0" BEL "pixel_1" BEL "pixel_2" BEL
+        "hvsync/vga_VS" BEL "hvsync/vga_HS" BEL "hvsync/inDisplayArea" BEL
+        "hvsync/CounterX_9" BEL "hvsync/CounterX_8" BEL "hvsync/CounterX_7"
+        BEL "hvsync/CounterX_6" BEL "hvsync/CounterX_5" BEL
+        "hvsync/CounterX_4" BEL "hvsync/CounterX_3" BEL "hvsync/CounterX_2"
+        BEL "hvsync/CounterX_1" BEL "hvsync/CounterX_0" BEL "clk_BUFGP/BUFG";
 TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz HIGH 50%;
 SCHEMATIC END;
 

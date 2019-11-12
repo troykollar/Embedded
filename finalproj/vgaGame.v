@@ -196,11 +196,11 @@ module VGAWrite(
     output vsync_out
 );
 
-	 
-	 wire clk_25 = clk_counter == 2'd3;
-	 reg [1:0] clk_counter = 0;
-	 always @(posedge clk)
-			clk_counter = clk_counter + 1;
+	 wire clk_25 = clk;
+	 //wire clk_25 = clk_counter == 2'd3;
+	 //reg [1:0] clk_counter = 0;
+	 //always @(posedge clk)
+		//	clk_counter = clk_counter + 1;
 		
     wire inDisplayArea;
     wire [9:0] CounterX;

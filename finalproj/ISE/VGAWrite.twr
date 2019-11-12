@@ -28,18 +28,18 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 3 paths analyzed, 3 endpoints analyzed, 0 failing endpoints
+ 441 paths analyzed, 134 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   1.730ns.
+ Minimum period is   2.865ns.
 --------------------------------------------------------------------------------
 
-Paths for end point clk_counter_1 (SLICE_X12Y33.A1), 1 path
+Paths for end point hvsync/CounterY_3 (SLICE_X16Y50.B3), 4 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     8.821ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               clk_counter_1 (FF)
-  Destination:          clk_counter_1 (FF)
+Slack (setup path):     7.135ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hvsync/CounterY_3 (FF)
+  Destination:          hvsync/CounterY_3 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      1.144ns (Levels of Logic = 1)
+  Data Path Delay:      2.830ns (Levels of Logic = 2)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
@@ -51,29 +51,30 @@ Slack (setup path):     8.821ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: clk_counter_1 to clk_counter_1
+  Maximum Data Path at Slow Process Corner: hvsync/CounterY_3 to hvsync/CounterY_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y33.AMUX    Tshcko                0.488   clk_counter<0>
-                                                       clk_counter_1
-    SLICE_X12Y33.A1      net (fanout=1)        0.502   clk_counter<1>
-    SLICE_X12Y33.CLK     Tas                   0.154   clk_counter<0>
-                                                       Mcount_clk_counter_xor<1>11
-                                                       clk_counter_1
+    SLICE_X16Y50.BMUX    Tshcko                0.488   hvsync/CounterY<5>
+                                                       hvsync/CounterY_3
+    SLICE_X14Y49.D2      net (fanout=5)        0.840   hvsync/CounterY<3>
+    SLICE_X14Y49.DMUX    Topdd                 0.374   hvsync/Mcount_CounterY_cy<3>
+                                                       hvsync/CounterY<3>_rt
+                                                       hvsync/Mcount_CounterY_cy<3>
+    SLICE_X16Y50.B3      net (fanout=1)        0.974   hvsync/Result<3>1
+    SLICE_X16Y50.CLK     Tas                   0.154   hvsync/CounterY<5>
+                                                       hvsync/CounterY_3_dpot
+                                                       hvsync/CounterY_3
     -------------------------------------------------  ---------------------------
-    Total                                      1.144ns (0.642ns logic, 0.502ns route)
-                                                       (56.1% logic, 43.9% route)
+    Total                                      2.830ns (1.016ns logic, 1.814ns route)
+                                                       (35.9% logic, 64.1% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point clk_counter_1 (SLICE_X12Y33.A2), 1 path
---------------------------------------------------------------------------------
-Slack (setup path):     8.928ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               clk_counter_0 (FF)
-  Destination:          clk_counter_1 (FF)
+Slack (setup path):     7.352ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hvsync/CounterY_1 (FF)
+  Destination:          hvsync/CounterY_3 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      1.037ns (Levels of Logic = 1)
+  Data Path Delay:      2.613ns (Levels of Logic = 2)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
@@ -85,29 +86,173 @@ Slack (setup path):     8.928ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: clk_counter_0 to clk_counter_1
+  Maximum Data Path at Slow Process Corner: hvsync/CounterY_1 to hvsync/CounterY_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y33.BQ      Tcko                  0.447   clk_counter<0>
-                                                       clk_counter_0
-    SLICE_X12Y33.A2      net (fanout=2)        0.436   clk_counter<0>
-    SLICE_X12Y33.CLK     Tas                   0.154   clk_counter<0>
-                                                       Mcount_clk_counter_xor<1>11
-                                                       clk_counter_1
+    SLICE_X16Y50.CQ      Tcko                  0.447   hvsync/CounterY<5>
+                                                       hvsync/CounterY_1
+    SLICE_X14Y49.B4      net (fanout=3)        0.501   hvsync/CounterY<1>
+    SLICE_X14Y49.DMUX    Topbd                 0.537   hvsync/Mcount_CounterY_cy<3>
+                                                       hvsync/CounterY<1>_rt
+                                                       hvsync/Mcount_CounterY_cy<3>
+    SLICE_X16Y50.B3      net (fanout=1)        0.974   hvsync/Result<3>1
+    SLICE_X16Y50.CLK     Tas                   0.154   hvsync/CounterY<5>
+                                                       hvsync/CounterY_3_dpot
+                                                       hvsync/CounterY_3
     -------------------------------------------------  ---------------------------
-    Total                                      1.037ns (0.601ns logic, 0.436ns route)
-                                                       (58.0% logic, 42.0% route)
+    Total                                      2.613ns (1.138ns logic, 1.475ns route)
+                                                       (43.6% logic, 56.4% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point clk_counter_0 (SLICE_X12Y33.B5), 1 path
---------------------------------------------------------------------------------
-Slack (setup path):     9.036ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               clk_counter_0 (FF)
-  Destination:          clk_counter_0 (FF)
+Slack (setup path):     7.402ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hvsync/CounterY_2 (FF)
+  Destination:          hvsync/CounterY_3 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      0.929ns (Levels of Logic = 1)
+  Data Path Delay:      2.554ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.009ns (0.153 - 0.162)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: hvsync/CounterY_2 to hvsync/CounterY_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y50.AMUX    Tshcko                0.461   hvsync/CounterXmaxed<9>_cepot
+                                                       hvsync/CounterY_2
+    SLICE_X14Y49.C5      net (fanout=4)        0.554   hvsync/CounterY<2>
+    SLICE_X14Y49.DMUX    Topcd                 0.411   hvsync/Mcount_CounterY_cy<3>
+                                                       hvsync/CounterY<2>_rt
+                                                       hvsync/Mcount_CounterY_cy<3>
+    SLICE_X16Y50.B3      net (fanout=1)        0.974   hvsync/Result<3>1
+    SLICE_X16Y50.CLK     Tas                   0.154   hvsync/CounterY<5>
+                                                       hvsync/CounterY_3_dpot
+                                                       hvsync/CounterY_3
+    -------------------------------------------------  ---------------------------
+    Total                                      2.554ns (1.026ns logic, 1.528ns route)
+                                                       (40.2% logic, 59.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point hvsync/CounterY_7 (SLICE_X15Y51.A1), 5 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     7.307ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hvsync/CounterX_1 (FF)
+  Destination:          hvsync/CounterY_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      2.699ns (Levels of Logic = 2)
+  Clock Path Skew:      0.041ns (0.576 - 0.535)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: hvsync/CounterX_1 to hvsync/CounterY_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y46.BQ      Tcko                  0.391   hvsync/CounterX<3>
+                                                       hvsync/CounterX_1
+    SLICE_X16Y50.A2      net (fanout=4)        1.007   hvsync/CounterX<1>
+    SLICE_X16Y50.A       Tilo                  0.203   hvsync/CounterY<5>
+                                                       hvsync/CounterXmaxed<9>_rstpot
+    SLICE_X15Y51.A1      net (fanout=5)        0.776   hvsync/CounterXmaxed<9>_rstpot
+    SLICE_X15Y51.CLK     Tas                   0.322   hvsync/CounterY<7>
+                                                       hvsync/CounterY_7_dpot
+                                                       hvsync/CounterY_7
+    -------------------------------------------------  ---------------------------
+    Total                                      2.699ns (0.916ns logic, 1.783ns route)
+                                                       (33.9% logic, 66.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     7.338ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hvsync/CounterX_9 (FF)
+  Destination:          hvsync/CounterY_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      2.615ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.012ns (0.151 - 0.163)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: hvsync/CounterX_9 to hvsync/CounterY_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y48.BQ      Tcko                  0.391   hvsync/CounterX<9>
+                                                       hvsync/CounterX_9
+    SLICE_X16Y50.A1      net (fanout=13)       0.923   hvsync/CounterX<9>
+    SLICE_X16Y50.A       Tilo                  0.203   hvsync/CounterY<5>
+                                                       hvsync/CounterXmaxed<9>_rstpot
+    SLICE_X15Y51.A1      net (fanout=5)        0.776   hvsync/CounterXmaxed<9>_rstpot
+    SLICE_X15Y51.CLK     Tas                   0.322   hvsync/CounterY<7>
+                                                       hvsync/CounterY_7_dpot
+                                                       hvsync/CounterY_7
+    -------------------------------------------------  ---------------------------
+    Total                                      2.615ns (0.916ns logic, 1.699ns route)
+                                                       (35.0% logic, 65.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     7.461ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hvsync/CounterX_2 (FF)
+  Destination:          hvsync/CounterY_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      2.545ns (Levels of Logic = 2)
+  Clock Path Skew:      0.041ns (0.576 - 0.535)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: hvsync/CounterX_2 to hvsync/CounterY_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y46.CQ      Tcko                  0.391   hvsync/CounterX<3>
+                                                       hvsync/CounterX_2
+    SLICE_X16Y50.A4      net (fanout=4)        0.853   hvsync/CounterX<2>
+    SLICE_X16Y50.A       Tilo                  0.203   hvsync/CounterY<5>
+                                                       hvsync/CounterXmaxed<9>_rstpot
+    SLICE_X15Y51.A1      net (fanout=5)        0.776   hvsync/CounterXmaxed<9>_rstpot
+    SLICE_X15Y51.CLK     Tas                   0.322   hvsync/CounterY<7>
+                                                       hvsync/CounterY_7_dpot
+                                                       hvsync/CounterY_7
+    -------------------------------------------------  ---------------------------
+    Total                                      2.545ns (0.916ns logic, 1.629ns route)
+                                                       (36.0% logic, 64.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point hvsync/CounterY_5 (SLICE_X16Y50.D4), 6 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     7.344ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hvsync/CounterY_3 (FF)
+  Destination:          hvsync/CounterY_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      2.621ns (Levels of Logic = 3)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
@@ -119,106 +264,189 @@ Slack (setup path):     9.036ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: clk_counter_0 to clk_counter_0
+  Maximum Data Path at Slow Process Corner: hvsync/CounterY_3 to hvsync/CounterY_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y33.BQ      Tcko                  0.447   clk_counter<0>
-                                                       clk_counter_0
-    SLICE_X12Y33.B5      net (fanout=2)        0.193   clk_counter<0>
-    SLICE_X12Y33.CLK     Tas                   0.289   clk_counter<0>
-                                                       Mcount_clk_counter_xor<0>11_INV_0
-                                                       clk_counter_0
+    SLICE_X16Y50.BMUX    Tshcko                0.488   hvsync/CounterY<5>
+                                                       hvsync/CounterY_3
+    SLICE_X14Y49.D2      net (fanout=5)        0.840   hvsync/CounterY<3>
+    SLICE_X14Y49.COUT    Topcyd                0.260   hvsync/Mcount_CounterY_cy<3>
+                                                       hvsync/CounterY<3>_rt
+                                                       hvsync/Mcount_CounterY_cy<3>
+    SLICE_X14Y50.CIN     net (fanout=1)        0.003   hvsync/Mcount_CounterY_cy<3>
+    SLICE_X14Y50.BMUX    Tcinb                 0.260   hvsync/Mcount_CounterY_cy<7>
+                                                       hvsync/Mcount_CounterY_cy<7>
+    SLICE_X16Y50.D4      net (fanout=1)        0.481   hvsync/Result<5>1
+    SLICE_X16Y50.CLK     Tas                   0.289   hvsync/CounterY<5>
+                                                       hvsync/CounterY_5_dpot
+                                                       hvsync/CounterY_5
     -------------------------------------------------  ---------------------------
-    Total                                      0.929ns (0.736ns logic, 0.193ns route)
-                                                       (79.2% logic, 20.8% route)
+    Total                                      2.621ns (1.297ns logic, 1.324ns route)
+                                                       (49.5% logic, 50.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     7.609ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hvsync/CounterY_1 (FF)
+  Destination:          hvsync/CounterY_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      2.356ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: hvsync/CounterY_1 to hvsync/CounterY_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y50.CQ      Tcko                  0.447   hvsync/CounterY<5>
+                                                       hvsync/CounterY_1
+    SLICE_X14Y49.B4      net (fanout=3)        0.501   hvsync/CounterY<1>
+    SLICE_X14Y49.COUT    Topcyb                0.375   hvsync/Mcount_CounterY_cy<3>
+                                                       hvsync/CounterY<1>_rt
+                                                       hvsync/Mcount_CounterY_cy<3>
+    SLICE_X14Y50.CIN     net (fanout=1)        0.003   hvsync/Mcount_CounterY_cy<3>
+    SLICE_X14Y50.BMUX    Tcinb                 0.260   hvsync/Mcount_CounterY_cy<7>
+                                                       hvsync/Mcount_CounterY_cy<7>
+    SLICE_X16Y50.D4      net (fanout=1)        0.481   hvsync/Result<5>1
+    SLICE_X16Y50.CLK     Tas                   0.289   hvsync/CounterY<5>
+                                                       hvsync/CounterY_5_dpot
+                                                       hvsync/CounterY_5
+    -------------------------------------------------  ---------------------------
+    Total                                      2.356ns (1.371ns logic, 0.985ns route)
+                                                       (58.2% logic, 41.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     7.613ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hvsync/CounterY_2 (FF)
+  Destination:          hvsync/CounterY_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      2.343ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.009ns (0.153 - 0.162)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: hvsync/CounterY_2 to hvsync/CounterY_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y50.AMUX    Tshcko                0.461   hvsync/CounterXmaxed<9>_cepot
+                                                       hvsync/CounterY_2
+    SLICE_X14Y49.C5      net (fanout=4)        0.554   hvsync/CounterY<2>
+    SLICE_X14Y49.COUT    Topcyc                0.295   hvsync/Mcount_CounterY_cy<3>
+                                                       hvsync/CounterY<2>_rt
+                                                       hvsync/Mcount_CounterY_cy<3>
+    SLICE_X14Y50.CIN     net (fanout=1)        0.003   hvsync/Mcount_CounterY_cy<3>
+    SLICE_X14Y50.BMUX    Tcinb                 0.260   hvsync/Mcount_CounterY_cy<7>
+                                                       hvsync/Mcount_CounterY_cy<7>
+    SLICE_X16Y50.D4      net (fanout=1)        0.481   hvsync/Result<5>1
+    SLICE_X16Y50.CLK     Tas                   0.289   hvsync/CounterY<5>
+                                                       hvsync/CounterY_5_dpot
+                                                       hvsync/CounterY_5
+    -------------------------------------------------  ---------------------------
+    Total                                      2.343ns (1.305ns logic, 1.038ns route)
+                                                       (55.7% logic, 44.3% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point clk_counter_0 (SLICE_X12Y33.B5), 1 path
+Paths for end point hvsync/CounterY_0 (SLICE_X16Y50.B5), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.495ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               clk_counter_0 (FF)
-  Destination:          clk_counter_0 (FF)
+Slack (hold path):      0.503ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               hvsync/CounterY_0 (FF)
+  Destination:          hvsync/CounterY_0 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.495ns (Levels of Logic = 1)
+  Data Path Delay:      0.503ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: clk_counter_0 to clk_counter_0
+  Minimum Data Path at Fast Process Corner: hvsync/CounterY_0 to hvsync/CounterY_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y33.BQ      Tcko                  0.234   clk_counter<0>
-                                                       clk_counter_0
-    SLICE_X12Y33.B5      net (fanout=2)        0.064   clk_counter<0>
-    SLICE_X12Y33.CLK     Tah         (-Th)    -0.197   clk_counter<0>
-                                                       Mcount_clk_counter_xor<0>11_INV_0
-                                                       clk_counter_0
+    SLICE_X16Y50.BQ      Tcko                  0.234   hvsync/CounterY<5>
+                                                       hvsync/CounterY_0
+    SLICE_X16Y50.B5      net (fanout=3)        0.072   hvsync/CounterY<0>
+    SLICE_X16Y50.CLK     Tah         (-Th)    -0.197   hvsync/CounterY<5>
+                                                       hvsync/CounterY_0_dpot
+                                                       hvsync/CounterY_0
     -------------------------------------------------  ---------------------------
-    Total                                      0.495ns (0.431ns logic, 0.064ns route)
-                                                       (87.1% logic, 12.9% route)
+    Total                                      0.503ns (0.431ns logic, 0.072ns route)
+                                                       (85.7% logic, 14.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point clk_counter_1 (SLICE_X12Y33.A2), 1 path
+Paths for end point hvsync/CounterY_1 (SLICE_X16Y50.C5), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.612ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               clk_counter_0 (FF)
-  Destination:          clk_counter_1 (FF)
+Slack (hold path):      0.503ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               hvsync/CounterY_1 (FF)
+  Destination:          hvsync/CounterY_1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.612ns (Levels of Logic = 1)
+  Data Path Delay:      0.503ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: clk_counter_0 to clk_counter_1
+  Minimum Data Path at Fast Process Corner: hvsync/CounterY_1 to hvsync/CounterY_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y33.BQ      Tcko                  0.234   clk_counter<0>
-                                                       clk_counter_0
-    SLICE_X12Y33.A2      net (fanout=2)        0.247   clk_counter<0>
-    SLICE_X12Y33.CLK     Tah         (-Th)    -0.131   clk_counter<0>
-                                                       Mcount_clk_counter_xor<1>11
-                                                       clk_counter_1
+    SLICE_X16Y50.CQ      Tcko                  0.234   hvsync/CounterY<5>
+                                                       hvsync/CounterY_1
+    SLICE_X16Y50.C5      net (fanout=3)        0.072   hvsync/CounterY<1>
+    SLICE_X16Y50.CLK     Tah         (-Th)    -0.197   hvsync/CounterY<5>
+                                                       hvsync/CounterY_1_dpot
+                                                       hvsync/CounterY_1
     -------------------------------------------------  ---------------------------
-    Total                                      0.612ns (0.365ns logic, 0.247ns route)
-                                                       (59.6% logic, 40.4% route)
+    Total                                      0.503ns (0.431ns logic, 0.072ns route)
+                                                       (85.7% logic, 14.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point clk_counter_1 (SLICE_X12Y33.A1), 1 path
+Paths for end point pixel_1 (SLICE_X12Y50.C5), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.665ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               clk_counter_1 (FF)
-  Destination:          clk_counter_1 (FF)
+Slack (hold path):      0.555ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               drawHorizPosition_2 (FF)
+  Destination:          pixel_1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.665ns (Levels of Logic = 1)
+  Data Path Delay:      0.555ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: clk_counter_1 to clk_counter_1
+  Minimum Data Path at Fast Process Corner: drawHorizPosition_2 to pixel_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X12Y33.AMUX    Tshcko                0.266   clk_counter<0>
-                                                       clk_counter_1
-    SLICE_X12Y33.A1      net (fanout=1)        0.268   clk_counter<1>
-    SLICE_X12Y33.CLK     Tah         (-Th)    -0.131   clk_counter<0>
-                                                       Mcount_clk_counter_xor<1>11
-                                                       clk_counter_1
+    SLICE_X13Y49.CQ      Tcko                  0.198   drawHorizPosition<4>
+                                                       drawHorizPosition_2
+    SLICE_X12Y50.C5      net (fanout=2)        0.160   drawHorizPosition<2>
+    SLICE_X12Y50.CLK     Tah         (-Th)    -0.197   pixel_2
+                                                       pixel_1_glue_set
+                                                       pixel_1
     -------------------------------------------------  ---------------------------
-    Total                                      0.665ns (0.397ns logic, 0.268ns route)
-                                                       (59.7% logic, 40.3% route)
+    Total                                      0.555ns (0.395ns logic, 0.160ns route)
+                                                       (71.2% logic, 28.8% route)
 
 --------------------------------------------------------------------------------
 
@@ -232,20 +460,20 @@ Slack: 8.270ns (period - min period limit)
   Location pin: BUFGMUX_X3Y13.I0
   Clock network: clk_BUFGP/IBUFG
 --------------------------------------------------------------------------------
-Slack: 9.570ns (period - min period limit)
+Slack: 9.595ns (period - min period limit)
   Period: 10.000ns
-  Min period limit: 0.430ns (2325.581MHz) (Tcp)
-  Physical resource: drawHorizPosition<4>/CLK
-  Logical resource: drawHorizPosition_0/CK
-  Location pin: SLICE_X14Y46.CLK
+  Min period limit: 0.405ns (2469.136MHz) (Tcp)
+  Physical resource: drawHorizPosition<6>/CLK
+  Logical resource: drawHorizPosition_5/CK
+  Location pin: SLICE_X12Y49.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 9.570ns (period - min period limit)
+Slack: 9.595ns (period - min period limit)
   Period: 10.000ns
-  Min period limit: 0.430ns (2325.581MHz) (Tcp)
-  Physical resource: drawHorizPosition<4>/CLK
-  Logical resource: drawHorizPosition_1/CK
-  Location pin: SLICE_X14Y46.CLK
+  Min period limit: 0.405ns (2469.136MHz) (Tcp)
+  Physical resource: drawHorizPosition<6>/CLK
+  Logical resource: drawHorizPosition_6/CK
+  Location pin: SLICE_X12Y49.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -262,7 +490,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    1.179|         |         |         |
+clk            |    2.865|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -271,16 +499,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 3 paths, 0 nets, and 5 connections
+Constraints cover 441 paths, 0 nets, and 211 connections
 
 Design statistics:
-   Minimum period:   1.730ns{1}   (Maximum frequency: 578.035MHz)
+   Minimum period:   2.865ns{1}   (Maximum frequency: 349.040MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue Nov 12 14:28:30 2019 
+Analysis completed Tue Nov 12 14:33:30 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
