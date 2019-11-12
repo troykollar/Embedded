@@ -79,7 +79,7 @@ module VGADemo(
 );
     wire inDisplayArea;
     wire [9:0] CounterX;
-	 reg [1:0] clk_counter;
+	 reg [1:0] clk_counter = 0;
 	 always @(posedge clk)
 		clk_counter <= clk_counter + 1;
 	wire clk_25 = clk_counter == 3;
@@ -92,11 +92,15 @@ module VGADemo(
       //.CounterY(CounterY),
       .inDisplayArea(inDisplayArea)
     );
+	 
+	 wire [9:0] vert1;
+	 frogger frog1(.clk(clk), .vert1(vert1));
 
     always @(posedge clk_25)
     begin
       if (inDisplayArea)
-        pixel <= CounterX[9:6];
+			if (CounterX < vert1)	pixel <= 3'b111;
+			else							pixel <= CounterX[9:6];
       else // if it's not to display, go dark
         pixel <= 3'b000;
     end

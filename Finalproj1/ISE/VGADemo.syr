@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: VGADemo.prj
@@ -124,7 +124,14 @@ WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 84:
 Elaborating module <hvsync_generator>.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 18: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 27: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 99: Result of 4-bit expression is truncated to fit in 3-bit target.
+
+Elaborating module <frogger>.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 63: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 65: Result of 29-bit expression is truncated to fit in 28-bit target.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 69: Signal <vert1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 70: Signal <vert1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 70: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 103: Result of 4-bit expression is truncated to fit in 3-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -136,9 +143,11 @@ INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/newfrogger.v" line 87: Output po
     Found 3-bit register for signal <pixel>.
     Found 2-bit register for signal <clk_counter>.
     Found 2-bit adder for signal <clk_counter[1]_GND_1_o_add_1_OUT> created at line 84.
+    Found 10-bit comparator greater for signal <CounterX[9]_vert1[9]_LessThan_6_o> created at line 102
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   5 D-type flip-flop(s).
+	inferred   1 Comparator(s).
 Unit <VGADemo> synthesized.
 
 Synthesizing Unit <hvsync_generator>.
@@ -162,12 +171,21 @@ Synthesizing Unit <hvsync_generator>.
 	inferred   6 Comparator(s).
 Unit <hvsync_generator> synthesized.
 
+Synthesizing Unit <frogger>.
+    Related source file is "/home/troy/Embedded/Finalproj1/newfrogger.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 10-bit adder for signal <vert1[9]_GND_3_o_add_9_OUT> created at line 70.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <frogger> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 3
- 10-bit adder                                          : 1
+# Adders/Subtractors                                   : 4
+ 10-bit adder                                          : 2
  2-bit adder                                           : 1
  9-bit adder                                           : 1
 # Registers                                            : 7
@@ -176,9 +194,11 @@ Macro Statistics
  2-bit register                                        : 1
  3-bit register                                        : 1
  9-bit register                                        : 1
-# Comparators                                          : 6
- 10-bit comparator greater                             : 3
+# Comparators                                          : 7
+ 10-bit comparator greater                             : 4
  9-bit comparator greater                              : 3
+# Multiplexers                                         : 1
+ 10-bit 2-to-1 multiplexer                             : 1
 
 =========================================================================
 
@@ -200,21 +220,27 @@ Unit <hvsync_generator> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
 # Counters                                             : 3
  10-bit up counter                                     : 1
  2-bit up counter                                      : 1
  9-bit up counter                                      : 1
 # Registers                                            : 6
  Flip-Flops                                            : 6
-# Comparators                                          : 6
- 10-bit comparator greater                             : 3
+# Comparators                                          : 7
+ 10-bit comparator greater                             : 4
  9-bit comparator greater                              : 3
+# Multiplexers                                         : 1
+ 10-bit 2-to-1 multiplexer                             : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2170 - Unit VGADemo : the following signal(s) form a combinatorial loop: frog1/GND_3_o_GND_3_o_equal_9_o, CounterX[9]_vert1[9]_LessThan_6_o, frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_cy<0>, Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi, Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_cy<1>, Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_cy<0>, Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_cy<4>, Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_cy<3>, Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_cy<2>, frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut<9>.
+WARNING:Xst:2170 - Unit VGADemo : the following signal(s) form a combinatorial loop: frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_cy<0>.
 
 Optimizing unit <VGADemo> ...
 
@@ -222,7 +248,7 @@ Optimizing unit <hvsync_generator> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block VGADemo, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block VGADemo, actual ratio is 1.
 
 Final Macro Processing ...
 
@@ -254,22 +280,22 @@ Top Level Output File Name         : VGADemo.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 95
+# BELS                             : 125
 #      GND                         : 1
-#      INV                         : 7
+#      INV                         : 6
 #      LUT1                        : 17
-#      LUT2                        : 13
-#      LUT3                        : 8
-#      LUT4                        : 3
-#      LUT5                        : 3
-#      LUT6                        : 6
-#      MUXCY                       : 17
+#      LUT2                        : 17
+#      LUT3                        : 12
+#      LUT4                        : 14
+#      LUT5                        : 6
+#      LUT6                        : 10
+#      MUXCY                       : 22
 #      VCC                         : 1
 #      XORCY                       : 19
 # FlipFlops/Latches                : 27
-#      FD                          : 14
+#      FD                          : 13
 #      FDE                         : 9
-#      FDR                         : 4
+#      FDR                         : 5
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
@@ -284,14 +310,14 @@ Selected Device : 6slx9csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              27  out of  11440     0%  
- Number of Slice LUTs:                   57  out of   5720     0%  
-    Number used as Logic:                57  out of   5720     0%  
+ Number of Slice LUTs:                   82  out of   5720     1%  
+    Number used as Logic:                82  out of   5720     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     59
-   Number with an unused Flip Flop:      32  out of     59    54%  
-   Number with an unused LUT:             2  out of     59     3%  
-   Number of fully used LUT-FF pairs:    25  out of     59    42%  
+ Number of LUT Flip Flop pairs used:     82
+   Number with an unused Flip Flop:      55  out of     82    67%  
+   Number with an unused LUT:             0  out of     82     0%  
+   Number of fully used LUT-FF pairs:    27  out of     82    32%  
    Number of unique control sets:         6
 
 IO Utilization: 
@@ -319,12 +345,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk_25(clk_25<1>1:O)               | BUFG(*)(pixel_0)       | 25    |
-clk                                | BUFGP                  | 2     |
------------------------------------+------------------------+-------+
+-----------------------------------+---------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)     | Load  |
+-----------------------------------+---------------------------+-------+
+clk                                | BUFGP                     | 2     |
+clk_25(clk_25<1>1:O)               | BUFG(*)(hvsync/CounterY_8)| 25    |
+-----------------------------------+---------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -337,7 +363,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.695ns (Maximum Frequency: 270.621MHz)
+   Minimum period: 3.716ns (Maximum Frequency: 269.074MHz)
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: 4.382ns
    Maximum combinational path delay: No path found
@@ -345,30 +371,6 @@ Speed Grade: -3
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk_25'
-  Clock period: 3.695ns (frequency: 270.621MHz)
-  Total number of paths / destination ports: 344 / 38
--------------------------------------------------------------------------
-Delay:               3.695ns (Levels of Logic = 3)
-  Source:            hvsync/CounterX_4 (FF)
-  Destination:       hvsync/CounterX_9 (FF)
-  Source Clock:      clk_25 rising
-  Destination Clock: clk_25 rising
-
-  Data Path: hvsync/CounterX_4 to hvsync/CounterX_9
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q               5   0.447   1.059  hvsync/CounterX_4 (hvsync/CounterX_4)
-     LUT5:I0->O            2   0.203   0.617  hvsync/CounterXmaxed<9>_SW0 (N3)
-     LUT6:I5->O           10   0.205   0.857  hvsync/CounterXmaxed<9> (hvsync/CounterXmaxed)
-     LUT2:I1->O            1   0.205   0.000  hvsync/CounterX_9_rstpot (hvsync/CounterX_9_rstpot)
-     FD:D                      0.102          hvsync/CounterX_9
-    ----------------------------------------
-    Total                      3.695ns (1.162ns logic, 2.533ns route)
-                                       (31.4% logic, 68.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
@@ -391,6 +393,30 @@ Delay:               1.984ns (Levels of Logic = 1)
     ----------------------------------------
     Total                      1.984ns (0.755ns logic, 1.229ns route)
                                        (38.1% logic, 61.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_25'
+  Clock period: 3.716ns (frequency: 269.074MHz)
+  Total number of paths / destination ports: 404 / 39
+-------------------------------------------------------------------------
+Delay:               3.716ns (Levels of Logic = 3)
+  Source:            hvsync/CounterX_4 (FF)
+  Destination:       hvsync/CounterX_9 (FF)
+  Source Clock:      clk_25 rising
+  Destination Clock: clk_25 rising
+
+  Data Path: hvsync/CounterX_4 to hvsync/CounterX_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.447   1.118  hvsync/CounterX_4 (hvsync/CounterX_4)
+     LUT5:I0->O            1   0.203   0.580  hvsync/CounterXmaxed<9>_SW0 (N8)
+     LUT6:I5->O           10   0.205   0.857  hvsync/CounterXmaxed<9> (hvsync/CounterXmaxed)
+     LUT2:I1->O            1   0.205   0.000  hvsync/CounterX_9_rstpot (hvsync/CounterX_9_rstpot)
+     FD:D                      0.102          hvsync/CounterX_9
+    ----------------------------------------
+    Total                      3.716ns (1.162ns logic, 2.554ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_25'
@@ -430,21 +456,21 @@ Clock to Setup on destination clock clk_25
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_25         |    3.695|         |         |         |
+clk_25         |    3.716|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 9.12 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 9.94 secs
  
 --> 
 
 
-Total memory usage is 394784 kilobytes
+Total memory usage is 394884 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

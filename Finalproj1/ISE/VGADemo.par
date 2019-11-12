@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-troy-VirtualBox::  Tue Nov 12 18:03:12 2019
+troy-VirtualBox::  Tue Nov 12 18:12:36 2019
 
 par -w -intstyle ise -ol high -mt off VGADemo_map.ncd VGADemo.ncd VGADemo.pcf 
 
@@ -87,15 +87,15 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 7 secs 
-Finished initial Timing Analysis.  REAL time: 7 secs 
+Starting initial Timing Analysis.  REAL time: 6 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
 
 Starting Router
 
 
 Phase  1  : 182 unrouted;      REAL time: 7 secs 
 
-Phase  2  : 147 unrouted;      REAL time: 8 secs 
+Phase  2  : 147 unrouted;      REAL time: 7 secs 
 
 Phase  3  : 45 unrouted;      REAL time: 8 secs 
 

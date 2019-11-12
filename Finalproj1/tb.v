@@ -22,7 +22,7 @@ initial
 #5000   $finish;
   end
 
-frogger frog1 (
+VGADemo frog1 (
                  .clk(clk));
 
 

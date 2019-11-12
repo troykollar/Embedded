@@ -8,16 +8,124 @@
 <msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
 </msg>
 
-<msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;0&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;0&gt;)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_cy&lt;0&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
 </msg>
 
-<msg type="info" file="Pack" num="1720" delta="old" >Initializing voltage to <arg fmt="%0.3f" index="1">1.140</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">1.140</arg> to <arg fmt="%0.3f" index="3">1.260</arg> Volts)
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;0&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;0&gt;)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;1&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
 </msg>
 
-<msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;1&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;1&gt;)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;2&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
 </msg>
 
-<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;1&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;1&gt;)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;3&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;2&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;2&gt;)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;4&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;2&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;2&gt;)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;5&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;3&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;3&gt;)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;6&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;3&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;3&gt;)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;7&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;4&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;4&gt;)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;8&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;4&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;4&gt;)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;9&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_cy&lt;0&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;1&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi1&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi1)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;2&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi1&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi1)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;3&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi2&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi2)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;4&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi2&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi2)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;5&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi3&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi3)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;6&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi3&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi3)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;7&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi4&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi4)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;8&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="979" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi4&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi4)</arg> has input signal &quot;<arg fmt="%s" index="2">frog1/Madd_vert1[9]_GND_3_o_add_9_OUT_lut&lt;9&gt;</arg>&quot; which will be trimmed. See Section 5 of the Map Report File for details about why the input signal will become undriven.
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;0&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;0&gt;)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;0&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;0&gt;)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I2</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;1&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;1&gt;)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;1&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;1&gt;)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I2</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;2&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;2&gt;)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;2&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;2&gt;)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I2</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;3&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;3&gt;)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;3&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;3&gt;)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I2</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;4&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;4&gt;)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I0</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;4&gt;&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lut&lt;4&gt;)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I2</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I2</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I3</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi1&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi1)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I2</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi1&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi1)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I3</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi2&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi2)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I2</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi2&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi2)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I3</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi3&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi3)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I2</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi3&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi3)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I3</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi4&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi4)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I2</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
+</msg>
+
+<msg type="error" file="MapLib" num="978" delta="new" ><arg fmt="%s" index="1">LUT4 symbol &quot;Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi4&quot; (output signal=Mcompar_CounterX[9]_vert1[9]_LessThan_6_o_lutdi4)</arg> has an equation that uses input pin <arg fmt="%s" index="2">I3</arg>, which no longer has a connected signal. Please ensure that all the pins used in the equation for this LUT have signals that are not trimmed (see Section 5 of the Map Report File for details on which signals were trimmed).
 </msg>
 
 </messages>

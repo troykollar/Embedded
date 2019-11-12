@@ -46,6 +46,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="VGAWrite.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="VGAWrite.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="VGAWrite.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="VGAWrite_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="VGAWrite_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="VGAWrite_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="VGAWrite_map.mrp" xil_pn:subbranch="Map"/>
@@ -56,6 +57,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="VGAWrite_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="VGAWrite_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="VGAWrite_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="VGAWrite_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="VGAWrite_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="VGAWrite_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="VGAWrite_xst.xrpt"/>
@@ -102,12 +104,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1573593705" xil_pn:in_ck="2397741346807138087" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2636616276292945362" xil_pn:start_ts="1573593688">
+    <transform xil_pn:end_ts="1573601171" xil_pn:in_ck="2397741346807138087" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2636616276292945362" xil_pn:start_ts="1573601151">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="VGAWrite.lso"/>
       <outfile xil_pn:name="VGAWrite.ngc"/>
       <outfile xil_pn:name="VGAWrite.ngr"/>
@@ -124,55 +126,61 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1573593715" xil_pn:in_ck="-6483640637851580227" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3152157540299417760" xil_pn:start_ts="1573593705">
+    <transform xil_pn:end_ts="1573601182" xil_pn:in_ck="-6483640637851580227" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3152157540299417760" xil_pn:start_ts="1573601171">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="VGAWrite.bld"/>
       <outfile xil_pn:name="VGAWrite.ngd"/>
       <outfile xil_pn:name="VGAWrite_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1573593731" xil_pn:in_ck="-6483640637851580226" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1405206279585514545" xil_pn:start_ts="1573593715">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1573601207" xil_pn:in_ck="-6483640637851580226" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1405206279585514545" xil_pn:start_ts="1573601182">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="VGAWrite.pcf"/>
       <outfile xil_pn:name="VGAWrite_map.map"/>
       <outfile xil_pn:name="VGAWrite_map.mrp"/>
+      <outfile xil_pn:name="VGAWrite_map.ncd"/>
       <outfile xil_pn:name="VGAWrite_map.ngm"/>
       <outfile xil_pn:name="VGAWrite_map.xrpt"/>
       <outfile xil_pn:name="VGAWrite_summary.xml"/>
       <outfile xil_pn:name="VGAWrite_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1573592908" xil_pn:in_ck="-3043611439517874473" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1573592884">
+    <transform xil_pn:end_ts="1573601232" xil_pn:in_ck="-3043611439517874473" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1573601207">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="VGAWrite.ncd"/>
+      <outfile xil_pn:name="VGAWrite.pad"/>
+      <outfile xil_pn:name="VGAWrite.par"/>
+      <outfile xil_pn:name="VGAWrite.ptwx"/>
+      <outfile xil_pn:name="VGAWrite.unroutes"/>
+      <outfile xil_pn:name="VGAWrite.xpi"/>
+      <outfile xil_pn:name="VGAWrite_pad.csv"/>
+      <outfile xil_pn:name="VGAWrite_pad.txt"/>
+      <outfile xil_pn:name="VGAWrite_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1573592922" xil_pn:in_ck="4458507370938092044" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="4970201210546912173" xil_pn:start_ts="1573592908">
-      <status xil_pn:value="AbortedRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
-    </transform>
-    <transform xil_pn:end_ts="1573592908" xil_pn:in_ck="-6483640637851580358" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1573592899">
+    <transform xil_pn:end_ts="1573601246" xil_pn:in_ck="4458507370938092044" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="4970201210546912173" xil_pn:start_ts="1573601232">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="VGAWrite.bgn"/>
+      <outfile xil_pn:name="VGAWrite.bin"/>
+      <outfile xil_pn:name="VGAWrite.bit"/>
+      <outfile xil_pn:name="VGAWrite.drc"/>
+      <outfile xil_pn:name="VGAWrite.ut"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1573601232" xil_pn:in_ck="-6483640637851580358" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1573601223">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="VGAWrite.twr"/>
+      <outfile xil_pn:name="VGAWrite.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
     </transform>
   </transforms>
 

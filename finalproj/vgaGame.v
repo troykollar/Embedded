@@ -1,14 +1,14 @@
 //Frogger Logic~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 module frogger (input clk, input reset, input up, input down, input left, input right, 
-					output reg [5:0] vert1, output reg [5:0] vert2, output reg [5:0] vert3,
-					output reg [5:0] vert5, output reg [5:0] vert6);	//This module contains frogger logic
+					output reg [7:0] vert1, output reg [7:0] vert2, output reg [7:0] vert3,
+					output reg [7:0] vert5, output reg [7:0] vert6);	//This module contains frogger logic
 
 	//each vert register is a row that keeps track of cars
 	reg [7:0] vert0 = 8'b0000_0000;
 	reg [7:0] vert4 = 8'b0000_0000;
 	reg [7:0] vert7 = 8'b0000_0000;
 
-	reg [5:0] timeState = 0;	//Keep track of time which determines car locations
+	reg [2:0] timeState = 0;	//Keep track of time which determines car locations
 	reg [27:0] timeCounter = 0;	//Count the number of clock pulses to keep track of time
 
 	reg [2:0] froggerVerticalState = 7;	//Keep track of what vertical level frogger is on
@@ -20,7 +20,7 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 		if (reset)
 			timeState <= 0;
 		else
-			if (timeCounter == 3125000) //Change to 100 million for synthesis
+			if (timeCounter == 100000000) //Change to 100 million for synthesis
 				begin
 					timeCounter <= 0;
 					timeState <= timeState + 1;
@@ -28,9 +28,17 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 			else	timeCounter <= timeCounter + 1;
 
 	//Move vert1 cars based on timeState
-	always @(timeState)
-		if (timeState == 0)	vert1 = 32'd0;
-		else						vert1 = vert1 + 1;
+	always @(posedge clk)
+		case (timeState)
+			0: vert1 <= 8'b0111_0111;
+			1: vert1 <= 8'b1011_1011;
+			2: vert1 <= 8'b1101_1101;
+			3: vert1 <= 8'b1110_1110;
+			4: vert1 <= 8'b0111_0111;
+			5: vert1 <= 8'b1011_1011;
+			6: vert1 <= 8'b1101_1101;
+			7: vert1 <= 8'b1110_1110;
+		endcase
 
 	//Move vert2 cars based on timeState
 	always @(posedge clk)
@@ -182,11 +190,11 @@ endmodule	//************************************
 //Writing to VGA==================================
 module VGAWrite(
     input clk,
-	 input wire sw4,
-	 input wire sw3,
-	 input wire sw1,
-	 input wire sw2,
-	 input wire sw5,
+	 input sw4,
+	 input sw3,
+	 input sw1,
+	 input sw2,
+	 input sw5,
     output reg [2:0] pixel,
     output hsync_out,
     output vsync_out
@@ -231,7 +239,7 @@ module VGAWrite(
 	);
 	
 	reg [7:0] drawHorizPosition;
-	always @(posedge vsync_out)
+	always @(posedge clk)
 		if (CounterX < 80)
 			drawHorizPosition <= 8'b1000_0000;
 		else if (CounterX < 160)
