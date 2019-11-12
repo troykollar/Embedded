@@ -71,50 +71,38 @@ module frogger (input clk, output reg [9:0] vert1 = 0);	//This module contains f
 
 endmodule	//End of frogger logic module
 
-module VGAWrite(
+module VGADemo(
     input clk,
-	 input wire sw4,
-	 input wire sw3,
-	 input wire sw1,
-	 input wire sw2,
-	 input wire sw5,
     output reg [2:0] pixel,
     output hsync_out,
     output vsync_out
 );
-
-	 wire clk_25 = clk_counter == 2'd3;
-	 reg [1:0] clk_counter = 0;
-	 always @(posedge clk)
-		clk_counter = clk_counter + 1;
-		
     wire inDisplayArea;
     wire [9:0] CounterX;
-	wire [8:0] CounterY;
+	 reg [1:0] clk_counter;
+	 always @(posedge clk)
+		clk_counter <= clk_counter + 1;
+	wire clk_25 = clk_counter == 3;
 
     hvsync_generator hvsync(
       .clk(clk_25),
       .vga_h_sync(hsync_out),
       .vga_v_sync(vsync_out),
       .CounterX(CounterX),
-      .CounterY(CounterY),
+      //.CounterY(CounterY),
       .inDisplayArea(inDisplayArea)
     );
-	 
-	 wire [9:0] vert1;
-	 
-	 frogger frogLogic(
-		.clk(clk),
-		.vert1(vert1)
-	);
-	
-	always @(posedge clk_25)
-		if (inDisplayArea)
-			pixel <= CounterX[9:6];
-		else 	pixel <= 3'b111;
-	
+
+    always @(posedge clk_25)
+    begin
+      if (inDisplayArea)
+        pixel <= CounterX[9:6];
+      else // if it's not to display, go dark
+        pixel <= 3'b000;
+    end
 
 endmodule
+
 
 
 
