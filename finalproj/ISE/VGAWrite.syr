@@ -118,24 +118,24 @@ Parsing module <VGAWrite>.
 =========================================================================
 
 Elaborating module <VGAWrite>.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 202: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 205: Result of 3-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <hvsync_generator>.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 158: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 167: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 161: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 170: Result of 10-bit expression is truncated to fit in 9-bit target.
 
 Elaborating module <frogger>.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 23: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 25: Result of 29-bit expression is truncated to fit in 28-bit target.
-WARNING:HDLCompiler:1127 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 93: Assignment to win ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 99: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 100: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:1127 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 135: Assignment to andedReg ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 225: Net <sw4> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 226: Net <sw3> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 227: Net <sw1> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 228: Net <sw2> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 229: Net <sw5> does not have a driver.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 26: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 28: Result of 29-bit expression is truncated to fit in 28-bit target.
+WARNING:HDLCompiler:1127 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 96: Assignment to win ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 102: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 103: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 138: Assignment to andedReg ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 228: Net <sw4> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 229: Net <sw3> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 230: Net <sw1> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 231: Net <sw2> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 232: Net <sw5> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -155,23 +155,23 @@ WARNING:Xst:653 - Signal <sw5> is used but never assigned. This sourceless signa
     Found 8-bit register for signal <drawHorizPosition>.
     Found 3-bit register for signal <pixel>.
     Found 2-bit register for signal <clk_counter>.
-    Found 2-bit adder for signal <clk_counter[1]_GND_1_o_add_2_OUT> created at line 202.
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_6_o> created at line 239
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_7_o> created at line 241
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_8_o> created at line 243
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_9_o> created at line 245
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_10_o> created at line 247
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_11_o> created at line 249
-    Found 10-bit comparator greater for signal <CounterX[9]_PWR_1_o_LessThan_12_o> created at line 251
-    Found 10-bit comparator lessequal for signal <CounterX[9]_PWR_1_o_LessThan_13_o> created at line 253
-    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_24_o> created at line 261
-    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_25_o> created at line 263
-    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_29_o> created at line 268
-    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_33_o> created at line 273
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_37_o> created at line 278
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_38_o> created at line 280
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_42_o> created at line 285
-    Found 9-bit comparator lessequal for signal <CounterY[8]_PWR_1_o_LessThan_46_o> created at line 290
+    Found 2-bit adder for signal <clk_counter[1]_GND_1_o_add_2_OUT> created at line 205.
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_6_o> created at line 242
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_7_o> created at line 244
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_8_o> created at line 246
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_9_o> created at line 248
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_10_o> created at line 250
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_11_o> created at line 252
+    Found 10-bit comparator greater for signal <CounterX[9]_PWR_1_o_LessThan_12_o> created at line 254
+    Found 10-bit comparator lessequal for signal <CounterX[9]_PWR_1_o_LessThan_13_o> created at line 256
+    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_24_o> created at line 264
+    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_25_o> created at line 266
+    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_29_o> created at line 271
+    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_33_o> created at line 276
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_37_o> created at line 281
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_38_o> created at line 283
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_42_o> created at line 288
+    Found 9-bit comparator lessequal for signal <CounterY[8]_PWR_1_o_LessThan_46_o> created at line 293
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  13 D-type flip-flop(s).
@@ -186,14 +186,14 @@ Synthesizing Unit <hvsync_generator>.
     Found 1-bit register for signal <vga_VS>.
     Found 1-bit register for signal <inDisplayArea>.
     Found 10-bit register for signal <CounterX>.
-    Found 10-bit adder for signal <CounterX[9]_GND_2_o_add_2_OUT> created at line 158.
-    Found 9-bit adder for signal <CounterY[8]_GND_2_o_mux_7_OUT> created at line 167.
-    Found 10-bit comparator greater for signal <PWR_2_o_CounterX[9]_LessThan_12_o> created at line 173
-    Found 10-bit comparator greater for signal <CounterX[9]_PWR_2_o_LessThan_13_o> created at line 173
-    Found 9-bit comparator greater for signal <PWR_2_o_CounterY[8]_LessThan_14_o> created at line 174
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_2_o_LessThan_15_o> created at line 174
-    Found 10-bit comparator greater for signal <CounterX[9]_PWR_2_o_LessThan_17_o> created at line 179
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_2_o_LessThan_18_o> created at line 179
+    Found 10-bit adder for signal <CounterX[9]_GND_2_o_add_2_OUT> created at line 161.
+    Found 9-bit adder for signal <CounterY[8]_GND_2_o_mux_7_OUT> created at line 170.
+    Found 10-bit comparator greater for signal <PWR_2_o_CounterX[9]_LessThan_12_o> created at line 176
+    Found 10-bit comparator greater for signal <CounterX[9]_PWR_2_o_LessThan_13_o> created at line 176
+    Found 9-bit comparator greater for signal <PWR_2_o_CounterY[8]_LessThan_14_o> created at line 177
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_2_o_LessThan_15_o> created at line 177
+    Found 10-bit comparator greater for signal <CounterX[9]_PWR_2_o_LessThan_17_o> created at line 182
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_2_o_LessThan_18_o> created at line 182
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  22 D-type flip-flop(s).
@@ -202,21 +202,20 @@ Unit <hvsync_generator> synthesized.
 
 Synthesizing Unit <frogger>.
     Related source file is "/home/troy/Embedded/finalproj/vgaGame.v".
-WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <up> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <down> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <left> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <right> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 3-bit register for signal <timeState>.
+    Found 28-bit register for signal <timeCounter>.
     Found 8-bit register for signal <vert1>.
     Found 8-bit register for signal <vert2>.
     Found 8-bit register for signal <vert3>.
     Found 8-bit register for signal <vert5>.
     Found 8-bit register for signal <vert6>.
-    Found 28-bit register for signal <timeCounter>.
-    Found 3-bit adder for signal <timeState[2]_GND_3_o_add_2_OUT> created at line 23.
-    Found 28-bit adder for signal <timeCounter[27]_GND_3_o_add_3_OUT> created at line 25.
-    Found 8x40-bit Read Only RAM for signal <_n0050>
+    Found 3-bit register for signal <timeState>.
+    Found 3-bit adder for signal <timeState[2]_GND_3_o_add_2_OUT> created at line 26.
+    Found 28-bit adder for signal <timeCounter[27]_GND_3_o_add_3_OUT> created at line 28.
+    Found 8x40-bit Read Only RAM for signal <_n0054>
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
@@ -267,7 +266,7 @@ Unit <VGAWrite> synthesized (advanced).
 Synthesizing (advanced) Unit <frogger>.
 The following registers are absorbed into counter <timeState>: 1 register on signal <timeState>.
 The following registers are absorbed into counter <timeCounter>: 1 register on signal <timeCounter>.
-INFO:Xst:3231 - The small RAM <Mram__n0050> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n0054> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -314,17 +313,17 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 INFO:Xst:2261 - The FF/Latch <pixel_0> in Unit <VGAWrite> is equivalent to the following FF/Latch, which will be removed : <pixel_1> 
-INFO:Xst:2261 - The FF/Latch <vert5_3> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert5_7> 
-INFO:Xst:2261 - The FF/Latch <vert5_0> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert5_4> 
-INFO:Xst:2261 - The FF/Latch <vert5_1> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert5_5> 
-INFO:Xst:2261 - The FF/Latch <vert3_1> in Unit <frogger> is equivalent to the following 3 FFs/Latches, which will be removed : <vert3_5> <vert2_2> <vert2_6> 
-INFO:Xst:2261 - The FF/Latch <vert3_2> in Unit <frogger> is equivalent to the following 3 FFs/Latches, which will be removed : <vert3_6> <vert2_3> <vert2_7> 
-INFO:Xst:2261 - The FF/Latch <vert3_3> in Unit <frogger> is equivalent to the following 3 FFs/Latches, which will be removed : <vert3_7> <vert2_0> <vert2_4> 
 INFO:Xst:2261 - The FF/Latch <vert6_1> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert6_5> 
 INFO:Xst:2261 - The FF/Latch <vert6_2> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert6_6> 
 INFO:Xst:2261 - The FF/Latch <vert6_3> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert6_7> 
-INFO:Xst:2261 - The FF/Latch <vert6_0> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert6_4> 
+INFO:Xst:2261 - The FF/Latch <vert5_3> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert5_7> 
+INFO:Xst:2261 - The FF/Latch <vert5_0> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert5_4> 
+INFO:Xst:2261 - The FF/Latch <vert5_1> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert5_5> 
 INFO:Xst:2261 - The FF/Latch <vert5_2> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert5_6> 
+INFO:Xst:2261 - The FF/Latch <vert6_0> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert6_4> 
+INFO:Xst:2261 - The FF/Latch <vert3_1> in Unit <frogger> is equivalent to the following 3 FFs/Latches, which will be removed : <vert3_5> <vert2_2> <vert2_6> 
+INFO:Xst:2261 - The FF/Latch <vert3_2> in Unit <frogger> is equivalent to the following 3 FFs/Latches, which will be removed : <vert3_6> <vert2_3> <vert2_7> 
+INFO:Xst:2261 - The FF/Latch <vert3_3> in Unit <frogger> is equivalent to the following 3 FFs/Latches, which will be removed : <vert3_7> <vert2_0> <vert2_4> 
 INFO:Xst:2261 - The FF/Latch <vert3_0> in Unit <frogger> is equivalent to the following 3 FFs/Latches, which will be removed : <vert3_4> <vert2_1> <vert2_5> 
 
 Optimizing unit <VGAWrite> ...
@@ -555,14 +554,14 @@ clk_25         |    4.394|         |         |         |
 
 
 Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 9.53 secs
+Total CPU time to Xst completion: 9.50 secs
  
 --> 
 
 
-Total memory usage is 395724 kilobytes
+Total memory usage is 395728 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   28 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
 Number of infos    :   14 (   0 filtered)
 
