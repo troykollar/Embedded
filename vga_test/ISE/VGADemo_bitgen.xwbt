@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/troy/Embedded/vga_test/ISE/VGADemo.ncd
+OUTFILE=/home/troy/Embedded/vga_test/ISE/VGADemo.bit
+FAMILY=Spartan6
+PART=xc6slx9-3csg324
+WORKINGDIR=/home/troy/Embedded/vga_test/ISE
+LICENSE=WebPack
+USER_INFO=175375681_0_0_270
