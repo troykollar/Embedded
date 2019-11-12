@@ -234,12 +234,36 @@ module VGAWrite(
 		.vert5(vert5),
 		.vert6(vert6)
 	);
+	
+	reg [7:0] drawHorizPosition;
+	always @(posedge clk)
+		if (CounterX < 80)
+			drawHorizPosition <= 8'b1000_0000;
+		else if (CounterX < 160)
+			drawHorizPosition <= 8'b0100_0000;
+		else if (CounterX < 240)
+			drawHorizPosition <= 8'b0010_0000;
+		else if (CounterX < 320)
+			drawHorizPosition <= 8'b0001_0000;
+		else if (CounterX < 400)
+			drawHorizPosition <= 8'b0000_1000;
+		else if (CounterX < 480)
+			drawHorizPosition <= 8'b0000_0100;
+		else if (CounterX < 560)
+			drawHorizPosition <= 8'b0000_0010;
+		else if (CounterX < 640)
+			drawHorizPosition <= 8'b0000_0001;
+		else
+			drawHorizPosition <= 8'b0000_0000;
 
-    always @(posedge clk_25)
-    begin
-      if (inDisplayArea)
+   always @(posedge clk_25)
+   begin
+		if (inDisplayArea)
 			if (CounterY < 60)	//Top of screen shown in white because it's safe
-				pixel <= 3'b111;
+				if ((drawHorizPosition & vert1) !== 0)
+					pixel <= 3'b100;
+				else
+					pixel <= 3'b111;
 			else
 				pixel <= CounterX[9:6];
 		else // if it's not to display, go dark
