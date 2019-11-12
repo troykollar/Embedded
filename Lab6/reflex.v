@@ -4,7 +4,7 @@ module reflex(input clk, input ready_click, input fire_click, input reset, outpu
 reg [28:0] 	delay_status;
 reg [63:0]	reflex_time;
 reg [28:0]	time_delay = 0;
-reg [26:0]	time_delay_multiplier = 29'd100000000;	//Change for synthesis
+reg [26:0]	time_delay_multiplier = 29'd10;	//Change for synthesis
 reg [2:0]	state = 0;
 reg [11:0]	time_display = 0;
 
@@ -112,7 +112,7 @@ always @(posedge clk)
 		end
 	3:
 		begin
-			if (nsTimer == 100000)
+			if (nsTimer == 1)
 				if (msCounted < 4'h9)
 					begin
 						nsTimer <= 0;
