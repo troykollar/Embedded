@@ -17,14 +17,12 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 
 	//Increase timeState, depending on simulation vs. synthesis
 	always @(posedge clk)
-		if (!reset) timeState <= 0;
-		else
-			if (timeCounter == 100000000) //Change to 100 million for synthesis
-				begin
-					timeCounter <= 0;
-					timeState <= timeState + 1;
-				end
-			else	timeCounter <= timeCounter + 1;
+		if (timeCounter == 100000000) //Change to 100 million for synthesis
+			begin
+				timeCounter <= 0;
+				timeState <= timeState + 1;
+			end
+		else	timeCounter <= timeCounter + 1;
 
 	//Move vert1 cars based on timeState
 	always @(posedge clk)
@@ -278,7 +276,7 @@ module VGAWrite(
 				else
 					pixel <= 3'b000;
 			else if (CounterY < 300)
-				pixel <= 3'b111;
+				pixel <= 3'b000;
 			else if (CounterY < 360)
 				if ((drawHorizPosition & vert5) !== 0)
 					pixel <= 3'b100;

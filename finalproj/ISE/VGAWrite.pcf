@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Nov 12 15:12:12 2019
+// Written by: Map P.20131013 on Tue Nov 12 15:16:56 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -14,7 +14,31 @@ TIMEGRP GCLK1 = BEL "drawHorizPosition_0" BEL "drawHorizPosition_1" BEL
         "drawHorizPosition_2" BEL "drawHorizPosition_3" BEL
         "drawHorizPosition_4" BEL "drawHorizPosition_5" BEL
         "drawHorizPosition_6" BEL "clk_counter_0" BEL "clk_counter_1" BEL
-        "drawHorizPosition_7" BEL "clk_BUFGP/BUFG";
+        "frogLogic/timeState_2" BEL "frogLogic/timeState_1" BEL
+        "frogLogic/timeState_0" BEL "frogLogic/vert1_7" BEL
+        "frogLogic/vert1_6" BEL "frogLogic/vert1_5" BEL "frogLogic/vert1_4"
+        BEL "frogLogic/vert1_3" BEL "frogLogic/vert1_2" BEL
+        "frogLogic/vert1_1" BEL "frogLogic/vert1_0" BEL "frogLogic/vert3_3"
+        BEL "frogLogic/vert3_2" BEL "frogLogic/vert3_1" BEL
+        "frogLogic/vert3_0" BEL "frogLogic/vert5_3" BEL "frogLogic/vert5_2"
+        BEL "frogLogic/vert5_1" BEL "frogLogic/vert5_0" BEL
+        "frogLogic/vert6_3" BEL "frogLogic/vert6_2" BEL "frogLogic/vert6_1"
+        BEL "frogLogic/vert6_0" BEL "drawHorizPosition_7" BEL
+        "frogLogic/timeCounter_25" BEL "frogLogic/timeCounter_24" BEL
+        "frogLogic/timeCounter_23" BEL "frogLogic/timeCounter_22" BEL
+        "frogLogic/timeCounter_21" BEL "frogLogic/timeCounter_20" BEL
+        "frogLogic/timeCounter_19" BEL "frogLogic/timeCounter_18" BEL
+        "frogLogic/timeCounter_17" BEL "frogLogic/timeCounter_16" BEL
+        "frogLogic/timeCounter_15" BEL "frogLogic/timeCounter_14" BEL
+        "frogLogic/timeCounter_13" BEL "frogLogic/timeCounter_12" BEL
+        "frogLogic/timeCounter_11" BEL "frogLogic/timeCounter_10" BEL
+        "frogLogic/timeCounter_9" BEL "frogLogic/timeCounter_8" BEL
+        "frogLogic/timeCounter_7" BEL "frogLogic/timeCounter_6" BEL
+        "frogLogic/timeCounter_5" BEL "frogLogic/timeCounter_4" BEL
+        "frogLogic/timeCounter_3" BEL "frogLogic/timeCounter_2" BEL
+        "frogLogic/timeCounter_1" BEL "frogLogic/timeCounter_0" BEL
+        "frogLogic/timeCounter_26" BEL "frogLogic/timeCounter_27" BEL
+        "clk_BUFGP/BUFG";
 TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz HIGH 50%;
 SCHEMATIC END;
 
