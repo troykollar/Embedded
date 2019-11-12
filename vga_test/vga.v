@@ -59,20 +59,21 @@ module VGADemo(
 		
     wire inDisplayArea;
     wire [9:0] CounterX;
+	wire [8:0] CounterY;
 
     hvsync_generator hvsync(
       .clk(clk_25),
       .vga_h_sync(hsync_out),
       .vga_v_sync(vsync_out),
       .CounterX(CounterX),
-      //.CounterY(CounterY),
+      .CounterY(CounterY),
       .inDisplayArea(inDisplayArea)
     );
 
     always @(posedge clk_25)
     begin
       if (inDisplayArea)
-			if (CounterX < 60)
+			if (CounterY < 60)
 				pixel <= 3'b111;
 			else
 				pixel <= CounterX[9:6];

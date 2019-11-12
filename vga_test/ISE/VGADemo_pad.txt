@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Nov 12 13:32:09 2019
+Tue Nov 12 13:41:31 2019
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -28,7 +28,7 @@ Pinout by Pin Number:
 |A6        |           |IOBS     |IO_L8N_VREF_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A7        |           |IOBS     |IO_L10N_0                    |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A8        |           |IOBS     |IO_L33N_0                    |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
-|A9        |pixel<2>   |IOB      |IO_L35N_GCLK16_0             |OUTPUT   |LVCMOS33   |0             |8         |FAST     |           |         |         |LOCATED   |NO         |NONE            |
+|A9        |pixel<0>   |IOB      |IO_L35N_GCLK16_0             |OUTPUT   |LVCMOS33   |0             |8         |FAST     |           |         |         |LOCATED   |NO         |NONE            |
 |A10       |           |IOBS     |IO_L37N_GCLK12_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A11       |           |IOBS     |IO_L39N_0                    |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |A12       |vsync_out  |IOB      |IO_L41N_0                    |OUTPUT   |LVCMOS33   |0             |8         |FAST     |           |         |         |LOCATED   |NO         |NONE            |
@@ -48,7 +48,7 @@ Pinout by Pin Number:
 |B8        |           |IOBM     |IO_L33P_0                    |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |B9        |           |IOBM     |IO_L35P_GCLK17_0             |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |B10       |           |         |VCCO_0                       |         |           |0             |          |         |           |         |3.30     |          |           |                |
-|B11       |pixel<0>   |IOB      |IO_L39P_0                    |OUTPUT   |LVCMOS33   |0             |8         |FAST     |           |         |         |LOCATED   |NO         |NONE            |
+|B11       |pixel<2>   |IOB      |IO_L39P_0                    |OUTPUT   |LVCMOS33   |0             |8         |FAST     |           |         |         |LOCATED   |NO         |NONE            |
 |B12       |hsync_out  |IOB      |IO_L41P_0                    |OUTPUT   |LVCMOS33   |0             |8         |FAST     |           |         |         |LOCATED   |NO         |NONE            |
 |B13       |           |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |B14       |           |IOBM     |IO_L62P_0                    |UNUSED   |           |0             |          |         |           |         |         |          |           |                |

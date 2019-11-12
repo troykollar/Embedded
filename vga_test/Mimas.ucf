@@ -23,16 +23,16 @@ TIMESPEC TS_GCLK1 = PERIOD "GCLK1" 100 MHz HIGH 50%;
     NET "hsync_out"              LOC = B12 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
     NET "vsync_out"              LOC = A12 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
 
-    #NET "blue[1]"            LOC = A11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-    NET "pixel[0]"            LOC = B11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "pixel[2]"            LOC = A11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "pixel[2]"            LOC = B11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
 
-    #NET "green[2]"           LOC = C11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-    #NET "green[1]"           LOC = A10 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "pixel[1]"           LOC = C11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "pixel[1]"           LOC = A10 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
     NET "pixel[1]"           LOC = C10 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
 
-    #NET "red[2]"             LOC = C9 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-    #NET "red[1]"             LOC = B9 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-    NET "pixel[2]"           LOC = A9 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "pixel[0]"             LOC = C9 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "pixel[0]"             LOC = B9 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "pixel[0]"           LOC = A9 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
 
 ############################################################################
 # Micro SD Card

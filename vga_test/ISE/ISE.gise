@@ -104,7 +104,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1573583483" xil_pn:in_ck="2021839014445" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="3920535789885690632" xil_pn:start_ts="1573583467">
+    <transform xil_pn:end_ts="1573584048" xil_pn:in_ck="2021839014445" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="3920535789885690632" xil_pn:start_ts="1573584031">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -122,11 +122,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1573582334" xil_pn:in_ck="2397683785824913710" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1262981243869633893" xil_pn:start_ts="1573582334">
+    <transform xil_pn:end_ts="1573584049" xil_pn:in_ck="2397683785824913710" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1262981243869633893" xil_pn:start_ts="1573584049">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1573583495" xil_pn:in_ck="3716470927491485975" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2151640494393468390" xil_pn:start_ts="1573583483">
+    <transform xil_pn:end_ts="1573584059" xil_pn:in_ck="3716470927491485975" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2151640494393468390" xil_pn:start_ts="1573584049">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="VGADemo.bld"/>
@@ -135,7 +135,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1573583516" xil_pn:in_ck="3716470927491485976" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1405206279585514545" xil_pn:start_ts="1573583495">
+    <transform xil_pn:end_ts="1573584078" xil_pn:in_ck="3716470927491485976" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1405206279585514545" xil_pn:start_ts="1573584059">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="VGADemo.pcf"/>
@@ -148,7 +148,7 @@
       <outfile xil_pn:name="VGADemo_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1573583541" xil_pn:in_ck="-2749239558414930895" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1573583516">
+    <transform xil_pn:end_ts="1573584101" xil_pn:in_ck="-2749239558414930895" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1573584078">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="VGADemo.ncd"/>
@@ -162,7 +162,7 @@
       <outfile xil_pn:name="VGADemo_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1573583556" xil_pn:in_ck="135105457577025574" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="4970201210546912173" xil_pn:start_ts="1573583541">
+    <transform xil_pn:end_ts="1573584116" xil_pn:in_ck="135105457577025574" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="4970201210546912173" xil_pn:start_ts="1573584101">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="VGADemo.bgn"/>
@@ -175,7 +175,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1573583541" xil_pn:in_ck="3716470927491485844" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1573583531">
+    <transform xil_pn:end_ts="1573584101" xil_pn:in_ck="3716470927491485844" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1573584092">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="VGADemo.twr"/>
