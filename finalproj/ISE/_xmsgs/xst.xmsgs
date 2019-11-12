@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 202: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 202: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 158: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
@@ -14,7 +14,10 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 167: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 25: Result of <arg fmt="%d" index="1">26</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">25</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 23: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 25: Result of <arg fmt="%d" index="1">29</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">28</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 93: Assignment to <arg fmt="%s" index="1">win</arg> ignored, since the identifier is never used
@@ -27,9 +30,6 @@
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 135: Assignment to <arg fmt="%s" index="1">andedReg</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 11: Net &lt;<arg fmt="%s" index="1">timeState[2]</arg>&gt; does not have a driver.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 231: Assignment to <arg fmt="%s" index="1">vert2</arg> ignored, since the identifier is never used
@@ -74,16 +74,16 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">right</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/troy/Embedded/finalproj/vgaGame.v</arg>&quot; line <arg fmt="%s" index="2">223</arg>: Output port &lt;<arg fmt="%s" index="3">vert2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">frogLogic</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/troy/Embedded/finalproj/vgaGame.v</arg>&quot; line <arg fmt="%s" index="2">223</arg>: Output port &lt;<arg fmt="%s" index="3">vert2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">frogLogic</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/troy/Embedded/finalproj/vgaGame.v</arg>&quot; line <arg fmt="%s" index="2">223</arg>: Output port &lt;<arg fmt="%s" index="3">vert3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">frogLogic</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/troy/Embedded/finalproj/vgaGame.v</arg>&quot; line <arg fmt="%s" index="2">223</arg>: Output port &lt;<arg fmt="%s" index="3">vert3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">frogLogic</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/troy/Embedded/finalproj/vgaGame.v</arg>&quot; line <arg fmt="%s" index="2">223</arg>: Output port &lt;<arg fmt="%s" index="3">vert5</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">frogLogic</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/troy/Embedded/finalproj/vgaGame.v</arg>&quot; line <arg fmt="%s" index="2">223</arg>: Output port &lt;<arg fmt="%s" index="3">vert5</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">frogLogic</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/troy/Embedded/finalproj/vgaGame.v</arg>&quot; line <arg fmt="%s" index="2">223</arg>: Output port &lt;<arg fmt="%s" index="3">vert6</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">frogLogic</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/troy/Embedded/finalproj/vgaGame.v</arg>&quot; line <arg fmt="%s" index="2">223</arg>: Output port &lt;<arg fmt="%s" index="3">vert6</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">frogLogic</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">sw4</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -116,80 +116,190 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">right</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">timeState</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">frogger</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000</arg>).
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert5_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert1</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">7</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert5_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert1</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">5</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert5_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert1</arg>&lt;<arg fmt="%d" index="2">5</arg>:<arg fmt="%d" index="3">5</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert5_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert1</arg>&lt;<arg fmt="%d" index="2">5</arg>:<arg fmt="%d" index="3">3</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert5_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert2</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">7</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert5_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert2</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">5</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert5_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert2</arg>&lt;<arg fmt="%d" index="2">5</arg>:<arg fmt="%d" index="3">5</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert5_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert2</arg>&lt;<arg fmt="%d" index="2">5</arg>:<arg fmt="%d" index="3">3</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert3_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert3</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">6</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert3_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert3</arg>&lt;<arg fmt="%d" index="2">6</arg>:<arg fmt="%d" index="3">5</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert3_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert3</arg>&lt;<arg fmt="%d" index="2">5</arg>:<arg fmt="%d" index="3">4</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert3_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert3</arg>&lt;<arg fmt="%d" index="2">4</arg>:<arg fmt="%d" index="3">3</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert3_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert5</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">7</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert3_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert5</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">6</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert3_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert5</arg>&lt;<arg fmt="%d" index="2">6</arg>:<arg fmt="%d" index="3">5</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert3_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert5</arg>&lt;<arg fmt="%d" index="2">5</arg>:<arg fmt="%d" index="3">4</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert2_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert5</arg>&lt;<arg fmt="%d" index="2">4</arg>:<arg fmt="%d" index="3">4</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert2_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert6</arg>&lt;<arg fmt="%d" index="2">7</arg>:<arg fmt="%d" index="3">4</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">1</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert2_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">vert6</arg>&lt;<arg fmt="%d" index="2">4</arg>:<arg fmt="%d" index="3">1</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">frogger</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert2_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">frogLogic</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
-It will be removed from the design.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert2_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">drawHorizPosition_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert2_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">drawHorizPosition_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert2_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1898" delta="old" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">drawHorizPosition_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert2_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1898" delta="old" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">drawHorizPosition_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert1_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert1_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert1_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert1_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert1_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert1_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert1_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vert1_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">frogLogic</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n0050</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vert5_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert5_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vert5_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert5_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vert5_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert5_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vert3_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert3_5&gt; &lt;vert2_2&gt; &lt;vert2_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vert3_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert3_6&gt; &lt;vert2_3&gt; &lt;vert2_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vert3_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert3_7&gt; &lt;vert2_0&gt; &lt;vert2_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vert6_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert6_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vert6_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert6_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vert6_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert6_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vert6_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert6_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vert5_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert5_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">vert3_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert3_4&gt; &lt;vert2_1&gt; &lt;vert2_5&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/timeState_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert1_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert1_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert1_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert1_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert1_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert1_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert1_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert1_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert3_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert3_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert3_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert3_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert5_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert5_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert5_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">frogLogic/vert5_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
 </msg>
 
 </messages>

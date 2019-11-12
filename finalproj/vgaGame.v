@@ -9,7 +9,7 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 	reg [7:0] vert7 = 8'b0000_0000;
 
 	reg [2:0] timeState = 0;	//Keep track of time which determines car locations
-	reg [24:0] timeCounter = 0;	//Count the number of clock pulses to keep track of time
+	reg [27:0] timeCounter = 0;	//Count the number of clock pulses to keep track of time
 
 	reg [2:0] froggerVerticalState = 7;	//Keep track of what vertical level frogger is on
 	reg [7:0] froggerHorizState = 8'b0001_0000;	//Keep track of what horizontal level frogger is on
