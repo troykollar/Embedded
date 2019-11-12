@@ -9,3 +9,4 @@ map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -reg
 par -w -intstyle ise -ol high -mt off VGADemo_map.ncd VGADemo.ncd VGADemo.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml VGADemo.twx VGADemo.ncd -o VGADemo.twr VGADemo.pcf 
 bitgen -intstyle ise -f VGADemo.ut VGADemo.ncd 
+bitgen -intstyle ise -f VGADemo.ut VGADemo.ncd 
