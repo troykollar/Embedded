@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: VGAWrite.prj
@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/troy/Embedded/Finalproj/newfrogger.v" into library work
+Analyzing Verilog file "/home/troy/Embedded/Finalproj1/newfrogger.v" into library work
 Parsing module <hvsync_generator>.
 Parsing module <frogger>.
 Parsing module <VGAWrite>.
@@ -118,35 +118,36 @@ Parsing module <VGAWrite>.
 =========================================================================
 
 Elaborating module <VGAWrite>.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj/newfrogger.v" Line 89: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 89: Result of 3-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <hvsync_generator>.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj/newfrogger.v" Line 18: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj/newfrogger.v" Line 27: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Finalproj/newfrogger.v" Line 100: Assignment to CounterY ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 18: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 27: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 100: Assignment to CounterY ignored, since the identifier is never used
 
 Elaborating module <frogger>.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj/newfrogger.v" Line 63: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj/newfrogger.v" Line 65: Result of 29-bit expression is truncated to fit in 28-bit target.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Finalproj/newfrogger.v" Line 69: Signal <vert1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/troy/Embedded/Finalproj/newfrogger.v" Line 70: Signal <vert1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj/newfrogger.v" Line 70: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Finalproj/newfrogger.v" Line 108: Assignment to vert1 ignored, since the identifier is never used
-WARNING:Xst:2972 - "/home/troy/Embedded/Finalproj/newfrogger.v" line 106. All outputs of instance <frogLogic> of block <frogger> are unconnected in block <VGAWrite>. Underlying logic will be removed.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 63: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 65: Result of 29-bit expression is truncated to fit in 28-bit target.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 69: Signal <vert1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 70: Signal <vert1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 70: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 108: Assignment to vert1 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/newfrogger.v" Line 113: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:Xst:2972 - "/home/troy/Embedded/Finalproj1/newfrogger.v" line 106. All outputs of instance <frogLogic> of block <frogger> are unconnected in block <VGAWrite>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <VGAWrite>.
-    Related source file is "/home/troy/Embedded/Finalproj/newfrogger.v".
+    Related source file is "/home/troy/Embedded/Finalproj1/newfrogger.v".
 WARNING:Xst:647 - Input <sw4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <sw3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <sw1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <sw2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <sw5> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/troy/Embedded/Finalproj/newfrogger.v" line 95: Output port <CounterY> of the instance <hvsync> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/troy/Embedded/Finalproj/newfrogger.v" line 106: Output port <vert1> of the instance <frogLogic> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/newfrogger.v" line 95: Output port <CounterY> of the instance <hvsync> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/newfrogger.v" line 106: Output port <vert1> of the instance <frogLogic> is unconnected or connected to loadless signal.
     Found 3-bit register for signal <pixel>.
     Found 2-bit register for signal <clk_counter>.
     Found 2-bit adder for signal <clk_counter[1]_GND_1_o_add_2_OUT> created at line 89.
@@ -156,7 +157,7 @@ INFO:Xst:3210 - "/home/troy/Embedded/Finalproj/newfrogger.v" line 106: Output po
 Unit <VGAWrite> synthesized.
 
 Synthesizing Unit <hvsync_generator>.
-    Related source file is "/home/troy/Embedded/Finalproj/newfrogger.v".
+    Related source file is "/home/troy/Embedded/Finalproj1/newfrogger.v".
     Found 9-bit register for signal <CounterY>.
     Found 1-bit register for signal <vga_HS>.
     Found 1-bit register for signal <vga_VS>.
@@ -367,16 +368,16 @@ Timing constraint: Default period analysis for Clock 'clk_25'
   Total number of paths / destination ports: 344 / 38
 -------------------------------------------------------------------------
 Delay:               3.695ns (Levels of Logic = 3)
-  Source:            hvsync/CounterX_6 (FF)
+  Source:            hvsync/CounterX_4 (FF)
   Destination:       hvsync/CounterX_9 (FF)
   Source Clock:      clk_25 rising
   Destination Clock: clk_25 rising
 
-  Data Path: hvsync/CounterX_6 to hvsync/CounterX_9
+  Data Path: hvsync/CounterX_4 to hvsync/CounterX_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               5   0.447   1.059  hvsync/CounterX_6 (hvsync/CounterX_6)
+     FD:C->Q               5   0.447   1.059  hvsync/CounterX_4 (hvsync/CounterX_4)
      LUT5:I0->O            2   0.203   0.617  hvsync/CounterXmaxed<9>_SW0 (N3)
      LUT6:I5->O           10   0.205   0.857  hvsync/CounterXmaxed<9> (hvsync/CounterXmaxed)
      LUT2:I1->O            1   0.205   0.000  hvsync/CounterX_9_rstpot (hvsync/CounterX_9_rstpot)
@@ -451,8 +452,8 @@ clk_25         |    3.695|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 8.54 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 8.98 secs
  
 --> 
 
@@ -460,6 +461,6 @@ Total CPU time to Xst completion: 8.54 secs
 Total memory usage is 394792 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   16 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

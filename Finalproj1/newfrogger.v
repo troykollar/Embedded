@@ -110,7 +110,7 @@ module VGAWrite(
 	
 	always @(posedge clk_25)
 		if (inDisplayArea)
-			pixel <= CounterX[2:0];
+			pixel <= CounterX[9:6];
 		else 	pixel <= 3'b111;
 	
 

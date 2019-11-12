@@ -1,0 +1,16 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Nov 12 17:46:41 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "pixel<1>" LOCATE = SITE "C10" LEVEL 1;
+COMP "pixel<2>" LOCATE = SITE "B11" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "vsync_out" LOCATE = SITE "A12" LEVEL 1;
+COMP "hsync_out" LOCATE = SITE "B12" LEVEL 1;
+COMP "pixel<0>" LOCATE = SITE "A9" LEVEL 1;
+TIMEGRP GCLK1 = BEL "clk_counter_0" BEL "clk_counter_1" BEL "clk_BUFGP/BUFG";
+TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

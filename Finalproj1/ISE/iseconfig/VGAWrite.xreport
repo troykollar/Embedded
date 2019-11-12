@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-11-12T17:22:24</DateModified>
+  <DateModified>2019-11-12T17:52:24</DateModified>
   <ModuleName>VGAWrite</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/troy/Embedded/Finalproj/ISE/iseconfig/VGAWrite.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/troy/Embedded/Finalproj/ISE</ImplementationReportsDirectory>
+  <SavedFilePath>/home/troy/Embedded/Finalproj1/ISE/iseconfig/VGAWrite.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/troy/Embedded/Finalproj1/ISE/</ImplementationReportsDirectory>
   <DateInitialized>2019-11-12T17:22:24</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
