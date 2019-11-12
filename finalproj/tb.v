@@ -39,7 +39,7 @@ initial
 #5000   $finish;
   end
 
-frogger frog1 (
+VGAWrite frog1 (
                  .clk(clk),
                  .reset(reset),
                  .up(up),
