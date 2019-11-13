@@ -2,8 +2,8 @@
 Release 14.7 Trace  (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
-3 -fastpaths -xml VGAWrite.twx VGAWrite.ncd -o VGAWrite.twr VGAWrite.pcf
+/home/troy/ISE/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml VGAWrite.twx VGAWrite.ncd -o VGAWrite.twr VGAWrite.pcf
 
 Design file:              VGAWrite.ncd
 Physical constraint file: VGAWrite.pcf
@@ -30,17 +30,17 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  1264 paths analyzed, 130 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.634ns.
+ Minimum period is   4.473ns.
 --------------------------------------------------------------------------------
 
-Paths for end point frogLogic/timeState_0 (SLICE_X12Y33.CE), 27 paths
+Paths for end point frogLogic/timeState_0 (SLICE_X12Y39.CE), 27 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     5.366ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               frogLogic/timeCounter_12 (FF)
+Slack (setup path):     5.527ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               frogLogic/timeCounter_16 (FF)
   Destination:          frogLogic/timeState_0 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.550ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.049ns (0.605 - 0.654)
+  Data Path Delay:      4.378ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.060ns (0.592 - 0.652)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -51,32 +51,32 @@ Slack (setup path):     5.366ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_12 to frogLogic/timeState_0
+  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_16 to frogLogic/timeState_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X11Y19.AQ      Tcko                  0.391   frogLogic/timeCounter<15>
-                                                       frogLogic/timeCounter_12
-    SLICE_X8Y20.D2       net (fanout=3)        1.582   frogLogic/timeCounter<12>
-    SLICE_X8Y20.D        Tilo                  0.203   frogLogic/_n004614
-                                                       frogLogic/_n004614
-    SLICE_X8Y20.A4       net (fanout=2)        0.448   frogLogic/_n004614
-    SLICE_X8Y20.A        Tilo                  0.203   frogLogic/_n004614
+    SLICE_X11Y20.AQ      Tcko                  0.391   frogLogic/timeCounter<19>
+                                                       frogLogic/timeCounter_16
+    SLICE_X9Y19.A1       net (fanout=3)        0.819   frogLogic/timeCounter<16>
+    SLICE_X9Y19.A        Tilo                  0.259   frogLogic/_n004612
+                                                       frogLogic/_n004612
+    SLICE_X9Y21.A4       net (fanout=2)        0.630   frogLogic/_n004612
+    SLICE_X9Y21.A        Tilo                  0.259   frogLogic/_n004614
                                                        frogLogic/_n004616
-    SLICE_X12Y33.CE      net (fanout=1)        1.392   frogLogic/_n00461
-    SLICE_X12Y33.CLK     Tceck                 0.331   frogLogic/timeState<2>
+    SLICE_X12Y39.CE      net (fanout=1)        1.689   frogLogic/_n00461
+    SLICE_X12Y39.CLK     Tceck                 0.331   frogLogic/timeState<2>
                                                        frogLogic/timeState_0
     -------------------------------------------------  ---------------------------
-    Total                                      4.550ns (1.128ns logic, 3.422ns route)
-                                                       (24.8% logic, 75.2% route)
+    Total                                      4.378ns (1.240ns logic, 3.138ns route)
+                                                       (28.3% logic, 71.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     5.982ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               frogLogic/timeCounter_5 (FF)
+Slack (setup path):     5.625ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               frogLogic/timeCounter_6 (FF)
   Destination:          frogLogic/timeState_0 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.931ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.052ns (0.605 - 0.657)
+  Data Path Delay:      4.275ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.065ns (0.592 - 0.657)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -87,32 +87,32 @@ Slack (setup path):     5.982ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_5 to frogLogic/timeState_0
+  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_6 to frogLogic/timeState_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X11Y17.BQ      Tcko                  0.391   frogLogic/timeCounter<7>
-                                                       frogLogic/timeCounter_5
-    SLICE_X8Y16.A1       net (fanout=3)        0.696   frogLogic/timeCounter<5>
-    SLICE_X8Y16.A        Tilo                  0.203   frogLogic/_n004613
-                                                       frogLogic/_n004613
-    SLICE_X8Y20.A5       net (fanout=2)        0.715   frogLogic/_n004613
-    SLICE_X8Y20.A        Tilo                  0.203   frogLogic/_n004614
+    SLICE_X11Y17.CQ      Tcko                  0.391   frogLogic/timeCounter<7>
+                                                       frogLogic/timeCounter_6
+    SLICE_X9Y21.D1       net (fanout=3)        1.049   frogLogic/timeCounter<6>
+    SLICE_X9Y21.D        Tilo                  0.259   frogLogic/_n004614
+                                                       frogLogic/_n004614
+    SLICE_X9Y21.A3       net (fanout=2)        0.297   frogLogic/_n004614
+    SLICE_X9Y21.A        Tilo                  0.259   frogLogic/_n004614
                                                        frogLogic/_n004616
-    SLICE_X12Y33.CE      net (fanout=1)        1.392   frogLogic/_n00461
-    SLICE_X12Y33.CLK     Tceck                 0.331   frogLogic/timeState<2>
+    SLICE_X12Y39.CE      net (fanout=1)        1.689   frogLogic/_n00461
+    SLICE_X12Y39.CLK     Tceck                 0.331   frogLogic/timeState<2>
                                                        frogLogic/timeState_0
     -------------------------------------------------  ---------------------------
-    Total                                      3.931ns (1.128ns logic, 2.803ns route)
-                                                       (28.7% logic, 71.3% route)
+    Total                                      4.275ns (1.240ns logic, 3.035ns route)
+                                                       (29.0% logic, 71.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     6.032ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               frogLogic/timeCounter_4 (FF)
+Slack (setup path):     5.709ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               frogLogic/timeCounter_13 (FF)
   Destination:          frogLogic/timeState_0 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.881ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.052ns (0.605 - 0.657)
+  Data Path Delay:      4.194ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.062ns (0.592 - 0.654)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -123,35 +123,35 @@ Slack (setup path):     6.032ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_4 to frogLogic/timeState_0
+  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_13 to frogLogic/timeState_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X11Y17.AQ      Tcko                  0.391   frogLogic/timeCounter<7>
-                                                       frogLogic/timeCounter_4
-    SLICE_X8Y16.A2       net (fanout=3)        0.646   frogLogic/timeCounter<4>
-    SLICE_X8Y16.A        Tilo                  0.203   frogLogic/_n004613
-                                                       frogLogic/_n004613
-    SLICE_X8Y20.A5       net (fanout=2)        0.715   frogLogic/_n004613
-    SLICE_X8Y20.A        Tilo                  0.203   frogLogic/_n004614
+    SLICE_X11Y19.BQ      Tcko                  0.391   frogLogic/timeCounter<15>
+                                                       frogLogic/timeCounter_13
+    SLICE_X9Y19.A2       net (fanout=3)        0.635   frogLogic/timeCounter<13>
+    SLICE_X9Y19.A        Tilo                  0.259   frogLogic/_n004612
+                                                       frogLogic/_n004612
+    SLICE_X9Y21.A4       net (fanout=2)        0.630   frogLogic/_n004612
+    SLICE_X9Y21.A        Tilo                  0.259   frogLogic/_n004614
                                                        frogLogic/_n004616
-    SLICE_X12Y33.CE      net (fanout=1)        1.392   frogLogic/_n00461
-    SLICE_X12Y33.CLK     Tceck                 0.331   frogLogic/timeState<2>
+    SLICE_X12Y39.CE      net (fanout=1)        1.689   frogLogic/_n00461
+    SLICE_X12Y39.CLK     Tceck                 0.331   frogLogic/timeState<2>
                                                        frogLogic/timeState_0
     -------------------------------------------------  ---------------------------
-    Total                                      3.881ns (1.128ns logic, 2.753ns route)
-                                                       (29.1% logic, 70.9% route)
+    Total                                      4.194ns (1.240ns logic, 2.954ns route)
+                                                       (29.6% logic, 70.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point frogLogic/timeState_2 (SLICE_X12Y33.CE), 27 paths
+Paths for end point frogLogic/timeState_2 (SLICE_X12Y39.CE), 27 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     5.402ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               frogLogic/timeCounter_12 (FF)
+Slack (setup path):     5.563ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               frogLogic/timeCounter_16 (FF)
   Destination:          frogLogic/timeState_2 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      4.514ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.049ns (0.605 - 0.654)
+  Data Path Delay:      4.342ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.060ns (0.592 - 0.652)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -162,179 +162,32 @@ Slack (setup path):     5.402ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_12 to frogLogic/timeState_2
+  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_16 to frogLogic/timeState_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X11Y19.AQ      Tcko                  0.391   frogLogic/timeCounter<15>
-                                                       frogLogic/timeCounter_12
-    SLICE_X8Y20.D2       net (fanout=3)        1.582   frogLogic/timeCounter<12>
-    SLICE_X8Y20.D        Tilo                  0.203   frogLogic/_n004614
-                                                       frogLogic/_n004614
-    SLICE_X8Y20.A4       net (fanout=2)        0.448   frogLogic/_n004614
-    SLICE_X8Y20.A        Tilo                  0.203   frogLogic/_n004614
+    SLICE_X11Y20.AQ      Tcko                  0.391   frogLogic/timeCounter<19>
+                                                       frogLogic/timeCounter_16
+    SLICE_X9Y19.A1       net (fanout=3)        0.819   frogLogic/timeCounter<16>
+    SLICE_X9Y19.A        Tilo                  0.259   frogLogic/_n004612
+                                                       frogLogic/_n004612
+    SLICE_X9Y21.A4       net (fanout=2)        0.630   frogLogic/_n004612
+    SLICE_X9Y21.A        Tilo                  0.259   frogLogic/_n004614
                                                        frogLogic/_n004616
-    SLICE_X12Y33.CE      net (fanout=1)        1.392   frogLogic/_n00461
-    SLICE_X12Y33.CLK     Tceck                 0.295   frogLogic/timeState<2>
+    SLICE_X12Y39.CE      net (fanout=1)        1.689   frogLogic/_n00461
+    SLICE_X12Y39.CLK     Tceck                 0.295   frogLogic/timeState<2>
                                                        frogLogic/timeState_2
     -------------------------------------------------  ---------------------------
-    Total                                      4.514ns (1.092ns logic, 3.422ns route)
-                                                       (24.2% logic, 75.8% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     6.018ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               frogLogic/timeCounter_5 (FF)
-  Destination:          frogLogic/timeState_2 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      3.895ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.052ns (0.605 - 0.657)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_5 to frogLogic/timeState_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y17.BQ      Tcko                  0.391   frogLogic/timeCounter<7>
-                                                       frogLogic/timeCounter_5
-    SLICE_X8Y16.A1       net (fanout=3)        0.696   frogLogic/timeCounter<5>
-    SLICE_X8Y16.A        Tilo                  0.203   frogLogic/_n004613
-                                                       frogLogic/_n004613
-    SLICE_X8Y20.A5       net (fanout=2)        0.715   frogLogic/_n004613
-    SLICE_X8Y20.A        Tilo                  0.203   frogLogic/_n004614
-                                                       frogLogic/_n004616
-    SLICE_X12Y33.CE      net (fanout=1)        1.392   frogLogic/_n00461
-    SLICE_X12Y33.CLK     Tceck                 0.295   frogLogic/timeState<2>
-                                                       frogLogic/timeState_2
-    -------------------------------------------------  ---------------------------
-    Total                                      3.895ns (1.092ns logic, 2.803ns route)
-                                                       (28.0% logic, 72.0% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     6.068ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               frogLogic/timeCounter_4 (FF)
-  Destination:          frogLogic/timeState_2 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      3.845ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.052ns (0.605 - 0.657)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_4 to frogLogic/timeState_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y17.AQ      Tcko                  0.391   frogLogic/timeCounter<7>
-                                                       frogLogic/timeCounter_4
-    SLICE_X8Y16.A2       net (fanout=3)        0.646   frogLogic/timeCounter<4>
-    SLICE_X8Y16.A        Tilo                  0.203   frogLogic/_n004613
-                                                       frogLogic/_n004613
-    SLICE_X8Y20.A5       net (fanout=2)        0.715   frogLogic/_n004613
-    SLICE_X8Y20.A        Tilo                  0.203   frogLogic/_n004614
-                                                       frogLogic/_n004616
-    SLICE_X12Y33.CE      net (fanout=1)        1.392   frogLogic/_n00461
-    SLICE_X12Y33.CLK     Tceck                 0.295   frogLogic/timeState<2>
-                                                       frogLogic/timeState_2
-    -------------------------------------------------  ---------------------------
-    Total                                      3.845ns (1.092ns logic, 2.753ns route)
-                                                       (28.4% logic, 71.6% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point frogLogic/timeState_1 (SLICE_X12Y33.CE), 27 paths
---------------------------------------------------------------------------------
-Slack (setup path):     5.421ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               frogLogic/timeCounter_12 (FF)
-  Destination:          frogLogic/timeState_1 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      4.495ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.049ns (0.605 - 0.654)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_12 to frogLogic/timeState_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y19.AQ      Tcko                  0.391   frogLogic/timeCounter<15>
-                                                       frogLogic/timeCounter_12
-    SLICE_X8Y20.D2       net (fanout=3)        1.582   frogLogic/timeCounter<12>
-    SLICE_X8Y20.D        Tilo                  0.203   frogLogic/_n004614
-                                                       frogLogic/_n004614
-    SLICE_X8Y20.A4       net (fanout=2)        0.448   frogLogic/_n004614
-    SLICE_X8Y20.A        Tilo                  0.203   frogLogic/_n004614
-                                                       frogLogic/_n004616
-    SLICE_X12Y33.CE      net (fanout=1)        1.392   frogLogic/_n00461
-    SLICE_X12Y33.CLK     Tceck                 0.276   frogLogic/timeState<2>
-                                                       frogLogic/timeState_1
-    -------------------------------------------------  ---------------------------
-    Total                                      4.495ns (1.073ns logic, 3.422ns route)
-                                                       (23.9% logic, 76.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     6.037ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               frogLogic/timeCounter_5 (FF)
-  Destination:          frogLogic/timeState_1 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      3.876ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.052ns (0.605 - 0.657)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_5 to frogLogic/timeState_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y17.BQ      Tcko                  0.391   frogLogic/timeCounter<7>
-                                                       frogLogic/timeCounter_5
-    SLICE_X8Y16.A1       net (fanout=3)        0.696   frogLogic/timeCounter<5>
-    SLICE_X8Y16.A        Tilo                  0.203   frogLogic/_n004613
-                                                       frogLogic/_n004613
-    SLICE_X8Y20.A5       net (fanout=2)        0.715   frogLogic/_n004613
-    SLICE_X8Y20.A        Tilo                  0.203   frogLogic/_n004614
-                                                       frogLogic/_n004616
-    SLICE_X12Y33.CE      net (fanout=1)        1.392   frogLogic/_n00461
-    SLICE_X12Y33.CLK     Tceck                 0.276   frogLogic/timeState<2>
-                                                       frogLogic/timeState_1
-    -------------------------------------------------  ---------------------------
-    Total                                      3.876ns (1.073ns logic, 2.803ns route)
+    Total                                      4.342ns (1.204ns logic, 3.138ns route)
                                                        (27.7% logic, 72.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     6.087ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               frogLogic/timeCounter_4 (FF)
-  Destination:          frogLogic/timeState_1 (FF)
+Slack (setup path):     5.661ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               frogLogic/timeCounter_6 (FF)
+  Destination:          frogLogic/timeState_2 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.826ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.052ns (0.605 - 0.657)
+  Data Path Delay:      4.239ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.065ns (0.592 - 0.657)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -345,63 +198,182 @@ Slack (setup path):     6.087ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_4 to frogLogic/timeState_1
+  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_6 to frogLogic/timeState_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X11Y17.AQ      Tcko                  0.391   frogLogic/timeCounter<7>
-                                                       frogLogic/timeCounter_4
-    SLICE_X8Y16.A2       net (fanout=3)        0.646   frogLogic/timeCounter<4>
-    SLICE_X8Y16.A        Tilo                  0.203   frogLogic/_n004613
-                                                       frogLogic/_n004613
-    SLICE_X8Y20.A5       net (fanout=2)        0.715   frogLogic/_n004613
-    SLICE_X8Y20.A        Tilo                  0.203   frogLogic/_n004614
+    SLICE_X11Y17.CQ      Tcko                  0.391   frogLogic/timeCounter<7>
+                                                       frogLogic/timeCounter_6
+    SLICE_X9Y21.D1       net (fanout=3)        1.049   frogLogic/timeCounter<6>
+    SLICE_X9Y21.D        Tilo                  0.259   frogLogic/_n004614
+                                                       frogLogic/_n004614
+    SLICE_X9Y21.A3       net (fanout=2)        0.297   frogLogic/_n004614
+    SLICE_X9Y21.A        Tilo                  0.259   frogLogic/_n004614
                                                        frogLogic/_n004616
-    SLICE_X12Y33.CE      net (fanout=1)        1.392   frogLogic/_n00461
-    SLICE_X12Y33.CLK     Tceck                 0.276   frogLogic/timeState<2>
+    SLICE_X12Y39.CE      net (fanout=1)        1.689   frogLogic/_n00461
+    SLICE_X12Y39.CLK     Tceck                 0.295   frogLogic/timeState<2>
+                                                       frogLogic/timeState_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.239ns (1.204ns logic, 3.035ns route)
+                                                       (28.4% logic, 71.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.745ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               frogLogic/timeCounter_13 (FF)
+  Destination:          frogLogic/timeState_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.158ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.062ns (0.592 - 0.654)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_13 to frogLogic/timeState_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y19.BQ      Tcko                  0.391   frogLogic/timeCounter<15>
+                                                       frogLogic/timeCounter_13
+    SLICE_X9Y19.A2       net (fanout=3)        0.635   frogLogic/timeCounter<13>
+    SLICE_X9Y19.A        Tilo                  0.259   frogLogic/_n004612
+                                                       frogLogic/_n004612
+    SLICE_X9Y21.A4       net (fanout=2)        0.630   frogLogic/_n004612
+    SLICE_X9Y21.A        Tilo                  0.259   frogLogic/_n004614
+                                                       frogLogic/_n004616
+    SLICE_X12Y39.CE      net (fanout=1)        1.689   frogLogic/_n00461
+    SLICE_X12Y39.CLK     Tceck                 0.295   frogLogic/timeState<2>
+                                                       frogLogic/timeState_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.158ns (1.204ns logic, 2.954ns route)
+                                                       (29.0% logic, 71.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point frogLogic/timeState_1 (SLICE_X12Y39.CE), 27 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     5.582ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               frogLogic/timeCounter_16 (FF)
+  Destination:          frogLogic/timeState_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.323ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.060ns (0.592 - 0.652)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_16 to frogLogic/timeState_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y20.AQ      Tcko                  0.391   frogLogic/timeCounter<19>
+                                                       frogLogic/timeCounter_16
+    SLICE_X9Y19.A1       net (fanout=3)        0.819   frogLogic/timeCounter<16>
+    SLICE_X9Y19.A        Tilo                  0.259   frogLogic/_n004612
+                                                       frogLogic/_n004612
+    SLICE_X9Y21.A4       net (fanout=2)        0.630   frogLogic/_n004612
+    SLICE_X9Y21.A        Tilo                  0.259   frogLogic/_n004614
+                                                       frogLogic/_n004616
+    SLICE_X12Y39.CE      net (fanout=1)        1.689   frogLogic/_n00461
+    SLICE_X12Y39.CLK     Tceck                 0.276   frogLogic/timeState<2>
                                                        frogLogic/timeState_1
     -------------------------------------------------  ---------------------------
-    Total                                      3.826ns (1.073ns logic, 2.753ns route)
-                                                       (28.0% logic, 72.0% route)
+    Total                                      4.323ns (1.185ns logic, 3.138ns route)
+                                                       (27.4% logic, 72.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.680ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               frogLogic/timeCounter_6 (FF)
+  Destination:          frogLogic/timeState_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.220ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.065ns (0.592 - 0.657)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_6 to frogLogic/timeState_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y17.CQ      Tcko                  0.391   frogLogic/timeCounter<7>
+                                                       frogLogic/timeCounter_6
+    SLICE_X9Y21.D1       net (fanout=3)        1.049   frogLogic/timeCounter<6>
+    SLICE_X9Y21.D        Tilo                  0.259   frogLogic/_n004614
+                                                       frogLogic/_n004614
+    SLICE_X9Y21.A3       net (fanout=2)        0.297   frogLogic/_n004614
+    SLICE_X9Y21.A        Tilo                  0.259   frogLogic/_n004614
+                                                       frogLogic/_n004616
+    SLICE_X12Y39.CE      net (fanout=1)        1.689   frogLogic/_n00461
+    SLICE_X12Y39.CLK     Tceck                 0.276   frogLogic/timeState<2>
+                                                       frogLogic/timeState_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.220ns (1.185ns logic, 3.035ns route)
+                                                       (28.1% logic, 71.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     5.764ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               frogLogic/timeCounter_13 (FF)
+  Destination:          frogLogic/timeState_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.139ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.062ns (0.592 - 0.654)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: frogLogic/timeCounter_13 to frogLogic/timeState_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y19.BQ      Tcko                  0.391   frogLogic/timeCounter<15>
+                                                       frogLogic/timeCounter_13
+    SLICE_X9Y19.A2       net (fanout=3)        0.635   frogLogic/timeCounter<13>
+    SLICE_X9Y19.A        Tilo                  0.259   frogLogic/_n004612
+                                                       frogLogic/_n004612
+    SLICE_X9Y21.A4       net (fanout=2)        0.630   frogLogic/_n004612
+    SLICE_X9Y21.A        Tilo                  0.259   frogLogic/_n004614
+                                                       frogLogic/_n004616
+    SLICE_X12Y39.CE      net (fanout=1)        1.689   frogLogic/_n00461
+    SLICE_X12Y39.CLK     Tceck                 0.276   frogLogic/timeState<2>
+                                                       frogLogic/timeState_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.139ns (1.185ns logic, 2.954ns route)
+                                                       (28.6% logic, 71.4% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point clk_counter_0 (SLICE_X13Y33.A6), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.436ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               clk_counter_0 (FF)
-  Destination:          clk_counter_0 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.436ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 10.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: clk_counter_0 to clk_counter_0
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X13Y33.AQ      Tcko                  0.198   clk_counter<0>
-                                                       clk_counter_0
-    SLICE_X13Y33.A6      net (fanout=2)        0.023   clk_counter<0>
-    SLICE_X13Y33.CLK     Tah         (-Th)    -0.215   clk_counter<0>
-                                                       Mcount_clk_counter_xor<0>11_INV_0
-                                                       clk_counter_0
-    -------------------------------------------------  ---------------------------
-    Total                                      0.436ns (0.413ns logic, 0.023ns route)
-                                                       (94.7% logic, 5.3% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point frogLogic/timeCounter_3 (SLICE_X11Y16.D6), 1 path
+Paths for end point frogLogic/timeCounter_20 (SLICE_X11Y21.A6), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.442ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               frogLogic/timeCounter_3 (FF)
-  Destination:          frogLogic/timeCounter_3 (FF)
+  Source:               frogLogic/timeCounter_20 (FF)
+  Destination:          frogLogic/timeCounter_20 (FF)
   Requirement:          0.000ns
   Data Path Delay:      0.442ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
@@ -409,47 +381,75 @@ Slack (hold path):      0.442ns (requirement - (clock path skew + uncertainty - 
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: frogLogic/timeCounter_3 to frogLogic/timeCounter_3
+  Minimum Data Path at Fast Process Corner: frogLogic/timeCounter_20 to frogLogic/timeCounter_20
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X11Y16.DQ      Tcko                  0.198   frogLogic/timeCounter<3>
-                                                       frogLogic/timeCounter_3
-    SLICE_X11Y16.D6      net (fanout=3)        0.029   frogLogic/timeCounter<3>
-    SLICE_X11Y16.CLK     Tah         (-Th)    -0.215   frogLogic/timeCounter<3>
-                                                       frogLogic/timeCounter_3_rstpot
-                                                       frogLogic/timeCounter_3
+    SLICE_X11Y21.AQ      Tcko                  0.198   frogLogic/timeCounter<23>
+                                                       frogLogic/timeCounter_20
+    SLICE_X11Y21.A6      net (fanout=3)        0.029   frogLogic/timeCounter<20>
+    SLICE_X11Y21.CLK     Tah         (-Th)    -0.215   frogLogic/timeCounter<23>
+                                                       frogLogic/timeCounter_20_rstpot
+                                                       frogLogic/timeCounter_20
     -------------------------------------------------  ---------------------------
     Total                                      0.442ns (0.413ns logic, 0.029ns route)
                                                        (93.4% logic, 6.6% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point frogLogic/timeCounter_24 (SLICE_X9Y20.A6), 1 path
+Paths for end point frogLogic/timeCounter_23 (SLICE_X11Y21.D6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.445ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               frogLogic/timeCounter_24 (FF)
-  Destination:          frogLogic/timeCounter_24 (FF)
+Slack (hold path):      0.442ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               frogLogic/timeCounter_23 (FF)
+  Destination:          frogLogic/timeCounter_23 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.445ns (Levels of Logic = 1)
+  Data Path Delay:      0.442ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: frogLogic/timeCounter_24 to frogLogic/timeCounter_24
+  Minimum Data Path at Fast Process Corner: frogLogic/timeCounter_23 to frogLogic/timeCounter_23
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X9Y20.AQ       Tcko                  0.198   frogLogic/timeCounter<26>
-                                                       frogLogic/timeCounter_24
-    SLICE_X9Y20.A6       net (fanout=3)        0.032   frogLogic/timeCounter<24>
-    SLICE_X9Y20.CLK      Tah         (-Th)    -0.215   frogLogic/timeCounter<26>
-                                                       frogLogic/timeCounter_24_rstpot
-                                                       frogLogic/timeCounter_24
+    SLICE_X11Y21.DQ      Tcko                  0.198   frogLogic/timeCounter<23>
+                                                       frogLogic/timeCounter_23
+    SLICE_X11Y21.D6      net (fanout=3)        0.029   frogLogic/timeCounter<23>
+    SLICE_X11Y21.CLK     Tah         (-Th)    -0.215   frogLogic/timeCounter<23>
+                                                       frogLogic/timeCounter_23_rstpot
+                                                       frogLogic/timeCounter_23
     -------------------------------------------------  ---------------------------
-    Total                                      0.445ns (0.413ns logic, 0.032ns route)
-                                                       (92.8% logic, 7.2% route)
+    Total                                      0.442ns (0.413ns logic, 0.029ns route)
+                                                       (93.4% logic, 6.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point frogLogic/timeCounter_7 (SLICE_X11Y17.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.444ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               frogLogic/timeCounter_7 (FF)
+  Destination:          frogLogic/timeCounter_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.444ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: frogLogic/timeCounter_7 to frogLogic/timeCounter_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y17.DQ      Tcko                  0.198   frogLogic/timeCounter<7>
+                                                       frogLogic/timeCounter_7
+    SLICE_X11Y17.D6      net (fanout=3)        0.031   frogLogic/timeCounter<7>
+    SLICE_X11Y17.CLK     Tah         (-Th)    -0.215   frogLogic/timeCounter<7>
+                                                       frogLogic/timeCounter_7_rstpot
+                                                       frogLogic/timeCounter_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.444ns (0.413ns logic, 0.031ns route)
+                                                       (93.0% logic, 7.0% route)
 
 --------------------------------------------------------------------------------
 
@@ -468,7 +468,7 @@ Slack: 9.570ns (period - min period limit)
   Min period limit: 0.430ns (2325.581MHz) (Tcp)
   Physical resource: frogLogic/vert3_2/CLK
   Logical resource: frogLogic/vert3_0/CK
-  Location pin: SLICE_X14Y36.CLK
+  Location pin: SLICE_X14Y39.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 9.570ns (period - min period limit)
@@ -476,7 +476,7 @@ Slack: 9.570ns (period - min period limit)
   Min period limit: 0.430ns (2325.581MHz) (Tcp)
   Physical resource: frogLogic/vert3_2/CLK
   Logical resource: frogLogic/vert3_3/CK
-  Location pin: SLICE_X14Y36.CLK
+  Location pin: SLICE_X14Y39.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -493,7 +493,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.634|         |         |         |
+clk            |    4.473|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -505,13 +505,13 @@ Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 Constraints cover 1264 paths, 0 nets, and 198 connections
 
 Design statistics:
-   Minimum period:   4.634ns{1}   (Maximum frequency: 215.796MHz)
+   Minimum period:   4.473ns{1}   (Maximum frequency: 223.564MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue Nov 12 18:27:11 2019 
+Analysis completed Tue Nov 12 19:39:10 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:

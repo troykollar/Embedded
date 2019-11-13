@@ -1,14 +1,14 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-troy-VirtualBox::  Tue Nov 12 18:26:50 2019
+troy-VirtualBox::  Tue Nov 12 19:38:43 2019
 
 par -w -intstyle ise -ol high -mt off VGAWrite_map.ncd VGAWrite.ncd
 VGAWrite.pcf 
 
 
 Constraints file: VGAWrite.pcf.
-Loading device for application Rf_Device from file '6slx9.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+Loading device for application Rf_Device from file '6slx9.nph' in environment /home/troy/ISE/14.7/ISE_DS/ISE/.
    "VGAWrite" is an NCD, version 3.2, device xc6slx9, package csg324, speed -3
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
@@ -22,16 +22,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                    84 out of  11,440    1%
-    Number used as Flip Flops:                  84
+  Number of Slice Registers:                    85 out of  11,440    1%
+    Number used as Flip Flops:                  85
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        141 out of   5,720    2%
-    Number used as logic:                      138 out of   5,720    2%
-      Number using O6 output only:              86
+  Number of Slice LUTs:                        160 out of   5,720    2%
+    Number used as logic:                      157 out of   5,720    2%
+      Number using O6 output only:              98
       Number using O5 output only:              40
-      Number using O5 and O6:                   12
+      Number using O5 and O6:                   19
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
     Number used exclusively as route-thrus:      3
@@ -40,12 +40,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    51 out of   1,430    3%
+  Number of occupied Slices:                    53 out of   1,430    3%
   Number of MUXCYs used:                        52 out of   2,860    1%
-  Number of LUT Flip Flop pairs used:          145
-    Number with an unused Flip Flop:            68 out of     145   46%
-    Number with an unused LUT:                   4 out of     145    2%
-    Number of fully used LUT-FF pairs:          73 out of     145   50%
+  Number of LUT Flip Flop pairs used:          164
+    Number with an unused Flip Flop:            90 out of     164   54%
+    Number with an unused LUT:                   4 out of     164    2%
+    Number of fully used LUT-FF pairs:          70 out of     164   42%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -88,35 +88,35 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 7 secs 
-Finished initial Timing Analysis.  REAL time: 7 secs 
+Starting initial Timing Analysis.  REAL time: 9 secs 
+Finished initial Timing Analysis.  REAL time: 9 secs 
 
 Starting Router
 
 
-Phase  1  : 579 unrouted;      REAL time: 8 secs 
+Phase  1  : 638 unrouted;      REAL time: 10 secs 
 
-Phase  2  : 498 unrouted;      REAL time: 8 secs 
+Phase  2  : 550 unrouted;      REAL time: 10 secs 
 
-Phase  3  : 156 unrouted;      REAL time: 9 secs 
+Phase  3  : 198 unrouted;      REAL time: 11 secs 
 
-Phase  4  : 156 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
+Phase  4  : 198 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 12 secs 
 
 Updating file: VGAWrite.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 10 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 10 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 10 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 10 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 10 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 10 secs 
-Total REAL time to Router completion: 10 secs 
-Total CPU time to Router completion: 8 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
+Total REAL time to Router completion: 13 secs 
+Total CPU time to Router completion: 10 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -134,9 +134,9 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X3Y13| No   |   17 |  0.041     |  1.109      |
+|         clk_25_BUFG |  BUFGMUX_X2Y3| No   |   11 |  0.008     |  1.080      |
 +---------------------+--------------+------+------+------------+-------------+
-|         clk_25_BUFG |  BUFGMUX_X2Y3| No   |   11 |  0.013     |  1.081      |
+|           clk_BUFGP | BUFGMUX_X3Y13| No   |   17 |  0.042     |  1.109      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -156,8 +156,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz | SETUP       |     5.366ns|     4.634ns|       0|           0
-   HIGH 50%                                 | HOLD        |     0.436ns|            |       0|           0
+  TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz | SETUP       |     5.527ns|     4.473ns|       0|           0
+   HIGH 50%                                 | HOLD        |     0.442ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -168,10 +168,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 11 secs 
-Total CPU time to PAR completion: 8 secs 
+Total REAL time to PAR completion: 14 secs 
+Total CPU time to PAR completion: 11 secs 
 
-Peak Memory Usage:  606 MB
+Peak Memory Usage:  607 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

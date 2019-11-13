@@ -262,33 +262,33 @@ module VGAWrite(
    always @(posedge clk_25)
    begin
 		if (inDisplayArea)
-			if (CounterY < 60)	//Top of screen shown in black because no cars
+			if (CounterY < 60)	
 				pixel <= 3'b000;
-			else if (CounterY < 120)
+			else if (CounterY < 110 && CounterY > 70)
 				if ((drawHorizPosition & vert1) !== 0)
 					pixel <= 3'b100;
 				else
 					pixel <= 3'b000;
-			else if (CounterY < 180)
+			else if (CounterY < 170 && CounterY > 130)
 				if ((drawHorizPosition & vert2) !== 0)
-					pixel <= 3'b100;
+					pixel <= 3'b010;
 				else
 					pixel <= 3'b000;
-			else if (CounterY < 240)
+			else if (CounterY < 230 && CounterY > 190)
 				if ((drawHorizPosition & vert3) !== 0)
-					pixel <= 3'b100;
+					pixel <= 3'b001;
 				else
 					pixel <= 3'b000;
-			else if (CounterY < 300)
+			else if (CounterY < 290 && CounterY > 250)
 				pixel <= 3'b000;
-			else if (CounterY < 360)
+			else if (CounterY < 310 && CounterY > 350)
 				if ((drawHorizPosition & vert5) !== 0)
-					pixel <= 3'b100;
+					pixel <= 3'b110;
 				else
 					pixel <= 3'b000;
-			else if (CounterY < 420)
+			else if (CounterY < 410 && CounterY > 370)
 				if ((drawHorizPosition & vert6) !== 0)
-					pixel <= 3'b100;
+					pixel <= 3'b011;
 				else
 					pixel <= 3'b000;
 			else if (CounterY < 480)

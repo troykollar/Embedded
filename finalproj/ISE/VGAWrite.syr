@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: VGAWrite.prj
@@ -152,16 +152,22 @@ Synthesizing Unit <VGAWrite>.
     Found 10-bit comparator lessequal for signal <CounterX[9]_PWR_1_o_LessThan_13_o> created at line 257
     Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_24_o> created at line 265
     Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_25_o> created at line 267
-    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_29_o> created at line 272
-    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_33_o> created at line 277
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_37_o> created at line 282
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_38_o> created at line 284
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_42_o> created at line 289
-    Found 9-bit comparator lessequal for signal <CounterY[8]_PWR_1_o_LessThan_46_o> created at line 294
+    Found 9-bit comparator greater for signal <GND_1_o_CounterY[8]_LessThan_26_o> created at line 267
+    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_30_o> created at line 272
+    Found 9-bit comparator greater for signal <GND_1_o_CounterY[8]_LessThan_31_o> created at line 272
+    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_35_o> created at line 277
+    Found 9-bit comparator greater for signal <GND_1_o_CounterY[8]_LessThan_36_o> created at line 277
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_40_o> created at line 282
+    Found 9-bit comparator greater for signal <GND_1_o_CounterY[8]_LessThan_41_o> created at line 282
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_42_o> created at line 284
+    Found 9-bit comparator greater for signal <PWR_1_o_CounterY[8]_LessThan_43_o> created at line 284
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_47_o> created at line 289
+    Found 9-bit comparator greater for signal <PWR_1_o_CounterY[8]_LessThan_48_o> created at line 289
+    Found 9-bit comparator lessequal for signal <CounterY[8]_PWR_1_o_LessThan_52_o> created at line 294
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  13 D-type flip-flop(s).
-	inferred  16 Comparator(s).
+	inferred  22 Comparator(s).
 	inferred  12 Multiplexer(s).
 Unit <VGAWrite> synthesized.
 
@@ -229,10 +235,10 @@ Macro Statistics
  40-bit register                                       : 1
  8-bit register                                        : 1
  9-bit register                                        : 1
-# Comparators                                          : 22
+# Comparators                                          : 28
  10-bit comparator greater                             : 10
  10-bit comparator lessequal                           : 1
- 9-bit comparator greater                              : 10
+ 9-bit comparator greater                              : 16
  9-bit comparator lessequal                            : 1
 # Multiplexers                                         : 12
  3-bit 2-to-1 multiplexer                              : 7
@@ -284,10 +290,10 @@ Macro Statistics
  9-bit up counter                                      : 1
 # Registers                                            : 54
  Flip-Flops                                            : 54
-# Comparators                                          : 22
+# Comparators                                          : 28
  10-bit comparator greater                             : 10
  10-bit comparator lessequal                           : 1
- 9-bit comparator greater                              : 10
+ 9-bit comparator greater                              : 16
  9-bit comparator lessequal                            : 1
 # Multiplexers                                         : 12
  3-bit 2-to-1 multiplexer                              : 7
@@ -298,7 +304,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <pixel_0> in Unit <VGAWrite> is equivalent to the following FF/Latch, which will be removed : <pixel_1> 
 INFO:Xst:2261 - The FF/Latch <vert5_3> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert5_7> 
 INFO:Xst:2261 - The FF/Latch <vert5_0> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert5_4> 
 INFO:Xst:2261 - The FF/Latch <vert5_1> in Unit <frogger> is equivalent to the following FF/Latch, which will be removed : <vert5_5> 
@@ -329,8 +334,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 84
- Flip-Flops                                            : 84
+# Registers                                            : 85
+ Flip-Flops                                            : 85
 
 =========================================================================
 
@@ -353,23 +358,23 @@ Top Level Output File Name         : VGAWrite.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 242
+# BELS                             : 268
 #      GND                         : 1
 #      INV                         : 10
 #      LUT1                        : 43
-#      LUT2                        : 15
-#      LUT3                        : 5
+#      LUT2                        : 25
+#      LUT3                        : 18
 #      LUT4                        : 31
-#      LUT5                        : 12
-#      LUT6                        : 34
+#      LUT5                        : 19
+#      LUT6                        : 29
 #      MUXCY                       : 43
-#      MUXF7                       : 1
+#      MUXF7                       : 2
 #      VCC                         : 1
 #      XORCY                       : 46
-# FlipFlops/Latches                : 84
-#      FD                          : 53
+# FlipFlops/Latches                : 85
+#      FD                          : 63
 #      FDE                         : 9
-#      FDR                         : 19
+#      FDR                         : 10
 #      FDRE                        : 3
 # Clock Buffers                    : 2
 #      BUFG                        : 1
@@ -385,16 +390,16 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              84  out of  11440     0%  
- Number of Slice LUTs:                  150  out of   5720     2%  
-    Number used as Logic:               150  out of   5720     2%  
+ Number of Slice Registers:              85  out of  11440     0%  
+ Number of Slice LUTs:                  175  out of   5720     3%  
+    Number used as Logic:               175  out of   5720     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    152
-   Number with an unused Flip Flop:      68  out of    152    44%  
-   Number with an unused LUT:             2  out of    152     1%  
-   Number of fully used LUT-FF pairs:    82  out of    152    53%  
-   Number of unique control sets:         7
+ Number of LUT Flip Flop pairs used:    177
+   Number with an unused Flip Flop:      92  out of    177    51%  
+   Number with an unused LUT:             2  out of    177     1%  
+   Number of fully used LUT-FF pairs:    83  out of    177    46%  
+   Number of unique control sets:         6
 
 IO Utilization: 
  Number of IOs:                          11
@@ -425,7 +430,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)     | Load  |
 -----------------------------------+---------------------------+-------+
 clk                                | BUFGP                     | 60    |
-clk_25(clk_25<1>1:O)               | BUFG(*)(hvsync/CounterY_8)| 24    |
+clk_25(clk_25<1>1:O)               | BUFG(*)(hvsync/CounterY_8)| 25    |
 -----------------------------------+---------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -474,28 +479,28 @@ Delay:               4.506ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_25'
-  Clock period: 4.367ns (frequency: 228.985MHz)
-  Total number of paths / destination ports: 367 / 45
+  Clock period: 3.956ns (frequency: 252.777MHz)
+  Total number of paths / destination ports: 471 / 37
 -------------------------------------------------------------------------
-Delay:               4.367ns (Levels of Logic = 4)
-  Source:            hvsync/CounterY_8 (FF)
-  Destination:       pixel_2 (FF)
+Delay:               3.956ns (Levels of Logic = 4)
+  Source:            hvsync/CounterY_4 (FF)
+  Destination:       pixel_0 (FF)
   Source Clock:      clk_25 rising
   Destination Clock: clk_25 rising
 
-  Data Path: hvsync/CounterY_8 to pixel_2
+  Data Path: hvsync/CounterY_4 to pixel_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              8   0.447   1.031  hvsync/CounterY_8 (hvsync/CounterY_8)
-     LUT6:I3->O            1   0.205   0.580  Mmux_PWR_1_o_GND_1_o_mux_53_OUT26 (Mmux_PWR_1_o_GND_1_o_mux_53_OUT25)
-     LUT6:I5->O            1   0.205   0.808  Mmux_PWR_1_o_GND_1_o_mux_53_OUT27 (Mmux_PWR_1_o_GND_1_o_mux_53_OUT26)
-     LUT6:I3->O            1   0.205   0.580  Mmux_PWR_1_o_GND_1_o_mux_53_OUT213 (PWR_1_o_GND_1_o_mux_53_OUT<2>)
-     LUT5:I4->O            1   0.205   0.000  pixel_2_glue_set (pixel_2_glue_set)
-     FDR:D                     0.102          pixel_2
+     FDE:C->Q             10   0.447   1.221  hvsync/CounterY_4 (hvsync/CounterY_4)
+     LUT6:I0->O            1   0.203   0.827  Mmux_PWR_1_o_GND_1_o_mux_59_OUT3118 (Mmux_PWR_1_o_GND_1_o_mux_59_OUT3118)
+     LUT5:I1->O            1   0.203   0.000  Mmux_PWR_1_o_GND_1_o_mux_59_OUT3119_F (N8)
+     MUXF7:I0->O           2   0.131   0.617  Mmux_PWR_1_o_GND_1_o_mux_59_OUT3119 (Mmux_PWR_1_o_GND_1_o_mux_59_OUT311)
+     LUT6:I5->O            1   0.205   0.000  pixel_0_glue_set (pixel_0_glue_set)
+     FDR:D                     0.102          pixel_0
     ----------------------------------------
-    Total                      4.367ns (1.369ns logic, 2.998ns route)
-                                       (31.3% logic, 68.7% route)
+    Total                      3.956ns (1.291ns logic, 2.665ns route)
+                                       (32.6% logic, 67.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -549,7 +554,7 @@ Clock to Setup on destination clock clk
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 clk            |    4.506|         |         |         |
-clk_25         |    3.150|         |         |         |
+clk_25         |    3.175|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk_25
@@ -557,22 +562,22 @@ Clock to Setup on destination clock clk_25
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    6.674|         |         |         |
-clk_25         |    4.367|         |         |         |
+clk            |    7.201|         |         |         |
+clk_25         |    3.956|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 10.08 secs
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 13.51 secs
  
 --> 
 
 
-Total memory usage is 395712 kilobytes
+Total memory usage is 395580 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   14 (   0 filtered)
-Number of infos    :   14 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
 
