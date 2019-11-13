@@ -2,56 +2,43 @@
 module frogger (input clk, input reset, input up, input down, input left, input right, 
 					output reg [7:0] vert1 = 8'b1000_1000, output reg [7:0] vert2 = 8'b1000_1000,
 					output reg [7:0] vert3 = 8'b1100_1100,output reg [7:0] vert5 = 8'b1000_0000,
-					output reg [7:0] vert6 = 8'b1111_0000);	//This module contains frogger logic
+					output reg [7:0] vert6 = 8'b1111_0000, output reg [7:0] froggerHorizState = 8'b0001_0000,
+					output reg [2:0] froggerVerticalState = 7);	//This module contains frogger logic
 
 	//each vert register is a row that keeps track of cars
-	reg [7:0] vert0 = 8'b0000_0000;
-	reg [7:0] vert4 = 8'b0000_0000;
-	reg [7:0] vert7 = 8'b0000_0000;
 
 	reg [2:0] timeState = 0;	//Keep track of time which determines car locations
 	reg [27:0] timeCounter = 0;	//Count the number of clock pulses to keep track of time
 
-	reg [2:0] froggerVerticalState = 7;	//Keep track of what vertical level frogger is on (7 is lowest, 0 is highest)
-	reg [7:0] froggerHorizState = 8'b0001_0000;	//Keep track of what horizontal level frogger is on
 	reg win = 0;	//Turns to 1 when reaching the top of the level
 
+
+	parameter counterReset = 2;	//2 for simulation, 100,000,000 for synthesis
+	wire oneSecond = (timeCounter == counterReset);
 	//Increase timeState, depending on simulation vs. synthesis
 	always @(posedge clk)
-		if (reset)
-			timeState <= 0;
-		else
-			if (timeCounter == 2) //Change to 100 million for synthesis
-				begin
-					timeCounter <= 0;
-					timeState <= timeState + 1;
-				end
-			else	timeCounter <= timeCounter + 1;
+		if (timeCounter == counterReset)	timeCounter <= 0;
+		else										timeCounter <= timeCounter + 1;
 
-	//Move vert1 cars based on timeState
-	always @(timeState)	//If the least significant bit is a 1, add a one to the beginning and move down
-		if (vert1[0] == 1)	vert1 = {1'b1, vert1[7:1]};
-		else						vert1 = vert1 >> 1;
+	//Move vert1 cars every second
+	always @(posedge oneSecond)
+		vert1 <= {vert1[0], vert1[7:1]};
 
-	//Move vert2 cars based on timeState
-	always @(timeState)
-		if (vert2[7] == 1)	vert2 = {vert2[6:0], 1'b1};
-		else						vert2 = vert2 << 1;
+	//Move vert2 cars every second
+	always @(posedge oneSecond)
+		vert2 <= {vert2[6:0], vert2[7]};
 
-	//shift vert3 as timeState changes
-	always @(timeState)
-		if (vert3[0] == 1)	vert3 = {1'b1, vert3[7:1]};
-		else						vert3 = vert3 >> 1;
+	//shift vert3 every second
+	always @(posedge oneSecond)
+		vert3 <= {vert3[0], vert3[7:1]};
 
-	//shift vert5 as timeState changes
-	always @(timeState)
-		if (vert5[7] == 1)	vert5 = {vert5[6:0], 1'b1};
-		else						vert5 = vert5 << 1;
+	//shift vert5 every second
+	always @(posedge oneSecond)
+		vert5 <= {vert5[6:0], vert5[7]};
 
-	//shift vert6 as timeState changes
-	always @(timeState)
-		if (vert6[0] == 1)	vert6 = {1'b1, vert6[7:1]};
-		else						vert6 = vert6 >> 1;
+	//shift vert6 every second
+	always @(posedge oneSecond)
+		vert6 <= {vert6[0], vert6[7:1]};
 
 	//Check for win state
 	always @(posedge clk)
@@ -63,6 +50,7 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 		if (!up)	froggerVerticalState <= froggerVerticalState - 1;
 		else if (!down) froggerVerticalState <= froggerVerticalState + 1;
 		else	froggerVerticalState <= froggerVerticalState;
+		
 	//Control frogger horizontal position
 	always @(posedge clk)
 		if (froggerHorizState == 8'b1000_0000)
@@ -94,10 +82,9 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 			if ((vert1 & froggerHorizState) !== 0)	dead <= 1;
 			else					dead <= dead;
 		else						dead <= dead;
-
-	reg [7:0] andedReg;	//Remove when synthesizing
-	always @(posedge clk)
-		andedReg <= froggerHorizState & vert6;
+		
+		reg [63:0] gridView;
+		
 
 endmodule
 
@@ -174,6 +161,7 @@ module VGAWrite(
 	 wire [7:0] vert3;
 	 wire [7:0] vert5;
 	 wire [7:0] vert6;
+	 wire [7:0] frogPos;
 	 
 	 frogger frogLogic(
 		.clk(clk),
@@ -186,10 +174,12 @@ module VGAWrite(
 		.vert2(vert2),
 		.vert3(vert3),
 		.vert5(vert5),
-		.vert6(vert6)
+		.vert6(vert6),
+		.froggerHorizState(HfrogPos),
+		.froggerVerticalState(VfrogPos)
 	);
 	
-	reg [7:0] drawHorizPosition;
+	reg [7:0] drawHorizPosition;		//Determine the position of the current pixel in the "grid"
 	always @(posedge clk)
 		if (CounterX < 80)			drawHorizPosition <= 8'b1000_0000;
 		else if (CounterX < 160)	drawHorizPosition <= 8'b0100_0000;
@@ -200,46 +190,61 @@ module VGAWrite(
 		else if (CounterX < 560)	drawHorizPosition <= 8'b0000_0010;
 		else if (CounterX < 640)	drawHorizPosition <= 8'b0000_0001;
 		else								drawHorizPosition <= 8'b0000_0000;
-
+	
    always @(posedge clk_25)
-   begin
 		if (inDisplayArea)
-			if (CounterY < 60)	
-				pixel <= 3'b000;
-			else if (CounterY < 110 && CounterY > 70)
-				if ((drawHorizPosition & vert1) !== 0)
-					pixel <= 3'b100;
-				else
-					pixel <= 3'b000;
-			else if (CounterY < 170 && CounterY > 130)
-				if ((drawHorizPosition & vert2) !== 0)
-					pixel <= 3'b010;
-				else
-					pixel <= 3'b000;
-			else if (CounterY < 230 && CounterY > 190)
-				if ((drawHorizPosition & vert3) !== 0)
-					pixel <= 3'b001;
-				else
-					pixel <= 3'b000;
-			else if (CounterY < 290 && CounterY > 250)
-				pixel <= 3'b000;
-			else if (CounterY < 310 && CounterY > 350)
-				if ((drawHorizPosition & vert5) !== 0)
-					pixel <= 3'b110;
-				else
-					pixel <= 3'b000;
-			else if (CounterY < 410 && CounterY > 370)
-				if ((drawHorizPosition & vert6) !== 0)
-					pixel <= 3'b011;
-				else
-					pixel <= 3'b000;
+			if (CounterY < 60)		//If drawing level 0
+				if (VfrogPos == 0)			//If frog is at level 0
+					if ((drawHorizPosition & HfrogPos) !== 0)	pixel <= 3'b010;	//Check if frog is on currently drawn block
+					else	pixel <= 3'b000;													//Draw black if not
+				else	pixel <= 3'b000;		//Draw black if frog is not at level 0
+			else if (CounterY < 120)	//If drawing level 1
+				if (VfrogPos == 1)			//If frog is at level 1
+					if ((drawHorizPosition & HfrogPos) !== 0) 	pixel <= 3'b010; //Check if frog is currently drawn block
+					else if ((drawHorizPosition & vert1) !== 0)	pixel <= 3'b100;	//Check if car is currently drawn block
+					else	pixel <= 3'b000;	//Draw black if not
+				else if ((drawHorizPosition & vert1) !== 0)	pixel <= 3'b100;
+				else		pixel <= 3'b000;
+			else if (CounterY < 180)
+				if (VfrogPos == 2)
+					if ((drawHorizPosition & HfrogPos) !== 0) 	pixel <= 3'b010;
+					else if ((drawHorizPosition & vert2) !== 0)	pixel <= 3'b001;
+					else	pixel <= 3'b000;
+				else if ((drawHorizPosition & vert2) !== 0)	pixel <= 3'b001;
+				else		pixel <= 3'b000;
+			else if (CounterY < 240)
+				if (VfrogPos == 3)
+					if ((drawHorizPosition & HfrogPos) !== 0) 	pixel <= 3'b010;
+					else if ((drawHorizPosition & vert3) !== 0)	pixel <= 3'b101;
+					else	pixel <= 3'b000;
+				else  if ((drawHorizPosition & vert2) !== 0)	pixel <= 3'b101;
+				else		pixel <= 3'b000;
+			else if (CounterY < 300)
+				if (VfrogPos == 4)
+					if ((drawHorizPosition & HfrogPos) !== 0) 	pixel <= 3'b010;
+					else	pixel <= 3'b000;
+				else		pixel <= 3'b000;
+			else if (CounterY < 360)
+				if (VfrogPos == 5)
+					if ((drawHorizPosition & HfrogPos) !== 0) 	pixel <= 3'b010;
+					else if ((drawHorizPosition & vert5) !== 0)	pixel <= 3'b101;
+					else	pixel <= 3'b000;
+				else if ((drawHorizPosition & vert5) !== 0)	pixel <= 3'b101;
+				else		pixel <= 3'b000;
+			else if (CounterY < 420)
+				if (VfrogPos == 6)
+					if ((drawHorizPosition & HfrogPos) !== 0) 	pixel <= 3'b010;
+					else if ((drawHorizPosition & vert6) !== 0)	pixel <= 3'b101;
+					else	pixel <= 3'b000;
+				else if ((drawHorizPosition & vert6) !== 0)	pixel <= 3'b101;
+				else		pixel <= 3'b000;
 			else if (CounterY < 480)
-				pixel <= 3'b000;
-			else
-				pixel <= 3'b111;
-		else // if it's not to display, go dark
-			pixel <= 3'b000;
-    end
+				if (VfrogPos == 7)
+					if ((drawHorizPosition & HfrogPos) !== 0) 	pixel <= 3'b010;
+					else	pixel <= 3'b000;
+				else		pixel <= 3'b000;
+			else	pixel <= 3'b000;	//Draw black if not between 0 < CounterY < 480 should be redundant with next line
+		else		pixel <= 3'b000;	//Draw black if not inDisplayArea
 
 endmodule
 
