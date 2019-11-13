@@ -1,7 +1,8 @@
 //Frogger Logic~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 module frogger (input clk, input reset, input up, input down, input left, input right, 
-					output reg [7:0] vert1 = 8'b1000_1000, output reg [7:0] vert2, output reg [7:0] vert3,
-					output reg [7:0] vert5, output reg [7:0] vert6);	//This module contains frogger logic
+					output reg [7:0] vert1 = 8'b1000_1000, output reg [7:0] vert2 = 8'b1000_1000,
+					output reg [7:0] vert3 = 8'b1100_1100,output reg [7:0] vert5,
+					output reg [7:0] vert6);	//This module contains frogger logic
 
 	//each vert register is a row that keeps track of cars
 	reg [7:0] vert0 = 8'b0000_0000;
@@ -11,7 +12,7 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 	reg [2:0] timeState = 0;	//Keep track of time which determines car locations
 	reg [27:0] timeCounter = 0;	//Count the number of clock pulses to keep track of time
 
-	reg [2:0] froggerVerticalState = 7;	//Keep track of what vertical level frogger is on
+	reg [2:0] froggerVerticalState = 7;	//Keep track of what vertical level frogger is on (7 is lowest, 0 is highest)
 	reg [7:0] froggerHorizState = 8'b0001_0000;	//Keep track of what horizontal level frogger is on
 	reg win = 0;	//Turns to 1 when reaching the top of the level
 
@@ -20,7 +21,7 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 		if (reset)
 			timeState <= 0;
 		else
-			if (timeCounter == 100000000) //Change to 100 million for synthesis
+			if (timeCounter == 2) //Change to 100 million for synthesis
 				begin
 					timeCounter <= 0;
 					timeState <= timeState + 1;
@@ -28,37 +29,19 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 			else	timeCounter <= timeCounter + 1;
 
 	//Move vert1 cars based on timeState
-	always @(posedge clk)
-		if (vert1[0] == 1)			//If the least significant bit is a 1, add a one to the beginning and move down
-			vert1 <= {1'b1, vert1[7:1]};
-		else
-			vert1 <= vert1 >> 1;
+	always @(timeState)	//If the least significant bit is a 1, add a one to the beginning and move down
+		if (vert1[0] == 1)		vert1 = {1'b1, vert1[7:1]};
+		else							vert1 = vert1 >> 1;
 
 	//Move vert2 cars based on timeState
-	always @(posedge clk)
-		case (timeState)
-					0: vert2 <= 8'b1000_1000;
-					1: vert2 <= 8'b0001_0001;
-					2: vert2 <= 8'b0010_0010;
-					3: vert2 <= 8'b0100_0100;
-					4: vert2 <= 8'b1000_1000;
-					5: vert2 <= 8'b0001_0001;
-					6: vert2 <= 8'b0010_0010;
-					7: vert2 <= 8'b0100_0100;
-			endcase
+	always @(timeState)
+		if (vert2[7] == 1)	vert2 = {vert2[6:0], 1'b1};
+		else						vert2 = vert2 << 1;
 
 	//shift vert3 as timeState changes
-	always @(posedge clk)
-		case (timeState)
-			0: vert3 <= 8'b1100_1100;
-			1: vert3 <= 8'b0110_0110;
-			2: vert3 <= 8'b0011_0011;
-			3: vert3 <= 8'b1001_1001;
-			4: vert3 <= 8'b1100_1100;
-			5: vert3 <= 8'b0110_0110;
-			6: vert3 <= 8'b0011_0011;
-			7: vert3 <= 8'b1001_1001;
-		endcase
+	always @(timeState)
+		if (vert3[0] == 1)	vert3 = {1'b1, vert3[7:1]};
+		else						vert3 = vert3 >> 1;
 
 	//shift vert5 as timeState changes
 	always @(posedge clk)

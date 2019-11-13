@@ -41,11 +41,11 @@ initial
 
 VGAWrite frog1 (
                  .clk(clk),
-                 .reset(reset),
-                 .up(up),
-                 .down(down),
-		 .left(left),
-		 .right(right));
+                 .sw5(reset),
+                 .sw4(up),
+                 .sw3(down),
+		 .sw1(left),
+		 .sw2(right));
 
 
 initial 
