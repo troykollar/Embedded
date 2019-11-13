@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: VGAWrite.prj
@@ -188,7 +188,7 @@ Unit <hvsync_generator> synthesized.
 
 Synthesizing Unit <frogger>.
     Related source file is "/home/troy/Embedded/finalproj/vgaGame.v".
-        counterReset = 2
+        counterReset = 100000000
 WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8-bit register for signal <vert1>.
     Found 8-bit register for signal <vert2>.
@@ -295,32 +295,7 @@ WARNING:Xst:2677 - Node <frogLogic/vert3_3> of sequential type is unconnected in
 WARNING:Xst:2677 - Node <frogLogic/vert3_2> of sequential type is unconnected in block <VGAWrite>.
 WARNING:Xst:2677 - Node <frogLogic/vert3_1> of sequential type is unconnected in block <VGAWrite>.
 WARNING:Xst:2677 - Node <frogLogic/vert3_0> of sequential type is unconnected in block <VGAWrite>.
-WARNING:Xst:1293 - FF/Latch <frogLogic/timeCounter_2> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_3> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_4> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_5> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_6> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_7> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_8> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_9> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_10> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_11> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_12> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_13> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_14> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_15> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_16> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_17> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_18> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_19> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_20> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_21> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_22> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_23> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_24> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_25> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_26> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frogLogic/timeCounter_27> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <frogLogic/timeCounter_27> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -332,8 +307,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 78
- Flip-Flops                                            : 78
+# Registers                                            : 103
+ Flip-Flops                                            : 103
 
 =========================================================================
 
@@ -356,23 +331,23 @@ Top Level Output File Name         : VGAWrite.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 133
+# BELS                             : 240
 #      GND                         : 1
 #      INV                         : 6
-#      LUT1                        : 18
-#      LUT2                        : 8
-#      LUT3                        : 7
+#      LUT1                        : 43
+#      LUT2                        : 7
+#      LUT3                        : 8
 #      LUT4                        : 4
-#      LUT5                        : 12
-#      LUT6                        : 36
-#      MUXCY                       : 18
+#      LUT5                        : 13
+#      LUT6                        : 67
+#      MUXCY                       : 43
 #      MUXF7                       : 1
 #      VCC                         : 1
-#      XORCY                       : 21
-# FlipFlops/Latches                : 78
-#      FD                          : 44
+#      XORCY                       : 46
+# FlipFlops/Latches                : 103
+#      FD                          : 71
 #      FDE                         : 9
-#      FDR                         : 19
+#      FDR                         : 17
 #      FDRE                        : 6
 # Clock Buffers                    : 3
 #      BUFG                        : 2
@@ -388,16 +363,16 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              78  out of  11440     0%  
- Number of Slice LUTs:                   91  out of   5720     1%  
-    Number used as Logic:                91  out of   5720     1%  
+ Number of Slice Registers:             103  out of  11440     0%  
+ Number of Slice LUTs:                  148  out of   5720     2%  
+    Number used as Logic:               148  out of   5720     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    107
-   Number with an unused Flip Flop:      29  out of    107    27%  
-   Number with an unused LUT:            16  out of    107    14%  
-   Number of fully used LUT-FF pairs:    62  out of    107    57%  
-   Number of unique control sets:         8
+ Number of LUT Flip Flop pairs used:    164
+   Number with an unused Flip Flop:      61  out of    164    37%  
+   Number with an unused LUT:            16  out of    164     9%  
+   Number of fully used LUT-FF pairs:    87  out of    164    53%  
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          11
@@ -427,8 +402,8 @@ Clock Information:
 -----------------------------------------------+---------------------------+-------+
 Clock Signal                                   | Clock buffer(FF name)     | Load  |
 -----------------------------------------------+---------------------------+-------+
-clk                                            | BUFGP                     | 21    |
-frogLogic/oneSecond(frogLogic/oneSecond<27>1:O)| BUFG(*)(frogLogic/vert5_7)| 32    |
+clk                                            | BUFGP                     | 46    |
+frogLogic/oneSecond(frogLogic/oneSecond<27>6:O)| BUFG(*)(frogLogic/vert5_7)| 32    |
 clk_25(clk_25<1>1:O)                           | BUFG(*)(hvsync/CounterY_8)| 25    |
 -----------------------------------------------+---------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
@@ -455,7 +430,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 3.753ns (frequency: 266.450MHz)
-  Total number of paths / destination ports: 162 / 27
+  Total number of paths / destination ports: 1262 / 50
 -------------------------------------------------------------------------
 Delay:               3.753ns (Levels of Logic = 2)
   Source:            frogLogic/froggerHorizState_6 (FF)
@@ -598,14 +573,14 @@ frogLogic/oneSecond|    1.165|         |         |         |
 
 
 Total REAL time to Xst completion: 27.00 secs
-Total CPU time to Xst completion: 17.84 secs
+Total CPU time to Xst completion: 10.11 secs
  
 --> 
 
 
-Total memory usage is 395552 kilobytes
+Total memory usage is 395700 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   46 (   0 filtered)
+Number of warnings :   21 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 
