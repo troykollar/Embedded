@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: VGAWrite.prj
@@ -118,19 +118,19 @@ Parsing module <VGAWrite>.
 =========================================================================
 
 Elaborating module <VGAWrite>.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 144: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 149: Result of 3-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <hvsync_generator>.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 107: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 112: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 112: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 117: Result of 10-bit expression is truncated to fit in 9-bit target.
 
 Elaborating module <frogger>.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 21: Result of 29-bit expression is truncated to fit in 28-bit target.
-WARNING:HDLCompiler:1127 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 44: Assignment to win ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 50: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 51: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:189 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 178: Size mismatch in connection of port <froggerHorizState>. Formal port size is 8-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 179: Size mismatch in connection of port <froggerVerticalState>. Formal port size is 3-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 49: Assignment to win ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 55: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 56: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:189 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 183: Size mismatch in connection of port <froggerHorizState>. Formal port size is 8-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 184: Size mismatch in connection of port <froggerVerticalState>. Formal port size is 3-bit while actual signal size is 1-bit.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -138,26 +138,25 @@ WARNING:HDLCompiler:189 - "/home/troy/Embedded/finalproj/vgaGame.v" Line 179: Si
 
 Synthesizing Unit <VGAWrite>.
     Related source file is "/home/troy/Embedded/finalproj/vgaGame.v".
-INFO:Xst:3210 - "/home/troy/Embedded/finalproj/vgaGame.v" line 166: Output port <vert3> of the instance <frogLogic> is unconnected or connected to loadless signal.
     Found 8-bit register for signal <drawHorizPosition>.
     Found 3-bit register for signal <pixel>.
     Found 2-bit register for signal <clk_counter>.
-    Found 2-bit adder for signal <clk_counter[1]_GND_1_o_add_2_OUT> created at line 144.
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_6_o> created at line 184
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_7_o> created at line 185
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_8_o> created at line 186
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_9_o> created at line 187
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_10_o> created at line 188
-    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_11_o> created at line 189
-    Found 10-bit comparator greater for signal <CounterX[9]_PWR_1_o_LessThan_12_o> created at line 190
-    Found 10-bit comparator lessequal for signal <CounterX[9]_PWR_1_o_LessThan_13_o> created at line 191
-    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_24_o> created at line 196
-    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_30_o> created at line 201
-    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_42_o> created at line 208
-    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_46_o> created at line 215
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_50_o> created at line 222
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_51_o> created at line 227
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_55_o> created at line 234
+    Found 2-bit adder for signal <clk_counter[1]_GND_1_o_add_2_OUT> created at line 149.
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_6_o> created at line 189
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_7_o> created at line 190
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_8_o> created at line 191
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_9_o> created at line 192
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_10_o> created at line 193
+    Found 10-bit comparator greater for signal <CounterX[9]_GND_1_o_LessThan_11_o> created at line 194
+    Found 10-bit comparator greater for signal <CounterX[9]_PWR_1_o_LessThan_12_o> created at line 195
+    Found 10-bit comparator lessequal for signal <CounterX[9]_PWR_1_o_LessThan_13_o> created at line 196
+    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_24_o> created at line 201
+    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_30_o> created at line 206
+    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_42_o> created at line 213
+    Found 9-bit comparator greater for signal <CounterY[8]_GND_1_o_LessThan_46_o> created at line 220
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_50_o> created at line 227
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_51_o> created at line 232
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_1_o_LessThan_55_o> created at line 239
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  13 D-type flip-flop(s).
@@ -172,14 +171,14 @@ Synthesizing Unit <hvsync_generator>.
     Found 1-bit register for signal <vga_VS>.
     Found 1-bit register for signal <inDisplayArea>.
     Found 10-bit register for signal <CounterX>.
-    Found 10-bit adder for signal <CounterX[9]_GND_2_o_add_2_OUT> created at line 107.
-    Found 9-bit adder for signal <CounterY[8]_GND_2_o_mux_7_OUT> created at line 112.
-    Found 10-bit comparator greater for signal <PWR_2_o_CounterX[9]_LessThan_12_o> created at line 115
-    Found 10-bit comparator greater for signal <CounterX[9]_PWR_2_o_LessThan_13_o> created at line 115
-    Found 9-bit comparator greater for signal <PWR_2_o_CounterY[8]_LessThan_15_o> created at line 118
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_2_o_LessThan_16_o> created at line 118
-    Found 10-bit comparator greater for signal <CounterX[9]_PWR_2_o_LessThan_18_o> created at line 121
-    Found 9-bit comparator greater for signal <CounterY[8]_PWR_2_o_LessThan_19_o> created at line 121
+    Found 10-bit adder for signal <CounterX[9]_GND_2_o_add_2_OUT> created at line 112.
+    Found 9-bit adder for signal <CounterY[8]_GND_2_o_mux_7_OUT> created at line 117.
+    Found 10-bit comparator greater for signal <PWR_2_o_CounterX[9]_LessThan_12_o> created at line 120
+    Found 10-bit comparator greater for signal <CounterX[9]_PWR_2_o_LessThan_13_o> created at line 120
+    Found 9-bit comparator greater for signal <PWR_2_o_CounterY[8]_LessThan_15_o> created at line 123
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_2_o_LessThan_16_o> created at line 123
+    Found 10-bit comparator greater for signal <CounterX[9]_PWR_2_o_LessThan_18_o> created at line 126
+    Found 9-bit comparator greater for signal <CounterY[8]_PWR_2_o_LessThan_19_o> created at line 126
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  22 D-type flip-flop(s).
@@ -189,7 +188,6 @@ Unit <hvsync_generator> synthesized.
 Synthesizing Unit <frogger>.
     Related source file is "/home/troy/Embedded/finalproj/vgaGame.v".
         counterReset = 100000000
-WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8-bit register for signal <vert1>.
     Found 8-bit register for signal <vert2>.
     Found 8-bit register for signal <vert3>.
@@ -199,8 +197,8 @@ WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and l
     Found 8-bit register for signal <froggerHorizState>.
     Found 28-bit register for signal <timeCounter>.
     Found 28-bit adder for signal <timeCounter[27]_GND_3_o_add_3_OUT> created at line 21.
-    Found 3-bit adder for signal <froggerVerticalState[2]_GND_3_o_add_20_OUT> created at line 51.
-    Found 3-bit subtractor for signal <GND_3_o_GND_3_o_sub_20_OUT<2:0>> created at line 50.
+    Found 3-bit adder for signal <froggerVerticalState[2]_GND_3_o_add_25_OUT> created at line 56.
+    Found 3-bit subtractor for signal <GND_3_o_GND_3_o_sub_25_OUT<2:0>> created at line 55.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  79 D-type flip-flop(s).
@@ -245,8 +243,8 @@ The following registers are absorbed into counter <clk_counter>: 1 register on s
 Unit <VGAWrite> synthesized (advanced).
 
 Synthesizing (advanced) Unit <frogger>.
-The following registers are absorbed into counter <froggerVerticalState>: 1 register on signal <froggerVerticalState>.
 The following registers are absorbed into counter <timeCounter>: 1 register on signal <timeCounter>.
+The following registers are absorbed into counter <froggerVerticalState>: 1 register on signal <froggerVerticalState>.
 Unit <frogger> synthesized (advanced).
 
 Synthesizing (advanced) Unit <hvsync_generator>.
@@ -287,15 +285,19 @@ Optimizing unit <frogger> ...
 Optimizing unit <hvsync_generator> ...
 WARNING:Xst:2677 - Node <frogLogic/froggerVerticalState_2> of sequential type is unconnected in block <VGAWrite>.
 WARNING:Xst:2677 - Node <frogLogic/froggerVerticalState_1> of sequential type is unconnected in block <VGAWrite>.
-WARNING:Xst:2677 - Node <frogLogic/vert3_7> of sequential type is unconnected in block <VGAWrite>.
-WARNING:Xst:2677 - Node <frogLogic/vert3_6> of sequential type is unconnected in block <VGAWrite>.
-WARNING:Xst:2677 - Node <frogLogic/vert3_5> of sequential type is unconnected in block <VGAWrite>.
-WARNING:Xst:2677 - Node <frogLogic/vert3_4> of sequential type is unconnected in block <VGAWrite>.
-WARNING:Xst:2677 - Node <frogLogic/vert3_3> of sequential type is unconnected in block <VGAWrite>.
-WARNING:Xst:2677 - Node <frogLogic/vert3_2> of sequential type is unconnected in block <VGAWrite>.
-WARNING:Xst:2677 - Node <frogLogic/vert3_1> of sequential type is unconnected in block <VGAWrite>.
-WARNING:Xst:2677 - Node <frogLogic/vert3_0> of sequential type is unconnected in block <VGAWrite>.
 WARNING:Xst:1293 - FF/Latch <frogLogic/timeCounter_27> has a constant value of 0 in block <VGAWrite>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <frogLogic/vert3_6> in Unit <VGAWrite> is equivalent to the following FF/Latch, which will be removed : <frogLogic/vert3_2> 
+INFO:Xst:2261 - The FF/Latch <frogLogic/vert3_7> in Unit <VGAWrite> is equivalent to the following FF/Latch, which will be removed : <frogLogic/vert3_3> 
+INFO:Xst:2261 - The FF/Latch <frogLogic/vert1_4> in Unit <VGAWrite> is equivalent to the following 3 FFs/Latches, which will be removed : <frogLogic/vert1_0> <frogLogic/vert2_6> <frogLogic/vert2_2> 
+INFO:Xst:2261 - The FF/Latch <frogLogic/vert1_5> in Unit <VGAWrite> is equivalent to the following 3 FFs/Latches, which will be removed : <frogLogic/vert1_1> <frogLogic/vert2_5> <frogLogic/vert2_1> 
+INFO:Xst:2261 - The FF/Latch <frogLogic/vert1_6> in Unit <VGAWrite> is equivalent to the following 3 FFs/Latches, which will be removed : <frogLogic/vert1_2> <frogLogic/vert2_4> <frogLogic/vert2_0> 
+INFO:Xst:2261 - The FF/Latch <frogLogic/vert1_7> in Unit <VGAWrite> is equivalent to the following 3 FFs/Latches, which will be removed : <frogLogic/vert1_3> <frogLogic/vert2_7> <frogLogic/vert2_3> 
+INFO:Xst:3203 - The FF/Latch <frogLogic/vert3_6> in Unit <VGAWrite> is the opposite to the following 2 FFs/Latches, which will be removed : <frogLogic/vert3_4> <frogLogic/vert3_0> 
+INFO:Xst:3203 - The FF/Latch <frogLogic/vert3_7> in Unit <VGAWrite> is the opposite to the following 2 FFs/Latches, which will be removed : <frogLogic/vert3_5> <frogLogic/vert3_1> 
+INFO:Xst:3203 - The FF/Latch <frogLogic/vert6_4> in Unit <VGAWrite> is the opposite to the following FF/Latch, which will be removed : <frogLogic/vert6_0> 
+INFO:Xst:3203 - The FF/Latch <frogLogic/vert6_5> in Unit <VGAWrite> is the opposite to the following FF/Latch, which will be removed : <frogLogic/vert6_1> 
+INFO:Xst:3203 - The FF/Latch <frogLogic/vert6_6> in Unit <VGAWrite> is the opposite to the following FF/Latch, which will be removed : <frogLogic/vert6_2> 
+INFO:Xst:3203 - The FF/Latch <frogLogic/vert6_7> in Unit <VGAWrite> is the opposite to the following FF/Latch, which will be removed : <frogLogic/vert6_3> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -307,8 +309,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 103
- Flip-Flops                                            : 103
+# Registers                                            : 89
+ Flip-Flops                                            : 89
 
 =========================================================================
 
@@ -331,29 +333,30 @@ Top Level Output File Name         : VGAWrite.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 240
+# BELS                             : 245
 #      GND                         : 1
-#      INV                         : 6
+#      INV                         : 8
 #      LUT1                        : 43
 #      LUT2                        : 7
-#      LUT3                        : 8
+#      LUT3                        : 7
 #      LUT4                        : 4
-#      LUT5                        : 13
-#      LUT6                        : 67
+#      LUT5                        : 15
+#      LUT6                        : 69
 #      MUXCY                       : 43
 #      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 46
-# FlipFlops/Latches                : 103
-#      FD                          : 71
+# FlipFlops/Latches                : 89
+#      FD                          : 39
 #      FDE                         : 9
-#      FDR                         : 17
+#      FDR                         : 27
 #      FDRE                        : 6
-# Clock Buffers                    : 3
-#      BUFG                        : 2
+#      FDS                         : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 9
-#      IBUF                        : 4
+# IO Buffers                       : 10
+#      IBUF                        : 5
 #      OBUF                        : 5
 
 Device utilization summary:
@@ -363,23 +366,23 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             103  out of  11440     0%  
- Number of Slice LUTs:                  148  out of   5720     2%  
-    Number used as Logic:               148  out of   5720     2%  
+ Number of Slice Registers:              89  out of  11440     0%  
+ Number of Slice LUTs:                  153  out of   5720     2%  
+    Number used as Logic:               153  out of   5720     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    164
-   Number with an unused Flip Flop:      61  out of    164    37%  
-   Number with an unused LUT:            16  out of    164     9%  
-   Number of fully used LUT-FF pairs:    87  out of    164    53%  
+ Number of LUT Flip Flop pairs used:    160
+   Number with an unused Flip Flop:      71  out of    160    44%  
+   Number with an unused LUT:             7  out of    160     4%  
+   Number of fully used LUT-FF pairs:    82  out of    160    51%  
    Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          11
- Number of bonded IOBs:                  10  out of    200     5%  
+ Number of bonded IOBs:                  11  out of    200     5%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
 
 ---------------------------
 Partition Resource Summary:
@@ -403,12 +406,13 @@ Clock Information:
 Clock Signal                                   | Clock buffer(FF name)     | Load  |
 -----------------------------------------------+---------------------------+-------+
 clk                                            | BUFGP                     | 46    |
-frogLogic/oneSecond(frogLogic/oneSecond<27>6:O)| BUFG(*)(frogLogic/vert5_7)| 32    |
+frogLogic/oneSecond(frogLogic/oneSecond<27>6:O)| NONE(*)(frogLogic/vert6_7)| 18    |
 clk_25(clk_25<1>1:O)                           | BUFG(*)(hvsync/CounterY_8)| 25    |
 -----------------------------------------------+---------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -418,7 +422,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.615ns (Maximum Frequency: 216.675MHz)
+   Minimum period: 4.823ns (Maximum Frequency: 207.348MHz)
    Minimum input arrival time before clock: 3.810ns
    Maximum output required time after clock: 4.382ns
    Maximum combinational path delay: No path found
@@ -443,8 +447,8 @@ Delay:               3.753ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             3   0.447   1.015  frogLogic/froggerHorizState_6 (frogLogic/froggerHorizState_6)
-     LUT6:I0->O            3   0.203   0.651  frogLogic/froggerHorizState[7]_GND_3_o_equal_28_o<7>11 (frogLogic/froggerHorizState[7]_GND_3_o_equal_28_o<7>1)
-     LUT4:I3->O            8   0.205   0.802  frogLogic/_n00671 (frogLogic/_n0067)
+     LUT6:I0->O            3   0.203   0.651  frogLogic/froggerHorizState[7]_GND_3_o_equal_33_o<7>11 (frogLogic/froggerHorizState[7]_GND_3_o_equal_33_o<7>1)
+     LUT4:I3->O            8   0.205   0.802  frogLogic/_n00771 (frogLogic/_n0077)
      FDRE:R                    0.430          frogLogic/froggerHorizState_0
     ----------------------------------------
     Total                      3.753ns (1.285ns logic, 2.468ns route)
@@ -452,49 +456,50 @@ Delay:               3.753ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'frogLogic/oneSecond'
-  Clock period: 1.165ns (frequency: 858.185MHz)
-  Total number of paths / destination ports: 32 / 32
+  Clock period: 2.016ns (frequency: 495.933MHz)
+  Total number of paths / destination ports: 18 / 18
 -------------------------------------------------------------------------
-Delay:               1.165ns (Levels of Logic = 0)
-  Source:            frogLogic/vert5_6 (FF)
-  Destination:       frogLogic/vert5_7 (FF)
+Delay:               2.016ns (Levels of Logic = 1)
+  Source:            frogLogic/vert3_6 (FF)
+  Destination:       frogLogic/vert3_7 (FF)
   Source Clock:      frogLogic/oneSecond rising
   Destination Clock: frogLogic/oneSecond rising
 
-  Data Path: frogLogic/vert5_6 to frogLogic/vert5_7
+  Data Path: frogLogic/vert3_6 to frogLogic/vert3_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.447   0.616  frogLogic/vert5_6 (frogLogic/vert5_6)
-     FD:D                      0.102          frogLogic/vert5_7
+     FDS:C->Q              4   0.447   0.683  frogLogic/vert3_6 (frogLogic/vert3_6)
+     INV:I->O              1   0.206   0.579  vert3<2>_inv1_INV_0 (vert3<0>)
+     FDS:D                     0.102          frogLogic/vert3_7
     ----------------------------------------
-    Total                      1.165ns (0.549ns logic, 0.616ns route)
-                                       (47.1% logic, 52.9% route)
+    Total                      2.016ns (0.755ns logic, 1.261ns route)
+                                       (37.4% logic, 62.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_25'
-  Clock period: 4.615ns (frequency: 216.675MHz)
-  Total number of paths / destination ports: 529 / 44
+  Clock period: 4.823ns (frequency: 207.348MHz)
+  Total number of paths / destination ports: 508 / 44
 -------------------------------------------------------------------------
-Delay:               4.615ns (Levels of Logic = 4)
+Delay:               4.823ns (Levels of Logic = 4)
   Source:            hvsync/CounterY_4 (FF)
-  Destination:       pixel_0 (FF)
+  Destination:       pixel_2 (FF)
   Source Clock:      clk_25 rising
   Destination Clock: clk_25 rising
 
-  Data Path: hvsync/CounterY_4 to pixel_0
+  Data Path: hvsync/CounterY_4 to pixel_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             10   0.447   1.201  hvsync/CounterY_4 (hvsync/CounterY_4)
-     LUT5:I0->O            4   0.203   0.788  CounterY[8]_GND_1_o_LessThan_46_o11 (CounterY[8]_GND_1_o_LessThan_46_o)
-     LUT4:I2->O            1   0.203   0.684  CounterY[8]_GND_1_o_LessThan_46_o10_SW1 (N8)
-     LUT6:I4->O            1   0.203   0.580  Mmux_GND_1_o_GND_1_o_mux_65_OUT11 (GND_1_o_GND_1_o_mux_65_OUT<0>)
-     LUT2:I1->O            1   0.205   0.000  pixel_0_rstpot (pixel_0_rstpot)
-     FD:D                      0.102          pixel_0
+     FDE:C->Q              9   0.447   0.934  hvsync/CounterY_4 (hvsync/CounterY_4)
+     LUT2:I0->O            4   0.203   0.684  CounterY[8]_GND_1_o_LessThan_24_o1111 (CounterY[8]_GND_1_o_LessThan_24_o111)
+     LUT6:I5->O            3   0.205   0.879  CounterY[8]_GND_1_o_LessThan_24_o11 (CounterY[8]_GND_1_o_LessThan_24_o)
+     LUT6:I3->O            2   0.205   0.961  _n0156_013 (_n0156_0)
+     LUT6:I1->O            1   0.203   0.000  pixel_2_rstpot (pixel_2_rstpot)
+     FD:D                      0.102          pixel_2
     ----------------------------------------
-    Total                      4.615ns (1.363ns logic, 3.252ns route)
-                                       (29.5% logic, 70.5% route)
+    Total                      4.823ns (1.365ns logic, 3.458ns route)
+                                       (28.3% logic, 71.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -510,12 +515,31 @@ Offset:              3.810ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             9   1.222   1.174  sw2_IBUF (sw2_IBUF)
-     LUT5:I0->O            8   0.203   0.907  frogLogic/_n0076_inv1 (frogLogic/_n0076_inv)
+     LUT5:I0->O            8   0.203   0.907  frogLogic/_n0086_inv1 (frogLogic/_n0086_inv)
      LUT6:I4->O            1   0.203   0.000  frogLogic/froggerHorizState_4_glue_rst (frogLogic/froggerHorizState_4_glue_rst)
      FD:D                      0.102          frogLogic/froggerHorizState_4
     ----------------------------------------
     Total                      3.810ns (1.730ns logic, 2.080ns route)
                                        (45.4% logic, 54.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'frogLogic/oneSecond'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              2.701ns (Levels of Logic = 1)
+  Source:            sw5 (PAD)
+  Destination:       frogLogic/vert6_7 (FF)
+  Destination Clock: frogLogic/oneSecond rising
+
+  Data Path: sw5 to frogLogic/vert6_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.222   1.049  sw5_IBUF (sw5_IBUF)
+     FDR:R                     0.430          frogLogic/vert1_4
+    ----------------------------------------
+    Total                      2.701ns (1.652ns logic, 1.049ns route)
+                                       (61.2% logic, 38.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_25'
@@ -548,7 +572,7 @@ Clock to Setup on destination clock clk
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 clk            |    3.753|         |         |         |
-clk_25         |    3.150|         |         |         |
+clk_25         |    3.175|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk_25
@@ -556,9 +580,9 @@ Clock to Setup on destination clock clk_25
                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------+---------+---------+---------+---------+
-clk                |    6.519|         |         |         |
-clk_25             |    4.615|         |         |         |
-frogLogic/oneSecond|    6.401|         |         |         |
+clk                |    6.756|         |         |         |
+clk_25             |    4.823|         |         |         |
+frogLogic/oneSecond|    6.672|         |         |         |
 -------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock frogLogic/oneSecond
@@ -566,21 +590,21 @@ Clock to Setup on destination clock frogLogic/oneSecond
                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------+---------+---------+---------+---------+
-frogLogic/oneSecond|    1.165|         |         |         |
+frogLogic/oneSecond|    2.016|         |         |         |
 -------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 27.00 secs
-Total CPU time to Xst completion: 10.11 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 10.47 secs
  
 --> 
 
 
-Total memory usage is 395700 kilobytes
+Total memory usage is 395756 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   21 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
 

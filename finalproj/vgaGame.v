@@ -22,23 +22,28 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 
 	//Move vert1 cars every second
 	always @(posedge oneSecond)
-		vert1 <= {vert1[0], vert1[7:1]};
+		if (reset)	vert1 <= 8'b1000_1000;
+		else			vert1 <= {vert1[0], vert1[7:1]};
 
 	//Move vert2 cars every second
 	always @(posedge oneSecond)
-		vert2 <= {vert2[6:0], vert2[7]};
+		if (reset)	vert2 <= 8'b1000_1000;
+		else			vert2 <= {vert2[6:0], vert2[7]};
 
 	//shift vert3 every second
 	always @(posedge oneSecond)
-		vert3 <= {vert3[0], vert3[7:1]};
+		if (reset)	vert3 <= 8'b1100_1100;
+		else 			vert3 <= {vert3[0], vert3[7:1]};
 
 	//shift vert5 every second
 	always @(posedge oneSecond)
-		vert5 <= {vert5[6:0], vert5[7]};
+		if (reset) 	vert5 <= 8'b1000_0000;
+		else			vert5 <= {vert5[6:0], vert5[7]};
 
 	//shift vert6 every second
 	always @(posedge oneSecond)
-		vert6 <= {vert6[0], vert6[7:1]};
+		if (reset)	vert6 <= 8'b1111_0000;
+		else 			vert6 <= {vert6[0], vert6[7:1]};
 
 	//Check for win state
 	always @(posedge clk)
@@ -217,7 +222,7 @@ module VGAWrite(
 					if ((drawHorizPosition & HfrogPos) !== 0) 	pixel <= 3'b010;
 					else if ((drawHorizPosition & vert3) !== 0)	pixel <= 3'b101;
 					else	pixel <= 3'b000;
-				else  if ((drawHorizPosition & vert2) !== 0)	pixel <= 3'b101;
+				else  if ((drawHorizPosition & vert3) !== 0)	pixel <= 3'b101;
 				else		pixel <= 3'b000;
 			else if (CounterY < 300)
 				if (VfrogPos == 4)
