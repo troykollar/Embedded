@@ -1,6 +1,6 @@
 //Frogger Logic~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 module frogger (input clk, input reset, input up, input down, input left, input right, 
-					output reg [7:0] vert1, output reg [7:0] vert2, output reg [7:0] vert3,
+					output reg [7:0] vert1 = 8'b1000_1000, output reg [7:0] vert2, output reg [7:0] vert3,
 					output reg [7:0] vert5, output reg [7:0] vert6);	//This module contains frogger logic
 
 	//each vert register is a row that keeps track of cars
@@ -29,16 +29,10 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 
 	//Move vert1 cars based on timeState
 	always @(posedge clk)
-		case (timeState)
-			0: vert1 <= 8'b0111_0111;
-			1: vert1 <= 8'b1011_1011;
-			2: vert1 <= 8'b1101_1101;
-			3: vert1 <= 8'b1110_1110;
-			4: vert1 <= 8'b0111_0111;
-			5: vert1 <= 8'b1011_1011;
-			6: vert1 <= 8'b1101_1101;
-			7: vert1 <= 8'b1110_1110;
-		endcase
+		if (vert1[0] == 1)			//If the least significant bit is a 1, add a one to the beginning and move down
+			vert1 <= {1'b1, vert1[7:1]};
+		else
+			vert1 <= vert1 >> 1;
 
 	//Move vert2 cars based on timeState
 	always @(posedge clk)
