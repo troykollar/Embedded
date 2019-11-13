@@ -5,86 +5,61 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 206: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 157: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 161: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 120: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 170: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 125: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 26: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 27: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 28: Result of <arg fmt="%d" index="1">29</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">28</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 29: Result of <arg fmt="%d" index="1">29</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">28</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 96: Assignment to <arg fmt="%s" index="1">win</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 33: Signal &lt;<arg fmt="%s" index="1">vert1</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 102: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 34: Signal &lt;<arg fmt="%s" index="1">vert1</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 103: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 38: Signal &lt;<arg fmt="%s" index="1">vert2</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 138: Assignment to <arg fmt="%s" index="1">andedReg</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 39: Signal &lt;<arg fmt="%s" index="1">vert2</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">up</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 43: Signal &lt;<arg fmt="%s" index="1">vert3</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">down</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 44: Signal &lt;<arg fmt="%s" index="1">vert3</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">left</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 48: Signal &lt;<arg fmt="%s" index="1">vert5</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">right</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 49: Signal &lt;<arg fmt="%s" index="1">vert5</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n0057</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 53: Signal &lt;<arg fmt="%s" index="1">vert6</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vert5_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert5_7&gt; </arg>
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 54: Signal &lt;<arg fmt="%s" index="1">vert6</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vert5_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert5_4&gt; </arg>
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 57: Assignment to <arg fmt="%s" index="1">win</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vert5_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert5_5&gt; </arg>
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 63: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vert3_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert3_5&gt; &lt;vert2_2&gt; &lt;vert2_6&gt; </arg>
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 64: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vert3_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert3_6&gt; &lt;vert2_3&gt; &lt;vert2_7&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vert3_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert3_7&gt; &lt;vert2_0&gt; &lt;vert2_4&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vert6_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert6_5&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vert6_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert6_6&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vert6_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert6_7&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vert5_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert5_6&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vert6_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert6_4&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vert3_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">frogger</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vert3_4&gt; &lt;vert2_1&gt; &lt;vert2_5&gt; </arg>
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/timeCounter_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">VGAWrite</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 99: Assignment to <arg fmt="%s" index="1">andedReg</arg> ignored, since the identifier is never used
 </msg>
 
 </messages>
-

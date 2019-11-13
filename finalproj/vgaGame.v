@@ -1,8 +1,8 @@
 //Frogger Logic~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 module frogger (input clk, input reset, input up, input down, input left, input right, 
 					output reg [7:0] vert1 = 8'b1000_1000, output reg [7:0] vert2 = 8'b1000_1000,
-					output reg [7:0] vert3 = 8'b1100_1100,output reg [7:0] vert5,
-					output reg [7:0] vert6);	//This module contains frogger logic
+					output reg [7:0] vert3 = 8'b1100_1100,output reg [7:0] vert5 = 8'b1000_0000,
+					output reg [7:0] vert6 = 8'b1111_0000);	//This module contains frogger logic
 
 	//each vert register is a row that keeps track of cars
 	reg [7:0] vert0 = 8'b0000_0000;
@@ -30,8 +30,8 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 
 	//Move vert1 cars based on timeState
 	always @(timeState)	//If the least significant bit is a 1, add a one to the beginning and move down
-		if (vert1[0] == 1)		vert1 = {1'b1, vert1[7:1]};
-		else							vert1 = vert1 >> 1;
+		if (vert1[0] == 1)	vert1 = {1'b1, vert1[7:1]};
+		else						vert1 = vert1 >> 1;
 
 	//Move vert2 cars based on timeState
 	always @(timeState)
@@ -44,30 +44,14 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 		else						vert3 = vert3 >> 1;
 
 	//shift vert5 as timeState changes
-	always @(posedge clk)
-		case (timeState)
-			0: vert5 <= 8'b1001_1001;
-					1: vert5 <= 8'b1100_1100;
-					2: vert5 <= 8'b0110_0110;
-					3: vert5 <= 8'b0011_0011;
-					4: vert5 <= 8'b1001_1001;
-					5: vert5 <= 8'b1100_1100;
-					6: vert5 <= 8'b0110_0110;
-					7: vert5 <= 8'b0011_0011;
-		endcase
+	always @(timeState)
+		if (vert5[7] == 1)	vert5 = {vert5[6:0], 1'b1};
+		else						vert5 = vert5 << 1;
 
 	//shift vert6 as timeState changes
-	always @(posedge clk)
-		case (timeState)
-			0: vert6 <= 8'b1111_0000;
-			1: vert6 <= 8'b0111_1000;
-			2: vert6 <= 8'b0011_1100;
-			3: vert6 <= 8'b0001_1110;
-			4: vert6 <= 8'b0000_1111;
-			5: vert6 <= 8'b1000_0111;
-			6: vert6 <= 8'b1100_0011;
-			7: vert6 <= 8'b1110_0001;
-		endcase
+	always @(timeState)
+		if (vert6[0] == 1)	vert6 = {1'b1, vert6[7:1]};
+		else						vert6 = vert6 >> 1;
 
 	//Check for win state
 	always @(posedge clk)
@@ -132,32 +116,22 @@ module hvsync_generator(
     wire CounterYmaxed = (CounterY == 525); // 10 + 2 + 33 + 480
 
     always @(posedge clk)
-    if (CounterXmaxed)
-      CounterX <= 0;
-    else
-      CounterX <= CounterX + 1;
+		 if (CounterXmaxed)	CounterX <= 0;
+		 else	CounterX <= CounterX + 1;
 
     always @(posedge clk)
-    begin
       if (CounterXmaxed)
-      begin
-        if(CounterYmaxed)
-          CounterY <= 0;
-        else
-          CounterY <= CounterY + 1;
-      end
-    end
+        if(CounterYmaxed)	CounterY <= 0;
+        else					CounterY <= CounterY + 1;
 
     always @(posedge clk)
-    begin
       vga_HS <= (CounterX > (640 + 16) && (CounterX < (640 + 16 + 96)));   // active for 96 clocks
+	
+	always @(posedge clk)
       vga_VS <= (CounterY > (480 + 10) && (CounterY < (480 + 10 + 2)));   // active for 2 clocks
-    end
 
     always @(posedge clk)
-    begin
         inDisplayArea <= (CounterX < 640) && (CounterY < 480);
-    end
 
     assign vga_h_sync = ~vga_HS;
     assign vga_v_sync = ~vga_VS;
@@ -177,7 +151,7 @@ module VGAWrite(
     output vsync_out
 );
 
-	 wire clk_25 = clk_counter == 2'd3;
+	 wire clk_25 = clk_counter == 2'd3;		//clk_25 goes high every 4th clk pulse, creates a 25MHz clock
 	 reg [1:0] clk_counter = 0;
 	 always @(posedge clk)
 		clk_counter = clk_counter + 1;
@@ -217,24 +191,15 @@ module VGAWrite(
 	
 	reg [7:0] drawHorizPosition;
 	always @(posedge clk)
-		if (CounterX < 80)
-			drawHorizPosition <= 8'b1000_0000;
-		else if (CounterX < 160)
-			drawHorizPosition <= 8'b0100_0000;
-		else if (CounterX < 240)
-			drawHorizPosition <= 8'b0010_0000;
-		else if (CounterX < 320)
-			drawHorizPosition <= 8'b0001_0000;
-		else if (CounterX < 400)
-			drawHorizPosition <= 8'b0000_1000;
-		else if (CounterX < 480)
-			drawHorizPosition <= 8'b0000_0100;
-		else if (CounterX < 560)
-			drawHorizPosition <= 8'b0000_0010;
-		else if (CounterX < 640)
-			drawHorizPosition <= 8'b0000_0001;
-		else
-			drawHorizPosition <= 8'b0000_0000;
+		if (CounterX < 80)			drawHorizPosition <= 8'b1000_0000;
+		else if (CounterX < 160)	drawHorizPosition <= 8'b0100_0000;
+		else if (CounterX < 240)	drawHorizPosition <= 8'b0010_0000;
+		else if (CounterX < 320)	drawHorizPosition <= 8'b0001_0000;
+		else if (CounterX < 400)	drawHorizPosition <= 8'b0000_1000;
+		else if (CounterX < 480)	drawHorizPosition <= 8'b0000_0100;
+		else if (CounterX < 560)	drawHorizPosition <= 8'b0000_0010;
+		else if (CounterX < 640)	drawHorizPosition <= 8'b0000_0001;
+		else								drawHorizPosition <= 8'b0000_0000;
 
    always @(posedge clk_25)
    begin
