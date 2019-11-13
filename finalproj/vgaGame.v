@@ -13,7 +13,7 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 	reg win = 0;	//Turns to 1 when reaching the top of the level
 
 
-	parameter counterReset = 100000000;	//2 for simulation, 100,000,000 for synthesis
+	parameter counterReset = 2;	//2 for simulation, 100,000,000 for synthesis
 	wire oneSecond = (timeCounter == counterReset);
 	//Increase timeState, depending on simulation vs. synthesis
 	always @(posedge clk)
@@ -87,9 +87,6 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 			if ((vert1 & froggerHorizState) !== 0)	dead <= 1;
 			else					dead <= dead;
 		else						dead <= dead;
-		
-		reg [63:0] gridView;
-		
 
 endmodule
 
@@ -166,7 +163,8 @@ module VGAWrite(
 	 wire [7:0] vert3;
 	 wire [7:0] vert5;
 	 wire [7:0] vert6;
-	 wire [7:0] frogPos;
+	 wire [7:0] HfrogPos;
+	 wire [2:0] VfrogPos;
 	 
 	 frogger frogLogic(
 		.clk(clk),
