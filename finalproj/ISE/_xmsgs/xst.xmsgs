@@ -5,67 +5,109 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 146: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 157: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 109: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 162: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 114: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 215: Assignment to <arg fmt="%s" index="1">inDisplayArea</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 21: Result of <arg fmt="%d" index="1">29</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">28</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 108: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 49: Assignment to <arg fmt="%s" index="1">win</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 109: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 55: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 110: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 56: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 111: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/timeCounter_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">VGAWrite</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 124: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/vert3_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frogLogic/vert3_2&gt; </arg>
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 125: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/vert3_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frogLogic/vert3_3&gt; </arg>
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 224: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">y2</arg>&gt;. Formal port size is <arg fmt="%d" index="2">12</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/vert1_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frogLogic/vert1_0&gt; &lt;frogLogic/vert2_6&gt; &lt;frogLogic/vert2_2&gt; </arg>
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 224: Assignment to <arg fmt="%s" index="1">obst1y2</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/vert1_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frogLogic/vert1_1&gt; &lt;frogLogic/vert2_5&gt; &lt;frogLogic/vert2_1&gt; </arg>
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 226: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/vert1_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frogLogic/vert1_2&gt; &lt;frogLogic/vert2_4&gt; &lt;frogLogic/vert2_0&gt; </arg>
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/troy/Embedded/finalproj/vgaGame.v" Line 222: Net &lt;<arg fmt="%s" index="1">obs1y2[11]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/vert1_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frogLogic/vert1_3&gt; &lt;frogLogic/vert2_7&gt; &lt;frogLogic/vert2_3&gt; </arg>
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">sw4</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3203" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/vert3_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt; is the opposite to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frogLogic/vert3_4&gt; &lt;frogLogic/vert3_0&gt; </arg>
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">sw3</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3203" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/vert3_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt; is the opposite to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frogLogic/vert3_5&gt; &lt;frogLogic/vert3_1&gt; </arg>
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">sw1</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3203" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/vert6_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt; is the opposite to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frogLogic/vert6_0&gt; </arg>
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">sw2</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3203" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/vert6_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt; is the opposite to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frogLogic/vert6_1&gt; </arg>
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/troy/Embedded/finalproj/vgaGame.v</arg>&quot; line <arg fmt="%s" index="2">209</arg>: Output port &lt;<arg fmt="%s" index="3">inDisplayArea</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hvsync</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3203" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/vert6_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt; is the opposite to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frogLogic/vert6_2&gt; </arg>
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/troy/Embedded/finalproj/vgaGame.v</arg>&quot; line <arg fmt="%s" index="2">224</arg>: Output port &lt;<arg fmt="%s" index="3">y2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">obs1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3203" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">frogLogic/vert6_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt; is the opposite to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;frogLogic/vert6_3&gt; </arg>
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">obs1y2</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk_cnt_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hvsync/inDisplayArea</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">VGAWrite</arg>&gt;.
 </msg>
 
 </messages>

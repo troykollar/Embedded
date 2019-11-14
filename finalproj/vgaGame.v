@@ -90,6 +90,52 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 
 endmodule
 
+module obstacle (input wire clk, input wire animation_clk, input wire reset, input wire animate, output wire [11:0] x1, output wire [11:0] x2, output wire [11:0] y1, output wire [11:0] y2);
+	parameter width = 20;	//half the width of the obstacle
+	parameter height = 10;	//half the height of the obstacle
+	parameter initial_x = 320;
+	parameter initial_y = 240;
+	parameter initial_x_dxn = 1;
+	parameter initial_y_dxn = 1;
+	parameter display_width = 640;
+	parameter display_height = 480;
+	
+	reg [11:0] x = initial_x;	//horizontal position
+	reg [11:0] y = initial_y;	//vertical position
+	reg x_dxn = initial_x_dxn;	//horizontal direction
+	reg y_dxn = initial_y_dxn;	//vertical direction
+	
+	assign x1 = x - width;	//center minus half width
+	assign x2 = x + width;	//center plus half width
+	assign y1 = y - height;	//center - half height (top)
+	assign y2 = y + height;	//center + half height (bottom)
+	
+	always @(posedge clk)
+		begin
+			if (reset)	//return to initial position on reset
+				begin
+					x <= initial_x;
+					y <= initial_y;
+					x_dxn <= initial_x_dxn;
+					y_dxn <= initial_y_dxn;
+				end
+			if (animate && animation_clk)
+				begin
+					x <= (x_dxn) ? x + 1 : x - 1;	//move right if positive x dxn
+					y <= (y_dxn) ? y + 1 : y - 1;	//move down if positive y dxn
+					
+					if (x <= width + 1)	//is at left edge of screen
+						x_dxn <= 1;	//change dxn to right
+					if (x >= (display_width - width - 1))	//is at right edge of screen
+						x_dxn <= 0;	//change dxn to left
+					if (y <= height + 1)
+						y_dxn <= 1;
+					if (y >= (display_height - height - 1))
+						y_dxn <= 0;
+				end
+		end
+endmodule
+
 //VGA V/Hsync Generator *******************************************
 module hvsync_generator(
 	input clk,
@@ -97,9 +143,11 @@ module hvsync_generator(
 	output vga_v_sync,
 	output reg inDisplayArea,
 	output reg [9:0] CounterX,
-	output reg [8:0] CounterY
+	output reg [8:0] CounterY,
+	output wire animate
   );
     reg vga_HS, vga_VS;
+	 localparam VA_END = 480;
 
     wire CounterXmaxed = (CounterX == 800); // 16 + 48 + 96 + 640
     wire CounterYmaxed = (CounterY == 525); // 10 + 2 + 33 + 480
@@ -124,6 +172,7 @@ module hvsync_generator(
 
     assign vga_h_sync = ~vga_HS;
     assign vga_v_sync = ~vga_VS;
+	 assign animate = ((CounterY == VA_END - 1) & (CounterX == 800));
 
 endmodule	//************************************
 
@@ -135,19 +184,27 @@ module VGAWrite(
 	 input sw1,
 	 input sw2,
 	 input sw5,
-    output reg [2:0] pixel,
+    output [2:0] pixel,
     output hsync_out,
     output vsync_out
 );
-
+/*
 	 wire clk_25 = clk_counter == 2'd3;		//clk_25 goes high every 4th clk pulse, creates a 25MHz clock
 	 reg [1:0] clk_counter = 0;
 	 always @(posedge clk)
-		clk_counter = clk_counter + 1;
+		clk_counter = clk_counter + 1;*/
+		
+	
+	reg clk_25 = 0;
+	reg [15:0] clk_cnt = 0;
+	always @(posedge clk)
+		{clk_25, clk_cnt} <= clk_cnt + 16'h4000;
 		
     wire inDisplayArea;
     wire [9:0] CounterX;
 	wire [8:0] CounterY;
+	
+	wire animate;
 
     hvsync_generator hvsync(
       .clk(clk_25),
@@ -155,10 +212,23 @@ module VGAWrite(
       .vga_v_sync(vsync_out),
       .CounterX(CounterX),
       .CounterY(CounterY),
-      .inDisplayArea(inDisplayArea)
+      .inDisplayArea(inDisplayArea),
+		.animate(animate)
     );
 	 
-	 wire [7:0] vert1;
+	 wire [11:0] obs1x1;
+	 wire [11:0] obs1x2;
+	 wire [11:0] obs1y1;
+	 wire [11:0] obs1y2;
+	 
+	 obstacle obs1(.clk(clk), .animation_clk(clk_25), .reset(sw5), .animate(animate), .x1(obs1x1), .x2(obs1x2), .y1(obs1y1), .y2(obst1y2));
+	 
+	 assign sq1 = ((CounterX > obs1x1) & (CounterY > obs1y1) & (CounterX < obs1x2) & (CounterY < obs1y2)) ? 1 : 0;
+	 
+	 assign pixel[2] = sq1;
+	 assign pixel[1:0] = 2'b00;
+	 
+/*	 wire [7:0] vert1;
 	 wire [7:0] vert2;
 	 wire [7:0] vert3;
 	 wire [7:0] vert5;
@@ -247,7 +317,7 @@ module VGAWrite(
 					else	pixel <= 3'b000;
 				else		pixel <= 3'b000;
 			else	pixel <= 3'b000;	//Draw black if not between 0 < CounterY < 480 should be redundant with next line
-		else		pixel <= 3'b000;	//Draw black if not inDisplayArea
-
+		else		pixel <= 3'b000;	//Draw black if not inDisplayArea*/
+		
 endmodule
 
