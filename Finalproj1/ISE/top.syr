@@ -229,7 +229,7 @@ Synthesizing Unit <square_1>.
 	inferred   5 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
 	inferred   2 Comparator(s).
-	inferred   1 Multiplexer(s).
+	inferred   2 Multiplexer(s).
 Unit <square_1> synthesized.
 
 Synthesizing Unit <square_2>.
@@ -257,7 +257,7 @@ Synthesizing Unit <square_2>.
 	inferred   6 Adder/Subtractor(s).
 	inferred  25 D-type flip-flop(s).
 	inferred   2 Comparator(s).
-	inferred   2 Multiplexer(s).
+	inferred   3 Multiplexer(s).
 Unit <square_2> synthesized.
 
 Synthesizing Unit <square_3>.
@@ -283,7 +283,7 @@ Synthesizing Unit <square_3>.
 	inferred   5 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
 	inferred   2 Comparator(s).
-	inferred   1 Multiplexer(s).
+	inferred   2 Multiplexer(s).
 Unit <square_3> synthesized.
 
 =========================================================================
@@ -308,9 +308,9 @@ Macro Statistics
  10-bit comparator lessequal                           : 3
  12-bit comparator greater                             : 12
  12-bit comparator lessequal                           : 6
-# Multiplexers                                         : 8
+# Multiplexers                                         : 11
  10-bit 2-to-1 multiplexer                             : 2
- 12-bit 2-to-1 multiplexer                             : 3
+ 12-bit 2-to-1 multiplexer                             : 6
  32-bit 2-to-1 multiplexer                             : 3
 
 =========================================================================
@@ -357,14 +357,6 @@ WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 0 in block <sq_b_anim>
 WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 1 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
 
-Synthesizing (advanced) Unit <square_1>.
-The following registers are absorbed into counter <x>: 1 register on signal <x>.
-Unit <square_1> synthesized (advanced).
-
-Synthesizing (advanced) Unit <square_3>.
-The following registers are absorbed into counter <x>: 1 register on signal <x>.
-Unit <square_3> synthesized (advanced).
-
 Synthesizing (advanced) Unit <vga640x480>.
 The following registers are absorbed into counter <h_count>: 1 register on signal <h_count>.
 Unit <vga640x480> synthesized (advanced).
@@ -373,27 +365,26 @@ Unit <vga640x480> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 17
+# Adders/Subtractors                                   : 19
  10-bit adder                                          : 1
  11-bit subtractor                                     : 1
- 12-bit adder                                          : 6
+ 12-bit adder                                          : 8
  12-bit subtractor                                     : 6
  13-bit adder                                          : 1
  13-bit subtractor                                     : 1
  17-bit adder                                          : 1
-# Counters                                             : 3
+# Counters                                             : 1
  10-bit up counter                                     : 1
- 12-bit up counter                                     : 2
-# Registers                                            : 76
- Flip-Flops                                            : 76
+# Registers                                            : 100
+ Flip-Flops                                            : 100
 # Comparators                                          : 25
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 3
  12-bit comparator greater                             : 12
  12-bit comparator lessequal                           : 6
-# Multiplexers                                         : 6
+# Multiplexers                                         : 11
  10-bit 2-to-1 multiplexer                             : 2
- 12-bit 2-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 6
  32-bit 2-to-1 multiplexer                             : 3
 
 =========================================================================
@@ -457,18 +448,28 @@ Optimizing unit <top> ...
 
 Optimizing unit <vga640x480> ...
 
+Optimizing unit <square_1> ...
+
 Optimizing unit <square_2> ...
+
+Optimizing unit <square_3> ...
 WARNING:Xst:1293 - FF/Latch <sq_a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_a_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <sq_a_anim/x_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <sq_b_anim/x_0> <sq_c_anim/x_0> 
+INFO:Xst:2261 - The FF/Latch <sq_a_anim/x_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <sq_c_anim/x_1> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 6.
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 7.
+FlipFlop cnt_15 has been replicated 2 time(s)
+FlipFlop display/h_count_7 has been replicated 1 time(s)
+FlipFlop display/v_count_5 has been replicated 1 time(s)
 FlipFlop display/v_count_6 has been replicated 1 time(s)
+FlipFlop display/v_count_8 has been replicated 1 time(s)
 FlipFlop display/v_count_9 has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -477,8 +478,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 55
- Flip-Flops                                            : 55
+# Registers                                            : 57
+ Flip-Flops                                            : 57
 
 =========================================================================
 
@@ -501,21 +502,22 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 441
+# BELS                             : 456
 #      GND                         : 1
-#      INV                         : 14
-#      LUT1                        : 17
-#      LUT2                        : 30
+#      INV                         : 16
+#      LUT1                        : 28
+#      LUT2                        : 26
 #      LUT3                        : 25
-#      LUT4                        : 91
-#      LUT5                        : 65
-#      LUT6                        : 76
-#      MUXCY                       : 81
+#      LUT4                        : 90
+#      LUT5                        : 44
+#      LUT6                        : 87
+#      MUXCY                       : 101
 #      VCC                         : 1
-#      XORCY                       : 40
-# FlipFlops/Latches                : 55
-#      FD                          : 43
-#      FDRE                        : 12
+#      XORCY                       : 37
+# FlipFlops/Latches                : 57
+#      FD                          : 7
+#      FDRE                        : 42
+#      FDSE                        : 8
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 11
@@ -529,16 +531,16 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              55  out of  11440     0%  
- Number of Slice LUTs:                  318  out of   5720     5%  
-    Number used as Logic:               318  out of   5720     5%  
+ Number of Slice Registers:              57  out of  11440     0%  
+ Number of Slice LUTs:                  316  out of   5720     5%  
+    Number used as Logic:               316  out of   5720     5%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    320
-   Number with an unused Flip Flop:     265  out of    320    82%  
-   Number with an unused LUT:             2  out of    320     0%  
-   Number of fully used LUT-FF pairs:    53  out of    320    16%  
-   Number of unique control sets:         2
+ Number of LUT Flip Flop pairs used:    322
+   Number with an unused Flip Flop:     265  out of    322    82%  
+   Number with an unused LUT:             6  out of    322     1%  
+   Number of fully used LUT-FF pairs:    51  out of    322    15%  
+   Number of unique control sets:         5
 
 IO Utilization: 
  Number of IOs:                          12
@@ -568,7 +570,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 55    |
+CLK                                | BUFGP                  | 57    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -579,9 +581,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.336ns (Maximum Frequency: 187.396MHz)
-   Minimum input arrival time before clock: 4.335ns
-   Maximum output required time after clock: 9.287ns
+   Minimum period: 4.585ns (Maximum Frequency: 218.122MHz)
+   Minimum input arrival time before clock: 3.991ns
+   Maximum output required time after clock: 9.137ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -590,54 +592,54 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 5.336ns (frequency: 187.396MHz)
-  Total number of paths / destination ports: 3201 / 79
+  Clock period: 4.585ns (frequency: 218.122MHz)
+  Total number of paths / destination ports: 2689 / 157
 -------------------------------------------------------------------------
-Delay:               5.336ns (Levels of Logic = 3)
-  Source:            display/h_count_9 (FF)
-  Destination:       display/v_count_9 (FF)
+Delay:               4.585ns (Levels of Logic = 4)
+  Source:            sq_a_anim/x_9 (FF)
+  Destination:       sq_a_anim/x_9 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: display/h_count_9 to display/v_count_9
+  Data Path: sq_a_anim/x_9 to sq_a_anim/x_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              14   0.447   1.186  display/h_count_9 (display/h_count_9)
-     LUT5:I2->O            6   0.205   0.745  display/GND_2_o_GND_2_o_equal_15_o<9>_SW0 (N18)
-     LUT6:I5->O           21   0.205   1.114  display/GND_2_o_GND_2_o_equal_15_o<9> (display/GND_2_o_GND_2_o_equal_15_o)
-     LUT3:I2->O           12   0.205   0.908  display/_n0087_inv1 (display/_n0087_inv)
-     FDRE:CE                   0.322          display/v_count_0
+     FDRE:C->Q            10   0.447   1.201  sq_a_anim/x_9 (sq_a_anim/x_9)
+     LUT5:I0->O            1   0.203   0.580  sq_a_anim/x[11]_GND_3_o_LessThan_11_o1_SW0 (N15)
+     LUT6:I5->O           10   0.205   0.857  sq_a_anim/x[11]_GND_3_o_LessThan_11_o1 (sq_a_anim/x[11]_GND_3_o_LessThan_11_o)
+     LUT6:I5->O            1   0.205   0.580  sq_a_anim/x_9_dpot (sq_a_anim/x_9_dpot)
+     LUT3:I2->O            1   0.205   0.000  sq_a_anim/x_9_dpot1 (sq_a_anim/x_9_dpot1)
+     FDRE:D                    0.102          sq_a_anim/x_9
     ----------------------------------------
-    Total                      5.336ns (1.384ns logic, 3.952ns route)
-                                       (25.9% logic, 74.1% route)
+    Total                      4.585ns (1.367ns logic, 3.218ns route)
+                                       (29.8% logic, 70.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 55 / 52
+  Total number of paths / destination ports: 52 / 52
 -------------------------------------------------------------------------
-Offset:              4.335ns (Levels of Logic = 3)
+Offset:              3.991ns (Levels of Logic = 2)
   Source:            RST_BTN (PAD)
-  Destination:       sq_a_anim/x_5 (FF)
+  Destination:       sq_a_anim/x_9 (FF)
   Destination Clock: CLK rising
 
-  Data Path: RST_BTN to sq_a_anim/x_5
+  Data Path: RST_BTN to sq_a_anim/x_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            29   1.222   1.614  RST_BTN_IBUF (RST_BTN_IBUF)
-     LUT6:I0->O            6   0.203   0.992  sq_c_anim/x_cst1 (sq_c_anim/x_cst)
-     LUT5:I1->O            1   0.203   0.000  sq_a_anim/x_7_glue_rst (sq_a_anim/x_7_glue_rst)
-     FD:D                      0.102          sq_a_anim/x_7
+     IBUF:I->O             6   1.222   1.109  RST_BTN_IBUF (RST_BTN_IBUF)
+     LUT6:I0->O           17   0.203   1.027  sq_a_anim/_n00501 (sq_a_anim/_n0050)
+     FDRE:R                    0.430          sq_a_anim/x_0
     ----------------------------------------
-    Total                      4.335ns (1.730ns logic, 2.605ns route)
-                                       (39.9% logic, 60.1% route)
+    Total                      3.991ns (1.855ns logic, 2.136ns route)
+                                       (46.5% logic, 53.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 4101 / 10
+  Total number of paths / destination ports: 4350 / 10
 -------------------------------------------------------------------------
-Offset:              9.287ns (Levels of Logic = 7)
+Offset:              9.137ns (Levels of Logic = 7)
   Source:            sq_a_anim/x_4 (FF)
   Destination:       VGA_R<1> (PAD)
   Source Clock:      CLK rising
@@ -646,17 +648,17 @@ Offset:              9.287ns (Levels of Logic = 7)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              15   0.447   1.229  sq_a_anim/x_4 (sq_a_anim/x_4)
-     LUT4:I0->O            5   0.203   0.715  sq_a_anim/Msub_o_x1_xor<11>111 (sq_a_anim/Msub_o_x1_xor<11>11)
+     FDRE:C->Q            14   0.447   1.205  sq_a_anim/x_4 (sq_a_anim/x_4)
+     LUT4:I0->O            5   0.203   0.715  sq_a_anim/Mmux_GND_3_o_GND_3_o_mux_13_OUT1211 (sq_a_anim/Mmux_GND_3_o_GND_3_o_mux_13_OUT121)
      LUT5:I4->O            2   0.205   0.961  sq_a_anim/Msub_o_x1_xor<9>11 (sq_a_x1<9>)
      LUT5:I0->O            0   0.203   0.000  Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_lutdi4 (Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_lutdi4)
      MUXCY:DI->O           1   0.339   0.580  Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_cy<4> (Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_cy<4>)
-     LUT6:I5->O            1   0.205   0.808  Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_cy<5> (Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_cy<5>)
-     LUT5:I2->O            2   0.205   0.616  sq_a_x1[11]_GND_1_o_AND_10_o5 (VGA_R_0_OBUF)
+     LUT6:I5->O            1   0.205   0.684  Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_cy<5> (Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_cy<5>)
+     LUT4:I2->O            2   0.203   0.616  sq_a_x1[11]_GND_1_o_AND_10_o1 (VGA_R_0_OBUF)
      OBUF:I->O                 2.571          VGA_R_1_OBUF (VGA_R<1>)
     ----------------------------------------
-    Total                      9.287ns (4.378ns logic, 4.909ns route)
-                                       (47.1% logic, 52.9% route)
+    Total                      9.137ns (4.376ns logic, 4.761ns route)
+                                       (47.9% logic, 52.1% route)
 
 =========================================================================
 
@@ -668,21 +670,21 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.336|         |         |         |
+CLK            |    4.585|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 10.41 secs
+Total CPU time to Xst completion: 10.70 secs
  
 --> 
 
 
-Total memory usage is 396044 kilobytes
+Total memory usage is 396060 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  120 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 
