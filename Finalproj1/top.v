@@ -9,9 +9,9 @@ module top(
     input wire RST_BTN,         // reset button
     output wire VGA_HS_O,       // horizontal sync output
     output wire VGA_VS_O,       // vertical sync output
-    output wire [3:0] VGA_R,    // 4-bit VGA red output
-    output wire [3:0] VGA_G,    // 4-bit VGA green output
-    output wire [3:0] VGA_B     // 4-bit VGA blue output
+    output wire [1:0] VGA_R,    // 4-bit VGA red output
+    output wire [2:0] VGA_G,    // 4-bit VGA green output
+    output wire [2:0] VGA_B     // 4-bit VGA blue output
     );
 
     wire rst = ~RST_BTN;    // reset is active low on Arty & Nexys Video
@@ -83,7 +83,7 @@ module top(
     assign sq_c = ((x > sq_c_x1) & (y > sq_c_y1) &
         (x < sq_c_x2) & (y < sq_c_y2)) ? 1 : 0;
 
-    assign VGA_R[3] = sq_a;  // square a is red
-    assign VGA_G[3] = sq_b;  // square b is green
-    assign VGA_B[3] = sq_c;  // square c is blue
+    assign VGA_R[1:0] = {sq_a, sq_a};  // square a is red
+    assign VGA_G[2:0] = {sq_b, sq_b, sq_b};  // square b is green
+    assign VGA_B[2:0] = {sq_c, sq_c,sq_c};  // square c is blue
 endmodule

@@ -21,7 +21,7 @@ TIMESPEC TS_GCLK1 = PERIOD "GCLK1" 100 MHz HIGH 50%;
 ############################################################################
 
     NET "VGA_HS_O"              LOC = B12 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-    NET "VGA_VS_O
+    NET "VGA_VS_O"				LOC = A12 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
     NET "VGA_R[1]"            LOC = A11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
     NET "VGA_R[0]"            LOC = B11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
 
