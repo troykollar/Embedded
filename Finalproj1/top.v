@@ -43,7 +43,7 @@ module top(
     wire [11:0] sq_b_x1, sq_b_x2, sq_b_y1, sq_b_y2;
     wire [11:0] sq_c_x1, sq_c_x2, sq_c_y1, sq_c_y2;
 
-    square #(.IX(160), .IY(120), .H_WIDTH(60), .H_HEIGHT(15)) sq_a_anim (
+    square #(.IX(160), .IY(120), .H_WIDTH(60), .H_HEIGHT(15), .IX_DIR(1)) sq_a_anim (
         .i_clk(CLK), 
         .i_ani_stb(pix_stb),
         .i_rst(rst),
@@ -54,7 +54,7 @@ module top(
         .o_y2(sq_a_y2)
     );
 
-    square #(.IX(320), .IY(240), .IY_DIR(0), .H_WIDTH(20), .H_HEIGHT(15)) sq_b_anim (
+    square #(.IX(320), .IY(240), .IY_DIR(0), .H_WIDTH(20), .H_HEIGHT(15), .IX_DIR(0)) sq_b_anim (
         .i_clk(CLK), 
         .i_ani_stb(pix_stb),
         .i_rst(rst),

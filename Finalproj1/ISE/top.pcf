@@ -1,41 +1,41 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Nov 14 16:27:09 2019
+// Written by: Map P.20131013 on Thu Nov 14 16:33:58 2019
 //! **************************************************************************
 
 SCHEMATIC START;
 CONFIG VCCAUX = "3.3";
-COMP "VGA_R<0>" LOCATE = SITE "B11" LEVEL 1;
-COMP "VGA_R<1>" LOCATE = SITE "A11" LEVEL 1;
-COMP "RST_BTN" LOCATE = SITE "K17" LEVEL 1;
-COMP "VGA_G<0>" LOCATE = SITE "C10" LEVEL 1;
-COMP "VGA_G<1>" LOCATE = SITE "A10" LEVEL 1;
-COMP "VGA_G<2>" LOCATE = SITE "C11" LEVEL 1;
-COMP "VGA_HS_O" LOCATE = SITE "B12" LEVEL 1;
-COMP "VGA_VS_O" LOCATE = SITE "A12" LEVEL 1;
 COMP "VGA_B<0>" LOCATE = SITE "A9" LEVEL 1;
 COMP "VGA_B<1>" LOCATE = SITE "B9" LEVEL 1;
 COMP "VGA_B<2>" LOCATE = SITE "C9" LEVEL 1;
+COMP "VGA_G<0>" LOCATE = SITE "C10" LEVEL 1;
+COMP "VGA_G<1>" LOCATE = SITE "A10" LEVEL 1;
+COMP "VGA_G<2>" LOCATE = SITE "C11" LEVEL 1;
+COMP "VGA_R<0>" LOCATE = SITE "B11" LEVEL 1;
+COMP "VGA_R<1>" LOCATE = SITE "A11" LEVEL 1;
+COMP "VGA_HS_O" LOCATE = SITE "B12" LEVEL 1;
+COMP "VGA_VS_O" LOCATE = SITE "A12" LEVEL 1;
 COMP "CLK" LOCATE = SITE "V10" LEVEL 1;
+COMP "RST_BTN" LOCATE = SITE "K17" LEVEL 1;
 TIMEGRP GCLK1 = BEL "cnt_13" BEL "cnt_14" BEL "cnt_15" BEL "display/v_count_9"
         BEL "display/v_count_8" BEL "display/v_count_7" BEL
         "display/v_count_6" BEL "display/v_count_5" BEL "display/v_count_4"
         BEL "display/v_count_3" BEL "display/v_count_2" BEL
-        "display/v_count_1" BEL "display/v_count_0" BEL "sq_a_anim/x_0" BEL
-        "sq_b_anim/x_0" BEL "sq_c_anim/x_0" BEL "sq_b_anim/x_4" BEL
-        "sq_b_anim/x_5" BEL "sq_b_anim/x_6" BEL "sq_b_anim/x_7" BEL
-        "sq_b_anim/x_8" BEL "sq_b_anim/x_9" BEL "sq_b_anim/x_10" BEL
-        "sq_c_anim/x_4" BEL "sq_c_anim/x_5" BEL "sq_c_anim/x_6" BEL
-        "sq_c_anim/x_7" BEL "sq_c_anim/x_8" BEL "sq_c_anim/x_9" BEL
-        "sq_c_anim/x_10" BEL "sq_a_anim/x_1" BEL "sq_a_anim/x_2" BEL
-        "sq_a_anim/x_3" BEL "sq_a_anim/x_4" BEL "sq_a_anim/x_5" BEL
-        "sq_a_anim/x_6" BEL "sq_a_anim/x_7" BEL "sq_a_anim/x_8" BEL
-        "sq_a_anim/x_9" BEL "sq_a_anim/x_10" BEL "sq_b_anim/x_1" BEL
-        "sq_b_anim/x_2" BEL "sq_b_anim/x_3" BEL "sq_c_anim/x_1" BEL
-        "sq_c_anim/x_2" BEL "sq_c_anim/x_3" BEL "display/h_count_9" BEL
-        "display/h_count_8" BEL "display/h_count_7" BEL "display/h_count_6"
-        BEL "display/h_count_5" BEL "display/h_count_4" BEL
-        "display/h_count_3" BEL "display/h_count_2" BEL "display/h_count_1"
-        BEL "display/h_count_0" BEL "CLK_BUFGP/BUFG";
+        "display/v_count_1" BEL "display/v_count_0" BEL "sq_a_anim/x_5" BEL
+        "sq_a_anim/x_7" BEL "sq_c_anim/x_5" BEL "sq_c_anim/x_8" BEL
+        "sq_c_anim/x_6" BEL "sq_c_anim/x_7" BEL "sq_b_anim/x_8" BEL
+        "sq_b_anim/x_6" BEL "sq_b_anim/x_9" BEL "sq_b_anim/x_7" BEL
+        "sq_b_anim/x_5" BEL "sq_b_anim/x_4" BEL "sq_b_anim/x_3" BEL
+        "sq_b_anim/x_2" BEL "sq_b_anim/x_1" BEL "sq_b_anim/x_0" BEL
+        "sq_a_anim/x_0" BEL "sq_c_anim/x_0" BEL "sq_a_anim/x_1" BEL
+        "display/v_count_9_1" BEL "sq_a_anim/x_2" BEL "sq_a_anim/x_3" BEL
+        "sq_a_anim/x_4" BEL "sq_a_anim/x_8" BEL "sq_a_anim/x_6" BEL
+        "sq_a_anim/x_9" BEL "sq_c_anim/x_2" BEL "sq_c_anim/x_1" BEL
+        "sq_c_anim/x_3" BEL "sq_c_anim/x_4" BEL "sq_c_anim/x_9" BEL
+        "display/h_count_9" BEL "display/h_count_8" BEL "display/h_count_7"
+        BEL "display/h_count_6" BEL "display/h_count_5" BEL
+        "display/h_count_4" BEL "display/h_count_3" BEL "display/h_count_2"
+        BEL "display/h_count_1" BEL "display/h_count_0" BEL
+        "display/v_count_6_1" BEL "CLK_BUFGP/BUFG";
 TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz HIGH 50%;
 SCHEMATIC END;
 

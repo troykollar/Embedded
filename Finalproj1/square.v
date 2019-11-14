@@ -49,10 +49,10 @@ module square #(
             x <= (x_dir) ? x + 1 : x - 1;  // move right if positive x_dir
             //y <= (y_dir) ? y + 1 : y - 1;  // move down if positive y_dir
 
-            if (x <= H_WIDTH + 1)  // edge of square is at left of screen
-                x_dir <= 1;  // change direction to right
+            if (x <= 0)  // square goes off left of screen
+                x <= D_WIDTH + H_WIDTH;  // reset location to right of screen
             if (x >= (D_WIDTH + H_WIDTH))  // edge of square goes off right of screen
-                x <= -H_WIDTH;  // reset to left of screen        
+                x <= 0;  // reset to left of screen        
             if (y <= H_HEIGHT + 1)  // edge of square at top of screen
                 y_dir <= 1;  // change direction to down
             if (y >= (D_HEIGHT - H_HEIGHT - 1))  // edge of square at bottom
