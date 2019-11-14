@@ -28,19 +28,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 3387 paths analyzed, 435 endpoints analyzed, 0 failing endpoints
+ 3465 paths analyzed, 459 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   6.158ns.
+ Minimum period is   5.283ns.
 --------------------------------------------------------------------------------
 
-Paths for end point frog_anim/y_4 (SLICE_X7Y28.B4), 20 paths
+Paths for end point sq_b_anim/x_8 (SLICE_X0Y50.C1), 15 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     3.842ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               display/v_count_2 (FF)
-  Destination:          frog_anim/y_4 (FF)
+Slack (setup path):     4.717ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               display/h_count_1 (FF)
+  Destination:          sq_b_anim/x_8 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      6.096ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.027ns (0.638 - 0.665)
+  Data Path Delay:      5.307ns (Levels of Logic = 3)
+  Clock Path Skew:      0.059ns (0.621 - 0.562)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -51,33 +51,33 @@ Slack (setup path):     3.842ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: display/v_count_2 to frog_anim/y_4
+  Maximum Data Path at Slow Process Corner: display/h_count_1 to sq_b_anim/x_8
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y45.AQ       Tcko                  0.391   display/v_count_7_1
-                                                       display/v_count_2
-    SLICE_X7Y40.D4       net (fanout=7)        0.662   display/v_count<2>
-    SLICE_X7Y40.D        Tilo                  0.259   display/v_count<1>
-                                                       display/Mmux_v_count[9]_v_count[9]_mux_28_OUT4111
-    SLICE_X11Y48.A4      net (fanout=13)       1.333   display/Mmux_v_count[9]_v_count[9]_mux_28_OUT411
-    SLICE_X11Y48.A       Tilo                  0.259   display/h_count_7_1
-                                                       display/o_animate
-    SLICE_X7Y28.B4       net (fanout=18)       2.870   animate
-    SLICE_X7Y28.CLK      Tas                   0.322   frog_anim/y<6>
-                                                       frog_anim/y_4_rstpot
-                                                       frog_anim/y_4
+    SLICE_X10Y35.BQ      Tcko                  0.408   display/h_count<3>
+                                                       display/h_count_1
+    SLICE_X13Y32.D1      net (fanout=9)        1.307   display/h_count<1>
+    SLICE_X13Y32.D       Tilo                  0.259   frog_anim/y<11>
+                                                       display/GND_2_o_GND_2_o_equal_15_o<9>_SW4
+    SLICE_X4Y36.B6       net (fanout=2)        0.936   N38
+    SLICE_X4Y36.B        Tilo                  0.203   sq_c_anim/x<4>
+                                                       display/o_animate_rstpot
+    SLICE_X0Y50.C1       net (fanout=27)       1.905   display/o_animate_rstpot
+    SLICE_X0Y50.CLK      Tas                   0.289   sq_b_anim/x<6>
+                                                       sq_b_anim/x_8_dpot1
+                                                       sq_b_anim/x_8
     -------------------------------------------------  ---------------------------
-    Total                                      6.096ns (1.231ns logic, 4.865ns route)
-                                                       (20.2% logic, 79.8% route)
+    Total                                      5.307ns (1.159ns logic, 4.148ns route)
+                                                       (21.8% logic, 78.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     3.898ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               display/v_count_0 (FF)
-  Destination:          frog_anim/y_4 (FF)
+Slack (setup path):     4.765ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               display/h_count_3 (FF)
+  Destination:          sq_b_anim/x_8 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      6.051ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.638 - 0.654)
+  Data Path Delay:      5.259ns (Levels of Logic = 3)
+  Clock Path Skew:      0.059ns (0.621 - 0.562)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -88,33 +88,33 @@ Slack (setup path):     3.898ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: display/v_count_0 to frog_anim/y_4
+  Maximum Data Path at Slow Process Corner: display/h_count_3 to sq_b_anim/x_8
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y40.AQ       Tcko                  0.391   display/v_count<1>
-                                                       display/v_count_0
-    SLICE_X7Y40.D2       net (fanout=8)        0.617   display/v_count<0>
-    SLICE_X7Y40.D        Tilo                  0.259   display/v_count<1>
-                                                       display/Mmux_v_count[9]_v_count[9]_mux_28_OUT4111
-    SLICE_X11Y48.A4      net (fanout=13)       1.333   display/Mmux_v_count[9]_v_count[9]_mux_28_OUT411
-    SLICE_X11Y48.A       Tilo                  0.259   display/h_count_7_1
-                                                       display/o_animate
-    SLICE_X7Y28.B4       net (fanout=18)       2.870   animate
-    SLICE_X7Y28.CLK      Tas                   0.322   frog_anim/y<6>
-                                                       frog_anim/y_4_rstpot
-                                                       frog_anim/y_4
+    SLICE_X10Y35.DQ      Tcko                  0.408   display/h_count<3>
+                                                       display/h_count_3
+    SLICE_X13Y32.D2      net (fanout=12)       1.259   display/h_count<3>
+    SLICE_X13Y32.D       Tilo                  0.259   frog_anim/y<11>
+                                                       display/GND_2_o_GND_2_o_equal_15_o<9>_SW4
+    SLICE_X4Y36.B6       net (fanout=2)        0.936   N38
+    SLICE_X4Y36.B        Tilo                  0.203   sq_c_anim/x<4>
+                                                       display/o_animate_rstpot
+    SLICE_X0Y50.C1       net (fanout=27)       1.905   display/o_animate_rstpot
+    SLICE_X0Y50.CLK      Tas                   0.289   sq_b_anim/x<6>
+                                                       sq_b_anim/x_8_dpot1
+                                                       sq_b_anim/x_8
     -------------------------------------------------  ---------------------------
-    Total                                      6.051ns (1.231ns logic, 4.820ns route)
-                                                       (20.3% logic, 79.7% route)
+    Total                                      5.259ns (1.159ns logic, 4.100ns route)
+                                                       (22.0% logic, 78.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     4.029ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               display/v_count_1 (FF)
-  Destination:          frog_anim/y_4 (FF)
+Slack (setup path):     5.009ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               display/h_count_0 (FF)
+  Destination:          sq_b_anim/x_8 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.920ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.638 - 0.654)
+  Data Path Delay:      5.014ns (Levels of Logic = 3)
+  Clock Path Skew:      0.058ns (0.621 - 0.563)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -125,36 +125,36 @@ Slack (setup path):     4.029ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: display/v_count_1 to frog_anim/y_4
+  Maximum Data Path at Slow Process Corner: display/h_count_0 to sq_b_anim/x_8
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y40.CQ       Tcko                  0.391   display/v_count<1>
-                                                       display/v_count_1
-    SLICE_X7Y40.D1       net (fanout=9)        0.486   display/v_count<1>
-    SLICE_X7Y40.D        Tilo                  0.259   display/v_count<1>
-                                                       display/Mmux_v_count[9]_v_count[9]_mux_28_OUT4111
-    SLICE_X11Y48.A4      net (fanout=13)       1.333   display/Mmux_v_count[9]_v_count[9]_mux_28_OUT411
-    SLICE_X11Y48.A       Tilo                  0.259   display/h_count_7_1
-                                                       display/o_animate
-    SLICE_X7Y28.B4       net (fanout=18)       2.870   animate
-    SLICE_X7Y28.CLK      Tas                   0.322   frog_anim/y<6>
-                                                       frog_anim/y_4_rstpot
-                                                       frog_anim/y_4
+    SLICE_X10Y34.AQ      Tcko                  0.408   cnt_15_1
+                                                       display/h_count_0
+    SLICE_X13Y32.D3      net (fanout=10)       1.014   display/h_count<0>
+    SLICE_X13Y32.D       Tilo                  0.259   frog_anim/y<11>
+                                                       display/GND_2_o_GND_2_o_equal_15_o<9>_SW4
+    SLICE_X4Y36.B6       net (fanout=2)        0.936   N38
+    SLICE_X4Y36.B        Tilo                  0.203   sq_c_anim/x<4>
+                                                       display/o_animate_rstpot
+    SLICE_X0Y50.C1       net (fanout=27)       1.905   display/o_animate_rstpot
+    SLICE_X0Y50.CLK      Tas                   0.289   sq_b_anim/x<6>
+                                                       sq_b_anim/x_8_dpot1
+                                                       sq_b_anim/x_8
     -------------------------------------------------  ---------------------------
-    Total                                      5.920ns (1.231ns logic, 4.689ns route)
-                                                       (20.8% logic, 79.2% route)
+    Total                                      5.014ns (1.159ns logic, 3.855ns route)
+                                                       (23.1% logic, 76.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point frog_anim/y_3 (SLICE_X7Y28.A4), 20 paths
+Paths for end point sq_b_anim/x_6 (SLICE_X0Y50.D3), 15 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     3.896ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               display/v_count_2 (FF)
-  Destination:          frog_anim/y_3 (FF)
+Slack (setup path):     4.877ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               display/h_count_1 (FF)
+  Destination:          sq_b_anim/x_6 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      6.042ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.027ns (0.638 - 0.665)
+  Data Path Delay:      5.147ns (Levels of Logic = 3)
+  Clock Path Skew:      0.059ns (0.621 - 0.562)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -165,33 +165,33 @@ Slack (setup path):     3.896ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: display/v_count_2 to frog_anim/y_3
+  Maximum Data Path at Slow Process Corner: display/h_count_1 to sq_b_anim/x_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y45.AQ       Tcko                  0.391   display/v_count_7_1
-                                                       display/v_count_2
-    SLICE_X7Y40.D4       net (fanout=7)        0.662   display/v_count<2>
-    SLICE_X7Y40.D        Tilo                  0.259   display/v_count<1>
-                                                       display/Mmux_v_count[9]_v_count[9]_mux_28_OUT4111
-    SLICE_X11Y48.A4      net (fanout=13)       1.333   display/Mmux_v_count[9]_v_count[9]_mux_28_OUT411
-    SLICE_X11Y48.A       Tilo                  0.259   display/h_count_7_1
-                                                       display/o_animate
-    SLICE_X7Y28.A4       net (fanout=18)       2.816   animate
-    SLICE_X7Y28.CLK      Tas                   0.322   frog_anim/y<6>
-                                                       frog_anim/y_3_rstpot
-                                                       frog_anim/y_3
+    SLICE_X10Y35.BQ      Tcko                  0.408   display/h_count<3>
+                                                       display/h_count_1
+    SLICE_X13Y32.D1      net (fanout=9)        1.307   display/h_count<1>
+    SLICE_X13Y32.D       Tilo                  0.259   frog_anim/y<11>
+                                                       display/GND_2_o_GND_2_o_equal_15_o<9>_SW4
+    SLICE_X4Y36.B6       net (fanout=2)        0.936   N38
+    SLICE_X4Y36.B        Tilo                  0.203   sq_c_anim/x<4>
+                                                       display/o_animate_rstpot
+    SLICE_X0Y50.D3       net (fanout=27)       1.745   display/o_animate_rstpot
+    SLICE_X0Y50.CLK      Tas                   0.289   sq_b_anim/x<6>
+                                                       sq_b_anim/x_6_dpot1
+                                                       sq_b_anim/x_6
     -------------------------------------------------  ---------------------------
-    Total                                      6.042ns (1.231ns logic, 4.811ns route)
-                                                       (20.4% logic, 79.6% route)
+    Total                                      5.147ns (1.159ns logic, 3.988ns route)
+                                                       (22.5% logic, 77.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     3.952ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               display/v_count_0 (FF)
-  Destination:          frog_anim/y_3 (FF)
+Slack (setup path):     4.925ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               display/h_count_3 (FF)
+  Destination:          sq_b_anim/x_6 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.997ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.638 - 0.654)
+  Data Path Delay:      5.099ns (Levels of Logic = 3)
+  Clock Path Skew:      0.059ns (0.621 - 0.562)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -202,33 +202,33 @@ Slack (setup path):     3.952ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: display/v_count_0 to frog_anim/y_3
+  Maximum Data Path at Slow Process Corner: display/h_count_3 to sq_b_anim/x_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y40.AQ       Tcko                  0.391   display/v_count<1>
-                                                       display/v_count_0
-    SLICE_X7Y40.D2       net (fanout=8)        0.617   display/v_count<0>
-    SLICE_X7Y40.D        Tilo                  0.259   display/v_count<1>
-                                                       display/Mmux_v_count[9]_v_count[9]_mux_28_OUT4111
-    SLICE_X11Y48.A4      net (fanout=13)       1.333   display/Mmux_v_count[9]_v_count[9]_mux_28_OUT411
-    SLICE_X11Y48.A       Tilo                  0.259   display/h_count_7_1
-                                                       display/o_animate
-    SLICE_X7Y28.A4       net (fanout=18)       2.816   animate
-    SLICE_X7Y28.CLK      Tas                   0.322   frog_anim/y<6>
-                                                       frog_anim/y_3_rstpot
-                                                       frog_anim/y_3
+    SLICE_X10Y35.DQ      Tcko                  0.408   display/h_count<3>
+                                                       display/h_count_3
+    SLICE_X13Y32.D2      net (fanout=12)       1.259   display/h_count<3>
+    SLICE_X13Y32.D       Tilo                  0.259   frog_anim/y<11>
+                                                       display/GND_2_o_GND_2_o_equal_15_o<9>_SW4
+    SLICE_X4Y36.B6       net (fanout=2)        0.936   N38
+    SLICE_X4Y36.B        Tilo                  0.203   sq_c_anim/x<4>
+                                                       display/o_animate_rstpot
+    SLICE_X0Y50.D3       net (fanout=27)       1.745   display/o_animate_rstpot
+    SLICE_X0Y50.CLK      Tas                   0.289   sq_b_anim/x<6>
+                                                       sq_b_anim/x_6_dpot1
+                                                       sq_b_anim/x_6
     -------------------------------------------------  ---------------------------
-    Total                                      5.997ns (1.231ns logic, 4.766ns route)
-                                                       (20.5% logic, 79.5% route)
+    Total                                      5.099ns (1.159ns logic, 3.940ns route)
+                                                       (22.7% logic, 77.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     4.083ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               display/v_count_1 (FF)
-  Destination:          frog_anim/y_3 (FF)
+Slack (setup path):     5.169ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               display/h_count_0 (FF)
+  Destination:          sq_b_anim/x_6 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.866ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.638 - 0.654)
+  Data Path Delay:      4.854ns (Levels of Logic = 3)
+  Clock Path Skew:      0.058ns (0.621 - 0.563)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -239,36 +239,36 @@ Slack (setup path):     4.083ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: display/v_count_1 to frog_anim/y_3
+  Maximum Data Path at Slow Process Corner: display/h_count_0 to sq_b_anim/x_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y40.CQ       Tcko                  0.391   display/v_count<1>
-                                                       display/v_count_1
-    SLICE_X7Y40.D1       net (fanout=9)        0.486   display/v_count<1>
-    SLICE_X7Y40.D        Tilo                  0.259   display/v_count<1>
-                                                       display/Mmux_v_count[9]_v_count[9]_mux_28_OUT4111
-    SLICE_X11Y48.A4      net (fanout=13)       1.333   display/Mmux_v_count[9]_v_count[9]_mux_28_OUT411
-    SLICE_X11Y48.A       Tilo                  0.259   display/h_count_7_1
-                                                       display/o_animate
-    SLICE_X7Y28.A4       net (fanout=18)       2.816   animate
-    SLICE_X7Y28.CLK      Tas                   0.322   frog_anim/y<6>
-                                                       frog_anim/y_3_rstpot
-                                                       frog_anim/y_3
+    SLICE_X10Y34.AQ      Tcko                  0.408   cnt_15_1
+                                                       display/h_count_0
+    SLICE_X13Y32.D3      net (fanout=10)       1.014   display/h_count<0>
+    SLICE_X13Y32.D       Tilo                  0.259   frog_anim/y<11>
+                                                       display/GND_2_o_GND_2_o_equal_15_o<9>_SW4
+    SLICE_X4Y36.B6       net (fanout=2)        0.936   N38
+    SLICE_X4Y36.B        Tilo                  0.203   sq_c_anim/x<4>
+                                                       display/o_animate_rstpot
+    SLICE_X0Y50.D3       net (fanout=27)       1.745   display/o_animate_rstpot
+    SLICE_X0Y50.CLK      Tas                   0.289   sq_b_anim/x<6>
+                                                       sq_b_anim/x_6_dpot1
+                                                       sq_b_anim/x_6
     -------------------------------------------------  ---------------------------
-    Total                                      5.866ns (1.231ns logic, 4.635ns route)
-                                                       (21.0% logic, 79.0% route)
+    Total                                      4.854ns (1.159ns logic, 3.695ns route)
+                                                       (23.9% logic, 76.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point frog_anim/y_6 (SLICE_X7Y28.D5), 20 paths
+Paths for end point sq_b_anim/x_4 (SLICE_X1Y47.D3), 15 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     3.960ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               display/v_count_2 (FF)
-  Destination:          frog_anim/y_6 (FF)
+Slack (setup path):     4.892ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               display/h_count_1 (FF)
+  Destination:          sq_b_anim/x_4 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.978ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.027ns (0.638 - 0.665)
+  Data Path Delay:      5.078ns (Levels of Logic = 3)
+  Clock Path Skew:      0.005ns (0.287 - 0.282)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -279,33 +279,33 @@ Slack (setup path):     3.960ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: display/v_count_2 to frog_anim/y_6
+  Maximum Data Path at Slow Process Corner: display/h_count_1 to sq_b_anim/x_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y45.AQ       Tcko                  0.391   display/v_count_7_1
-                                                       display/v_count_2
-    SLICE_X7Y40.D4       net (fanout=7)        0.662   display/v_count<2>
-    SLICE_X7Y40.D        Tilo                  0.259   display/v_count<1>
-                                                       display/Mmux_v_count[9]_v_count[9]_mux_28_OUT4111
-    SLICE_X11Y48.A4      net (fanout=13)       1.333   display/Mmux_v_count[9]_v_count[9]_mux_28_OUT411
-    SLICE_X11Y48.A       Tilo                  0.259   display/h_count_7_1
-                                                       display/o_animate
-    SLICE_X7Y28.D5       net (fanout=18)       2.752   animate
-    SLICE_X7Y28.CLK      Tas                   0.322   frog_anim/y<6>
-                                                       frog_anim/y_6_rstpot
-                                                       frog_anim/y_6
+    SLICE_X10Y35.BQ      Tcko                  0.408   display/h_count<3>
+                                                       display/h_count_1
+    SLICE_X13Y32.D1      net (fanout=9)        1.307   display/h_count<1>
+    SLICE_X13Y32.D       Tilo                  0.259   frog_anim/y<11>
+                                                       display/GND_2_o_GND_2_o_equal_15_o<9>_SW4
+    SLICE_X4Y36.B6       net (fanout=2)        0.936   N38
+    SLICE_X4Y36.B        Tilo                  0.203   sq_c_anim/x<4>
+                                                       display/o_animate_rstpot
+    SLICE_X1Y47.D3       net (fanout=27)       1.643   display/o_animate_rstpot
+    SLICE_X1Y47.CLK      Tas                   0.322   sq_b_anim/x<4>
+                                                       sq_b_anim/x_4_dpot1
+                                                       sq_b_anim/x_4
     -------------------------------------------------  ---------------------------
-    Total                                      5.978ns (1.231ns logic, 4.747ns route)
-                                                       (20.6% logic, 79.4% route)
+    Total                                      5.078ns (1.192ns logic, 3.886ns route)
+                                                       (23.5% logic, 76.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     4.016ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               display/v_count_0 (FF)
-  Destination:          frog_anim/y_6 (FF)
+Slack (setup path):     4.940ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               display/h_count_3 (FF)
+  Destination:          sq_b_anim/x_4 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.933ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.638 - 0.654)
+  Data Path Delay:      5.030ns (Levels of Logic = 3)
+  Clock Path Skew:      0.005ns (0.287 - 0.282)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -316,33 +316,33 @@ Slack (setup path):     4.016ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: display/v_count_0 to frog_anim/y_6
+  Maximum Data Path at Slow Process Corner: display/h_count_3 to sq_b_anim/x_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y40.AQ       Tcko                  0.391   display/v_count<1>
-                                                       display/v_count_0
-    SLICE_X7Y40.D2       net (fanout=8)        0.617   display/v_count<0>
-    SLICE_X7Y40.D        Tilo                  0.259   display/v_count<1>
-                                                       display/Mmux_v_count[9]_v_count[9]_mux_28_OUT4111
-    SLICE_X11Y48.A4      net (fanout=13)       1.333   display/Mmux_v_count[9]_v_count[9]_mux_28_OUT411
-    SLICE_X11Y48.A       Tilo                  0.259   display/h_count_7_1
-                                                       display/o_animate
-    SLICE_X7Y28.D5       net (fanout=18)       2.752   animate
-    SLICE_X7Y28.CLK      Tas                   0.322   frog_anim/y<6>
-                                                       frog_anim/y_6_rstpot
-                                                       frog_anim/y_6
+    SLICE_X10Y35.DQ      Tcko                  0.408   display/h_count<3>
+                                                       display/h_count_3
+    SLICE_X13Y32.D2      net (fanout=12)       1.259   display/h_count<3>
+    SLICE_X13Y32.D       Tilo                  0.259   frog_anim/y<11>
+                                                       display/GND_2_o_GND_2_o_equal_15_o<9>_SW4
+    SLICE_X4Y36.B6       net (fanout=2)        0.936   N38
+    SLICE_X4Y36.B        Tilo                  0.203   sq_c_anim/x<4>
+                                                       display/o_animate_rstpot
+    SLICE_X1Y47.D3       net (fanout=27)       1.643   display/o_animate_rstpot
+    SLICE_X1Y47.CLK      Tas                   0.322   sq_b_anim/x<4>
+                                                       sq_b_anim/x_4_dpot1
+                                                       sq_b_anim/x_4
     -------------------------------------------------  ---------------------------
-    Total                                      5.933ns (1.231ns logic, 4.702ns route)
-                                                       (20.7% logic, 79.3% route)
+    Total                                      5.030ns (1.192ns logic, 3.838ns route)
+                                                       (23.7% logic, 76.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     4.147ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               display/v_count_1 (FF)
-  Destination:          frog_anim/y_6 (FF)
+Slack (setup path):     5.184ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               display/h_count_0 (FF)
+  Destination:          sq_b_anim/x_4 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.802ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.638 - 0.654)
+  Data Path Delay:      4.785ns (Levels of Logic = 3)
+  Clock Path Skew:      0.004ns (0.287 - 0.283)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -353,112 +353,112 @@ Slack (setup path):     4.147ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: display/v_count_1 to frog_anim/y_6
+  Maximum Data Path at Slow Process Corner: display/h_count_0 to sq_b_anim/x_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y40.CQ       Tcko                  0.391   display/v_count<1>
-                                                       display/v_count_1
-    SLICE_X7Y40.D1       net (fanout=9)        0.486   display/v_count<1>
-    SLICE_X7Y40.D        Tilo                  0.259   display/v_count<1>
-                                                       display/Mmux_v_count[9]_v_count[9]_mux_28_OUT4111
-    SLICE_X11Y48.A4      net (fanout=13)       1.333   display/Mmux_v_count[9]_v_count[9]_mux_28_OUT411
-    SLICE_X11Y48.A       Tilo                  0.259   display/h_count_7_1
-                                                       display/o_animate
-    SLICE_X7Y28.D5       net (fanout=18)       2.752   animate
-    SLICE_X7Y28.CLK      Tas                   0.322   frog_anim/y<6>
-                                                       frog_anim/y_6_rstpot
-                                                       frog_anim/y_6
+    SLICE_X10Y34.AQ      Tcko                  0.408   cnt_15_1
+                                                       display/h_count_0
+    SLICE_X13Y32.D3      net (fanout=10)       1.014   display/h_count<0>
+    SLICE_X13Y32.D       Tilo                  0.259   frog_anim/y<11>
+                                                       display/GND_2_o_GND_2_o_equal_15_o<9>_SW4
+    SLICE_X4Y36.B6       net (fanout=2)        0.936   N38
+    SLICE_X4Y36.B        Tilo                  0.203   sq_c_anim/x<4>
+                                                       display/o_animate_rstpot
+    SLICE_X1Y47.D3       net (fanout=27)       1.643   display/o_animate_rstpot
+    SLICE_X1Y47.CLK      Tas                   0.322   sq_b_anim/x<4>
+                                                       sq_b_anim/x_4_dpot1
+                                                       sq_b_anim/x_4
     -------------------------------------------------  ---------------------------
-    Total                                      5.802ns (1.231ns logic, 4.571ns route)
-                                                       (21.2% logic, 78.8% route)
+    Total                                      4.785ns (1.192ns logic, 3.593ns route)
+                                                       (24.9% logic, 75.1% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point cnt_13 (SLICE_X7Y29.A6), 1 path
+Paths for end point sq_b_anim/x_5 (SLICE_X2Y47.A6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.436ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               cnt_13 (FF)
-  Destination:          cnt_13 (FF)
+Slack (hold path):      0.430ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               sq_b_anim/x_5 (FF)
+  Destination:          sq_b_anim/x_5 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.436ns (Levels of Logic = 1)
+  Data Path Delay:      0.430ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 10.000ns
   Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: cnt_13 to cnt_13
+  Minimum Data Path at Fast Process Corner: sq_b_anim/x_5 to sq_b_anim/x_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y29.AQ       Tcko                  0.198   frog_anim/y<11>
-                                                       cnt_13
-    SLICE_X7Y29.A6       net (fanout=2)        0.023   cnt_13
-    SLICE_X7Y29.CLK      Tah         (-Th)    -0.215   frog_anim/y<11>
-                                                       Madd_n0085_xor<14>11_INV_0
-                                                       cnt_13
+    SLICE_X2Y47.AQ       Tcko                  0.200   sq_b_anim/x<9>
+                                                       sq_b_anim/x_5
+    SLICE_X2Y47.A6       net (fanout=13)       0.040   sq_b_anim/x<5>
+    SLICE_X2Y47.CLK      Tah         (-Th)    -0.190   sq_b_anim/x<9>
+                                                       sq_b_anim/x_5_dpot1
+                                                       sq_b_anim/x_5
     -------------------------------------------------  ---------------------------
-    Total                                      0.436ns (0.413ns logic, 0.023ns route)
-                                                       (94.7% logic, 5.3% route)
+    Total                                      0.430ns (0.390ns logic, 0.040ns route)
+                                                       (90.7% logic, 9.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point frog_anim/y_3 (SLICE_X7Y28.A6), 1 path
+Paths for end point display/v_count_2 (SLICE_X14Y35.D6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.444ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               frog_anim/y_3 (FF)
-  Destination:          frog_anim/y_3 (FF)
+Slack (hold path):      0.432ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               display/v_count_2 (FF)
+  Destination:          display/v_count_2 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.444ns (Levels of Logic = 1)
+  Data Path Delay:      0.432ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 10.000ns
   Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: frog_anim/y_3 to frog_anim/y_3
+  Minimum Data Path at Fast Process Corner: display/v_count_2 to display/v_count_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y28.AQ       Tcko                  0.198   frog_anim/y<6>
-                                                       frog_anim/y_3
-    SLICE_X7Y28.A6       net (fanout=5)        0.031   frog_anim/y<3>
-    SLICE_X7Y28.CLK      Tah         (-Th)    -0.215   frog_anim/y<6>
-                                                       frog_anim/y_3_rstpot
-                                                       frog_anim/y_3
+    SLICE_X14Y35.DQ      Tcko                  0.200   display/v_count<2>
+                                                       display/v_count_2
+    SLICE_X14Y35.D6      net (fanout=7)        0.042   display/v_count<2>
+    SLICE_X14Y35.CLK     Tah         (-Th)    -0.190   display/v_count<2>
+                                                       display/Mmux_v_count[9]_v_count[9]_mux_28_OUT31
+                                                       display/v_count_2
     -------------------------------------------------  ---------------------------
-    Total                                      0.444ns (0.413ns logic, 0.031ns route)
-                                                       (93.0% logic, 7.0% route)
+    Total                                      0.432ns (0.390ns logic, 0.042ns route)
+                                                       (90.3% logic, 9.7% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point frog_anim/y_7 (SLICE_X7Y30.A6), 1 path
+Paths for end point frog_anim/x_1 (SLICE_X13Y31.A6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.444ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               frog_anim/y_7 (FF)
-  Destination:          frog_anim/y_7 (FF)
+Slack (hold path):      0.439ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               frog_anim/x_1 (FF)
+  Destination:          frog_anim/x_1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.444ns (Levels of Logic = 1)
+  Data Path Delay:      0.439ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         CLK_BUFGP rising at 10.000ns
   Destination Clock:    CLK_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: frog_anim/y_7 to frog_anim/y_7
+  Minimum Data Path at Fast Process Corner: frog_anim/x_1 to frog_anim/x_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y30.AQ       Tcko                  0.198   frog_anim/y<10>
-                                                       frog_anim/y_7
-    SLICE_X7Y30.A6       net (fanout=5)        0.031   frog_anim/y<7>
-    SLICE_X7Y30.CLK      Tah         (-Th)    -0.215   frog_anim/y<10>
-                                                       frog_anim/y_7_rstpot
-                                                       frog_anim/y_7
+    SLICE_X13Y31.AQ      Tcko                  0.198   frog_anim/x<1>
+                                                       frog_anim/x_1
+    SLICE_X13Y31.A6      net (fanout=5)        0.026   frog_anim/x<1>
+    SLICE_X13Y31.CLK     Tah         (-Th)    -0.215   frog_anim/x<1>
+                                                       frog_anim/x_1_dpot1
+                                                       frog_anim/x_1
     -------------------------------------------------  ---------------------------
-    Total                                      0.444ns (0.413ns logic, 0.031ns route)
-                                                       (93.0% logic, 7.0% route)
+    Total                                      0.439ns (0.413ns logic, 0.026ns route)
+                                                       (94.1% logic, 5.9% route)
 
 --------------------------------------------------------------------------------
 
@@ -477,7 +477,7 @@ Slack: 9.570ns (period - min period limit)
   Min period limit: 0.430ns (2325.581MHz) (Tcp)
   Physical resource: display/h_count<3>/CLK
   Logical resource: display/h_count_1/CK
-  Location pin: SLICE_X10Y47.CLK
+  Location pin: SLICE_X10Y35.CLK
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
 Slack: 9.570ns (period - min period limit)
@@ -485,7 +485,7 @@ Slack: 9.570ns (period - min period limit)
   Min period limit: 0.430ns (2325.581MHz) (Tcp)
   Physical resource: display/h_count<3>/CLK
   Logical resource: display/h_count_2/CK
-  Location pin: SLICE_X10Y47.CLK
+  Location pin: SLICE_X10Y35.CLK
   Clock network: CLK_BUFGP
 --------------------------------------------------------------------------------
 
@@ -502,7 +502,7 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    6.158|         |         |         |
+CLK            |    5.283|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -511,16 +511,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 3387 paths, 0 nets, and 723 connections
+Constraints cover 3465 paths, 0 nets, and 714 connections
 
 Design statistics:
-   Minimum period:   6.158ns{1}   (Maximum frequency: 162.390MHz)
+   Minimum period:   5.283ns{1}   (Maximum frequency: 189.286MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu Nov 14 18:01:13 2019 
+Analysis completed Thu Nov 14 18:07:54 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:

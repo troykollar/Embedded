@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Reading design: top.prj
@@ -108,8 +108,6 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/troy/Embedded/Finalproj1/debounce.v" into library work
-Parsing module <debounce>.
 Analyzing Verilog file "/home/troy/Embedded/Finalproj1/vga640x480.v" into library work
 Parsing module <vga640x480>.
 Analyzing Verilog file "/home/troy/Embedded/Finalproj1/square.v" into library work
@@ -161,12 +159,10 @@ WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 37: Resul
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 38: Result of 13-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 39: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 40: Result of 13-bit expression is truncated to fit in 12-bit target.
-
-Elaborating module <debounce>.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 74: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 75: Result of 13-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 78: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 79: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 82: Result of 32-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 83: Result of 13-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 101: Result of 32-bit expression is truncated to fit in 1-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 103: Result of 32-bit expression is truncated to fit in 1-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 105: Result of 32-bit expression is truncated to fit in 1-bit target.
@@ -317,39 +313,27 @@ Synthesizing Unit <frog>.
         IY_DIR = 1
         D_WIDTH = 640
         D_HEIGHT = 480
+WARNING:Xst:647 - Input <i_rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 12-bit register for signal <y>.
     Found 12-bit register for signal <x>.
     Found 12-bit adder for signal <o_x2> created at line 38.
     Found 12-bit adder for signal <o_y2> created at line 40.
-    Found 12-bit adder for signal <y[11]_GND_6_o_add_8_OUT> created at line 79.
-    Found 12-bit adder for signal <x[11]_GND_6_o_add_12_OUT> created at line 83.
+    Found 12-bit adder for signal <y[11]_GND_6_o_add_12_OUT> created at line 75.
+    Found 12-bit adder for signal <x[11]_GND_6_o_add_16_OUT> created at line 79.
     Found 12-bit subtractor for signal <o_x1> created at line 26.
     Found 12-bit subtractor for signal <o_y1> created at line 28.
-    Found 12-bit subtractor for signal <GND_6_o_GND_6_o_sub_8_OUT<11:0>> created at line 78.
-    Found 12-bit subtractor for signal <GND_6_o_GND_6_o_sub_12_OUT<11:0>> created at line 82.
+    Found 12-bit subtractor for signal <GND_6_o_GND_6_o_sub_12_OUT<11:0>> created at line 74.
+    Found 12-bit subtractor for signal <GND_6_o_GND_6_o_sub_16_OUT<11:0>> created at line 78.
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
 Unit <frog> synthesized.
 
-Synthesizing Unit <debounce>.
-    Related source file is "/home/troy/Embedded/Finalproj1/debounce.v".
-        DEBOUNCE_DELAY = 32'b00000000000000011110100001001000
-WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1-bit register for signal <button_sync>.
-    Found 32-bit register for signal <button_count>.
-    Found 1-bit register for signal <button_reg>.
-    Found 32-bit adder for signal <button_count[31]_GND_7_o_add_5_OUT> created at line 18.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  34 D-type flip-flop(s).
-Unit <debounce> synthesized.
-
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 30
+# Adders/Subtractors                                   : 26
  10-bit adder                                          : 2
  11-bit subtractor                                     : 1
  12-bit adder                                          : 8
@@ -358,13 +342,11 @@ Macro Statistics
  13-bit adder                                          : 3
  13-bit subtractor                                     : 1
  17-bit adder                                          : 1
- 32-bit adder                                          : 4
-# Registers                                            : 24
- 1-bit register                                        : 9
+# Registers                                            : 12
+ 1-bit register                                        : 1
  10-bit register                                       : 2
  12-bit register                                       : 8
  17-bit register                                       : 1
- 32-bit register                                       : 4
 # Comparators                                          : 29
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 3
@@ -419,10 +401,6 @@ WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 0 in block <sq_b_anim>
 WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 1 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
 
-Synthesizing (advanced) Unit <debounce>.
-The following registers are absorbed into counter <button_count>: 1 register on signal <button_count>.
-Unit <debounce> synthesized (advanced).
-
 Synthesizing (advanced) Unit <frog>.
 The following registers are absorbed into accumulator <y>: 1 register on signal <y>.
 The following registers are absorbed into accumulator <x>: 1 register on signal <x>.
@@ -444,13 +422,12 @@ Macro Statistics
  13-bit adder                                          : 1
  13-bit subtractor                                     : 1
  17-bit adder                                          : 1
-# Counters                                             : 5
+# Counters                                             : 1
  10-bit up counter                                     : 1
- 32-bit up counter                                     : 4
 # Accumulators                                         : 2
  12-bit updown accumulator                             : 2
-# Registers                                            : 108
- Flip-Flops                                            : 108
+# Registers                                            : 100
+ Flip-Flops                                            : 100
 # Comparators                                          : 29
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 3
@@ -529,53 +506,21 @@ Optimizing unit <square_2> ...
 Optimizing unit <square_3> ...
 
 Optimizing unit <frog> ...
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_21> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_20> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_19> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_18> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_17> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_31> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_30> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_29> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_28> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_27> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_26> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_25> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_24> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_23> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_22> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_21> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_20> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_19> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_18> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/right_btn/button_count_17> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_22> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_23> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_24> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_25> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_26> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_27> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_28> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_29> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_30> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <frog_anim/down_btn/button_count_31> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sq_a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_a_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/x_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/x_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/y_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/y_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/x_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <sq_a_anim/x_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <sq_b_anim/x_0> <sq_c_anim/x_0> 
 INFO:Xst:2261 - The FF/Latch <sq_a_anim/x_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <sq_c_anim/x_1> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 11.
-FlipFlop cnt_15 has been replicated 3 time(s)
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 9.
+FlipFlop cnt_15 has been replicated 1 time(s)
 FlipFlop display/h_count_7 has been replicated 1 time(s)
 FlipFlop display/v_count_5 has been replicated 1 time(s)
 FlipFlop display/v_count_6 has been replicated 1 time(s)
@@ -589,8 +534,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 185
- Flip-Flops                                            : 185
+# Registers                                            : 79
+ Flip-Flops                                            : 79
 
 =========================================================================
 
@@ -613,26 +558,25 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1045
+# BELS                             : 729
 #      GND                         : 1
-#      INV                         : 50
-#      LUT1                        : 142
-#      LUT2                        : 26
-#      LUT3                        : 27
-#      LUT4                        : 144
-#      LUT5                        : 57
-#      LUT6                        : 132
-#      MUXCY                       : 270
+#      INV                         : 42
+#      LUT1                        : 50
+#      LUT2                        : 45
+#      LUT3                        : 24
+#      LUT4                        : 121
+#      LUT5                        : 50
+#      LUT6                        : 112
+#      MUXCY                       : 180
 #      VCC                         : 1
-#      XORCY                       : 195
-# FlipFlops/Latches                : 185
-#      FD                          : 34
+#      XORCY                       : 103
+# FlipFlops/Latches                : 79
+#      FD                          : 25
 #      FDE                         : 2
-#      FDR                         : 4
-#      FDRE                        : 137
+#      FDR                         : 1
+#      FDRE                        : 43
 #      FDSE                        : 8
-# Clock Buffers                    : 2
-#      BUFG                        : 1
+# Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 15
 #      IBUF                        : 5
@@ -645,23 +589,23 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             185  out of  11440     1%  
- Number of Slice LUTs:                  578  out of   5720    10%  
-    Number used as Logic:               578  out of   5720    10%  
+ Number of Slice Registers:              79  out of  11440     0%  
+ Number of Slice LUTs:                  444  out of   5720     7%  
+    Number used as Logic:               444  out of   5720     7%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    586
-   Number with an unused Flip Flop:     401  out of    586    68%  
-   Number with an unused LUT:             8  out of    586     1%  
-   Number of fully used LUT-FF pairs:   177  out of    586    30%  
-   Number of unique control sets:        15
+ Number of LUT Flip Flop pairs used:    450
+   Number with an unused Flip Flop:     371  out of    450    82%  
+   Number with an unused LUT:             6  out of    450     1%  
+   Number of fully used LUT-FF pairs:    73  out of    450    16%  
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          16
  Number of bonded IOBs:                  16  out of    200     8%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -685,7 +629,6 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 CLK                                | BUFGP                  | 79    |
-cnt_15                             | BUFG                   | 106   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -697,7 +640,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 4.585ns (Maximum Frequency: 218.122MHz)
-   Minimum input arrival time before clock: 3.991ns
+   Minimum input arrival time before clock: 4.576ns
    Maximum output required time after clock: 9.183ns
    Maximum combinational path delay: No path found
 
@@ -708,7 +651,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
   Clock period: 4.585ns (frequency: 218.122MHz)
-  Total number of paths / destination ports: 3387 / 175
+  Total number of paths / destination ports: 3465 / 184
 -------------------------------------------------------------------------
 Delay:               4.585ns (Levels of Logic = 4)
   Source:            sq_a_anim/x_9 (FF)
@@ -731,71 +674,41 @@ Delay:               4.585ns (Levels of Logic = 4)
                                        (29.8% logic, 70.2% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cnt_15'
-  Clock period: 4.409ns (frequency: 226.825MHz)
-  Total number of paths / destination ports: 4090 / 298
--------------------------------------------------------------------------
-Delay:               4.409ns (Levels of Logic = 2)
-  Source:            frog_anim/up_btn/button_count_17 (FF)
-  Destination:       frog_anim/up_btn/button_count_31 (FF)
-  Source Clock:      cnt_15 rising
-  Destination Clock: cnt_15 rising
-
-  Data Path: frog_anim/up_btn/button_count_17 to frog_anim/up_btn/button_count_31
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDRE:C->Q             2   0.447   0.981  frog_anim/up_btn/button_count_17 (frog_anim/up_btn/button_count_17)
-     LUT6:I0->O            2   0.203   0.961  frog_anim/up_btn/button_click<31>14 (frog_anim/up_btn/button_click<31>14)
-     LUT6:I1->O           32   0.203   1.291  frog_anim/up_btn/button_done_inv1 (frog_anim/up_btn/button_done_inv)
-     FDRE:CE                   0.322          frog_anim/up_btn/button_count_0
-    ----------------------------------------
-    Total                      4.409ns (1.175ns logic, 3.234ns route)
-                                       (26.7% logic, 73.3% route)
-
-=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 53 / 53
+  Total number of paths / destination ports: 273 / 75
 -------------------------------------------------------------------------
-Offset:              3.991ns (Levels of Logic = 2)
-  Source:            RST_BTN (PAD)
-  Destination:       sq_a_anim/x_9 (FF)
+Offset:              4.576ns (Levels of Logic = 15)
+  Source:            up_btn (PAD)
+  Destination:       frog_anim/y_11 (FF)
   Destination Clock: CLK rising
 
-  Data Path: RST_BTN to sq_a_anim/x_9
+  Data Path: up_btn to frog_anim/y_11
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             6   1.222   1.109  RST_BTN_IBUF (RST_BTN_IBUF)
-     LUT6:I0->O           17   0.203   1.027  sq_a_anim/_n00501 (sq_a_anim/_n0050)
-     FDRE:R                    0.430          sq_a_anim/x_0
+     IBUF:I->O            23   1.222   1.153  up_btn_IBUF (up_btn_IBUF)
+     INV:I->O              2   0.206   0.616  frog_anim/i_up_btn_inv2_INV_0 (frog_anim/Maccum_y_lut<0>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<0> (frog_anim/Maccum_y_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<1> (frog_anim/Maccum_y_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<2> (frog_anim/Maccum_y_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<3> (frog_anim/Maccum_y_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<4> (frog_anim/Maccum_y_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<5> (frog_anim/Maccum_y_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<6> (frog_anim/Maccum_y_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<7> (frog_anim/Maccum_y_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<8> (frog_anim/Maccum_y_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<9> (frog_anim/Maccum_y_cy<9>)
+     MUXCY:CI->O           0   0.019   0.000  frog_anim/Maccum_y_cy<10> (frog_anim/Maccum_y_cy<10>)
+     XORCY:CI->O           1   0.180   0.684  frog_anim/Maccum_y_xor<11> (frog_anim/Result<11>1)
+     LUT6:I4->O            1   0.203   0.000  frog_anim/y_11_rstpot (frog_anim/y_11_rstpot)
+     FD:D                      0.102          frog_anim/y_11
     ----------------------------------------
-    Total                      3.991ns (1.855ns logic, 2.136ns route)
-                                       (46.5% logic, 53.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cnt_15'
-  Total number of paths / destination ports: 4 / 4
--------------------------------------------------------------------------
-Offset:              2.688ns (Levels of Logic = 2)
-  Source:            up_btn (PAD)
-  Destination:       frog_anim/up_btn/button_reg (FF)
-  Destination Clock: cnt_15 rising
-
-  Data Path: up_btn to frog_anim/up_btn/button_reg
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  up_btn_IBUF (up_btn_IBUF)
-     INV:I->O              1   0.206   0.579  frog_anim/i_up_btn_INV_32_o1_INV_0 (frog_anim/i_up_btn_INV_32_o)
-     FD:D                      0.102          frog_anim/up_btn/button_reg
-    ----------------------------------------
-    Total                      2.688ns (1.530ns logic, 1.158ns route)
-                                       (56.9% logic, 43.1% route)
+    Total                      4.576ns (2.122ns logic, 2.454ns route)
+                                       (46.4% logic, 53.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 6405 / 10
+  Total number of paths / destination ports: 6699 / 10
 -------------------------------------------------------------------------
 Offset:              9.183ns (Levels of Logic = 8)
   Source:            sq_c_anim/x_4 (FF)
@@ -812,7 +725,7 @@ Offset:              9.183ns (Levels of Logic = 8)
      LUT5:I0->O            0   0.203   0.000  Mcompar_sq_c_x1[11]_GND_1_o_LessThan_14_o_lutdi4 (Mcompar_sq_c_x1[11]_GND_1_o_LessThan_14_o_lutdi4)
      MUXCY:DI->O           1   0.145   0.000  Mcompar_sq_c_x1[11]_GND_1_o_LessThan_14_o_cy<4> (Mcompar_sq_c_x1[11]_GND_1_o_LessThan_14_o_cy<4>)
      MUXCY:CI->O           1   0.213   0.580  Mcompar_sq_c_x1[11]_GND_1_o_LessThan_14_o_cy<5> (Mcompar_sq_c_x1[11]_GND_1_o_LessThan_14_o_cy<5>)
-     LUT5:I4->O            1   0.205   0.580  VGA_B<2>_SW1 (N65)
+     LUT5:I4->O            1   0.205   0.580  VGA_B<2>_SW1 (N61)
      LUT6:I5->O            3   0.205   0.650  VGA_B<2> (VGA_B_0_OBUF)
      OBUF:I->O                 2.571          VGA_B_2_OBUF (VGA_B<2>)
     ----------------------------------------
@@ -830,29 +743,20 @@ Clock to Setup on destination clock CLK
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 CLK            |    4.585|         |         |         |
-cnt_15         |    6.134|         |         |         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock cnt_15
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-cnt_15         |    4.409|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 11.99 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 11.28 secs
  
 --> 
 
 
-Total memory usage is 396556 kilobytes
+Total memory usage is 396408 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  164 (   0 filtered)
+Number of warnings :  132 (   0 filtered)
 Number of infos    :    5 (   0 filtered)
 

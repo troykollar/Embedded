@@ -1,4 +1,3 @@
-verilog work "../debounce.v"
 verilog work "../vga640x480.v"
 verilog work "../square.v"
 verilog work "../frog.v"
