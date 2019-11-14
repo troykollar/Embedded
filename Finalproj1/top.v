@@ -9,6 +9,8 @@ module top(
     input wire RST_BTN,         // reset button
 	 input wire up_btn,			  // up button
 	 input wire down_btn, 		  // down button
+	 input wire right_btn,		  // right button
+	 input wire left_btn, 		  // left button
     output wire VGA_HS_O,       // horizontal sync output
     output wire VGA_VS_O,       // vertical sync output
     output wire [1:0] VGA_R,    // 4-bit VGA red output
@@ -91,7 +93,9 @@ module top(
 			.o_y1(frog_y1),
 			.o_y2(frog_y2),
 			.i_up_btn(up_btn),
-			.i_down_btn(down_btn)
+			.i_down_btn(down_btn),
+			.i_right_btn(right_btn),
+			.i_left_btn(left_btn)
 		);
 
     assign sq_a = ((x > sq_a_x1) & (y > sq_a_y1) &

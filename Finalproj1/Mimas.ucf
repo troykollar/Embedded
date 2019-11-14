@@ -101,8 +101,8 @@ TIMESPEC TS_GCLK1 = PERIOD "GCLK1" 100 MHz HIGH 50%;
 # Buttons
 ############################################################################
 
-    #NET "buttons[1]"         LOC = M18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW1
-    #NET "buttons[2]"         LOC = L18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW2
+    NET "left_btn"         LOC = M18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW1
+    NET "right_btn"         LOC = L18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW2
     NET "down_btn"         LOC = M16 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW3
     NET "up_btn"         LOC = L17 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW4
     NET "RST_BTN"         LOC = K17 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW5
