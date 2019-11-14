@@ -51,8 +51,8 @@ module square #(
 
             if (x <= H_WIDTH + 1)  // edge of square is at left of screen
                 x_dir <= 1;  // change direction to right
-            if (x >= (D_WIDTH - H_WIDTH - 1))  // edge of square at right
-                x_dir <= 0;  // change direction to left          
+            if (x >= (D_WIDTH + H_WIDTH - 1))  // edge of square goes off right of screen
+                x <= 0;  // reset to left of screen        
             if (y <= H_HEIGHT + 1)  // edge of square at top of screen
                 y_dir <= 1;  // change direction to down
             if (y >= (D_HEIGHT - H_HEIGHT - 1))  // edge of square at bottom
