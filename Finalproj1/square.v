@@ -5,7 +5,8 @@
 `default_nettype none
 
 module square #(
-    H_SIZE=80,      // half square width (for ease of co-ordinate calculations)
+    H_WIDTH=20,      // half obstacle width (for ease of co-ordinate calculations)
+	 H_HEIGHT = 20,		// half obstacle height
     IX=320,         // initial horizontal position of square centre
     IY=240,         // initial vertical position of square centre
     IX_DIR=1,       // initial horizontal direction: 1 is right, 0 is left
@@ -29,10 +30,10 @@ module square #(
     reg x_dir = IX_DIR;  // horizontal animation direction
     reg y_dir = IY_DIR;  // vertical animation direction
 
-    assign o_x1 = x - H_SIZE;  // left: centre minus half horizontal size
-    assign o_x2 = x + H_SIZE;  // right
-    assign o_y1 = y - H_SIZE;  // top
-    assign o_y2 = y + H_SIZE;  // bottom
+    assign o_x1 = x - H_WIDTH;  // left: centre minus half horizontal size
+    assign o_x2 = x + H_WIDTH;  // right
+    assign o_y1 = y - H_HEIGHT;  // top
+    assign o_y2 = y + H_HEIGHT;  // bottom
 
     always @ (posedge i_clk)
     begin
@@ -48,13 +49,13 @@ module square #(
             x <= (x_dir) ? x + 1 : x - 1;  // move left if positive x_dir
             y <= (y_dir) ? y + 1 : y - 1;  // move down if positive y_dir
 
-            if (x <= H_SIZE + 1)  // edge of square is at left of screen
+            if (x <= H_WIDTH + 1)  // edge of square is at left of screen
                 x_dir <= 1;  // change direction to right
-            if (x >= (D_WIDTH - H_SIZE - 1))  // edge of square at right
+            if (x >= (D_WIDTH - H_WIDTH - 1))  // edge of square at right
                 x_dir <= 0;  // change direction to left          
-            if (y <= H_SIZE + 1)  // edge of square at top of screen
+            if (y <= H_HEIGHT + 1)  // edge of square at top of screen
                 y_dir <= 1;  // change direction to down
-            if (y >= (D_HEIGHT - H_SIZE - 1))  // edge of square at bottom
+            if (y >= (D_HEIGHT - H_HEIGHT - 1))  // edge of square at bottom
                 y_dir <= 0;  // change direction to up              
         end
     end
