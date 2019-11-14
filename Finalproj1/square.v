@@ -46,8 +46,8 @@ module square #(
         end
         if (i_animate && i_ani_stb)
         begin
-            x <= (x_dir) ? x + 1 : x - 1;  // move left if positive x_dir
-            y <= (y_dir) ? y + 1 : y - 1;  // move down if positive y_dir
+            x <= (x_dir) ? x + 1 : x - 1;  // move right if positive x_dir
+            //y <= (y_dir) ? y + 1 : y - 1;  // move down if positive y_dir
 
             if (x <= H_WIDTH + 1)  // edge of square is at left of screen
                 x_dir <= 1;  // change direction to right
