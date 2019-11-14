@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Nov 14 17:34:14 2019
+// Written by: Map P.20131013 on Thu Nov 14 17:54:30 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -20,35 +20,138 @@ COMP "right_btn" LOCATE = SITE "L18" LEVEL 1;
 COMP "left_btn" LOCATE = SITE "M18" LEVEL 1;
 COMP "down_btn" LOCATE = SITE "M16" LEVEL 1;
 COMP "up_btn" LOCATE = SITE "L17" LEVEL 1;
-TIMEGRP GCLK1 = BEL "cnt_13" BEL "cnt_14" BEL "cnt_15" BEL "display/h_count_9"
-        BEL "display/h_count_8" BEL "display/h_count_7" BEL
-        "display/h_count_6" BEL "display/h_count_5" BEL "display/h_count_4"
-        BEL "display/h_count_3" BEL "display/h_count_2" BEL
-        "display/h_count_1" BEL "display/v_count_9" BEL "display/v_count_8"
-        BEL "display/v_count_7" BEL "display/v_count_6" BEL
-        "display/v_count_5" BEL "display/v_count_4" BEL "display/v_count_3"
-        BEL "display/v_count_2" BEL "display/v_count_1" BEL "sq_a_anim/x_9"
-        BEL "sq_a_anim/x_8" BEL "sq_a_anim/x_7" BEL "sq_a_anim/x_6" BEL
-        "sq_a_anim/x_5" BEL "sq_a_anim/x_4" BEL "sq_a_anim/x_3" BEL
-        "sq_a_anim/x_2" BEL "sq_a_anim/x_1" BEL "sq_a_anim/x_0" BEL
-        "sq_b_anim/x_9" BEL "sq_b_anim/x_8" BEL "sq_b_anim/x_7" BEL
-        "sq_b_anim/x_6" BEL "sq_b_anim/x_5" BEL "sq_b_anim/x_4" BEL
-        "sq_b_anim/x_3" BEL "sq_b_anim/x_2" BEL "sq_b_anim/x_1" BEL
-        "sq_c_anim/x_9" BEL "sq_c_anim/x_8" BEL "sq_c_anim/x_7" BEL
-        "sq_c_anim/x_6" BEL "sq_c_anim/x_5" BEL "sq_c_anim/x_4" BEL
-        "sq_c_anim/x_3" BEL "sq_c_anim/x_2" BEL "frog_anim/y_2" BEL
+TIMEGRP GCLK1 = BEL "cnt_13" BEL "cnt_14" BEL "cnt_15" BEL "display/v_count_9"
+        BEL "display/v_count_8" BEL "display/v_count_7" BEL
+        "display/v_count_6" BEL "display/v_count_5" BEL "display/v_count_4"
+        BEL "display/v_count_3" BEL "display/v_count_2" BEL
+        "display/v_count_1" BEL "display/v_count_0" BEL "frog_anim/y_11" BEL
+        "frog_anim/y_10" BEL "frog_anim/y_9" BEL "frog_anim/y_8" BEL
+        "frog_anim/y_7" BEL "frog_anim/y_6" BEL "frog_anim/y_5" BEL
+        "frog_anim/y_4" BEL "frog_anim/y_3" BEL "frog_anim/y_2" BEL
         "frog_anim/x_11" BEL "frog_anim/x_10" BEL "frog_anim/x_9" BEL
         "frog_anim/x_8" BEL "frog_anim/x_7" BEL "frog_anim/x_6" BEL
         "frog_anim/x_5" BEL "frog_anim/x_4" BEL "frog_anim/x_3" BEL
-        "frog_anim/up" BEL "frog_anim/right" BEL "frog_anim/down" BEL
-        "frog_anim/left" BEL "display/v_count_0" BEL "frog_anim/y_11" BEL
-        "frog_anim/y_10" BEL "frog_anim/y_9" BEL "frog_anim/y_8" BEL
-        "frog_anim/y_7" BEL "frog_anim/y_6" BEL "frog_anim/y_5" BEL
-        "frog_anim/y_4" BEL "frog_anim/y_3" BEL "frog_anim/x_2" BEL
-        "display/h_count_0" BEL "display/v_count_9_1" BEL
-        "display/v_count_8_1" BEL "display/v_count_6_1" BEL "cnt_15_1" BEL
-        "display/v_count_7_1" BEL "display/v_count_5_1" BEL
-        "display/h_count_7_1" BEL "CLK_BUFGP/BUFG";
+        "frog_anim/x_2" BEL "frog_anim/up_btn/button_count_31" BEL
+        "frog_anim/up_btn/button_count_30" BEL
+        "frog_anim/up_btn/button_count_29" BEL
+        "frog_anim/up_btn/button_count_28" BEL
+        "frog_anim/up_btn/button_count_27" BEL
+        "frog_anim/up_btn/button_count_26" BEL
+        "frog_anim/up_btn/button_count_25" BEL
+        "frog_anim/up_btn/button_count_24" BEL
+        "frog_anim/up_btn/button_count_23" BEL
+        "frog_anim/up_btn/button_count_22" BEL
+        "frog_anim/up_btn/button_count_21" BEL
+        "frog_anim/up_btn/button_count_20" BEL
+        "frog_anim/up_btn/button_count_19" BEL
+        "frog_anim/up_btn/button_count_18" BEL
+        "frog_anim/up_btn/button_count_17" BEL
+        "frog_anim/up_btn/button_count_16" BEL
+        "frog_anim/up_btn/button_count_15" BEL
+        "frog_anim/up_btn/button_count_14" BEL
+        "frog_anim/up_btn/button_count_13" BEL
+        "frog_anim/up_btn/button_count_12" BEL
+        "frog_anim/up_btn/button_count_11" BEL
+        "frog_anim/up_btn/button_count_10" BEL
+        "frog_anim/up_btn/button_count_9" BEL
+        "frog_anim/up_btn/button_count_8" BEL
+        "frog_anim/up_btn/button_count_7" BEL
+        "frog_anim/up_btn/button_count_6" BEL
+        "frog_anim/up_btn/button_count_5" BEL
+        "frog_anim/up_btn/button_count_4" BEL
+        "frog_anim/up_btn/button_count_3" BEL
+        "frog_anim/up_btn/button_count_2" BEL
+        "frog_anim/up_btn/button_count_1" BEL
+        "frog_anim/up_btn/button_count_0" BEL
+        "frog_anim/down_btn/button_count_18" BEL
+        "frog_anim/down_btn/button_count_17" BEL
+        "frog_anim/down_btn/button_count_16" BEL
+        "frog_anim/down_btn/button_count_15" BEL
+        "frog_anim/down_btn/button_count_14" BEL
+        "frog_anim/down_btn/button_count_13" BEL
+        "frog_anim/down_btn/button_count_12" BEL
+        "frog_anim/down_btn/button_count_11" BEL
+        "frog_anim/down_btn/button_count_10" BEL
+        "frog_anim/down_btn/button_count_9" BEL
+        "frog_anim/down_btn/button_count_8" BEL
+        "frog_anim/down_btn/button_count_7" BEL
+        "frog_anim/down_btn/button_count_6" BEL
+        "frog_anim/down_btn/button_count_5" BEL
+        "frog_anim/down_btn/button_count_4" BEL
+        "frog_anim/down_btn/button_count_3" BEL
+        "frog_anim/down_btn/button_count_2" BEL
+        "frog_anim/down_btn/button_count_1" BEL
+        "frog_anim/down_btn/button_count_0" BEL
+        "frog_anim/right_btn/button_count_18" BEL
+        "frog_anim/right_btn/button_count_17" BEL
+        "frog_anim/right_btn/button_count_16" BEL
+        "frog_anim/right_btn/button_count_15" BEL
+        "frog_anim/right_btn/button_count_14" BEL
+        "frog_anim/right_btn/button_count_13" BEL
+        "frog_anim/right_btn/button_count_12" BEL
+        "frog_anim/right_btn/button_count_11" BEL
+        "frog_anim/right_btn/button_count_10" BEL
+        "frog_anim/right_btn/button_count_9" BEL
+        "frog_anim/right_btn/button_count_8" BEL
+        "frog_anim/right_btn/button_count_7" BEL
+        "frog_anim/right_btn/button_count_6" BEL
+        "frog_anim/right_btn/button_count_5" BEL
+        "frog_anim/right_btn/button_count_4" BEL
+        "frog_anim/right_btn/button_count_3" BEL
+        "frog_anim/right_btn/button_count_2" BEL
+        "frog_anim/right_btn/button_count_1" BEL
+        "frog_anim/right_btn/button_count_0" BEL
+        "frog_anim/left_btn/button_count_31" BEL
+        "frog_anim/left_btn/button_count_30" BEL
+        "frog_anim/left_btn/button_count_29" BEL
+        "frog_anim/left_btn/button_count_28" BEL
+        "frog_anim/left_btn/button_count_27" BEL
+        "frog_anim/left_btn/button_count_26" BEL
+        "frog_anim/left_btn/button_count_25" BEL
+        "frog_anim/left_btn/button_count_24" BEL
+        "frog_anim/left_btn/button_count_23" BEL
+        "frog_anim/left_btn/button_count_22" BEL
+        "frog_anim/left_btn/button_count_21" BEL
+        "frog_anim/left_btn/button_count_20" BEL
+        "frog_anim/left_btn/button_count_19" BEL
+        "frog_anim/left_btn/button_count_18" BEL
+        "frog_anim/left_btn/button_count_17" BEL
+        "frog_anim/left_btn/button_count_16" BEL
+        "frog_anim/left_btn/button_count_15" BEL
+        "frog_anim/left_btn/button_count_14" BEL
+        "frog_anim/left_btn/button_count_13" BEL
+        "frog_anim/left_btn/button_count_12" BEL
+        "frog_anim/left_btn/button_count_11" BEL
+        "frog_anim/left_btn/button_count_10" BEL
+        "frog_anim/left_btn/button_count_9" BEL
+        "frog_anim/left_btn/button_count_8" BEL
+        "frog_anim/left_btn/button_count_7" BEL
+        "frog_anim/left_btn/button_count_6" BEL
+        "frog_anim/left_btn/button_count_5" BEL
+        "frog_anim/left_btn/button_count_4" BEL
+        "frog_anim/left_btn/button_count_3" BEL
+        "frog_anim/left_btn/button_count_2" BEL
+        "frog_anim/left_btn/button_count_1" BEL
+        "frog_anim/left_btn/button_count_0" BEL "frog_anim/up_btn/button_reg"
+        BEL "frog_anim/up_btn/button_sync" BEL "frog_anim/down_btn/button_reg"
+        BEL "frog_anim/down_btn/button_sync" BEL
+        "frog_anim/left_btn/button_reg" BEL "frog_anim/left_btn/button_sync"
+        BEL "frog_anim/right_btn/button_reg" BEL
+        "frog_anim/right_btn/button_sync" BEL "sq_a_anim/x_9" BEL
+        "sq_a_anim/x_8" BEL "sq_a_anim/x_6" BEL "sq_a_anim/x_2" BEL
+        "sq_b_anim/x_8" BEL "sq_b_anim/x_6" BEL "sq_b_anim/x_5" BEL
+        "sq_b_anim/x_3" BEL "sq_b_anim/x_2" BEL "sq_c_anim/x_8" BEL
+        "sq_c_anim/x_4" BEL "sq_c_anim/x_3" BEL "sq_c_anim/x_2" BEL
+        "sq_a_anim/x_7" BEL "sq_a_anim/x_5" BEL "sq_a_anim/x_4" BEL
+        "sq_a_anim/x_3" BEL "sq_a_anim/x_1" BEL "sq_a_anim/x_0" BEL
+        "sq_b_anim/x_9" BEL "sq_b_anim/x_7" BEL "sq_b_anim/x_4" BEL
+        "sq_b_anim/x_1" BEL "sq_c_anim/x_9" BEL "sq_c_anim/x_7" BEL
+        "sq_c_anim/x_6" BEL "sq_c_anim/x_5" BEL "display/v_count_6_1" BEL
+        "display/v_count_5_1" BEL "display/h_count_9" BEL "display/h_count_8"
+        BEL "display/h_count_7" BEL "display/h_count_6" BEL
+        "display/h_count_5" BEL "display/h_count_4" BEL "display/h_count_3"
+        BEL "display/h_count_2" BEL "display/h_count_1" BEL
+        "display/h_count_0" BEL "display/v_count_8_1" BEL "CLK_BUFGP/BUFG";
 TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz HIGH 50%;
 SCHEMATIC END;
 
