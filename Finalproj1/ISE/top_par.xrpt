@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Thu Nov 14 17:09:45 2019">
+  <application stringID="par" timeStamp="Thu Nov 14 17:16:19 2019">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -75,9 +75,9 @@
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X3Y13"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="33.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.102000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.170000"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="32.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.104000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.172000"/>
           </row>
         </table>
       </section>
@@ -2177,7 +2177,7 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Thu Nov 14 17:09:45 2019">
+  <application stringID="Par" timeStamp="Thu Nov 14 17:16:20 2019">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -2244,15 +2244,15 @@
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="5"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_OTHERS" value="0"/>
         </item>
-        <item AVAILABLE="1430" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="122">
+        <item AVAILABLE="1430" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="126">
           <item AVAILABLE="355" dataType="int" stringID="PAR_NUM_SLICEL" value="48"/>
           <item AVAILABLE="360" dataType="int" stringID="PAR_NUM_SLICEM" value="0"/>
-          <item AVAILABLE="715" dataType="int" stringID="PAR_NUM_SLICEX" value="74"/>
+          <item AVAILABLE="715" dataType="int" stringID="PAR_NUM_SLICEX" value="78"/>
         </item>
-        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="340">
-          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="267"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="4"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="69"/>
+        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="338">
+          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="266"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="2"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="70"/>
         </item>
       </section>
       <section stringID="PAR_IOB_REPORTING">

@@ -4,14 +4,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.07 secs
  
 --> 
@@ -580,9 +580,9 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 605
+# BELS                             : 606
 #      GND                         : 1
-#      INV                         : 26
+#      INV                         : 27
 #      LUT1                        : 38
 #      LUT2                        : 28
 #      LUT3                        : 24
@@ -610,14 +610,14 @@ Selected Device : 6slx9csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              74  out of  11440     0%  
- Number of Slice LUTs:                  409  out of   5720     7%  
-    Number used as Logic:               409  out of   5720     7%  
+ Number of Slice LUTs:                  410  out of   5720     7%  
+    Number used as Logic:               410  out of   5720     7%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    416
-   Number with an unused Flip Flop:     342  out of    416    82%  
-   Number with an unused LUT:             7  out of    416     1%  
-   Number of fully used LUT-FF pairs:    67  out of    416    16%  
+ Number of LUT Flip Flop pairs used:    417
+   Number with an unused Flip Flop:     343  out of    417    82%  
+   Number with an unused LUT:             7  out of    417     1%  
+   Number of fully used LUT-FF pairs:    67  out of    417    16%  
    Number of unique control sets:         5
 
 IO Utilization: 
@@ -755,13 +755,13 @@ CLK            |    4.585|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 11.02 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 10.90 secs
  
 --> 
 
 
-Total memory usage is 396340 kilobytes
+Total memory usage is 396348 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  154 (   0 filtered)
