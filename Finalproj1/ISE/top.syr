@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: top.prj
@@ -228,6 +228,7 @@ Synthesizing Unit <square_1>.
 	inferred   5 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
 	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
 Unit <square_1> synthesized.
 
 Synthesizing Unit <square_2>.
@@ -252,6 +253,7 @@ Synthesizing Unit <square_2>.
 	inferred   5 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
 	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
 Unit <square_2> synthesized.
 
 Synthesizing Unit <square_3>.
@@ -276,6 +278,7 @@ Synthesizing Unit <square_3>.
 	inferred   5 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
 	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
 Unit <square_3> synthesized.
 
 =========================================================================
@@ -298,8 +301,9 @@ Macro Statistics
  10-bit comparator lessequal                           : 3
  12-bit comparator greater                             : 12
  12-bit comparator lessequal                           : 3
-# Multiplexers                                         : 4
+# Multiplexers                                         : 7
  10-bit 2-to-1 multiplexer                             : 2
+ 12-bit 2-to-1 multiplexer                             : 3
  32-bit 2-to-1 multiplexer                             : 2
 
 =========================================================================
@@ -444,16 +448,13 @@ WARNING:Xst:2677 - Node <cnt_12> of sequential type is unconnected in block <top
 Optimizing unit <top> ...
 
 Optimizing unit <vga640x480> ...
-WARNING:Xst:1293 - FF/Latch <sq_a_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <sq_a_anim/x_10> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <sq_a_anim/x_11> 
+INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_10> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <sq_b_anim/x_11> 
+INFO:Xst:2261 - The FF/Latch <sq_c_anim/x_10> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <sq_c_anim/x_11> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 6.
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 5.
 
 Final Macro Processing ...
 
@@ -461,8 +462,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 53
- Flip-Flops                                            : 53
+# Registers                                            : 56
+ Flip-Flops                                            : 56
 
 =========================================================================
 
@@ -485,20 +486,20 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 419
+# BELS                             : 410
 #      GND                         : 1
-#      INV                         : 8
-#      LUT1                        : 36
-#      LUT2                        : 34
-#      LUT3                        : 24
-#      LUT4                        : 73
-#      LUT5                        : 54
-#      LUT6                        : 78
-#      MUXCY                       : 70
+#      INV                         : 5
+#      LUT1                        : 9
+#      LUT2                        : 17
+#      LUT3                        : 21
+#      LUT4                        : 92
+#      LUT5                        : 88
+#      LUT6                        : 61
+#      MUXCY                       : 72
 #      VCC                         : 1
-#      XORCY                       : 40
-# FlipFlops/Latches                : 53
-#      FD                          : 43
+#      XORCY                       : 43
+# FlipFlops/Latches                : 56
+#      FD                          : 46
 #      FDRE                        : 10
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -513,15 +514,15 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              53  out of  11440     0%  
- Number of Slice LUTs:                  307  out of   5720     5%  
-    Number used as Logic:               307  out of   5720     5%  
+ Number of Slice Registers:              56  out of  11440     0%  
+ Number of Slice LUTs:                  293  out of   5720     5%  
+    Number used as Logic:               293  out of   5720     5%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    307
-   Number with an unused Flip Flop:     254  out of    307    82%  
-   Number with an unused LUT:             0  out of    307     0%  
-   Number of fully used LUT-FF pairs:    53  out of    307    17%  
+ Number of LUT Flip Flop pairs used:    293
+   Number with an unused Flip Flop:     237  out of    293    80%  
+   Number with an unused LUT:             0  out of    293     0%  
+   Number of fully used LUT-FF pairs:    56  out of    293    19%  
    Number of unique control sets:         2
 
 IO Utilization: 
@@ -552,7 +553,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 53    |
+CLK                                | BUFGP                  | 56    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -563,9 +564,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.065ns (Maximum Frequency: 197.435MHz)
-   Minimum input arrival time before clock: 4.389ns
-   Maximum output required time after clock: 10.319ns
+   Minimum period: 5.029ns (Maximum Frequency: 198.835MHz)
+   Minimum input arrival time before clock: 4.136ns
+   Maximum output required time after clock: 10.313ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -574,73 +575,84 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 5.065ns (frequency: 197.435MHz)
-  Total number of paths / destination ports: 1838 / 73
+  Clock period: 5.029ns (frequency: 198.835MHz)
+  Total number of paths / destination ports: 4253 / 76
 -------------------------------------------------------------------------
-Delay:               5.065ns (Levels of Logic = 3)
-  Source:            display/h_count_7 (FF)
-  Destination:       display/v_count_9 (FF)
+Delay:               5.029ns (Levels of Logic = 14)
+  Source:            sq_a_anim/x_5 (FF)
+  Destination:       sq_a_anim/x_10 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: display/h_count_7 to display/v_count_9
+  Data Path: sq_a_anim/x_5 to sq_a_anim/x_10
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              14   0.447   1.062  display/h_count_7 (display/h_count_7)
-     LUT5:I3->O            3   0.203   0.651  display/GND_2_o_GND_2_o_equal_15_o<9>_SW0 (N18)
-     LUT6:I5->O           21   0.205   1.114  display/GND_2_o_GND_2_o_equal_15_o<9> (display/GND_2_o_GND_2_o_equal_15_o)
-     LUT3:I2->O           10   0.205   0.856  display/_n0087_inv1 (display/_n0087_inv)
-     FDRE:CE                   0.322          display/v_count_0
+     FD:C->Q              11   0.447   1.227  sq_a_anim/x_5 (sq_a_anim/x_5)
+     LUT6:I1->O           11   0.203   0.883  sq_a_anim/Msub_o_x1_xor<7>111 (sq_a_anim/Msub_o_x1_xor<7>11)
+     LUT4:I3->O            1   0.205   0.579  sq_a_anim/GND_3_o_x[11]_LessThan_12_o_inv1 (sq_a_anim/GND_3_o_x[11]_LessThan_12_o_inv)
+     MUXCY:CI->O           1   0.019   0.000  sq_a_anim/Mcount_x_cy<0> (sq_a_anim/Mcount_x_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  sq_a_anim/Mcount_x_cy<1> (sq_a_anim/Mcount_x_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  sq_a_anim/Mcount_x_cy<2> (sq_a_anim/Mcount_x_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  sq_a_anim/Mcount_x_cy<3> (sq_a_anim/Mcount_x_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  sq_a_anim/Mcount_x_cy<4> (sq_a_anim/Mcount_x_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  sq_a_anim/Mcount_x_cy<5> (sq_a_anim/Mcount_x_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  sq_a_anim/Mcount_x_cy<6> (sq_a_anim/Mcount_x_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  sq_a_anim/Mcount_x_cy<7> (sq_a_anim/Mcount_x_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  sq_a_anim/Mcount_x_cy<8> (sq_a_anim/Mcount_x_cy<8>)
+     MUXCY:CI->O           0   0.019   0.000  sq_a_anim/Mcount_x_cy<9> (sq_a_anim/Mcount_x_cy<9>)
+     XORCY:CI->O           1   0.180   0.808  sq_a_anim/Mcount_x_xor<10> (sq_a_anim/Mcount_x10)
+     LUT5:I2->O            1   0.205   0.000  sq_a_anim/x_10_rstpot (sq_a_anim/x_10_rstpot)
+     FD:D                      0.102          sq_a_anim/x_10
     ----------------------------------------
-    Total                      5.065ns (1.382ns logic, 3.683ns route)
-                                       (27.3% logic, 72.7% route)
+    Total                      5.029ns (1.532ns logic, 3.497ns route)
+                                       (30.5% logic, 69.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 56 / 50
+  Total number of paths / destination ports: 53 / 53
 -------------------------------------------------------------------------
-Offset:              4.389ns (Levels of Logic = 3)
+Offset:              4.136ns (Levels of Logic = 3)
   Source:            RST_BTN (PAD)
-  Destination:       sq_c_anim/x_6 (FF)
+  Destination:       sq_a_anim/x_0 (FF)
   Destination Clock: CLK rising
 
-  Data Path: RST_BTN to sq_c_anim/x_6
+  Data Path: RST_BTN to sq_a_anim/x_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            47   1.222   1.849  RST_BTN_IBUF (RST_BTN_IBUF)
-     LUT5:I0->O            1   0.203   0.808  sq_c_anim/Mcount_x_val2_SW6 (N77)
-     LUT6:I3->O            1   0.205   0.000  sq_c_anim/x_6_glue_rst (sq_c_anim/x_6_glue_rst)
-     FD:D                      0.102          sq_c_anim/x_6
+     IBUF:I->O            13   1.222   1.297  RST_BTN_IBUF (RST_BTN_IBUF)
+     LUT6:I0->O           16   0.203   1.109  sq_a_anim/_n00501_1 (sq_a_anim/_n00501)
+     LUT6:I4->O            1   0.203   0.000  sq_a_anim/x_0_rstpot (sq_a_anim/x_0_rstpot)
+     FD:D                      0.102          sq_a_anim/x_0
     ----------------------------------------
-    Total                      4.389ns (1.732ns logic, 2.657ns route)
-                                       (39.5% logic, 60.5% route)
+    Total                      4.136ns (1.730ns logic, 2.406ns route)
+                                       (41.8% logic, 58.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 3795 / 10
+  Total number of paths / destination ports: 4015 / 10
 -------------------------------------------------------------------------
-Offset:              10.319ns (Levels of Logic = 8)
-  Source:            sq_b_anim/x_2 (FF)
+Offset:              10.313ns (Levels of Logic = 8)
+  Source:            sq_b_anim/x_5 (FF)
   Destination:       VGA_G<2> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: sq_b_anim/x_2 to VGA_G<2>
+  Data Path: sq_b_anim/x_5 to VGA_G<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              17   0.447   1.132  sq_b_anim/x_2 (sq_b_anim/x_2)
-     LUT2:I0->O            1   0.203   0.580  sq_b_anim/Msub_o_x1_xor<11>121 (sq_b_anim/Msub_o_x1_xor<11>12)
-     LUT6:I5->O            4   0.205   0.684  sq_b_anim/Msub_o_x1_xor<9>111 (sq_b_anim/Msub_o_x1_xor<9>11)
-     LUT5:I4->O            2   0.205   0.961  sq_b_anim/Msub_o_x1_xor<9>12 (sq_b_x1<9>)
+     FD:C->Q              16   0.447   1.109  sq_b_anim/x_5 (sq_b_anim/x_5)
+     LUT2:I0->O            1   0.203   0.827  sq_b_anim/Msub_o_x1_xor<9>11_SW0 (N6)
+     LUT6:I2->O            4   0.203   0.684  sq_b_anim/Msub_o_x1_xor<9>11 (sq_b_anim/Msub_o_x1_xor<9>11)
+     LUT4:I3->O            2   0.205   0.961  sq_b_anim/Msub_o_x1_xor<9>12 (sq_b_x1<9>)
      LUT5:I0->O            0   0.203   0.000  Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_lutdi4 (Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_lutdi4)
-     MUXCY:DI->O           1   0.339   0.808  Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_cy<4> (Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_cy<4>)
-     LUT3:I0->O            1   0.205   0.924  Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_cy<5> (Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_cy<5>)
+     MUXCY:DI->O           1   0.339   0.580  Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_cy<4> (Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_cy<4>)
+     LUT4:I3->O            1   0.205   0.924  Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_cy<5> (Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_cy<5>)
      LUT6:I1->O            3   0.203   0.650  sq_b_x1[11]_GND_1_o_AND_13_o (VGA_G_0_OBUF)
      OBUF:I->O                 2.571          VGA_G_2_OBUF (VGA_G<2>)
     ----------------------------------------
-    Total                     10.319ns (4.581ns logic, 5.738ns route)
+    Total                     10.313ns (4.579ns logic, 5.734ns route)
                                        (44.4% logic, 55.6% route)
 
 =========================================================================
@@ -653,21 +665,21 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.065|         |         |         |
+CLK            |    5.029|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 10.32 secs
+Total CPU time to Xst completion: 10.43 secs
  
 --> 
 
 
-Total memory usage is 395896 kilobytes
+Total memory usage is 395932 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  118 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :  112 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 
