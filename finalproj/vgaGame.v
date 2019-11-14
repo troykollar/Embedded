@@ -13,7 +13,7 @@ module frogger (input clk, input reset, input up, input down, input left, input 
 	reg win = 0;	//Turns to 1 when reaching the top of the level
 
 
-	parameter counterReset = 2;	//2 for simulation, 100,000,000 for synthesis
+	parameter counterReset = 100000000;	//2 for simulation, 100,000,000 for synthesis
 	wire oneSecond = (timeCounter == counterReset);
 	//Increase timeState, depending on simulation vs. synthesis
 	always @(posedge clk)
