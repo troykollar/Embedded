@@ -12,7 +12,7 @@ CONFIG VCCAUX = "3.3";
 #TIMESPEC TS_MCLK = PERIOD "MCLK" 12 MHz HIGH 50%;
 
 # 100 MHz dedicated oscillator
-NET "clk" LOC = V10 | TNM_NET = GCLK1 | IOSTANDARD = LVCMOS33;
+NET "CLK" LOC = V10 | TNM_NET = GCLK1 | IOSTANDARD = LVCMOS33;
 TIMESPEC TS_GCLK1 = PERIOD "GCLK1" 100 MHz HIGH 50%;
 
 
@@ -20,19 +20,18 @@ TIMESPEC TS_GCLK1 = PERIOD "GCLK1" 100 MHz HIGH 50%;
 # VGA
 ############################################################################
 
-    NET "hsync_out"              LOC = B12 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-    NET "vsync_out"              LOC = A12 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "VGA_HS_O"              LOC = B12 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "VGA_VS_O
+    NET "VGA_R[1]"            LOC = A11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "VGA_R[0]"            LOC = B11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
 
-    NET "pixel[2]"            LOC = A11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-    NET "pixel[2]"            LOC = B11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "VGA_G[2]"           LOC = C11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "VGA_G[1]"           LOC = A10 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "VGA_G[0]"           LOC = C10 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
 
-    NET "pixel[1]"           LOC = C11 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-    NET "pixel[1]"           LOC = A10 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-    NET "pixel[1]"           LOC = C10 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-
-    NET "pixel[0]"             LOC = C9 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-    NET "pixel[0]"             LOC = B9 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-    NET "pixel[0]"           LOC = A9 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "VGA_B[2]"             LOC = C9 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "VGA_B[1]"             LOC = B9 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+    NET "VGA_B[0]"           LOC = A9 | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
 
 ############################################################################
 # Micro SD Card
@@ -93,7 +92,7 @@ TIMESPEC TS_GCLK1 = PERIOD "GCLK1" 100 MHz HIGH 50%;
     #NET "dips[2]"       LOC = F18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
     #NET "dips[3]"       LOC = E16 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
     #NET "dips[4]"       LOC = E18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
-	 #NET "dips[5]"       LOC = D18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
+	#NET "dips[5]"       LOC = D18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
     #NET "dips[6]"       LOC = D17 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
     #NET "dips[7]"       LOC = C18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
     #NET "dips[8]"       LOC = C17 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST;
@@ -106,7 +105,7 @@ TIMESPEC TS_GCLK1 = PERIOD "GCLK1" 100 MHz HIGH 50%;
     #NET "buttons[2]"         LOC = L18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW2
     #NET "buttons[3]"         LOC = M16 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW3
     #NET "buttons[4]"         LOC = L17 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW4
-    #NET "buttons[5]"         LOC = K17 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW5
+    NET "RST_BTN"         LOC = K17 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW5
     #NET "buttons[6]"         LOC = K18 | PULLUP | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST; // SW6
 
 ############################################################################

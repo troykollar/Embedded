@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/troy/Embedded/Finalproj1/ISE/VGAWrite.ncd
-OUTFILE=/home/troy/Embedded/Finalproj1/ISE/VGAWrite.bit
-FAMILY=Spartan6
-PART=xc6slx9-3csg324
-WORKINGDIR=/home/troy/Embedded/Finalproj1/ISE
-LICENSE=WebPack
-USER_INFO=175375681_0_0_270
