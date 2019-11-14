@@ -10,40 +10,40 @@ Target Device  : xc6slx9
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Nov 14 17:04:01 2019
+Mapped Date    : Thu Nov 14 17:09:15 2019
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Slice Logic Utilization:
-  Number of Slice Registers:                    57 out of  11,440    1%
-    Number used as Flip Flops:                  57
+  Number of Slice Registers:                    74 out of  11,440    1%
+    Number used as Flip Flops:                  74
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        252 out of   5,720    4%
-    Number used as logic:                      248 out of   5,720    4%
-      Number using O6 output only:             138
-      Number using O5 output only:              25
-      Number using O5 and O6:                   85
+  Number of Slice LUTs:                        336 out of   5,720    5%
+    Number used as logic:                      331 out of   5,720    5%
+      Number using O6 output only:             191
+      Number using O5 output only:              33
+      Number using O5 and O6:                  107
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   1,440    0%
-    Number used exclusively as route-thrus:      4
-      Number with same-slice register load:      1
-      Number with same-slice carry load:         3
+    Number used exclusively as route-thrus:      5
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         5
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    93 out of   1,430    6%
-  Number of MUXCYs used:                       144 out of   2,860    5%
-  Number of LUT Flip Flop pairs used:          254
-    Number with an unused Flip Flop:           199 out of     254   78%
-    Number with an unused LUT:                   2 out of     254    1%
-    Number of fully used LUT-FF pairs:          53 out of     254   20%
+  Number of occupied Slices:                   122 out of   1,430    8%
+  Number of MUXCYs used:                       192 out of   2,860    6%
+  Number of LUT Flip Flop pairs used:          340
+    Number with an unused Flip Flop:           267 out of     340   78%
+    Number with an unused LUT:                   4 out of     340    1%
+    Number of fully used LUT-FF pairs:          69 out of     340   20%
     Number of unique control sets:               5
     Number of slice register sites lost
-      to control set restrictions:              23 out of  11,440    1%
+      to control set restrictions:              22 out of  11,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -80,11 +80,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.45
+Average Fanout of Non-Clock Nets:                4.32
 
-Peak Memory Usage:  666 MB
+Peak Memory Usage:  668 MB
 Total REAL time to MAP completion:  19 secs 
-Total CPU time to MAP completion:   15 secs 
+Total CPU time to MAP completion:   16 secs 
 
 Table of Contents
 -----------------
@@ -111,10 +111,6 @@ Section 2 - Warnings
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network up_btn_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 1 more times for the following
-   (max. 5 shown):
-   down_btn_IBUF
-   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
    0.000 to 85.000 Celsius)

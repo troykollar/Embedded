@@ -81,7 +81,7 @@ module top(
 	 wire fr;
 	 wire [11:0] frog_x1, frog_x2, frog_y1, frog_y2;
 	 
-	 frog #(.IX(320), .IY(465)) frog_anim (
+	 frog #(.IX(320), .IY(200)) frog_anim (
 			.i_clk(CLK),
 			.i_ani_stb(pix_stb),
 			.i_rst(rst),
@@ -104,6 +104,6 @@ module top(
 		  (x < frog_x2) & (y < frog_y2)) ? 1 : 0;
 
     assign VGA_R[1:0] = {sq_a, sq_a};  // square a is red
-    assign VGA_G[2:0] = {sq_b, sq_b, sq_b};  // square b is green
+    assign VGA_G[2:0] = {fr, fr, fr};  // square b is green
     assign VGA_B[2:0] = {sq_c | sq_b, sq_c | sq_b,sq_c | sq_b};  // square c is blue
 endmodule
