@@ -7,6 +7,8 @@
 module top(
     input wire CLK,             // board clock: 100 MHz on Arty/Basys3/Nexys
     input wire RST_BTN,         // reset button
+	 input wire up_btn,			  // up button
+	 input wire down_btn, 		  // down button
     output wire VGA_HS_O,       // horizontal sync output
     output wire VGA_VS_O,       // vertical sync output
     output wire [1:0] VGA_R,    // 4-bit VGA red output
@@ -75,6 +77,22 @@ module top(
         .o_y1(sq_c_y1),
         .o_y2(sq_c_y2)
     );
+	 
+	 wire fr;
+	 wire [11:0] frog_x1, frog_x2, frog_y1, frog_y2;
+	 
+	 frog #(.IX(320), .IY(465)) frog_anim (
+			.i_clk(CLK),
+			.i_ani_stb(pix_stb),
+			.i_rst(rst),
+			.i_animate(animate),
+			.o_x1(frog_x1),
+			.o_x2(frog_x2),
+			.o_y1(frog_y1),
+			.o_y2(frog_y2),
+			.i_up_btn(up_btn),
+			.i_down_btn(down_btn)
+		);
 
     assign sq_a = ((x > sq_a_x1) & (y > sq_a_y1) &
         (x < sq_a_x2) & (y < sq_a_y2)) ? 1 : 0;
@@ -82,8 +100,10 @@ module top(
         (x < sq_b_x2) & (y < sq_b_y2)) ? 1 : 0;
     assign sq_c = ((x > sq_c_x1) & (y > sq_c_y1) &
         (x < sq_c_x2) & (y < sq_c_y2)) ? 1 : 0;
+	 assign fr = ((x > frog_x1) & (y > frog_y1) &
+		  (x < frog_x2) & (y < frog_y2)) ? 1 : 0;
 
     assign VGA_R[1:0] = {sq_a, sq_a};  // square a is red
     assign VGA_G[2:0] = {sq_b, sq_b, sq_b};  // square b is green
-    assign VGA_B[2:0] = {sq_c, sq_c,sq_c};  // square c is blue
+    assign VGA_B[2:0] = {sq_c | sq_b, sq_c | sq_b,sq_c | sq_b};  // square c is blue
 endmodule

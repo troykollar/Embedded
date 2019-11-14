@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Nov 14 16:38:45 2019
+Thu Nov 14 17:04:36 2019
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -216,7 +216,7 @@ Pinout by Pin Number:
 |L14       |           |IOBM     |IO_L61P_1                    |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |L15       |           |IOBM     |IO_L42P_GCLK7_M1UDM_1        |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |L16       |           |IOBS     |IO_L42N_GCLK6_TRDY1_M1LDM_1  |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|L17       |           |IOBM     |IO_L46P_FCS_B_M1DQ2_1        |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|L17       |up_btn     |IOB      |IO_L46P_FCS_B_M1DQ2_1        |INPUT    |LVCMOS33   |1             |          |         |PULLUP     |NONE     |         |LOCATED   |NO         |NONE            |
 |L18       |           |IOBS     |IO_L46N_FOE_B_M1DQ3_1        |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |M1        |           |IOBS     |IO_L36N_M3DQ9_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |M2        |           |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
@@ -233,7 +233,7 @@ Pinout by Pin Number:
 |M13       |           |IOBS     |IO_L61N_1                    |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |M14       |           |IOBM     |IO_L53P_1                    |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |M15       |           |         |VCCO_1                       |         |           |1             |          |         |           |         |any******|          |           |                |
-|M16       |           |IOBM     |IO_L47P_FWE_B_M1DQ0_1        |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|M16       |down_btn   |IOB      |IO_L47P_FWE_B_M1DQ0_1        |INPUT    |LVCMOS33   |1             |          |         |PULLUP     |NONE     |         |LOCATED   |NO         |NONE            |
 |M17       |           |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |M18       |           |IOBS     |IO_L47N_LDC_M1DQ1_1          |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |N1        |           |IOBS     |IO_L35N_M3DQ11_3             |UNUSED   |           |3             |          |         |           |         |         |          |           |                |

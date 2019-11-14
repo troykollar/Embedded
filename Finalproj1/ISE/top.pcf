@@ -1,11 +1,9 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Nov 14 16:38:29 2019
+// Written by: Map P.20131013 on Thu Nov 14 17:04:20 2019
 //! **************************************************************************
 
 SCHEMATIC START;
 CONFIG VCCAUX = "3.3";
-COMP "VGA_B<0>" LOCATE = SITE "A9" LEVEL 1;
-COMP "VGA_B<1>" LOCATE = SITE "B9" LEVEL 1;
 COMP "VGA_B<2>" LOCATE = SITE "C9" LEVEL 1;
 COMP "VGA_G<0>" LOCATE = SITE "C10" LEVEL 1;
 COMP "VGA_G<1>" LOCATE = SITE "A10" LEVEL 1;
@@ -16,6 +14,10 @@ COMP "VGA_HS_O" LOCATE = SITE "B12" LEVEL 1;
 COMP "VGA_VS_O" LOCATE = SITE "A12" LEVEL 1;
 COMP "CLK" LOCATE = SITE "V10" LEVEL 1;
 COMP "RST_BTN" LOCATE = SITE "K17" LEVEL 1;
+COMP "down_btn" LOCATE = SITE "M16" LEVEL 1;
+COMP "up_btn" LOCATE = SITE "L17" LEVEL 1;
+COMP "VGA_B<0>" LOCATE = SITE "A9" LEVEL 1;
+COMP "VGA_B<1>" LOCATE = SITE "B9" LEVEL 1;
 TIMEGRP GCLK1 = BEL "cnt_13" BEL "cnt_14" BEL "cnt_15" BEL "display/h_count_9"
         BEL "display/h_count_8" BEL "display/h_count_7" BEL
         "display/h_count_6" BEL "display/h_count_5" BEL "display/h_count_4"

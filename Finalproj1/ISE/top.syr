@@ -112,13 +112,15 @@ Analyzing Verilog file "/home/troy/Embedded/Finalproj1/vga640x480.v" into librar
 Parsing module <vga640x480>.
 Analyzing Verilog file "/home/troy/Embedded/Finalproj1/square.v" into library work
 Parsing module <square>.
+Analyzing Verilog file "/home/troy/Embedded/Finalproj1/frog.v" into library work
+Parsing module <frog>.
 Analyzing Verilog file "/home/troy/Embedded/Finalproj1/top.v" into library work
 Parsing module <top>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/troy/Embedded/Finalproj1/top.v" Line 30: Port o_blanking is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/troy/Embedded/Finalproj1/top.v" Line 32: Port o_blanking is not connected to this instance
 
 Elaborating module <top>.
 
@@ -151,9 +153,20 @@ WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 35: Res
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 36: Result of 13-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 79: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 81: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 83: Result of 32-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <frog(IX=320,IY=465)>.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 35: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 36: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 37: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 38: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 61: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 63: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 97: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 99: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 101: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 103: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Finalproj1/top.v" Line 103: Assignment to fr ignored, since the identifier is never used
+WARNING:Xst:2972 - "/home/troy/Embedded/Finalproj1/top.v" line 84. All outputs of instance <frog_anim> of block <frog> are unconnected in block <top>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -161,24 +174,28 @@ WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 83: Result
 
 Synthesizing Unit <top>.
     Related source file is "/home/troy/Embedded/Finalproj1/top.v".
-INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 30: Output port <o_blanking> of the instance <display> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 30: Output port <o_active> of the instance <display> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 30: Output port <o_screenend> of the instance <display> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 32: Output port <o_blanking> of the instance <display> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 32: Output port <o_active> of the instance <display> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 32: Output port <o_screenend> of the instance <display> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 84: Output port <o_x1> of the instance <frog_anim> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 84: Output port <o_x2> of the instance <frog_anim> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 84: Output port <o_y1> of the instance <frog_anim> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 84: Output port <o_y2> of the instance <frog_anim> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <pix_stb>.
     Found 16-bit register for signal <cnt>.
-    Found 17-bit adder for signal <n0069> created at line 28.
-    Found 12-bit comparator greater for signal <sq_a_x1[11]_GND_1_o_LessThan_4_o> created at line 79
-    Found 12-bit comparator greater for signal <sq_a_y1[11]_GND_1_o_LessThan_5_o> created at line 79
-    Found 12-bit comparator greater for signal <GND_1_o_sq_a_x2[11]_LessThan_6_o> created at line 80
-    Found 12-bit comparator greater for signal <GND_1_o_sq_a_y2[11]_LessThan_7_o> created at line 80
-    Found 12-bit comparator greater for signal <sq_b_x1[11]_GND_1_o_LessThan_9_o> created at line 81
-    Found 12-bit comparator greater for signal <sq_b_y1[11]_GND_1_o_LessThan_10_o> created at line 81
-    Found 12-bit comparator greater for signal <GND_1_o_sq_b_x2[11]_LessThan_11_o> created at line 82
-    Found 12-bit comparator greater for signal <GND_1_o_sq_b_y2[11]_LessThan_12_o> created at line 82
-    Found 12-bit comparator greater for signal <sq_c_x1[11]_GND_1_o_LessThan_14_o> created at line 83
-    Found 12-bit comparator greater for signal <sq_c_y1[11]_GND_1_o_LessThan_15_o> created at line 83
-    Found 12-bit comparator greater for signal <GND_1_o_sq_c_x2[11]_LessThan_16_o> created at line 84
-    Found 12-bit comparator greater for signal <GND_1_o_sq_c_y2[11]_LessThan_17_o> created at line 84
+    Found 17-bit adder for signal <n0068> created at line 30.
+    Found 12-bit comparator greater for signal <sq_a_x1[11]_GND_1_o_LessThan_4_o> created at line 97
+    Found 12-bit comparator greater for signal <sq_a_y1[11]_GND_1_o_LessThan_5_o> created at line 97
+    Found 12-bit comparator greater for signal <GND_1_o_sq_a_x2[11]_LessThan_6_o> created at line 98
+    Found 12-bit comparator greater for signal <GND_1_o_sq_a_y2[11]_LessThan_7_o> created at line 98
+    Found 12-bit comparator greater for signal <sq_b_x1[11]_GND_1_o_LessThan_9_o> created at line 99
+    Found 12-bit comparator greater for signal <sq_b_y1[11]_GND_1_o_LessThan_10_o> created at line 99
+    Found 12-bit comparator greater for signal <GND_1_o_sq_b_x2[11]_LessThan_11_o> created at line 100
+    Found 12-bit comparator greater for signal <GND_1_o_sq_b_y2[11]_LessThan_12_o> created at line 100
+    Found 12-bit comparator greater for signal <sq_c_x1[11]_GND_1_o_LessThan_14_o> created at line 101
+    Found 12-bit comparator greater for signal <sq_c_y1[11]_GND_1_o_LessThan_15_o> created at line 101
+    Found 12-bit comparator greater for signal <GND_1_o_sq_c_x2[11]_LessThan_16_o> created at line 102
+    Found 12-bit comparator greater for signal <GND_1_o_sq_c_y2[11]_LessThan_17_o> created at line 102
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  17 D-type flip-flop(s).
@@ -508,8 +525,8 @@ Primitive and Black Box Usage:
 #      LUT1                        : 28
 #      LUT2                        : 26
 #      LUT3                        : 25
-#      LUT4                        : 90
-#      LUT5                        : 44
+#      LUT4                        : 89
+#      LUT5                        : 45
 #      LUT6                        : 87
 #      MUXCY                       : 101
 #      VCC                         : 1
@@ -543,7 +560,7 @@ Slice Logic Distribution:
    Number of unique control sets:         5
 
 IO Utilization: 
- Number of IOs:                          12
+ Number of IOs:                          14
  Number of bonded IOBs:                  12  out of    200     6%  
 
 Specific Feature Utilization:
@@ -583,7 +600,7 @@ Speed Grade: -3
 
    Minimum period: 4.585ns (Maximum Frequency: 218.122MHz)
    Minimum input arrival time before clock: 3.991ns
-   Maximum output required time after clock: 9.137ns
+   Maximum output required time after clock: 9.921ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -637,28 +654,29 @@ Offset:              3.991ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 4350 / 10
+  Total number of paths / destination ports: 6009 / 10
 -------------------------------------------------------------------------
-Offset:              9.137ns (Levels of Logic = 7)
-  Source:            sq_a_anim/x_4 (FF)
-  Destination:       VGA_R<1> (PAD)
+Offset:              9.921ns (Levels of Logic = 8)
+  Source:            sq_b_anim/x_4 (FF)
+  Destination:       VGA_B<2> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: sq_a_anim/x_4 to VGA_R<1>
+  Data Path: sq_b_anim/x_4 to VGA_B<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            14   0.447   1.205  sq_a_anim/x_4 (sq_a_anim/x_4)
-     LUT4:I0->O            5   0.203   0.715  sq_a_anim/Mmux_GND_3_o_GND_3_o_mux_13_OUT1211 (sq_a_anim/Mmux_GND_3_o_GND_3_o_mux_13_OUT121)
-     LUT5:I4->O            2   0.205   0.961  sq_a_anim/Msub_o_x1_xor<9>11 (sq_a_x1<9>)
-     LUT5:I0->O            0   0.203   0.000  Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_lutdi4 (Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_lutdi4)
-     MUXCY:DI->O           1   0.339   0.580  Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_cy<4> (Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_cy<4>)
-     LUT6:I5->O            1   0.205   0.684  Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_cy<5> (Mcompar_sq_a_x1[11]_GND_1_o_LessThan_4_o_cy<5>)
-     LUT4:I2->O            2   0.203   0.616  sq_a_x1[11]_GND_1_o_AND_10_o1 (VGA_R_0_OBUF)
-     OBUF:I->O                 2.571          VGA_R_1_OBUF (VGA_R<1>)
+     FDRE:C->Q            15   0.447   1.326  sq_b_anim/x_4 (sq_b_anim/x_4)
+     LUT5:I0->O            3   0.203   0.879  sq_b_anim/Mmux_GND_4_o_GND_4_o_mux_13_OUT131 (sq_b_anim/Mmux_GND_4_o_GND_4_o_mux_13_OUT13)
+     LUT6:I3->O            2   0.205   0.961  sq_b_anim/Msub_o_x1_xor<9>12 (sq_b_x1<9>)
+     LUT5:I0->O            0   0.203   0.000  Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_lutdi4 (Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_lutdi4)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_cy<4> (Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_cy<4>)
+     MUXCY:CI->O           1   0.213   0.684  Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_cy<5> (Mcompar_sq_b_x1[11]_GND_1_o_LessThan_9_o_cy<5>)
+     LUT4:I2->O            4   0.203   1.028  sq_b_x1[11]_GND_1_o_AND_14_o1 (VGA_G_0_OBUF)
+     LUT5:I0->O            3   0.203   0.650  VGA_B<2>1 (VGA_B_0_OBUF)
+     OBUF:I->O                 2.571          VGA_B_2_OBUF (VGA_B<2>)
     ----------------------------------------
-    Total                      9.137ns (4.376ns logic, 4.761ns route)
-                                       (47.9% logic, 52.1% route)
+    Total                      9.921ns (4.393ns logic, 5.528ns route)
+                                       (44.3% logic, 55.7% route)
 
 =========================================================================
 
@@ -676,15 +694,15 @@ CLK            |    4.585|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 10.70 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 10.53 secs
  
 --> 
 
 
-Total memory usage is 396060 kilobytes
+Total memory usage is 396084 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  120 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of warnings :  129 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
 
