@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Reading design: top.prj
@@ -116,11 +116,13 @@ Analyzing Verilog file "/home/troy/Embedded/Finalproj1/frog.v" into library work
 Parsing module <frog>.
 Analyzing Verilog file "/home/troy/Embedded/Finalproj1/top.v" into library work
 Parsing module <top>.
+WARNING:HDLCompiler:327 - "/home/troy/Embedded/Finalproj1/top.v" Line 151: Concatenation with unsized literal; will interpret as 32 bits
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 WARNING:HDLCompiler:1016 - "/home/troy/Embedded/Finalproj1/top.v" Line 41: Port o_blanking is not connected to this instance
+WARNING:HDLCompiler:327 - "/home/troy/Embedded/Finalproj1/top.v" Line 151: Concatenation with unsized literal; will interpret as 32 bits
 
 Elaborating module <top>.
 
@@ -138,7 +140,7 @@ WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 36: Res
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
 
-Elaborating module <square(IX=80,IY=45,IY_DIR=1,H_WIDTH=40,IX_DIR=1)>.
+Elaborating module <square(IX=160,IY=45,IY_DIR=1,H_WIDTH=40,IX_DIR=1)>.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 33: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 34: Result of 13-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 35: Result of 32-bit expression is truncated to fit in 12-bit target.
@@ -146,7 +148,15 @@ WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 36: Res
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
 
-Elaborating module <square(IX=160,IY=45,H_WIDTH=40,IX_DIR=1)>.
+Elaborating module <square(IX=320,IY=45,H_WIDTH=40,IX_DIR=1,IY_DIR=1)>.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 33: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 34: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 35: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 36: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
+
+Elaborating module <square(IX=480,IY=45,H_WIDTH=40,IX_DIR=1,IY_DIR=1)>.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 33: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 34: Result of 13-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 35: Result of 32-bit expression is truncated to fit in 12-bit target.
@@ -159,14 +169,15 @@ WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 38: Resul
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 39: Result of 13-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 40: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 41: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 72: Result of 32-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 74: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 84: Result of 32-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 85: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 113: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 115: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 117: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 119: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 69: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 70: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 77: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 78: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 125: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 127: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 129: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 131: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 133: Result of 32-bit expression is truncated to fit in 1-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -186,35 +197,52 @@ INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 41: Output port <o_s
     Found 1-bit register for signal <pix_stb>.
     Found 1-bit register for signal <dead>.
     Found 1-bit register for signal <rst>.
-    Found 17-bit adder for signal <n0102> created at line 39.
-    Found 12-bit comparator greater for signal <sq_a_x1[11]_GND_1_o_LessThan_5_o> created at line 113
-    Found 12-bit comparator greater for signal <sq_a_y1[11]_GND_1_o_LessThan_6_o> created at line 113
-    Found 12-bit comparator greater for signal <GND_1_o_sq_a_x2[11]_LessThan_7_o> created at line 114
-    Found 12-bit comparator greater for signal <GND_1_o_sq_a_y2[11]_LessThan_8_o> created at line 114
-    Found 12-bit comparator greater for signal <sq_b_x1[11]_GND_1_o_LessThan_10_o> created at line 115
-    Found 12-bit comparator greater for signal <sq_b_y1[11]_GND_1_o_LessThan_11_o> created at line 115
-    Found 12-bit comparator greater for signal <GND_1_o_sq_b_x2[11]_LessThan_12_o> created at line 116
-    Found 12-bit comparator greater for signal <GND_1_o_sq_b_y2[11]_LessThan_13_o> created at line 116
-    Found 12-bit comparator greater for signal <sq_c_x1[11]_GND_1_o_LessThan_15_o> created at line 117
-    Found 12-bit comparator greater for signal <sq_c_y1[11]_GND_1_o_LessThan_16_o> created at line 117
-    Found 12-bit comparator greater for signal <GND_1_o_sq_c_x2[11]_LessThan_17_o> created at line 118
-    Found 12-bit comparator greater for signal <GND_1_o_sq_c_y2[11]_LessThan_18_o> created at line 118
-    Found 12-bit comparator greater for signal <frog_x1[11]_GND_1_o_LessThan_20_o> created at line 119
-    Found 12-bit comparator greater for signal <frog_y1[11]_GND_1_o_LessThan_21_o> created at line 119
-    Found 12-bit comparator greater for signal <GND_1_o_frog_x2[11]_LessThan_22_o> created at line 120
-    Found 12-bit comparator greater for signal <GND_1_o_frog_y2[11]_LessThan_23_o> created at line 120
-    Found 12-bit comparator greater for signal <GND_1_o_frog_y1[11]_LessThan_26_o> created at line 125
-    Found 12-bit comparator greater for signal <frog_y1[11]_GND_1_o_LessThan_27_o> created at line 125
-    Found 12-bit comparator greater for signal <GND_1_o_frog_y2[11]_LessThan_28_o> created at line 125
-    Found 12-bit comparator greater for signal <frog_y2[11]_GND_1_o_LessThan_29_o> created at line 125
-    Found 12-bit comparator greater for signal <sq_a_x1[11]_frog_x1[11]_LessThan_30_o> created at line 126
-    Found 12-bit comparator greater for signal <frog_x1[11]_sq_a_x2[11]_LessThan_31_o> created at line 126
-    Found 12-bit comparator greater for signal <sq_a_x1[11]_frog_x2[11]_LessThan_32_o> created at line 126
-    Found 12-bit comparator greater for signal <frog_x2[11]_sq_a_x2[11]_LessThan_33_o> created at line 126
+    Found 17-bit adder for signal <n0144> created at line 39.
+    Found 12-bit comparator greater for signal <sq_a_x1[11]_GND_1_o_LessThan_5_o> created at line 125
+    Found 12-bit comparator greater for signal <sq_a_y1[11]_GND_1_o_LessThan_6_o> created at line 125
+    Found 12-bit comparator greater for signal <GND_1_o_sq_a_x2[11]_LessThan_7_o> created at line 126
+    Found 12-bit comparator greater for signal <GND_1_o_sq_a_y2[11]_LessThan_8_o> created at line 126
+    Found 12-bit comparator greater for signal <sq_b_x1[11]_GND_1_o_LessThan_10_o> created at line 127
+    Found 12-bit comparator greater for signal <sq_b_y1[11]_GND_1_o_LessThan_11_o> created at line 127
+    Found 12-bit comparator greater for signal <GND_1_o_sq_b_x2[11]_LessThan_12_o> created at line 128
+    Found 12-bit comparator greater for signal <GND_1_o_sq_b_y2[11]_LessThan_13_o> created at line 128
+    Found 12-bit comparator greater for signal <sq_c_x1[11]_GND_1_o_LessThan_15_o> created at line 129
+    Found 12-bit comparator greater for signal <sq_c_y1[11]_GND_1_o_LessThan_16_o> created at line 129
+    Found 12-bit comparator greater for signal <GND_1_o_sq_c_x2[11]_LessThan_17_o> created at line 130
+    Found 12-bit comparator greater for signal <GND_1_o_sq_c_y2[11]_LessThan_18_o> created at line 130
+    Found 12-bit comparator greater for signal <sq_d_x1[11]_GND_1_o_LessThan_20_o> created at line 131
+    Found 12-bit comparator greater for signal <sq_d_y1[11]_GND_1_o_LessThan_21_o> created at line 131
+    Found 12-bit comparator greater for signal <GND_1_o_sq_d_x2[11]_LessThan_22_o> created at line 132
+    Found 12-bit comparator greater for signal <GND_1_o_sq_d_y2[11]_LessThan_23_o> created at line 132
+    Found 12-bit comparator greater for signal <frog_x1[11]_GND_1_o_LessThan_25_o> created at line 133
+    Found 12-bit comparator greater for signal <frog_y1[11]_GND_1_o_LessThan_26_o> created at line 133
+    Found 12-bit comparator greater for signal <GND_1_o_frog_x2[11]_LessThan_27_o> created at line 134
+    Found 12-bit comparator greater for signal <GND_1_o_frog_y2[11]_LessThan_28_o> created at line 134
+    Found 12-bit comparator greater for signal <GND_1_o_frog_y1[11]_LessThan_31_o> created at line 139
+    Found 12-bit comparator greater for signal <frog_y1[11]_GND_1_o_LessThan_32_o> created at line 139
+    Found 12-bit comparator greater for signal <GND_1_o_frog_y2[11]_LessThan_33_o> created at line 139
+    Found 12-bit comparator greater for signal <frog_y2[11]_GND_1_o_LessThan_34_o> created at line 139
+    Found 12-bit comparator greater for signal <sq_a_x1[11]_frog_x1[11]_LessThan_35_o> created at line 140
+    Found 12-bit comparator greater for signal <frog_x1[11]_sq_a_x2[11]_LessThan_36_o> created at line 140
+    Found 12-bit comparator greater for signal <sq_a_x1[11]_frog_x2[11]_LessThan_37_o> created at line 140
+    Found 12-bit comparator greater for signal <frog_x2[11]_sq_a_x2[11]_LessThan_38_o> created at line 140
+    Found 12-bit comparator greater for signal <sq_b_x1[11]_frog_x1[11]_LessThan_39_o> created at line 142
+    Found 12-bit comparator greater for signal <frog_x1[11]_sq_b_x2[11]_LessThan_40_o> created at line 142
+    Found 12-bit comparator greater for signal <sq_b_x1[11]_frog_x2[11]_LessThan_41_o> created at line 142
+    Found 12-bit comparator greater for signal <frog_x2[11]_sq_b_x2[11]_LessThan_42_o> created at line 142
+    Found 12-bit comparator greater for signal <sq_c_x1[11]_frog_x1[11]_LessThan_43_o> created at line 144
+    Found 12-bit comparator greater for signal <frog_x1[11]_sq_c_x2[11]_LessThan_44_o> created at line 144
+    Found 12-bit comparator greater for signal <sq_c_x1[11]_frog_x2[11]_LessThan_45_o> created at line 144
+    Found 12-bit comparator greater for signal <frog_x2[11]_sq_c_x2[11]_LessThan_46_o> created at line 144
+    Found 12-bit comparator greater for signal <sq_d_x1[11]_frog_x1[11]_LessThan_47_o> created at line 146
+    Found 12-bit comparator greater for signal <frog_x1[11]_sq_d_x2[11]_LessThan_48_o> created at line 146
+    Found 12-bit comparator greater for signal <sq_d_x1[11]_frog_x2[11]_LessThan_49_o> created at line 146
+    Found 12-bit comparator greater for signal <frog_x2[11]_sq_d_x2[11]_LessThan_50_o> created at line 146
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  19 D-type flip-flop(s).
-	inferred  24 Comparator(s).
+	inferred  40 Comparator(s).
+	inferred   2 Multiplexer(s).
 Unit <top> synthesized.
 
 Synthesizing Unit <vga640x480>.
@@ -268,7 +296,7 @@ Synthesizing Unit <square_2>.
     Related source file is "/home/troy/Embedded/Finalproj1/square.v".
         H_WIDTH = 40
         H_HEIGHT = 15
-        IX = 80
+        IX = 160
         IY = 45
         IX_DIR = 1
         IY_DIR = 1
@@ -294,7 +322,7 @@ Synthesizing Unit <square_3>.
     Related source file is "/home/troy/Embedded/Finalproj1/square.v".
         H_WIDTH = 40
         H_HEIGHT = 15
-        IX = 160
+        IX = 320
         IY = 45
         IX_DIR = 1
         IY_DIR = 1
@@ -316,6 +344,32 @@ Synthesizing Unit <square_3>.
 	inferred   2 Multiplexer(s).
 Unit <square_3> synthesized.
 
+Synthesizing Unit <square_4>.
+    Related source file is "/home/troy/Embedded/Finalproj1/square.v".
+        H_WIDTH = 40
+        H_HEIGHT = 15
+        IX = 480
+        IY = 45
+        IX_DIR = 1
+        IY_DIR = 1
+        D_WIDTH = 640
+        D_HEIGHT = 480
+    Found 12-bit register for signal <y>.
+    Found 12-bit register for signal <x>.
+    Found 12-bit adder for signal <o_x2> created at line 34.
+    Found 12-bit adder for signal <o_y2> created at line 36.
+    Found 13-bit adder for signal <n0045[12:0]> created at line 49.
+    Found 12-bit subtractor for signal <o_x1> created at line 22.
+    Found 12-bit subtractor for signal <o_y1> created at line 24.
+    Found 12-bit comparator lessequal for signal <n0011> created at line 52
+    Found 12-bit comparator lessequal for signal <n0014> created at line 54
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <square_4> synthesized.
+
 Synthesizing Unit <frog>.
     Related source file is "/home/troy/Embedded/Finalproj1/frog.v".
         H_WIDTH = 11
@@ -330,58 +384,52 @@ Synthesizing Unit <frog>.
     Found 12-bit register for signal <y>.
     Found 12-bit adder for signal <o_x2> created at line 39.
     Found 12-bit adder for signal <o_y2> created at line 41.
-    Found 12-bit adder for signal <y[11]_GND_6_o_add_11_OUT> created at line 74.
-    Found 12-bit adder for signal <x[11]_GND_6_o_add_20_OUT> created at line 85.
+    Found 12-bit adder for signal <y[11]_GND_7_o_add_10_OUT> created at line 70.
+    Found 12-bit adder for signal <x[11]_GND_7_o_add_19_OUT> created at line 78.
     Found 12-bit subtractor for signal <o_x1> created at line 27.
     Found 12-bit subtractor for signal <o_y1> created at line 29.
-    Found 12-bit subtractor for signal <GND_6_o_GND_6_o_sub_11_OUT<11:0>> created at line 72.
-    Found 12-bit subtractor for signal <GND_6_o_GND_6_o_sub_20_OUT<11:0>> created at line 84.
+    Found 12-bit subtractor for signal <GND_7_o_GND_7_o_sub_10_OUT<11:0>> created at line 69.
+    Found 12-bit subtractor for signal <GND_7_o_GND_7_o_sub_19_OUT<11:0>> created at line 77.
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
-	inferred   6 Multiplexer(s).
+	inferred   2 Multiplexer(s).
 Unit <frog> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 25
+# Adders/Subtractors                                   : 30
  10-bit adder                                          : 2
  11-bit subtractor                                     : 1
- 12-bit adder                                          : 8
+ 12-bit adder                                          : 10
  12-bit addsub                                         : 2
- 12-bit subtractor                                     : 8
- 13-bit adder                                          : 3
+ 12-bit subtractor                                     : 10
+ 13-bit adder                                          : 4
  17-bit adder                                          : 1
-# Registers                                            : 13
+# Registers                                            : 15
  1-bit register                                        : 2
  10-bit register                                       : 2
- 12-bit register                                       : 8
+ 12-bit register                                       : 10
  17-bit register                                       : 1
-# Comparators                                          : 37
+# Comparators                                          : 55
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 3
- 12-bit comparator greater                             : 24
- 12-bit comparator lessequal                           : 6
+ 12-bit comparator greater                             : 40
+ 12-bit comparator lessequal                           : 8
 # Multiplexers                                         : 15
+ 1-bit 2-to-1 multiplexer                              : 2
  10-bit 2-to-1 multiplexer                             : 2
- 12-bit 2-to-1 multiplexer                             : 11
+ 12-bit 2-to-1 multiplexer                             : 9
  32-bit 2-to-1 multiplexer                             : 2
 
 =========================================================================
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 1 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 1 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
@@ -394,6 +442,18 @@ WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_c_anim>
 WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 1 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 1 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 1 in block <sq_a_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_a_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 1 in block <sq_a_anim>. This FF/Latch will be trimmed during the optimization process.
@@ -412,6 +472,12 @@ WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 1 in block <sq_b_anim>
 WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <square_1>.
 The following registers are absorbed into counter <x>: 1 register on signal <x>.
@@ -425,26 +491,27 @@ Unit <vga640x480> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 23
+# Adders/Subtractors                                   : 28
  10-bit adder                                          : 1
  11-bit subtractor                                     : 1
- 12-bit adder                                          : 10
+ 12-bit adder                                          : 13
  12-bit addsub                                         : 2
- 12-bit subtractor                                     : 8
+ 12-bit subtractor                                     : 10
  17-bit adder                                          : 1
 # Counters                                             : 2
  10-bit up counter                                     : 1
  12-bit up counter                                     : 1
-# Registers                                            : 113
- Flip-Flops                                            : 113
-# Comparators                                          : 37
+# Registers                                            : 137
+ Flip-Flops                                            : 137
+# Comparators                                          : 55
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 3
- 12-bit comparator greater                             : 24
- 12-bit comparator lessequal                           : 6
+ 12-bit comparator greater                             : 40
+ 12-bit comparator lessequal                           : 8
 # Multiplexers                                         : 14
+ 1-bit 2-to-1 multiplexer                              : 2
  10-bit 2-to-1 multiplexer                             : 2
- 12-bit 2-to-1 multiplexer                             : 10
+ 12-bit 2-to-1 multiplexer                             : 8
  32-bit 2-to-1 multiplexer                             : 2
 
 =========================================================================
@@ -488,6 +555,18 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_8> has a constant
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_9> has a constant value of 0 in block <square_3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_10> has a constant value of 0 in block <square_3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_11> has a constant value of 0 in block <square_3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 1 in block <square_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_1> has a constant value of 0 in block <square_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_2> has a constant value of 1 in block <square_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_3> has a constant value of 1 in block <square_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_4> has a constant value of 0 in block <square_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_5> has a constant value of 1 in block <square_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_6> has a constant value of 0 in block <square_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_7> has a constant value of 0 in block <square_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_8> has a constant value of 0 in block <square_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_9> has a constant value of 0 in block <square_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_10> has a constant value of 0 in block <square_4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_11> has a constant value of 0 in block <square_4>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <pix_stb> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <cnt_0> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <cnt_1> of sequential type is unconnected in block <top>.
@@ -513,6 +592,8 @@ Optimizing unit <square_2> ...
 
 Optimizing unit <square_3> ...
 
+Optimizing unit <square_4> ...
+
 Optimizing unit <frog> ...
 WARNING:Xst:1293 - FF/Latch <sq_a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_a_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
@@ -520,15 +601,18 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_11> has
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_d_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_d_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/y_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/x_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <sq_c_anim/x_0> 
-INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <sq_c_anim/x_1> 
-INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <sq_c_anim/x_2> 
+INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <sq_c_anim/x_0> <sq_d_anim/x_0> 
+INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_1> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <sq_c_anim/x_1> <sq_d_anim/x_1> 
+INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_2> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <sq_c_anim/x_2> <sq_d_anim/x_2> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 11.
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 15.
+FlipFlop sq_b_anim/x_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -536,8 +620,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 74
- Flip-Flops                                            : 74
+# Registers                                            : 82
+ Flip-Flops                                            : 82
 
 =========================================================================
 
@@ -560,24 +644,24 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 841
+# BELS                             : 1165
 #      GND                         : 1
-#      INV                         : 34
-#      LUT1                        : 51
-#      LUT2                        : 61
-#      LUT3                        : 62
-#      LUT4                        : 163
-#      LUT5                        : 47
-#      LUT6                        : 112
-#      MUXCY                       : 204
-#      MUXF7                       : 2
+#      INV                         : 35
+#      LUT1                        : 58
+#      LUT2                        : 88
+#      LUT3                        : 59
+#      LUT4                        : 335
+#      LUT5                        : 54
+#      LUT6                        : 107
+#      MUXCY                       : 309
+#      MUXF7                       : 8
 #      VCC                         : 1
-#      XORCY                       : 103
-# FlipFlops/Latches                : 74
-#      FD                          : 41
+#      XORCY                       : 110
+# FlipFlops/Latches                : 82
+#      FD                          : 38
 #      FDR                         : 2
-#      FDRE                        : 27
-#      FDSE                        : 4
+#      FDRE                        : 36
+#      FDSE                        : 6
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 15
@@ -591,16 +675,16 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              74  out of  11440     0%  
- Number of Slice LUTs:                  530  out of   5720     9%  
-    Number used as Logic:               530  out of   5720     9%  
+ Number of Slice Registers:              82  out of  11440     0%  
+ Number of Slice LUTs:                  736  out of   5720    12%  
+    Number used as Logic:               736  out of   5720    12%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    531
-   Number with an unused Flip Flop:     457  out of    531    86%  
-   Number with an unused LUT:             1  out of    531     0%  
-   Number of fully used LUT-FF pairs:    73  out of    531    13%  
-   Number of unique control sets:         6
+ Number of LUT Flip Flop pairs used:    737
+   Number with an unused Flip Flop:     655  out of    737    88%  
+   Number with an unused LUT:             1  out of    737     0%  
+   Number of fully used LUT-FF pairs:    81  out of    737    10%  
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          16
@@ -630,7 +714,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 74    |
+CLK                                | BUFGP                  | 82    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -641,9 +725,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.906ns (Maximum Frequency: 169.328MHz)
-   Minimum input arrival time before clock: 4.576ns
-   Maximum output required time after clock: 9.959ns
+   Minimum period: 6.800ns (Maximum Frequency: 147.056MHz)
+   Minimum input arrival time before clock: 4.253ns
+   Maximum output required time after clock: 9.915ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -652,35 +736,34 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 5.906ns (frequency: 169.328MHz)
-  Total number of paths / destination ports: 5501 / 136
+  Clock period: 6.800ns (frequency: 147.056MHz)
+  Total number of paths / destination ports: 8479 / 166
 -------------------------------------------------------------------------
-Delay:               5.906ns (Levels of Logic = 5)
-  Source:            display/h_count_9 (FF)
-  Destination:       sq_a_anim/x_9 (FF)
+Delay:               6.800ns (Levels of Logic = 4)
+  Source:            display/h_count_6 (FF)
+  Destination:       frog_anim/y_11 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: display/h_count_9 to sq_a_anim/x_9
+  Data Path: display/h_count_6 to frog_anim/y_11
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            13   0.447   1.161  display/h_count_9 (display/h_count_9)
-     LUT5:I2->O            3   0.205   0.651  display/GND_2_o_GND_2_o_equal_15_o<9>_SW0 (N15)
-     LUT6:I5->O            2   0.205   0.617  display/GND_2_o_GND_2_o_equal_15_o<9>_1 (display/GND_2_o_GND_2_o_equal_15_o<9>)
-     LUT6:I5->O           19   0.205   1.072  display/o_animate (animate)
-     LUT6:I5->O            9   0.205   0.830  sq_a_anim/Mcount_x_val1 (sq_a_anim/Mcount_x_val)
-     LUT4:I3->O            1   0.205   0.000  sq_a_anim/x_9_rstpot (sq_a_anim/x_9_rstpot)
-     FD:D                      0.102          sq_a_anim/x_9
+     FDRE:C->Q            13   0.447   1.180  display/h_count_6 (display/h_count_6)
+     LUT5:I1->O            1   0.203   0.580  display/GND_2_o_GND_2_o_equal_15_o<9>_SW0 (N13)
+     LUT6:I5->O           16   0.205   1.005  display/GND_2_o_GND_2_o_equal_15_o<9> (display/GND_2_o_GND_2_o_equal_15_o)
+     LUT6:I5->O           26   0.205   1.207  display/o_animate (animate)
+     LUT3:I2->O           22   0.205   1.133  frog_anim/_n01931 (frog_anim/_n0193)
+     FDRE:R                    0.430          frog_anim/x_1
     ----------------------------------------
-    Total                      5.906ns (1.574ns logic, 4.332ns route)
-                                       (26.7% logic, 73.3% route)
+    Total                      6.800ns (1.695ns logic, 5.105ns route)
+                                       (24.9% logic, 75.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 408 / 45
+  Total number of paths / destination ports: 221 / 45
 -------------------------------------------------------------------------
-Offset:              4.576ns (Levels of Logic = 15)
+Offset:              4.253ns (Levels of Logic = 15)
   Source:            up_btn (PAD)
   Destination:       frog_anim/y_11 (FF)
   Destination Clock: CLK rising
@@ -689,51 +772,54 @@ Offset:              4.576ns (Levels of Logic = 15)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            25   1.222   1.192  up_btn_IBUF (up_btn_IBUF)
-     INV:I->O              1   0.206   0.579  frog_anim/i_up_btn_inv2_INV_0 (frog_anim/i_up_btn_inv)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<0> (frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<1> (frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<2> (frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<3> (frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<4> (frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<5> (frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<6> (frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<7> (frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<8> (frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<9> (frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<9>)
-     MUXCY:CI->O           0   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<10> (frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_cy<10>)
-     XORCY:CI->O           1   0.180   0.684  frog_anim/Mmux_y[11]_GND_6_o_mux_15_OUT_rs_xor<11> (frog_anim/y[11]_GND_6_o_mux_15_OUT<11>)
-     LUT2:I0->O            1   0.203   0.000  frog_anim/Mmux_y[11]_y[11]_mux_16_OUT31 (frog_anim/y[11]_y[11]_mux_16_OUT<11>)
+     IBUF:I->O            13   1.222   0.932  up_btn_IBUF (up_btn_IBUF)
+     INV:I->O              2   0.206   0.616  frog_anim/up2_INV_0 (frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_lut<0>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<0> (frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<1> (frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<2> (frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<3> (frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<4> (frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<5> (frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<6> (frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<7> (frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<8> (frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<9> (frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<9>)
+     MUXCY:CI->O           0   0.019   0.000  frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<10> (frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_cy<10>)
+     XORCY:CI->O           1   0.180   0.580  frog_anim/Maddsub_y[11]_GND_7_o_mux_12_OUT_xor<11> (frog_anim/y[11]_GND_7_o_mux_12_OUT<11>)
+     LUT2:I1->O            1   0.205   0.000  frog_anim/Mmux_y[11]_GND_7_o_mux_13_OUT31 (frog_anim/y[11]_GND_7_o_mux_13_OUT<11>)
      FDRE:D                    0.102          frog_anim/y_11
     ----------------------------------------
-    Total                      4.576ns (2.122ns logic, 2.454ns route)
-                                       (46.4% logic, 53.6% route)
+    Total                      4.253ns (2.124ns logic, 2.129ns route)
+                                       (49.9% logic, 50.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 6588 / 10
+  Total number of paths / destination ports: 8742 / 8
 -------------------------------------------------------------------------
-Offset:              9.959ns (Levels of Logic = 8)
-  Source:            sq_b_anim/x_8 (FF)
+Offset:              9.915ns (Levels of Logic = 11)
+  Source:            display/v_count_7 (FF)
   Destination:       VGA_B<2> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: sq_b_anim/x_8 to VGA_B<2>
+  Data Path: display/v_count_7 to VGA_B<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              11   0.447   1.111  sq_b_anim/x_8 (sq_b_anim/x_8)
-     LUT3:I0->O            4   0.205   0.684  sq_b_anim/Msub_o_x1_xor<8>151 (sq_b_anim/Msub_o_x1_xor<8>12)
-     LUT6:I5->O            2   0.205   0.961  sq_b_anim/Msub_o_x1_xor<9>1 (sq_b_x1<9>)
-     LUT5:I0->O            0   0.203   0.000  Mcompar_sq_b_x1[11]_GND_1_o_LessThan_10_o_lutdi4 (Mcompar_sq_b_x1[11]_GND_1_o_LessThan_10_o_lutdi4)
-     MUXCY:DI->O           1   0.339   0.580  Mcompar_sq_b_x1[11]_GND_1_o_LessThan_10_o_cy<4> (Mcompar_sq_b_x1[11]_GND_1_o_LessThan_10_o_cy<4>)
-     LUT6:I5->O            1   0.205   0.808  Mcompar_sq_b_x1[11]_GND_1_o_LessThan_10_o_cy<5> (Mcompar_sq_b_x1[11]_GND_1_o_LessThan_10_o_cy<5>)
-     LUT3:I0->O            1   0.205   0.580  VGA_B<2>_SW0 (N3)
-     LUT6:I5->O            3   0.205   0.650  VGA_B<2> (VGA_B_0_OBUF)
+     FDRE:C->Q            37   0.447   1.707  display/v_count_7 (display/v_count_7)
+     LUT6:I1->O           16   0.203   1.109  display/Mmux_n003711 (y<0>)
+     LUT2:I0->O            1   0.203   0.000  Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_lut<0>1 (Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<0> (Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<1> (Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<2> (Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<3> (Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<3>)
+     MUXCY:CI->O           1   0.213   0.808  Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<4> (Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<4>)
+     LUT3:I0->O            1   0.205   0.580  VGA_B<2>3_SW0 (N57)
+     LUT6:I5->O            1   0.205   0.580  VGA_B<2>3 (VGA_B<2>2)
+     LUT6:I5->O            3   0.205   0.650  VGA_B<2>5 (VGA_B_0_OBUF)
      OBUF:I->O                 2.571          VGA_B_2_OBUF (VGA_B<2>)
     ----------------------------------------
-    Total                      9.959ns (4.585ns logic, 5.374ns route)
-                                       (46.0% logic, 54.0% route)
+    Total                      9.915ns (4.481ns logic, 5.434ns route)
+                                       (45.2% logic, 54.8% route)
 
 =========================================================================
 
@@ -745,21 +831,21 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.906|         |         |         |
+CLK            |    6.800|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 11.95 secs
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 13.01 secs
  
 --> 
 
 
-Total memory usage is 396480 kilobytes
+Total memory usage is 396968 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  129 (   0 filtered)
-Number of infos    :    7 (   0 filtered)
+Number of warnings :  164 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 

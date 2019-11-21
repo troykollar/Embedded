@@ -61,21 +61,14 @@ module frog #(
 	 always @ (posedge i_clk)
 		if (!i_left_btn)  left <= 1;
 		else					left <= 0;*/
-			
-
-    always @ (posedge i_clk)
-    begin
-        if (i_rst)  // on reset return to starting position
-            y <= IY;
-        if (i_animate && i_ani_stb)
-		  begin
-				if (up)	y <= y - 2;
-				else if (i_dead) y <= IY;
-				else if (down)	y <= y + 2;
-				else if (i_rst) y <= IY;
-				else		y <= y;
-		  end
-    end
+	 
+	 always @(posedge i_clk)
+		if (i_animate && i_ani_stb)
+			if (i_rst)	y <= IY;
+			else if (i_dead) y <= IY;
+			else if (up)	y <= y - 2;
+			else if (down)	y <= y + 2;
+			else	y <= y;
 	 
 	 always @(posedge i_clk)
 		if (i_animate && i_ani_stb)

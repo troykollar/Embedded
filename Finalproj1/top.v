@@ -49,10 +49,11 @@ module top(
         .o_animate(animate)
     );
 
-    wire sq_a, sq_b, sq_c;
+    wire sq_a, sq_b, sq_c, sq_d;
     wire [11:0] sq_a_x1, sq_a_x2, sq_a_y1, sq_a_y2;  // 12-bit values: 0-4095 
     wire [11:0] sq_b_x1, sq_b_x2, sq_b_y1, sq_b_y2;
     wire [11:0] sq_c_x1, sq_c_x2, sq_c_y1, sq_c_y2;
+	 wire [11:0] sq_d_x1, sq_d_x2, sq_d_y1, sq_d_y2;
 	 
 	 parameter rw1y = 45;
 	 parameter rw1width = 40;
@@ -69,7 +70,7 @@ module top(
         .o_y2(sq_a_y2)
     );
 
-    square #(.IX(80), .IY(rw1y), .IY_DIR(rw1dir), .H_WIDTH(rw1width), .IX_DIR(rw1dir)) sq_b_anim (
+    square #(.IX(160), .IY(rw1y), .IY_DIR(rw1dir), .H_WIDTH(rw1width), .IX_DIR(rw1dir)) sq_b_anim (
         .i_clk(CLK), 
         .i_ani_stb(pix_stb),
         .i_rst(rst),
@@ -80,7 +81,7 @@ module top(
         .o_y2(sq_b_y2)
     );    
 
-    square #(.IX(160), .IY(rw1y), .H_WIDTH(rw1width), .IX_DIR(rw1dir)) sq_c_anim (
+    square #(.IX(320), .IY(rw1y), .H_WIDTH(rw1width), .IX_DIR(rw1dir), .IY_DIR(rw1dir)) sq_c_anim (
         .i_clk(CLK), 
         .i_ani_stb(pix_stb),
         .i_rst(rst),
@@ -89,6 +90,17 @@ module top(
         .o_x2(sq_c_x2),
         .o_y1(sq_c_y1),
         .o_y2(sq_c_y2)
+    );
+	 
+    square #(.IX(480), .IY(rw1y), .H_WIDTH(rw1width), .IX_DIR(rw1dir), .IY_DIR(rw1dir)) sq_d_anim (
+        .i_clk(CLK), 
+        .i_ani_stb(pix_stb),
+        .i_rst(rst),
+        .i_animate(animate),
+        .o_x1(sq_d_x1),
+        .o_x2(sq_d_x2),
+        .o_y1(sq_d_y1),
+        .o_y2(sq_d_y2)
     );
 	 
 	 wire fr;
@@ -116,6 +128,8 @@ module top(
         (x < sq_b_x2) & (y < sq_b_y2)) ? 1 : 0;
     assign sq_c = ((x > sq_c_x1) & (y > sq_c_y1) &
         (x < sq_c_x2) & (y < sq_c_y2)) ? 1 : 0;
+	 assign sq_d = ((x > sq_d_x1) & (y > sq_d_y1) &
+        (x < sq_d_x2) & (y < sq_d_y2)) ? 1 : 0;		
 	 assign fr = ((x > frog_x1) & (y > frog_y1) &
 		  (x < frog_x2) & (y < frog_y2)) ? 1 : 0;
 		  
@@ -125,10 +139,16 @@ module top(
 		if (((frog_y1 > rw1top) && (frog_y1 < rw1bot)) || ((frog_y2 > rw1top) && (frog_y2 < rw1bot)))	//Collisions with square 1
 			if (((frog_x1 > sq_a_x1) && (frog_x1 < sq_a_x2)) || ((frog_x2 > sq_a_x1) && (frog_x2 < sq_a_x2)))
 				dead <= 1;
+			else if (((frog_x1 > sq_b_x1) && (frog_x1 < sq_b_x2)) || ((frog_x2 > sq_b_x1) && (frog_x2 < sq_b_x2)))
+				dead <= 1;
+			else if (((frog_x1 > sq_c_x1) && (frog_x1 < sq_c_x2)) || ((frog_x2 > sq_c_x1) && (frog_x2 < sq_c_x2)))
+				dead <= 1;
+			else if (((frog_x1 > sq_d_x1) && (frog_x1 < sq_d_x2)) || ((frog_x2 > sq_d_x1) && (frog_x2 < sq_d_x2)))
+				dead <= 1;
 			else	dead <= 0;
 		else	dead <= 0;
 
-    assign VGA_R[1:0] = {sq_a, sq_a};  // square a is red
+    assign VGA_R[1:0] = {0, 0};  // square a is red
     assign VGA_G[2:0] = {fr, fr, fr};  // square b is green
-    assign VGA_B[2:0] = {sq_c | sq_b, sq_c | sq_b,sq_c | sq_b};  // square c is blue
+    assign VGA_B[2:0] = {3{sq_a | sq_b | sq_c | sq_d}};  // square c is blue
 endmodule
