@@ -23,6 +23,7 @@ module frog #(
 	 input wire i_down_btn,		// hight when the user presses "down"
 	 input wire i_right_btn,	// high when user presses "right"
 	 input wire i_left_btn,		// high when user presses "left"
+	 input wire i_dead,
     output wire [11:0] o_x1,  // square left edge: 12-bit value: 0-4095
     output wire [11:0] o_x2,  // square right edge
     output wire [11:0] o_y1,  // square top edge
@@ -69,6 +70,7 @@ module frog #(
         if (i_animate && i_ani_stb)
 		  begin
 				if (up)	y <= y - 2;
+				else if (i_dead) y <= IY;
 				else if (down)	y <= y + 2;
 				else if (i_rst) y <= IY;
 				else		y <= y;
@@ -78,6 +80,7 @@ module frog #(
 	 always @(posedge i_clk)
 		if (i_animate && i_ani_stb)
 			if (i_rst)	x <= IX;
+			else if (i_dead) x <= IX;
 			else if (left) x <= x-2;
 			else if (right) x <= x + 2;
 			else x <= x;

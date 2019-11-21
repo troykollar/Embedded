@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Nov 21 16:11:10 2019
+// Written by: Map P.20131013 on Thu Nov 21 17:27:31 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -42,10 +42,10 @@ TIMEGRP GCLK1 = BEL "dead" BEL "rst" BEL "cnt_13" BEL "cnt_14" BEL "cnt_15"
         "sq_c_anim/x_9" BEL "sq_c_anim/x_8" BEL "sq_c_anim/x_7" BEL
         "sq_c_anim/x_6" BEL "sq_c_anim/x_5" BEL "sq_c_anim/x_4" BEL
         "sq_c_anim/x_3" BEL "sq_c_anim/x_2" BEL "frog_anim/x_11" BEL
-        "frog_anim/x_10" BEL "frog_anim/x_8" BEL "frog_anim/x_7" BEL
-        "frog_anim/x_9" BEL "frog_anim/x_5" BEL "frog_anim/x_4" BEL
-        "frog_anim/x_6" BEL "frog_anim/x_2" BEL "frog_anim/x_1" BEL
-        "frog_anim/x_3" BEL "CLK_BUFGP/BUFG";
+        "frog_anim/x_10" BEL "frog_anim/x_9" BEL "frog_anim/x_8" BEL
+        "frog_anim/x_7" BEL "frog_anim/x_6" BEL "frog_anim/x_5" BEL
+        "frog_anim/x_4" BEL "frog_anim/x_3" BEL "frog_anim/x_2" BEL
+        "frog_anim/x_1" BEL "CLK_BUFGP/BUFG";
 TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz HIGH 50%;
 SCHEMATIC END;
 

@@ -23,8 +23,6 @@ module top(
 	always @(posedge CLK)
 		if (!RST_BTN)
 			rst <= 1;
-		else if(dead)
-			rst <= 1;
 		else	rst <= 0;
 		
     //wire rst = ~RST_BTN;    // reset is active low on Arty & Nexys Video
@@ -104,7 +102,8 @@ module top(
 			.i_up_btn(up_btn),
 			.i_down_btn(down_btn),
 			.i_right_btn(right_btn),
-			.i_left_btn(left_btn)
+			.i_left_btn(left_btn),
+			.i_dead(dead)
 		);
 
     assign sq_a = ((x > sq_a_x1) & (y > sq_a_y1) &
