@@ -6,7 +6,7 @@
 
 module square #(
     H_WIDTH=20,      // half obstacle width (for ease of co-ordinate calculations)
-	 H_HEIGHT = 20,		// half obstacle height
+	 H_HEIGHT = 15,		// half obstacle height
     IX=320,         // initial horizontal position of square centre
     IY=240,         // initial vertical position of square centre
     IX_DIR=1,       // initial horizontal direction: 1 is right, 0 is left

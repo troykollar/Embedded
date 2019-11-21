@@ -53,8 +53,12 @@ module top(
     wire [11:0] sq_a_x1, sq_a_x2, sq_a_y1, sq_a_y2;  // 12-bit values: 0-4095 
     wire [11:0] sq_b_x1, sq_b_x2, sq_b_y1, sq_b_y2;
     wire [11:0] sq_c_x1, sq_c_x2, sq_c_y1, sq_c_y2;
+	 
+	 parameter rw1y = 45;
+	 parameter rw1width = 40;
+	 parameter rw1dir = 1;
 
-    square #(.IX(160), .IY(120), .H_WIDTH(60), .H_HEIGHT(15), .IX_DIR(1)) sq_a_anim (
+    square #(.IX(0), .IY(rw1y), .H_WIDTH(rw1width), .IX_DIR(rw1dir)) sq_a_anim (
         .i_clk(CLK), 
         .i_ani_stb(pix_stb),
         .i_rst(rst),
@@ -65,7 +69,7 @@ module top(
         .o_y2(sq_a_y2)
     );
 
-    square #(.IX(320), .IY(240), .IY_DIR(0), .H_WIDTH(20), .H_HEIGHT(15), .IX_DIR(0)) sq_b_anim (
+    square #(.IX(80), .IY(rw1y), .IY_DIR(rw1dir), .H_WIDTH(rw1width), .IX_DIR(rw1dir)) sq_b_anim (
         .i_clk(CLK), 
         .i_ani_stb(pix_stb),
         .i_rst(rst),
@@ -76,7 +80,7 @@ module top(
         .o_y2(sq_b_y2)
     );    
 
-    square #(.IX(480), .IY(360), .H_WIDTH(100), .H_HEIGHT(15)) sq_c_anim (
+    square #(.IX(160), .IY(rw1y), .H_WIDTH(rw1width), .IX_DIR(rw1dir)) sq_c_anim (
         .i_clk(CLK), 
         .i_ani_stb(pix_stb),
         .i_rst(rst),
@@ -115,9 +119,11 @@ module top(
 	 assign fr = ((x > frog_x1) & (y > frog_y1) &
 		  (x < frog_x2) & (y < frog_y2)) ? 1 : 0;
 		  
+	 parameter rw1top = rw1y - 15;
+	 parameter rw1bot = rw1y + 15;
 	  always @(posedge CLK)
-		if (((frog_y1 > sq_a_y1) && (frog_y1 < sq_a_y2)) || ((frog_y2 < sq_a_y2) && (frog_y2 > sq_a_y1)))
-			if (((frog_x1 > sq_a_x1) && (frog_x1 < sq_a_x2)) || ((frog_x2 < sq_a_x2) && (frog_x1 > sq_a_x1)))
+		if (((frog_y1 > rw1top) && (frog_y1 < rw1bot)) || ((frog_y2 > rw1top) && (frog_y2 < rw1bot)))	//Collisions with square 1
+			if (((frog_x1 > sq_a_x1) && (frog_x1 < sq_a_x2)) || ((frog_x2 > sq_a_x1) && (frog_x2 < sq_a_x2)))
 				dead <= 1;
 			else	dead <= 0;
 		else	dead <= 0;
