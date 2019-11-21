@@ -8,7 +8,7 @@ module frog #(
     H_WIDTH=11,      // half obstacle width (for ease of co-ordinate calculations)
 	 H_HEIGHT = 11,		// half obstacle height
     IX=320,         // initial horizontal position of square centre
-    IY=240,         // initial vertical position of square centre
+    IY=460,         // initial vertical position of square centre
     IX_DIR=1,       // initial horizontal direction: 1 is right, 0 is left
     IY_DIR=1,       // initial vertical direction: 1 is down, 0 is up
     D_WIDTH=640,    // width of display
@@ -65,24 +65,21 @@ module frog #(
     always @ (posedge i_clk)
     begin
         if (i_rst)  // on reset return to starting position
-        begin
-            x <= IX;
             y <= IY;
-        end
         if (i_animate && i_ani_stb)
 		  begin
 				if (up)	y <= y - 2;
 				else if (down)	y <= y + 2;
+				else if (i_rst) y <= IY;
 				else		y <= y;
-				
-				if (left) x <= x - 2;
-				else if (right) x <= x + 2;
-				else x <= x;
-		  end
-		  else
-		  begin
-				y <= y;
-				x <= x;
 		  end
     end
+	 
+	 always @(posedge i_clk)
+		if (i_animate && i_ani_stb)
+			if (i_rst)	x <= IX;
+			else if (left) x <= x-2;
+			else if (right) x <= x + 2;
+			else x <= x;
+		
 endmodule

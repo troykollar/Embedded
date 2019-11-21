@@ -18,7 +18,16 @@ module top(
     output wire [2:0] VGA_B     // 4-bit VGA blue output
     );
 
-    wire rst = ~RST_BTN;    // reset is active low on Arty & Nexys Video
+	reg dead = 0;
+	reg rst;
+	always @(posedge CLK)
+		if (!RST_BTN)
+			rst <= 1;
+		else if(dead)
+			rst <= 1;
+		else	rst <= 0;
+		
+    //wire rst = ~RST_BTN;    // reset is active low on Arty & Nexys Video
     // wire rst = RST_BTN;  // reset is active high on Basys3 (BTNC)
 
     wire [9:0] x;  // current pixel x position: 10-bit value: 0-1023
@@ -83,7 +92,7 @@ module top(
 	 wire fr;
 	 wire [11:0] frog_x1, frog_x2, frog_y1, frog_y2;
 	 
-	 frog #(.IX(320), .IY(200)) frog_anim (
+	 frog #(.IX(320), .IY(420)) frog_anim (
 			.i_clk(CLK),
 			.i_ani_stb(pix_stb),
 			.i_rst(rst),
@@ -106,6 +115,13 @@ module top(
         (x < sq_c_x2) & (y < sq_c_y2)) ? 1 : 0;
 	 assign fr = ((x > frog_x1) & (y > frog_y1) &
 		  (x < frog_x2) & (y < frog_y2)) ? 1 : 0;
+		  
+	  always @(posedge CLK)
+		if (((frog_y1 > sq_a_y1) && (frog_y1 < sq_a_y2)) || ((frog_y2 < sq_a_y2) && (frog_y2 > sq_a_y1)))
+			if (((frog_x1 > sq_a_x1) && (frog_x1 < sq_a_x2)) || ((frog_x2 < sq_a_x2) && (frog_x1 > sq_a_x1)))
+				dead <= 1;
+			else	dead <= 0;
+		else	dead <= 0;
 
     assign VGA_R[1:0] = {sq_a, sq_a};  // square a is red
     assign VGA_G[2:0] = {fr, fr, fr};  // square b is green

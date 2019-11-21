@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: top.prj
@@ -120,7 +120,7 @@ Parsing module <top>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/troy/Embedded/Finalproj1/top.v" Line 34: Port o_blanking is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/troy/Embedded/Finalproj1/top.v" Line 43: Port o_blanking is not connected to this instance
 
 Elaborating module <top>.
 
@@ -154,19 +154,19 @@ WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 36: Res
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:1127 - "/home/troy/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
 
-Elaborating module <frog(IX=320,IY=200)>.
+Elaborating module <frog(IX=320,IY=420)>.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 37: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 38: Result of 13-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 39: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 40: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 74: Result of 32-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 75: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 78: Result of 32-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 79: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 101: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 103: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 105: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 107: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 71: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 72: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 81: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/frog.v" Line 82: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 110: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 112: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 114: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 116: Result of 32-bit expression is truncated to fit in 1-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -174,32 +174,41 @@ WARNING:HDLCompiler:413 - "/home/troy/Embedded/Finalproj1/top.v" Line 107: Resul
 
 Synthesizing Unit <top>.
     Related source file is "/home/troy/Embedded/Finalproj1/top.v".
-INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 34: Output port <o_blanking> of the instance <display> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 34: Output port <o_active> of the instance <display> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 34: Output port <o_screenend> of the instance <display> is unconnected or connected to loadless signal.
-    Found 1-bit register for signal <pix_stb>.
+INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 43: Output port <o_blanking> of the instance <display> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 43: Output port <o_active> of the instance <display> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/troy/Embedded/Finalproj1/top.v" line 43: Output port <o_screenend> of the instance <display> is unconnected or connected to loadless signal.
     Found 16-bit register for signal <cnt>.
-    Found 17-bit adder for signal <n0085> created at line 32.
-    Found 12-bit comparator greater for signal <sq_a_x1[11]_GND_1_o_LessThan_4_o> created at line 101
-    Found 12-bit comparator greater for signal <sq_a_y1[11]_GND_1_o_LessThan_5_o> created at line 101
-    Found 12-bit comparator greater for signal <GND_1_o_sq_a_x2[11]_LessThan_6_o> created at line 102
-    Found 12-bit comparator greater for signal <GND_1_o_sq_a_y2[11]_LessThan_7_o> created at line 102
-    Found 12-bit comparator greater for signal <sq_b_x1[11]_GND_1_o_LessThan_9_o> created at line 103
-    Found 12-bit comparator greater for signal <sq_b_y1[11]_GND_1_o_LessThan_10_o> created at line 103
-    Found 12-bit comparator greater for signal <GND_1_o_sq_b_x2[11]_LessThan_11_o> created at line 104
-    Found 12-bit comparator greater for signal <GND_1_o_sq_b_y2[11]_LessThan_12_o> created at line 104
-    Found 12-bit comparator greater for signal <sq_c_x1[11]_GND_1_o_LessThan_14_o> created at line 105
-    Found 12-bit comparator greater for signal <sq_c_y1[11]_GND_1_o_LessThan_15_o> created at line 105
-    Found 12-bit comparator greater for signal <GND_1_o_sq_c_x2[11]_LessThan_16_o> created at line 106
-    Found 12-bit comparator greater for signal <GND_1_o_sq_c_y2[11]_LessThan_17_o> created at line 106
-    Found 12-bit comparator greater for signal <frog_x1[11]_GND_1_o_LessThan_19_o> created at line 107
-    Found 12-bit comparator greater for signal <frog_y1[11]_GND_1_o_LessThan_20_o> created at line 107
-    Found 12-bit comparator greater for signal <GND_1_o_frog_x2[11]_LessThan_21_o> created at line 108
-    Found 12-bit comparator greater for signal <GND_1_o_frog_y2[11]_LessThan_22_o> created at line 108
+    Found 1-bit register for signal <pix_stb>.
+    Found 1-bit register for signal <dead>.
+    Found 1-bit register for signal <rst>.
+    Found 17-bit adder for signal <n0101> created at line 41.
+    Found 12-bit comparator greater for signal <sq_a_x1[11]_GND_1_o_LessThan_5_o> created at line 110
+    Found 12-bit comparator greater for signal <sq_a_y1[11]_GND_1_o_LessThan_6_o> created at line 110
+    Found 12-bit comparator greater for signal <GND_1_o_sq_a_x2[11]_LessThan_7_o> created at line 111
+    Found 12-bit comparator greater for signal <GND_1_o_sq_a_y2[11]_LessThan_8_o> created at line 111
+    Found 12-bit comparator greater for signal <sq_b_x1[11]_GND_1_o_LessThan_10_o> created at line 112
+    Found 12-bit comparator greater for signal <sq_b_y1[11]_GND_1_o_LessThan_11_o> created at line 112
+    Found 12-bit comparator greater for signal <GND_1_o_sq_b_x2[11]_LessThan_12_o> created at line 113
+    Found 12-bit comparator greater for signal <GND_1_o_sq_b_y2[11]_LessThan_13_o> created at line 113
+    Found 12-bit comparator greater for signal <sq_c_x1[11]_GND_1_o_LessThan_15_o> created at line 114
+    Found 12-bit comparator greater for signal <sq_c_y1[11]_GND_1_o_LessThan_16_o> created at line 114
+    Found 12-bit comparator greater for signal <GND_1_o_sq_c_x2[11]_LessThan_17_o> created at line 115
+    Found 12-bit comparator greater for signal <GND_1_o_sq_c_y2[11]_LessThan_18_o> created at line 115
+    Found 12-bit comparator greater for signal <frog_x1[11]_GND_1_o_LessThan_20_o> created at line 116
+    Found 12-bit comparator greater for signal <frog_y1[11]_GND_1_o_LessThan_21_o> created at line 116
+    Found 12-bit comparator greater for signal <GND_1_o_frog_x2[11]_LessThan_22_o> created at line 117
+    Found 12-bit comparator greater for signal <GND_1_o_frog_y2[11]_LessThan_23_o> created at line 117
+    Found 12-bit comparator greater for signal <sq_a_y1[11]_frog_y1[11]_LessThan_26_o> created at line 120
+    Found 12-bit comparator greater for signal <frog_y1[11]_sq_a_y2[11]_LessThan_27_o> created at line 120
+    Found 12-bit comparator greater for signal <frog_y2[11]_sq_a_y2[11]_LessThan_28_o> created at line 120
+    Found 12-bit comparator greater for signal <sq_a_y1[11]_frog_y2[11]_LessThan_29_o> created at line 120
+    Found 12-bit comparator greater for signal <sq_a_x1[11]_frog_x1[11]_LessThan_30_o> created at line 121
+    Found 12-bit comparator greater for signal <frog_x1[11]_sq_a_x2[11]_LessThan_31_o> created at line 121
+    Found 12-bit comparator greater for signal <frog_x2[11]_sq_a_x2[11]_LessThan_32_o> created at line 121
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  17 D-type flip-flop(s).
-	inferred  16 Comparator(s).
+	inferred  19 D-type flip-flop(s).
+	inferred  23 Comparator(s).
 Unit <top> synthesized.
 
 Synthesizing Unit <vga640x480>.
@@ -308,25 +317,25 @@ Synthesizing Unit <frog>.
         H_WIDTH = 11
         H_HEIGHT = 11
         IX = 320
-        IY = 200
+        IY = 420
         IX_DIR = 1
         IY_DIR = 1
         D_WIDTH = 640
         D_HEIGHT = 480
-WARNING:Xst:647 - Input <i_rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 12-bit register for signal <y>.
     Found 12-bit register for signal <x>.
+    Found 12-bit register for signal <y>.
     Found 12-bit adder for signal <o_x2> created at line 38.
     Found 12-bit adder for signal <o_y2> created at line 40.
-    Found 12-bit adder for signal <y[11]_GND_6_o_add_12_OUT> created at line 75.
-    Found 12-bit adder for signal <x[11]_GND_6_o_add_16_OUT> created at line 79.
+    Found 12-bit adder for signal <y[11]_GND_6_o_add_11_OUT> created at line 72.
+    Found 12-bit adder for signal <x[11]_GND_6_o_add_19_OUT> created at line 82.
     Found 12-bit subtractor for signal <o_x1> created at line 26.
     Found 12-bit subtractor for signal <o_y1> created at line 28.
-    Found 12-bit subtractor for signal <GND_6_o_GND_6_o_sub_12_OUT<11:0>> created at line 74.
-    Found 12-bit subtractor for signal <GND_6_o_GND_6_o_sub_16_OUT<11:0>> created at line 78.
+    Found 12-bit subtractor for signal <GND_6_o_GND_6_o_sub_11_OUT<11:0>> created at line 71.
+    Found 12-bit subtractor for signal <GND_6_o_GND_6_o_sub_19_OUT<11:0>> created at line 81.
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
 Unit <frog> synthesized.
 
 =========================================================================
@@ -342,22 +351,23 @@ Macro Statistics
  13-bit adder                                          : 3
  13-bit subtractor                                     : 1
  17-bit adder                                          : 1
-# Registers                                            : 12
- 1-bit register                                        : 1
+# Registers                                            : 14
+ 1-bit register                                        : 3
  10-bit register                                       : 2
  12-bit register                                       : 8
  17-bit register                                       : 1
-# Comparators                                          : 29
+# Comparators                                          : 36
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 3
- 12-bit comparator greater                             : 16
+ 12-bit comparator greater                             : 23
  12-bit comparator lessequal                           : 6
-# Multiplexers                                         : 11
+# Multiplexers                                         : 16
  10-bit 2-to-1 multiplexer                             : 2
- 12-bit 2-to-1 multiplexer                             : 6
+ 12-bit 2-to-1 multiplexer                             : 11
  32-bit 2-to-1 multiplexer                             : 3
 
 =========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
@@ -402,7 +412,6 @@ WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 1 in block <sq_b_anim>
 WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <frog>.
-The following registers are absorbed into accumulator <y>: 1 register on signal <y>.
 The following registers are absorbed into accumulator <x>: 1 register on signal <x>.
 Unit <frog> synthesized (advanced).
 
@@ -414,28 +423,29 @@ Unit <vga640x480> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 23
+# Adders/Subtractors                                   : 24
  10-bit adder                                          : 1
  11-bit subtractor                                     : 1
  12-bit adder                                          : 10
+ 12-bit addsub                                         : 1
  12-bit subtractor                                     : 8
  13-bit adder                                          : 1
  13-bit subtractor                                     : 1
  17-bit adder                                          : 1
 # Counters                                             : 1
  10-bit up counter                                     : 1
-# Accumulators                                         : 2
- 12-bit updown accumulator                             : 2
-# Registers                                            : 100
- Flip-Flops                                            : 100
-# Comparators                                          : 29
+# Accumulators                                         : 1
+ 12-bit updown accumulator                             : 1
+# Registers                                            : 114
+ Flip-Flops                                            : 114
+# Comparators                                          : 36
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 3
- 12-bit comparator greater                             : 16
+ 12-bit comparator greater                             : 23
  12-bit comparator lessequal                           : 6
-# Multiplexers                                         : 11
+# Multiplexers                                         : 16
  10-bit 2-to-1 multiplexer                             : 2
- 12-bit 2-to-1 multiplexer                             : 6
+ 12-bit 2-to-1 multiplexer                             : 11
  32-bit 2-to-1 multiplexer                             : 3
 
 =========================================================================
@@ -512,21 +522,14 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_11> has
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/y_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/x_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/y_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <sq_a_anim/x_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <sq_b_anim/x_0> <sq_c_anim/x_0> 
 INFO:Xst:2261 - The FF/Latch <sq_a_anim/x_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <sq_c_anim/x_1> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 9.
-FlipFlop cnt_15 has been replicated 1 time(s)
-FlipFlop display/h_count_7 has been replicated 1 time(s)
-FlipFlop display/v_count_5 has been replicated 1 time(s)
-FlipFlop display/v_count_6 has been replicated 1 time(s)
-FlipFlop display/v_count_7 has been replicated 1 time(s)
-FlipFlop display/v_count_8 has been replicated 1 time(s)
-FlipFlop display/v_count_9 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 11.
 
 Final Macro Processing ...
 
@@ -534,8 +537,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 79
- Flip-Flops                                            : 79
+# Registers                                            : 74
+ Flip-Flops                                            : 74
 
 =========================================================================
 
@@ -558,24 +561,24 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 729
+# BELS                             : 876
 #      GND                         : 1
-#      INV                         : 42
-#      LUT1                        : 50
-#      LUT2                        : 45
-#      LUT3                        : 24
-#      LUT4                        : 121
-#      LUT5                        : 50
-#      LUT6                        : 112
-#      MUXCY                       : 180
+#      INV                         : 50
+#      LUT1                        : 52
+#      LUT2                        : 50
+#      LUT3                        : 62
+#      LUT4                        : 172
+#      LUT5                        : 101
+#      LUT6                        : 60
+#      MUXCY                       : 224
 #      VCC                         : 1
 #      XORCY                       : 103
-# FlipFlops/Latches                : 79
-#      FD                          : 25
-#      FDE                         : 2
+# FlipFlops/Latches                : 74
+#      FD                          : 41
+#      FDE                         : 11
 #      FDR                         : 1
-#      FDRE                        : 43
-#      FDSE                        : 8
+#      FDRE                        : 20
+#      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 15
@@ -589,16 +592,16 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              79  out of  11440     0%  
- Number of Slice LUTs:                  444  out of   5720     7%  
-    Number used as Logic:               444  out of   5720     7%  
+ Number of Slice Registers:              74  out of  11440     0%  
+ Number of Slice LUTs:                  547  out of   5720     9%  
+    Number used as Logic:               547  out of   5720     9%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    450
-   Number with an unused Flip Flop:     371  out of    450    82%  
-   Number with an unused LUT:             6  out of    450     1%  
-   Number of fully used LUT-FF pairs:    73  out of    450    16%  
-   Number of unique control sets:         7
+ Number of LUT Flip Flop pairs used:    548
+   Number with an unused Flip Flop:     474  out of    548    86%  
+   Number with an unused LUT:             1  out of    548     0%  
+   Number of fully used LUT-FF pairs:    73  out of    548    13%  
+   Number of unique control sets:         6
 
 IO Utilization: 
  Number of IOs:                          16
@@ -628,7 +631,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 79    |
+CLK                                | BUFGP                  | 74    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -639,9 +642,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.585ns (Maximum Frequency: 218.122MHz)
-   Minimum input arrival time before clock: 4.576ns
-   Maximum output required time after clock: 9.183ns
+   Minimum period: 5.791ns (Maximum Frequency: 172.671MHz)
+   Minimum input arrival time before clock: 4.557ns
+   Maximum output required time after clock: 9.376ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -650,34 +653,34 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 4.585ns (frequency: 218.122MHz)
-  Total number of paths / destination ports: 3465 / 184
+  Clock period: 5.791ns (frequency: 172.671MHz)
+  Total number of paths / destination ports: 3987 / 126
 -------------------------------------------------------------------------
-Delay:               4.585ns (Levels of Logic = 4)
-  Source:            sq_a_anim/x_9 (FF)
-  Destination:       sq_a_anim/x_9 (FF)
+Delay:               5.791ns (Levels of Logic = 4)
+  Source:            display/h_count_9 (FF)
+  Destination:       frog_anim/y_11 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: sq_a_anim/x_9 to sq_a_anim/x_9
+  Data Path: display/h_count_9 to frog_anim/y_11
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            10   0.447   1.201  sq_a_anim/x_9 (sq_a_anim/x_9)
-     LUT5:I0->O            1   0.203   0.580  sq_a_anim/x[11]_GND_3_o_LessThan_11_o1_SW0 (N17)
-     LUT6:I5->O           10   0.205   0.857  sq_a_anim/x[11]_GND_3_o_LessThan_11_o1 (sq_a_anim/x[11]_GND_3_o_LessThan_11_o)
-     LUT6:I5->O            1   0.205   0.580  sq_a_anim/x_9_dpot (sq_a_anim/x_9_dpot)
-     LUT3:I2->O            1   0.205   0.000  sq_a_anim/x_9_dpot1 (sq_a_anim/x_9_dpot1)
-     FDRE:D                    0.102          sq_a_anim/x_9
+     FDRE:C->Q            13   0.447   1.180  display/h_count_9 (display/h_count_9)
+     LUT5:I1->O            1   0.203   0.580  display/GND_2_o_GND_2_o_equal_15_o<9>_SW0 (N15)
+     LUT6:I5->O           15   0.205   0.982  display/GND_2_o_GND_2_o_equal_15_o<9> (display/GND_2_o_GND_2_o_equal_15_o)
+     LUT6:I5->O            1   0.205   0.580  display/o_animate_1 (display/o_animate)
+     LUT5:I4->O           11   0.205   0.882  frog_anim/_n0201_inv1 (frog_anim/_n0201_inv)
+     FDE:CE                    0.322          frog_anim/y_1
     ----------------------------------------
-    Total                      4.585ns (1.367ns logic, 3.218ns route)
-                                       (29.8% logic, 70.2% route)
+    Total                      5.791ns (1.587ns logic, 4.204ns route)
+                                       (27.4% logic, 72.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 273 / 75
+  Total number of paths / destination ports: 397 / 34
 -------------------------------------------------------------------------
-Offset:              4.576ns (Levels of Logic = 15)
+Offset:              4.557ns (Levels of Logic = 15)
   Source:            up_btn (PAD)
   Destination:       frog_anim/y_11 (FF)
   Destination Clock: CLK rising
@@ -686,51 +689,51 @@ Offset:              4.576ns (Levels of Logic = 15)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            23   1.222   1.153  up_btn_IBUF (up_btn_IBUF)
-     INV:I->O              2   0.206   0.616  frog_anim/i_up_btn_inv2_INV_0 (frog_anim/Maccum_y_lut<0>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<0> (frog_anim/Maccum_y_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<1> (frog_anim/Maccum_y_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<2> (frog_anim/Maccum_y_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<3> (frog_anim/Maccum_y_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<4> (frog_anim/Maccum_y_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<5> (frog_anim/Maccum_y_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<6> (frog_anim/Maccum_y_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<7> (frog_anim/Maccum_y_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<8> (frog_anim/Maccum_y_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  frog_anim/Maccum_y_cy<9> (frog_anim/Maccum_y_cy<9>)
-     MUXCY:CI->O           0   0.019   0.000  frog_anim/Maccum_y_cy<10> (frog_anim/Maccum_y_cy<10>)
-     XORCY:CI->O           1   0.180   0.684  frog_anim/Maccum_y_xor<11> (frog_anim/Result<11>1)
-     LUT6:I4->O            1   0.203   0.000  frog_anim/y_11_rstpot (frog_anim/y_11_rstpot)
-     FD:D                      0.102          frog_anim/y_11
+     IBUF:I->O            24   1.222   1.172  up_btn_IBUF (up_btn_IBUF)
+     INV:I->O              1   0.206   0.579  frog_anim/i_up_btn_inv2_INV_0 (frog_anim/i_up_btn_inv)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<0> (frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<1> (frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<2> (frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<3> (frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<4> (frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<5> (frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<6> (frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<7> (frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<8> (frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<9> (frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<9>)
+     MUXCY:CI->O           0   0.019   0.000  frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<10> (frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_cy<10>)
+     XORCY:CI->O           1   0.180   0.684  frog_anim/Mmux_y[11]_GND_6_o_mux_14_OUT_rs_xor<11> (frog_anim/y[11]_GND_6_o_mux_14_OUT<11>)
+     LUT3:I1->O            1   0.203   0.000  frog_anim/Mmux_y[11]_y[11]_mux_15_OUT31 (frog_anim/y[11]_y[11]_mux_15_OUT<11>)
+     FDE:D                     0.102          frog_anim/y_11
     ----------------------------------------
-    Total                      4.576ns (2.122ns logic, 2.454ns route)
-                                       (46.4% logic, 53.6% route)
+    Total                      4.557ns (2.122ns logic, 2.435ns route)
+                                       (46.6% logic, 53.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 6699 / 10
+  Total number of paths / destination ports: 6721 / 10
 -------------------------------------------------------------------------
-Offset:              9.183ns (Levels of Logic = 8)
-  Source:            sq_c_anim/x_4 (FF)
+Offset:              9.376ns (Levels of Logic = 8)
+  Source:            sq_b_anim/x_2 (FF)
   Destination:       VGA_B<2> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: sq_c_anim/x_4 to VGA_B<2>
+  Data Path: sq_b_anim/x_2 to VGA_B<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            12   0.447   1.137  sq_c_anim/x_4 (sq_c_anim/x_4)
-     LUT3:I0->O            7   0.205   0.878  sq_c_anim/Msub_o_x1_xor<11>111 (sq_c_anim/Msub_o_x1_xor<11>11)
-     LUT6:I4->O            2   0.203   0.961  sq_c_anim/Msub_o_x1_xor<9>1 (sq_c_x1<9>)
-     LUT5:I0->O            0   0.203   0.000  Mcompar_sq_c_x1[11]_GND_1_o_LessThan_14_o_lutdi4 (Mcompar_sq_c_x1[11]_GND_1_o_LessThan_14_o_lutdi4)
-     MUXCY:DI->O           1   0.145   0.000  Mcompar_sq_c_x1[11]_GND_1_o_LessThan_14_o_cy<4> (Mcompar_sq_c_x1[11]_GND_1_o_LessThan_14_o_cy<4>)
-     MUXCY:CI->O           1   0.213   0.580  Mcompar_sq_c_x1[11]_GND_1_o_LessThan_14_o_cy<5> (Mcompar_sq_c_x1[11]_GND_1_o_LessThan_14_o_cy<5>)
-     LUT5:I4->O            1   0.205   0.580  VGA_B<2>_SW1 (N61)
+     FD:C->Q              19   0.447   1.300  sq_b_anim/x_2 (sq_b_anim/x_2)
+     LUT3:I0->O            3   0.205   0.651  sq_b_anim/Madd_o_x2_xor<11>111 (sq_b_anim/Madd_o_x2_xor<11>11)
+     LUT5:I4->O            2   0.205   0.961  sq_b_anim/Madd_o_x2_xor<8>11 (sq_b_x2<8>)
+     LUT5:I0->O            1   0.203   0.000  Mcompar_GND_1_o_sq_b_x2[11]_LessThan_12_o_lut<4> (Mcompar_GND_1_o_sq_b_x2[11]_LessThan_12_o_lut<4>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_sq_b_x2[11]_LessThan_12_o_cy<4> (Mcompar_GND_1_o_sq_b_x2[11]_LessThan_12_o_cy<4>)
+     MUXCY:CI->O           1   0.213   0.808  Mcompar_GND_1_o_sq_b_x2[11]_LessThan_12_o_cy<5> (Mcompar_GND_1_o_sq_b_x2[11]_LessThan_12_o_cy<5>)
+     LUT3:I0->O            1   0.205   0.580  VGA_B<2>_SW0 (N3)
      LUT6:I5->O            3   0.205   0.650  VGA_B<2> (VGA_B_0_OBUF)
      OBUF:I->O                 2.571          VGA_B_2_OBUF (VGA_B<2>)
     ----------------------------------------
-    Total                      9.183ns (4.397ns logic, 4.786ns route)
-                                       (47.9% logic, 52.1% route)
+    Total                      9.376ns (4.426ns logic, 4.950ns route)
+                                       (47.2% logic, 52.8% route)
 
 =========================================================================
 
@@ -742,21 +745,21 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    4.585|         |         |         |
+CLK            |    5.791|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 11.28 secs
+Total CPU time to Xst completion: 11.89 secs
  
 --> 
 
 
-Total memory usage is 396408 kilobytes
+Total memory usage is 396524 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  132 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of warnings :  131 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 
