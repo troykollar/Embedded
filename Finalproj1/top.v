@@ -17,8 +17,17 @@ module top(
     output wire [2:0] VGA_G,    // 4-bit VGA green output
     output wire [2:0] VGA_B     // 4-bit VGA blue output
     );
+
+	reg dead = 0;
+	reg rst;
+	always @(posedge CLK)
+		if (!RST_BTN)
+			rst <= 1;
+		else if(dead)
+			rst <= 1;
+		else	rst <= 0;
 		
-    wire rst = ~RST_BTN;    // reset is active low on Arty & Nexys Video
+    //wire rst = ~RST_BTN;    // reset is active low on Arty & Nexys Video
     // wire rst = RST_BTN;  // reset is active high on Basys3 (BTNC)
 
     wire [9:0] x;  // current pixel x position: 10-bit value: 0-1023
@@ -80,7 +89,6 @@ module top(
         .o_y2(sq_c_y2)
     );
 	 
-	 reg dead = 0;
 	 wire fr;
 	 wire [11:0] frog_x1, frog_x2, frog_y1, frog_y2;
 	 
@@ -96,8 +104,7 @@ module top(
 			.i_up_btn(up_btn),
 			.i_down_btn(down_btn),
 			.i_right_btn(right_btn),
-			.i_left_btn(left_btn),
-			.dead(dead)
+			.i_left_btn(left_btn)
 		);
 
     assign sq_a = ((x > sq_a_x1) & (y > sq_a_y1) &
@@ -109,14 +116,14 @@ module top(
 	 assign fr = ((x > frog_x1) & (y > frog_y1) &
 		  (x < frog_x2) & (y < frog_y2)) ? 1 : 0;
 		  
-	  always @(posedge CLK)		//Detect collisions for sq_a
-		if (((frog_y1 > sq_a_y1) && (frog_y1 < sq_a_y2)) || ((frog_y2 > sq_a_y1) && (frog_y2 < sq_a_y2)))
-			if (((frog_x1 > sq_a_x1) && (frog_x1 < sq_a_x2)) || ((frog_x2 > sq_a_x1) && (frog_x2 < sq_a_x2)))
+	  always @(posedge CLK)
+		if (((frog_y1 > sq_a_y1) && (frog_y1 < sq_a_y2)) || ((frog_y2 < sq_a_y2) && (frog_y2 > sq_a_y1)))
+			if (((frog_x1 > sq_a_x1) && (frog_x1 < sq_a_x2)) || ((frog_x2 < sq_a_x2) && (frog_x1 > sq_a_x1)))
 				dead <= 1;
 			else	dead <= 0;
 		else	dead <= 0;
 
-    assign VGA_R[1:0] = {sq_a, sq_a};  // square a is blue (vga_r is actually blue I messed up)
+    assign VGA_R[1:0] = {sq_a, sq_a};  // square a is red
     assign VGA_G[2:0] = {fr, fr, fr};  // square b is green
-    assign VGA_B[2:0] = {sq_c | sq_b, sq_c | sq_b,sq_c | sq_b};  // square c is red	(vga_b is actually red)
+    assign VGA_B[2:0] = {sq_c | sq_b, sq_c | sq_b,sq_c | sq_b};  // square c is blue
 endmodule

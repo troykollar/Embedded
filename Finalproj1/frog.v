@@ -23,7 +23,6 @@ module frog #(
 	 input wire i_down_btn,		// hight when the user presses "down"
 	 input wire i_right_btn,	// high when user presses "right"
 	 input wire i_left_btn,		// high when user presses "left"
-	 input wire dead,					// goes high when the frog dies
     output wire [11:0] o_x1,  // square left edge: 12-bit value: 0-4095
     output wire [11:0] o_x2,  // square right edge
     output wire [11:0] o_y1,  // square top edge
@@ -45,20 +44,42 @@ module frog #(
 	 wire left = i_left_btn ? 0: 1;
 	 wire right = i_right_btn ? 0: 1;
 	 
-	 always @(posedge i_clk)
-		if (i_animate && i_ani_stb)	//System should animate
-			if (i_rst)	x <= IX;			// reset to initial x
-			else if (dead) x <= IX;
-			else if (left) x <= x-2;	// move left
-			else if (right) x <= x + 2;	// move right
-			else x <= x;	
+	 
+/*	 always @ (posedge i_clk)
+		if (!i_up_btn)		up <= 1;
+		else					up <= 0;
+		
+	 always @ (posedge i_clk)
+		if (!i_down_btn)	down <= 1;
+		else					down <= 0;
+		
+	 always @ (posedge i_clk)
+		if (!i_right_btn) right <= 1;
+		else					right <= 0;
+		
+	 always @ (posedge i_clk)
+		if (!i_left_btn)  left <= 1;
+		else					left <= 0;*/
 			
+
+    always @ (posedge i_clk)
+    begin
+        if (i_rst)  // on reset return to starting position
+            y <= IY;
+        if (i_animate && i_ani_stb)
+		  begin
+				if (up)	y <= y - 2;
+				else if (down)	y <= y + 2;
+				else if (i_rst) y <= IY;
+				else		y <= y;
+		  end
+    end
+	 
 	 always @(posedge i_clk)
 		if (i_animate && i_ani_stb)
-			if (i_rst) y <= IY;
-			else if (dead) y <= IY;
-			else if (up) y <= y - 2;
-			else if (down) y <= y + 2;
-			else	y <= y;
+			if (i_rst)	x <= IX;
+			else if (left) x <= x-2;
+			else if (right) x <= x + 2;
+			else x <= x;
 		
 endmodule
