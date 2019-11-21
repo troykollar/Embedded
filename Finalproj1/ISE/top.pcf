@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Nov 21 16:11:10 2019
+// Written by: Map P.20131013 on Thu Nov 21 16:37:41 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -20,20 +20,16 @@ COMP "right_btn" LOCATE = SITE "L18" LEVEL 1;
 COMP "left_btn" LOCATE = SITE "M18" LEVEL 1;
 COMP "down_btn" LOCATE = SITE "M16" LEVEL 1;
 COMP "up_btn" LOCATE = SITE "L17" LEVEL 1;
-TIMEGRP GCLK1 = BEL "dead" BEL "rst" BEL "cnt_13" BEL "cnt_14" BEL "cnt_15"
-        BEL "display/h_count_9" BEL "display/h_count_8" BEL
-        "display/h_count_7" BEL "display/h_count_6" BEL "display/h_count_5"
-        BEL "display/h_count_4" BEL "display/h_count_3" BEL
-        "display/h_count_2" BEL "display/h_count_1" BEL "display/h_count_0"
-        BEL "display/v_count_9" BEL "display/v_count_8" BEL
-        "display/v_count_7" BEL "display/v_count_6" BEL "display/v_count_5"
-        BEL "display/v_count_4" BEL "display/v_count_3" BEL
-        "display/v_count_2" BEL "display/v_count_1" BEL "display/v_count_0"
-        BEL "frog_anim/y_11" BEL "frog_anim/y_10" BEL "frog_anim/y_9" BEL
-        "frog_anim/y_8" BEL "frog_anim/y_7" BEL "frog_anim/y_6" BEL
-        "frog_anim/y_5" BEL "frog_anim/y_4" BEL "frog_anim/y_3" BEL
-        "frog_anim/y_2" BEL "frog_anim/y_1" BEL "sq_a_anim/x_9" BEL
-        "sq_a_anim/x_8" BEL "sq_a_anim/x_7" BEL "sq_a_anim/x_6" BEL
+TIMEGRP GCLK1 = BEL "dead" BEL "cnt_13" BEL "cnt_14" BEL "cnt_15" BEL
+        "display/h_count_9" BEL "display/h_count_8" BEL "display/h_count_7"
+        BEL "display/h_count_6" BEL "display/h_count_5" BEL
+        "display/h_count_4" BEL "display/h_count_3" BEL "display/h_count_2"
+        BEL "display/h_count_1" BEL "display/h_count_0" BEL
+        "display/v_count_9" BEL "display/v_count_8" BEL "display/v_count_7"
+        BEL "display/v_count_6" BEL "display/v_count_5" BEL
+        "display/v_count_4" BEL "display/v_count_3" BEL "display/v_count_2"
+        BEL "display/v_count_1" BEL "display/v_count_0" BEL "sq_a_anim/x_9"
+        BEL "sq_a_anim/x_8" BEL "sq_a_anim/x_7" BEL "sq_a_anim/x_6" BEL
         "sq_a_anim/x_5" BEL "sq_a_anim/x_4" BEL "sq_a_anim/x_3" BEL
         "sq_a_anim/x_2" BEL "sq_a_anim/x_1" BEL "sq_a_anim/x_0" BEL
         "sq_b_anim/x_9" BEL "sq_b_anim/x_8" BEL "sq_b_anim/x_7" BEL
@@ -42,10 +38,14 @@ TIMEGRP GCLK1 = BEL "dead" BEL "rst" BEL "cnt_13" BEL "cnt_14" BEL "cnt_15"
         "sq_c_anim/x_9" BEL "sq_c_anim/x_8" BEL "sq_c_anim/x_7" BEL
         "sq_c_anim/x_6" BEL "sq_c_anim/x_5" BEL "sq_c_anim/x_4" BEL
         "sq_c_anim/x_3" BEL "sq_c_anim/x_2" BEL "frog_anim/x_11" BEL
-        "frog_anim/x_10" BEL "frog_anim/x_8" BEL "frog_anim/x_7" BEL
-        "frog_anim/x_9" BEL "frog_anim/x_5" BEL "frog_anim/x_4" BEL
-        "frog_anim/x_6" BEL "frog_anim/x_2" BEL "frog_anim/x_1" BEL
-        "frog_anim/x_3" BEL "CLK_BUFGP/BUFG";
+        "frog_anim/x_10" BEL "frog_anim/x_9" BEL "frog_anim/x_8" BEL
+        "frog_anim/x_7" BEL "frog_anim/x_6" BEL "frog_anim/x_5" BEL
+        "frog_anim/x_4" BEL "frog_anim/x_3" BEL "frog_anim/x_2" BEL
+        "frog_anim/x_1" BEL "frog_anim/y_11" BEL "frog_anim/y_10" BEL
+        "frog_anim/y_9" BEL "frog_anim/y_8" BEL "frog_anim/y_7" BEL
+        "frog_anim/y_6" BEL "frog_anim/y_5" BEL "frog_anim/y_4" BEL
+        "frog_anim/y_3" BEL "frog_anim/y_2" BEL "frog_anim/y_1" BEL
+        "CLK_BUFGP/BUFG";
 TS_GCLK1 = PERIOD TIMEGRP "GCLK1" 100 MHz HIGH 50%;
 SCHEMATIC END;
 
