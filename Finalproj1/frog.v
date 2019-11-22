@@ -61,8 +61,81 @@ module frog #(
 	 always @ (posedge i_clk)
 		if (!i_left_btn)  left <= 1;
 		else					left <= 0;*/
-	 
+		
+	reg up_inProg = 0;
+	reg down_inProg = 0;
+	reg right_inProg = 0;
+	reg left_inProg = 0;
+	reg [5:0] distance = 0;
+	parameter HOP_DIS = 48;
+	parameter HOP_DIS_4 = 4;
+	
+	always @(posedge i_clk)
+		if (i_animate && i_ani_stb)
+			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
+				if (up)	up_inProg <= 1;
+				else		up_inProg <= 0;
+			else if (distance == HOP_DIS) up_inProg <= 0;
+			else	up_inProg <= up_inProg;
+		else	up_inProg <= up_inProg;
+		
+	always @(posedge i_clk)
+		if (i_animate && i_ani_stb)
+			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
+				if (up)	down_inProg <= 1;
+				else		down_inProg <= 0;
+			else if (distance == HOP_DIS) down_inProg <= 0;
+			else	down_inProg <= down_inProg;
+		else	down_inProg <= down_inProg;
+		
+	always @(posedge i_clk)
+		if (i_animate && i_ani_stb)
+			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
+				if (up)	right_inProg <= 1;
+				else		right_inProg <= 0;
+			else if (distance == HOP_DIS) right_inProg <= 0;
+			else	right_inProg <= right_inProg;
+		else	right_inProg <= right_inProg;
+		
+	always @(posedge i_clk)
+		if (i_animate && i_ani_stb)
+			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
+				if (up)	left_inProg <= 1;
+				else		left_inProg <= 0;
+			else if (distance == HOP_DIS) left_inProg <= 0;
+			else	left_inProg <= left_inProg;
+		else	left_inProg <= left_inProg;
+		
+	always @(posedge i_clk)
+		if (i_animate && i_ani_stb)
+			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
+				distance <= 0;
+			else if (up_inProg) distance <= distance + HOP_DIS_4;
+			else if (down_inProg) distance <= distance + HOP_DIS_4;
+			else if (right_inProg) distance <= distance + HOP_DIS_4;
+			else if (left_inProg) distance <= distance + HOP_DIS_4;
+			else if (distance == HOP_DIS)	distance <= 0;
+			else distance <= distance;
+			
 	 always @(posedge i_clk)
+		if (i_animate && i_ani_stb)
+			if (i_rst || i_dead)	 y <= IY;
+			else if (up_inProg)	y <= y - HOP_DIS_4;
+			else if (down_inProg) y <= y + HOP_DIS_4;
+			else	y <= y;
+		else y <= y;
+		
+	 always @(posedge i_clk)
+		if (i_animate && i_ani_stb)
+			if (i_rst || i_dead)	x <= IX;
+			else if (right_inProg) x <= x + HOP_DIS_4;
+			else if (left_inProg) x <= x - HOP_DIS_4;
+			else x <= x;
+		else x <= x;
+		
+	 
+	 //constant movement
+/*	 always @(posedge i_clk)
 		if (i_animate && i_ani_stb)
 			if (i_rst)	y <= IY;
 			else if (i_dead) y <= IY;
@@ -76,6 +149,6 @@ module frog #(
 			else if (i_dead) x <= IX;
 			else if (left) x <= x-2;
 			else if (right) x <= x + 2;
-			else x <= x;
+			else x <= x;*/
 		
 endmodule

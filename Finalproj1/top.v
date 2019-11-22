@@ -49,6 +49,7 @@ module top(
         .o_animate(animate)
     );
 
+	//******Row 1 squares**************************//
     wire sq_a, sq_b, sq_c, sq_d;
     wire [11:0] sq_a_x1, sq_a_x2, sq_a_y1, sq_a_y2;  // 12-bit values: 0-4095 
     wire [11:0] sq_b_x1, sq_b_x2, sq_b_y1, sq_b_y2;
@@ -103,6 +104,57 @@ module top(
         .o_y2(sq_d_y2)
     );
 	 
+	 //***************Row 2 squares****************************
+	 wire sq_2a, sq_2b, sq_2c;
+    wire [11:0] sq_2a_x1, sq_2a_x2, sq_2a_y1, sq_2a_y2;  // 12-bit values: 0-4095 
+    wire [11:0] sq_2b_x1, sq_2b_x2, sq_2b_y1, sq_2b_y2;
+    wire [11:0] sq_2c_x1, sq_2c_x2, sq_2c_y1, sq_2c_y2;
+	 
+	 parameter rw2y = 105;
+	 parameter rw2width = 60;
+	 parameter rw2dir = 0;
+
+    square #(.IX(0), .IY(rw2y), .H_WIDTH(rw2width), .IX_DIR(rw2dir)) sq_2a_anim (
+        .i_clk(CLK), .i_ani_stb(pix_stb), .i_rst(rst), .i_animate(animate),
+        .o_x1(sq_2a_x1), .o_x2(sq_2a_x2), .o_y1(sq_2a_y1), .o_y2(sq_2a_y2)
+    );
+	 
+	 square #(.IX(300), .IY(rw2y), .H_WIDTH(rw2width), .IX_DIR(rw2dir)) sq_2b_anim (
+        .i_clk(CLK), .i_ani_stb(pix_stb), .i_rst(rst), .i_animate(animate),
+        .o_x1(sq_2b_x1), .o_x2(sq_2b_x2), .o_y1(sq_2b_y1), .o_y2(sq_2b_y2)
+    );
+	 
+	 square #(.IX(300), .IY(rw2y), .H_WIDTH(rw2width), .IX_DIR(rw2dir)) sq_2c_anim (
+        .i_clk(CLK), .i_ani_stb(pix_stb), .i_rst(rst), .i_animate(animate),
+        .o_x1(sq_2c_x1), .o_x2(sq_2c_x2), .o_y1(sq_2c_y1), .o_y2(sq_2c_y2)
+    );
+	 
+	 //****************Row 3 squares********************************
+	 wire sq_3a, sq_3b, sq_3c;
+    wire [11:0] sq_3a_x1, sq_3a_x2, sq_3a_y1, sq_3a_y2;  // 12-bit values: 0-4095 
+    wire [11:0] sq_3b_x1, sq_3b_x2, sq_3b_y1, sq_3b_y2;
+    wire [11:0] sq_3c_x1, sq_3c_x2, sq_3c_y1, sq_3c_y2;
+	 
+	 parameter rw3y = 165;
+	 parameter rw3width = 20;
+	 parameter rw3dir = 1;
+
+    square #(.IX(0), .IY(rw2y), .H_WIDTH(rw2width), .IX_DIR(rw2dir)) sq_3a_anim (
+        .i_clk(CLK), .i_ani_stb(pix_stb), .i_rst(rst), .i_animate(animate),
+        .o_x1(sq_3a_x1), .o_x2(sq_3a_x2), .o_y1(sq_3a_y1), .o_y2(sq_3a_y2)
+    );
+	 
+	 square #(.IX(300), .IY(rw2y), .H_WIDTH(rw2width), .IX_DIR(rw2dir)) sq_3b_anim (
+        .i_clk(CLK), .i_ani_stb(pix_stb), .i_rst(rst), .i_animate(animate),
+        .o_x1(sq_3b_x1), .o_x2(sq_3b_x2), .o_y1(sq_3b_y1), .o_y2(sq_3b_y2)
+    );
+	 
+	 square #(.IX(300), .IY(rw2y), .H_WIDTH(rw2width), .IX_DIR(rw2dir)) sq_3c_anim (
+        .i_clk(CLK), .i_ani_stb(pix_stb), .i_rst(rst), .i_animate(animate),
+        .o_x1(sq_3c_x1), .o_x2(sq_3c_x2), .o_y1(sq_3c_y1), .o_y2(sq_3c_y2)
+    );
+	 
+	 //*****************Frog animation******************************
 	 wire fr;
 	 wire [11:0] frog_x1, frog_x2, frog_y1, frog_y2;
 	 
@@ -129,7 +181,13 @@ module top(
     assign sq_c = ((x > sq_c_x1) & (y > sq_c_y1) &
         (x < sq_c_x2) & (y < sq_c_y2)) ? 1 : 0;
 	 assign sq_d = ((x > sq_d_x1) & (y > sq_d_y1) &
-        (x < sq_d_x2) & (y < sq_d_y2)) ? 1 : 0;		
+        (x < sq_d_x2) & (y < sq_d_y2)) ? 1 : 0;	
+	 assign sq_2a = ((x > sq_2a_x1) & (y > sq_2a_y1) &
+        (x < sq_2a_x2) & (y < sq_2a_y2)) ? 1 : 0;
+	 assign sq_2b = ((x > sq_2b_x1) & (y > sq_2b_y1) &
+        (x < sq_2b_x2) & (y < sq_2b_y2)) ? 1 : 0;
+	 assign sq_2c = ((x > sq_2c_x1) & (y > sq_2c_y1) &
+        (x < sq_2c_x2) & (y < sq_2c_y2)) ? 1 : 0;
 	 assign fr = ((x > frog_x1) & (y > frog_y1) &
 		  (x < frog_x2) & (y < frog_y2)) ? 1 : 0;
 		  
@@ -148,7 +206,7 @@ module top(
 			else	dead <= 0;
 		else	dead <= 0;
 
-    assign VGA_R[1:0] = {0, 0};  // square a is red
+    assign VGA_R[1:0] = {2{sq_2a | sq_2b | sq_2c }};  // square a is red
     assign VGA_G[2:0] = {fr, fr, fr};  // square b is green
     assign VGA_B[2:0] = {3{sq_a | sq_b | sq_c | sq_d}};  // square c is blue
 endmodule

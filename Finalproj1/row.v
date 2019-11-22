@@ -4,13 +4,11 @@
 
 `default_nettype none
 
-module square #(
+module row #(
     H_WIDTH=20,      // half obstacle width (for ease of co-ordinate calculations)
-	 H_HEIGHT = 24,		// half obstacle height
-    IX=320,         // initial horizontal position of square centre
+	 H_HEIGHT = 15,		// half obstacle height
     IY=240,         // initial vertical position of square centre
     IX_DIR=1,       // initial horizontal direction: 1 is right, 0 is left
-    IY_DIR=1,       // initial vertical direction: 1 is down, 0 is up
     D_WIDTH=640,    // width of display
     D_HEIGHT=480    // height of display
     )
