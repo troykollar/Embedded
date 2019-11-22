@@ -70,6 +70,7 @@ module frog #(
 	parameter HOP_DIS = 48;
 	parameter HOP_DIS_4 = 4;
 	
+	//TODO Add reset/dead logic to stop movement when dying
 	always @(posedge i_clk)
 		if (i_animate && i_ani_stb)
 			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
@@ -82,7 +83,7 @@ module frog #(
 	always @(posedge i_clk)
 		if (i_animate && i_ani_stb)
 			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
-				if (up)	down_inProg <= 1;
+				if (down)	down_inProg <= 1;
 				else		down_inProg <= 0;
 			else if (distance == HOP_DIS) down_inProg <= 0;
 			else	down_inProg <= down_inProg;
@@ -91,7 +92,7 @@ module frog #(
 	always @(posedge i_clk)
 		if (i_animate && i_ani_stb)
 			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
-				if (up)	right_inProg <= 1;
+				if (right)	right_inProg <= 1;
 				else		right_inProg <= 0;
 			else if (distance == HOP_DIS) right_inProg <= 0;
 			else	right_inProg <= right_inProg;
@@ -100,7 +101,7 @@ module frog #(
 	always @(posedge i_clk)
 		if (i_animate && i_ani_stb)
 			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
-				if (up)	left_inProg <= 1;
+				if (left)	left_inProg <= 1;
 				else		left_inProg <= 0;
 			else if (distance == HOP_DIS) left_inProg <= 0;
 			else	left_inProg <= left_inProg;

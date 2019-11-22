@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Reading design: top.prj
@@ -495,9 +495,6 @@ Synthesizing Unit <frog>.
         IY_DIR = 1
         D_WIDTH = 640
         D_HEIGHT = 480
-WARNING:Xst:647 - Input <i_down_btn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <i_right_btn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <i_left_btn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <down_inProg>.
     Found 1-bit register for signal <right_inProg>.
     Found 1-bit register for signal <left_inProg>.
@@ -556,7 +553,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <down_inProg> in Unit <frog_anim> is equivalent to the following 3 FFs/Latches, which will be removed : <right_inProg> <left_inProg> <up_inProg> 
 WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_2b_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_2b_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 1 in block <sq_2b_anim>. This FF/Latch will be trimmed during the optimization process.
@@ -770,7 +766,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_8> has a constant
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_9> has a constant value of 0 in block <square_6>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_10> has a constant value of 0 in block <square_6>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_11> has a constant value of 0 in block <square_6>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <left_inProg> in Unit <frog> is equivalent to the following 3 FFs/Latches, which will be removed : <down_inProg> <right_inProg> <up_inProg> 
 WARNING:Xst:1293 - FF/Latch <distance_0> has a constant value of 0 in block <frog>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <distance_1> has a constant value of 0 in block <frog>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <pix_stb> of sequential type is unconnected in block <top>.
@@ -821,12 +816,10 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/y_0> has 
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/x_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/y_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/x_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <frog_anim/y_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <frog_anim/x_3> 
 INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_0> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <sq_c_anim/x_0> <sq_d_anim/x_0> <sq_2a_anim/x_0> <sq_2b_anim/x_0> 
 INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_1> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <sq_c_anim/x_1> <sq_d_anim/x_1> 
 INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_2> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <sq_c_anim/x_2> <sq_d_anim/x_2> 
 INFO:Xst:2261 - The FF/Latch <sq_2a_anim/x_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <sq_2b_anim/x_1> 
-INFO:Xst:3203 - The FF/Latch <frog_anim/y_2> in Unit <top> is the opposite to the following FF/Latch, which will be removed : <frog_anim/x_2> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -838,8 +831,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 99
- Flip-Flops                                            : 99
+# Registers                                            : 104
+ Flip-Flops                                            : 104
 
 =========================================================================
 
@@ -862,27 +855,28 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1439
+# BELS                             : 1423
 #      GND                         : 1
-#      INV                         : 55
+#      INV                         : 53
 #      LUT1                        : 60
-#      LUT2                        : 80
-#      LUT3                        : 75
-#      LUT4                        : 418
-#      LUT5                        : 92
-#      LUT6                        : 142
+#      LUT2                        : 78
+#      LUT3                        : 81
+#      LUT4                        : 422
+#      LUT5                        : 100
+#      LUT6                        : 110
 #      MUXCY                       : 388
 #      MUXF7                       : 8
 #      VCC                         : 1
-#      XORCY                       : 119
-# FlipFlops/Latches                : 99
-#      FD                          : 77
-#      FDR                         : 2
-#      FDRE                        : 20
+#      XORCY                       : 121
+# FlipFlops/Latches                : 104
+#      FD                          : 49
+#      FDR                         : 3
+#      FDRE                        : 40
+#      FDSE                        : 12
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 12
-#      IBUF                        : 2
+# IO Buffers                       : 15
+#      IBUF                        : 5
 #      OBUF                        : 10
 
 Device utilization summary:
@@ -892,20 +886,20 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              99  out of  11440     0%  
- Number of Slice LUTs:                  922  out of   5720    16%  
-    Number used as Logic:               922  out of   5720    16%  
+ Number of Slice Registers:             104  out of  11440     0%  
+ Number of Slice LUTs:                  904  out of   5720    15%  
+    Number used as Logic:               904  out of   5720    15%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    923
-   Number with an unused Flip Flop:     824  out of    923    89%  
-   Number with an unused LUT:             1  out of    923     0%  
-   Number of fully used LUT-FF pairs:    98  out of    923    10%  
-   Number of unique control sets:         5
+ Number of LUT Flip Flop pairs used:    905
+   Number with an unused Flip Flop:     801  out of    905    88%  
+   Number with an unused LUT:             1  out of    905     0%  
+   Number of fully used LUT-FF pairs:   103  out of    905    11%  
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          16
- Number of bonded IOBs:                  13  out of    200     6%  
+ Number of bonded IOBs:                  16  out of    200     8%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -931,7 +925,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 99    |
+CLK                                | BUFGP                  | 104   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -942,9 +936,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.978ns (Maximum Frequency: 143.312MHz)
-   Minimum input arrival time before clock: 2.996ns
-   Maximum output required time after clock: 10.032ns
+   Minimum period: 7.158ns (Maximum Frequency: 139.709MHz)
+   Minimum input arrival time before clock: 2.451ns
+   Maximum output required time after clock: 10.013ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -953,77 +947,77 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 6.978ns (frequency: 143.312MHz)
-  Total number of paths / destination ports: 9516 / 139
+  Clock period: 7.158ns (frequency: 139.709MHz)
+  Total number of paths / destination ports: 9885 / 209
 -------------------------------------------------------------------------
-Delay:               6.978ns (Levels of Logic = 5)
+Delay:               7.158ns (Levels of Logic = 5)
   Source:            display/h_count_6 (FF)
-  Destination:       frog_anim/y_11 (FF)
+  Destination:       frog_anim/distance_4 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: display/h_count_6 to frog_anim/y_11
+  Data Path: display/h_count_6 to frog_anim/distance_4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            13   0.447   1.180  display/h_count_6 (display/h_count_6)
-     LUT5:I1->O            1   0.203   0.580  display/GND_2_o_GND_2_o_equal_15_o<9>_SW0 (N13)
-     LUT6:I5->O           17   0.205   1.028  display/GND_2_o_GND_2_o_equal_15_o<9> (display/GND_2_o_GND_2_o_equal_15_o)
-     LUT6:I5->O           53   0.205   1.568  display/o_animate (animate)
-     LUT4:I3->O           18   0.205   1.050  frog_anim/_n015511 (frog_anim/_n0155)
-     LUT6:I5->O            1   0.205   0.000  frog_anim/y_8_rstpot (frog_anim/y_8_rstpot)
-     FD:D                      0.102          frog_anim/y_8
+     FDRE:C->Q            13   0.447   1.161  display/h_count_6 (display/h_count_6)
+     LUT5:I2->O            1   0.205   0.580  display/GND_2_o_GND_2_o_equal_15_o<9>_SW0 (N13)
+     LUT6:I5->O           16   0.205   1.005  display/GND_2_o_GND_2_o_equal_15_o<9> (display/GND_2_o_GND_2_o_equal_15_o)
+     LUT6:I5->O           87   0.205   1.792  sq_a_anim/i_animate_i_ani_stb_AND_5_o1 (sq_2a_anim/i_animate_i_ani_stb_AND_9_o1)
+     LUT5:I4->O            4   0.205   1.048  frog_anim/distance_val21 (frog_anim/distance_val2)
+     LUT6:I0->O            1   0.203   0.000  frog_anim/distance_4_rstpot (frog_anim/distance_4_rstpot)
+     FD:D                      0.102          frog_anim/distance_4
     ----------------------------------------
-    Total                      6.978ns (1.572ns logic, 5.406ns route)
-                                       (22.5% logic, 77.5% route)
+    Total                      7.158ns (1.572ns logic, 5.586ns route)
+                                       (22.0% logic, 78.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 2 / 2
+  Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
-Offset:              2.996ns (Levels of Logic = 3)
+Offset:              2.451ns (Levels of Logic = 2)
   Source:            up_btn (PAD)
-  Destination:       frog_anim/left_inProg (FF)
+  Destination:       frog_anim/up_inProg (FF)
   Destination Clock: CLK rising
 
-  Data Path: up_btn to frog_anim/left_inProg
+  Data Path: up_btn to frog_anim/up_inProg
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  up_btn_IBUF (up_btn_IBUF)
-     INV:I->O              1   0.206   0.684  frog_anim/up1_INV_0 (frog_anim/up)
-     LUT5:I3->O            1   0.203   0.000  frog_anim/left_inProg_rstpot (frog_anim/left_inProg_rstpot)
-     FD:D                      0.102          frog_anim/left_inProg
+     IBUF:I->O             1   1.222   0.924  up_btn_IBUF (up_btn_IBUF)
+     LUT5:I0->O            1   0.203   0.000  frog_anim/up_inProg_rstpot (frog_anim/up_inProg_rstpot)
+     FD:D                      0.102          frog_anim/up_inProg
     ----------------------------------------
-    Total                      2.996ns (1.733ns logic, 1.263ns route)
-                                       (57.8% logic, 42.2% route)
+    Total                      2.451ns (1.527ns logic, 0.924ns route)
+                                       (62.3% logic, 37.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 11792 / 10
 -------------------------------------------------------------------------
-Offset:              10.032ns (Levels of Logic = 9)
-  Source:            sq_2b_anim/x_6 (FF)
-  Destination:       VGA_R<1> (PAD)
+Offset:              10.013ns (Levels of Logic = 10)
+  Source:            display/v_count_8 (FF)
+  Destination:       VGA_B<2> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: sq_2b_anim/x_6 to VGA_R<1>
+  Data Path: display/v_count_8 to VGA_B<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              16   0.447   1.369  sq_2b_anim/x_6 (sq_2b_anim/x_6)
-     LUT6:I0->O            3   0.203   0.651  sq_2b_anim/Madd_o_x2_xor<8>111 (sq_2b_anim/Madd_o_x2_xor<8>11)
-     LUT2:I1->O            4   0.205   1.028  sq_2b_anim/Madd_o_x2_xor<8>11 (sq_2b_x2<8>)
-     LUT5:I0->O            1   0.203   0.000  Mcompar_GND_1_o_sq_2b_x2[11]_LessThan_32_o_lut<4> (Mcompar_GND_1_o_sq_2b_x2[11]_LessThan_32_o_lut<4>)
-     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_sq_2b_x2[11]_LessThan_32_o_cy<4> (Mcompar_GND_1_o_sq_2b_x2[11]_LessThan_32_o_cy<4>)
-     MUXCY:CI->O           1   0.213   0.580  Mcompar_GND_1_o_sq_2b_x2[11]_LessThan_32_o_cy<5> (Mcompar_GND_1_o_sq_2b_x2[11]_LessThan_32_o_cy<5>)
-     LUT3:I2->O            1   0.205   0.580  VGA_R<1>1 (VGA_R<1>)
-     LUT6:I5->O            1   0.205   0.580  VGA_R<1>4_SW0 (N71)
-     LUT5:I4->O            2   0.205   0.616  VGA_R<1>4 (VGA_R_0_OBUF)
-     OBUF:I->O                 2.571          VGA_R_1_OBUF (VGA_R<1>3)
+     FDRE:C->Q            30   0.447   1.511  display/v_count_8 (display/v_count_8)
+     LUT6:I2->O           25   0.203   1.421  display/Mmux_n003731 (y<2>)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_lut<1> (Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<1> (Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<2> (Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<3> (Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<3>)
+     MUXCY:CI->O           1   0.213   0.808  Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<4> (Mcompar_GND_1_o_sq_c_y2[11]_LessThan_18_o_cy<4>)
+     LUT3:I0->O            1   0.205   0.580  VGA_B<2>3_SW0 (N65)
+     LUT6:I5->O            1   0.205   0.580  VGA_B<2>3 (VGA_B<2>2)
+     LUT6:I5->O            3   0.205   0.650  VGA_B<2>5 (VGA_B_0_OBUF)
+     OBUF:I->O                 2.571          VGA_B_2_OBUF (VGA_B<2>)
     ----------------------------------------
-    Total                     10.032ns (4.629ns logic, 5.403ns route)
-                                       (46.1% logic, 53.9% route)
+    Total                     10.013ns (4.464ns logic, 5.549ns route)
+                                       (44.6% logic, 55.4% route)
 
 =========================================================================
 
@@ -1035,21 +1029,21 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    6.978|         |         |         |
+CLK            |    7.158|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 32.00 secs
-Total CPU time to Xst completion: 22.90 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 15.01 secs
  
 --> 
 
 
-Total memory usage is 397752 kilobytes
+Total memory usage is 397904 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  264 (   0 filtered)
-Number of infos    :   23 (   0 filtered)
+Number of warnings :  261 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
 
