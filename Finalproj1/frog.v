@@ -67,7 +67,7 @@ module frog #(
 	reg right_inProg = 0;
 	reg left_inProg = 0;
 	reg [5:0] distance = 0;
-	parameter HOP_DIS = 72;
+	parameter HOP_DIS =12;
 	parameter HOP_DIS_4 = 4;
 	
 	//TODO Add reset/dead logic to stop movement when dying

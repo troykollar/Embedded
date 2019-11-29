@@ -749,20 +749,22 @@ Synthesizing Unit <frog>.
     Found 1-bit register for signal <down_inProg>.
     Found 1-bit register for signal <right_inProg>.
     Found 1-bit register for signal <left_inProg>.
+    Found 6-bit register for signal <distance>.
     Found 12-bit register for signal <y>.
     Found 12-bit register for signal <x>.
     Found 1-bit register for signal <up_inProg>.
     Found 12-bit adder for signal <o_x2> created at line 39.
     Found 12-bit adder for signal <o_y2> created at line 41.
-    Found 12-bit adder for signal <y[11]_GND_16_o_add_26_OUT> created at line 130.
-    Found 12-bit adder for signal <x[11]_GND_16_o_add_34_OUT> created at line 138.
+    Found 6-bit adder for signal <distance[5]_GND_16_o_add_20_OUT> created at line 121.
+    Found 12-bit adder for signal <y[11]_GND_16_o_add_32_OUT> created at line 130.
+    Found 12-bit adder for signal <x[11]_GND_16_o_add_40_OUT> created at line 138.
     Found 12-bit subtractor for signal <o_x1> created at line 27.
     Found 12-bit subtractor for signal <o_y1> created at line 29.
-    Found 12-bit subtractor for signal <GND_16_o_GND_16_o_sub_26_OUT<11:0>> created at line 129.
-    Found 12-bit subtractor for signal <GND_16_o_GND_16_o_sub_36_OUT<11:0>> created at line 139.
+    Found 12-bit subtractor for signal <GND_16_o_GND_16_o_sub_32_OUT<11:0>> created at line 129.
+    Found 12-bit subtractor for signal <GND_16_o_GND_16_o_sub_42_OUT<11:0>> created at line 139.
     Summary:
-	inferred   6 Adder/Subtractor(s).
-	inferred  28 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
 	inferred   2 Multiplexer(s).
 Unit <frog> synthesized.
 
@@ -770,7 +772,7 @@ Unit <frog> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 78
+# Adders/Subtractors                                   : 79
  10-bit adder                                          : 2
  11-bit subtractor                                     : 1
  12-bit adder                                          : 28
@@ -779,11 +781,13 @@ Macro Statistics
  13-bit adder                                          : 13
  13-bit subtractor                                     : 3
  17-bit adder                                          : 1
-# Registers                                            : 39
+ 6-bit adder                                           : 1
+# Registers                                            : 40
  1-bit register                                        : 8
  10-bit register                                       : 2
  12-bit register                                       : 28
  17-bit register                                       : 1
+ 6-bit register                                        : 1
 # Comparators                                          : 109
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 3
@@ -961,6 +965,10 @@ WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_2a_anim
 WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
 
+Synthesizing (advanced) Unit <frog>.
+The following registers are absorbed into accumulator <distance>: 1 register on signal <distance>.
+Unit <frog> synthesized (advanced).
+
 Synthesizing (advanced) Unit <square_1>.
 The following registers are absorbed into counter <x>: 1 register on signal <x>.
 Unit <square_1> synthesized (advanced).
@@ -989,6 +997,8 @@ Macro Statistics
 # Counters                                             : 3
  10-bit up counter                                     : 1
  12-bit up counter                                     : 2
+# Accumulators                                         : 1
+ 6-bit up accumulator                                  : 1
 # Registers                                            : 347
  Flip-Flops                                            : 347
 # Comparators                                          : 109
@@ -1166,6 +1176,8 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_8> has a constant
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_9> has a constant value of 0 in block <square_13>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_10> has a constant value of 0 in block <square_13>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_11> has a constant value of 0 in block <square_13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <distance_0> has a constant value of 0 in block <frog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <distance_1> has a constant value of 0 in block <frog>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <pix_stb> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <cnt_0> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <cnt_1> of sequential type is unconnected in block <top>.
@@ -1254,8 +1266,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 157
- Flip-Flops                                            : 157
+# Registers                                            : 161
+ Flip-Flops                                            : 161
 
 =========================================================================
 
@@ -1278,23 +1290,23 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2181
+# BELS                             : 2170
 #      GND                         : 1
-#      INV                         : 75
+#      INV                         : 76
 #      LUT1                        : 107
-#      LUT2                        : 164
-#      LUT3                        : 128
-#      LUT4                        : 556
-#      LUT5                        : 158
+#      LUT2                        : 165
+#      LUT3                        : 108
+#      LUT4                        : 557
+#      LUT5                        : 164
 #      LUT6                        : 243
 #      MUXCY                       : 561
 #      MUXF7                       : 8
 #      VCC                         : 1
 #      XORCY                       : 179
-# FlipFlops/Latches                : 157
+# FlipFlops/Latches                : 161
 #      FD                          : 116
 #      FDR                         : 1
-#      FDRE                        : 34
+#      FDRE                        : 38
 #      FDSE                        : 6
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -1309,16 +1321,16 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             157  out of  11440     1%  
- Number of Slice LUTs:                 1431  out of   5720    25%  
-    Number used as Logic:              1431  out of   5720    25%  
+ Number of Slice Registers:             161  out of  11440     1%  
+ Number of Slice LUTs:                 1420  out of   5720    24%  
+    Number used as Logic:              1420  out of   5720    24%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1431
-   Number with an unused Flip Flop:    1274  out of   1431    89%  
-   Number with an unused LUT:             0  out of   1431     0%  
-   Number of fully used LUT-FF pairs:   157  out of   1431    10%  
-   Number of unique control sets:         5
+ Number of LUT Flip Flop pairs used:   1420
+   Number with an unused Flip Flop:    1259  out of   1420    88%  
+   Number with an unused LUT:             0  out of   1420     0%  
+   Number of fully used LUT-FF pairs:   161  out of   1420    11%  
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          16
@@ -1348,7 +1360,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 157   |
+CLK                                | BUFGP                  | 161   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1359,7 +1371,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.685ns (Maximum Frequency: 149.579MHz)
+   Minimum period: 6.718ns (Maximum Frequency: 148.859MHz)
    Minimum input arrival time before clock: 4.841ns
    Maximum output required time after clock: 12.462ns
    Maximum combinational path delay: No path found
@@ -1370,10 +1382,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 6.685ns (frequency: 149.579MHz)
-  Total number of paths / destination ports: 13867 / 218
+  Clock period: 6.718ns (frequency: 148.859MHz)
+  Total number of paths / destination ports: 14154 / 230
 -------------------------------------------------------------------------
-Delay:               6.685ns (Levels of Logic = 6)
+Delay:               6.718ns (Levels of Logic = 6)
   Source:            display/h_count_6 (FF)
   Destination:       sq_a_anim/x_1 (FF)
   Source Clock:      CLK rising
@@ -1386,14 +1398,14 @@ Delay:               6.685ns (Levels of Logic = 6)
      FDRE:C->Q            13   0.447   1.180  display/h_count_6 (display/h_count_6)
      LUT5:I1->O            1   0.203   0.580  display/GND_2_o_GND_2_o_equal_15_o<9>_SW0 (N20)
      LUT6:I5->O           18   0.205   1.050  display/GND_2_o_GND_2_o_equal_15_o<9> (display/GND_2_o_GND_2_o_equal_15_o)
-     LUT6:I5->O            3   0.205   0.651  display/o_animate_1 (display/o_animate)
+     LUT6:I5->O            4   0.205   0.684  display/o_animate_1 (display/o_animate)
      LUT6:I5->O            2   0.205   0.617  sq_a_anim/x_cst (sq_a_anim/x_cst)
      LUT4:I3->O            9   0.205   0.830  sq_a_anim/Mcount_x_val1 (sq_a_anim/Mcount_x_val)
      LUT4:I3->O            1   0.205   0.000  sq_a_anim/x_1_rstpot (sq_a_anim/x_1_rstpot)
      FD:D                      0.102          sq_a_anim/x_1
     ----------------------------------------
-    Total                      6.685ns (1.777ns logic, 4.908ns route)
-                                       (26.6% logic, 73.4% route)
+    Total                      6.718ns (1.777ns logic, 4.941ns route)
+                                       (26.5% logic, 73.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
@@ -1435,9 +1447,9 @@ Offset:              12.462ns (Levels of Logic = 11)
      MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_cy<2> (Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_cy<2>)
      MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_cy<3> (Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_cy<3>)
      MUXCY:CI->O           1   0.213   0.808  Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_cy<4> (Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_cy<4>)
-     LUT3:I0->O            1   0.205   0.580  VGA_B<2>7_SW0 (N88)
+     LUT3:I0->O            1   0.205   0.580  VGA_B<2>7_SW0 (N72)
      LUT6:I5->O            1   0.205   0.580  VGA_B<2>7 (VGA_B<2>6)
-     LUT6:I5->O            1   0.205   0.944  VGA_B<2>11_SW0 (N90)
+     LUT6:I5->O            1   0.205   0.944  VGA_B<2>11_SW0 (N74)
      LUT6:I0->O            1   0.203   0.580  VGA_B<2>11 (VGA_B<2>10)
      LUT6:I5->O            3   0.205   0.650  VGA_B<2>16 (VGA_B_0_OBUF)
      OBUF:I->O                 2.571          VGA_B_2_OBUF (VGA_B<2>15)
@@ -1455,21 +1467,21 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    6.685|         |         |         |
+CLK            |    6.718|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 17.44 secs
+Total CPU time to Xst completion: 17.61 secs
  
 --> 
 
 
-Total memory usage is 487256 kilobytes
+Total memory usage is 487320 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  471 (   0 filtered)
+Number of warnings :  473 (   0 filtered)
 Number of infos    :    8 (   0 filtered)
 
