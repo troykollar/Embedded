@@ -12,7 +12,8 @@ module frog #(
     IX_DIR=1,       // initial horizontal direction: 1 is right, 0 is left
     IY_DIR=1,       // initial vertical direction: 1 is down, 0 is up
     D_WIDTH=640,    // width of display
-    D_HEIGHT=480    // height of display
+    D_HEIGHT=480,    // height of display
+	 RW1_Y=72
     )
     (
     input wire i_clk,         // base clock
@@ -29,6 +30,17 @@ module frog #(
     output wire [11:0] o_y1,  // square top edge
     output wire [11:0] o_y2   // square bottom edge
     );
+	 
+	 parameter RW0_Y = RW1_Y - 48;
+	 parameter RW2_Y = RW1_Y + 48;
+	 parameter RW3_Y = RW2_Y + 48;
+	 parameter RW4_Y = RW3_Y + 48;
+	 parameter RW5_Y = RW4_Y + 48;
+	 parameter RW6_Y = RW5_Y + 48;
+	 parameter RW7_Y = RW6_Y + 48;
+	 parameter RW8_Y = RW7_Y + 48;
+	 parameter RW9_Y = RW8_Y + 48;
+	 parameter RW10_Y = RW9_Y + 48;
 
     reg [11:0] x = IX;   // horizontal position of square centre
     reg [11:0] y = IY;   // vertical position of square centre
