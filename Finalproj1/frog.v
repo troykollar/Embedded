@@ -67,19 +67,28 @@ module frog #(
 	reg right_inProg = 0;
 	reg left_inProg = 0;
 	reg [5:0] distance = 0;
-	parameter HOP_DIS =12;
+	parameter HOP_DIS = 48;
 	parameter HOP_DIS_4 = 4;
+	reg [11:0] prevY;
+	reg [11:0] prevX;
 	
-	//TODO Add reset/dead logic to stop movement when dying
 	always @(posedge i_clk)
 		if (i_animate && i_ani_stb)
 			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
 				if (up)	up_inProg <= 1;
 				else		up_inProg <= 0;
 			else if (i_dead)	up_inProg <= 0;
-			else if (distance == HOP_DIS) up_inProg <= 0;
+			else if (y == prevY - HOP_DIS) up_inProg <= 0;
 			else	up_inProg <= up_inProg;
 		else	up_inProg <= up_inProg;
+		
+	always @(posedge i_clk)
+		if (i_animate && i_ani_stb)
+			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
+				if (up || down)	prevY <= y;
+				else					prevY <= prevY;
+			else	prevY <= prevY;
+		else prevY <= prevY;
 		
 	always @(posedge i_clk)
 		if (i_animate && i_ani_stb)
@@ -87,9 +96,17 @@ module frog #(
 				if (down)	down_inProg <= 1;
 				else		down_inProg <= 0;
 			else if (i_dead)		down_inProg <= 0;
-			else if (distance == HOP_DIS) down_inProg <= 0;
+			else if (y == prevY + HOP_DIS) down_inProg <= 0;
 			else	down_inProg <= down_inProg;
 		else	down_inProg <= down_inProg;
+		
+	always @(posedge i_clk)
+		if (i_animate && i_ani_stb)
+			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
+				if (right || left)	prevX <= x;
+				else						prevX <= prevX;
+			else 	prevX <= prevX;
+		else prevX <= prevX;
 		
 	always @(posedge i_clk)
 		if (i_animate && i_ani_stb)
@@ -97,7 +114,7 @@ module frog #(
 				if (right)	right_inProg <= 1;
 				else		right_inProg <= 0;
 			else if (i_dead)	right_inProg <= 0;
-			else if (distance == HOP_DIS) right_inProg <= 0;
+			else if (x == prevX + HOP_DIS) right_inProg <= 0;
 			else	right_inProg <= right_inProg;
 		else	right_inProg <= right_inProg;
 		
@@ -107,7 +124,7 @@ module frog #(
 				if (left)	left_inProg <= 1;
 				else		left_inProg <= 0;
 			else if (i_dead) left_inProg <= 0;
-			else if (distance == HOP_DIS) left_inProg <= 0;
+			else if (x == prevX - HOP_DIS) left_inProg <= 0;
 			else	left_inProg <= left_inProg;
 		else	left_inProg <= left_inProg;
 		

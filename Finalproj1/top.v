@@ -105,7 +105,7 @@ module top(
     wire [11:0] sq_2b_x1, sq_2b_x2, sq_2b_y1, sq_2b_y2;
     wire [11:0] sq_2c_x1, sq_2c_x2, sq_2c_y1, sq_2c_y2;
 	 
-	 parameter rw2y = 120;
+	 parameter rw2y = rw1y + 48;
 	 parameter rw2width = 60;
 	 parameter rw2dir = 0;
 
@@ -133,7 +133,7 @@ module top(
 	 wire [11:0] sq_3e_x1, sq_3e_x2, sq_3e_y1, sq_3e_y2;
 	 wire [11:0] sq_3f_x1, sq_3f_x2, sq_3f_y1, sq_3f_y2;
 	 
-	 parameter rw3y = 168;
+	 parameter rw3y = rw2y + 48;
 	 parameter rw3width = 20;
 	 parameter rw3dir = 1;
 
@@ -167,11 +167,89 @@ module top(
         .o_x1(sq_3f_x1), .o_x2(sq_3f_x2), .o_y1(sq_3f_y1), .o_y2(sq_3f_y2)
     );
 	 
+	 //**************Row 4 squares*********************************
+	 wire sq_4a, sq_4b, sq_4c;
+	 wire [11:0] sq_4a_x1, sq_4a_x2, sq_4a_y1, sq_4a_y2;  // 12-bit values: 0-4095 
+    wire [11:0] sq_4b_x1, sq_4b_x2, sq_4b_y1, sq_4b_y2;
+    wire [11:0] sq_4c_x1, sq_4c_x2, sq_4c_y1, sq_4c_y2;
+	 
+	 parameter rw4y = rw3y + 96;
+	 parameter rw4width = 60;
+	 parameter rw4dir = 1;
+	 
+	 square #(.IX(0), .IY(rw4y), .H_WIDTH(rw2width), .IX_DIR(rw4dir)) sq_4a_anim (
+        .i_clk(CLK), .i_ani_stb(pix_stb), .i_rst(rst), .i_animate(animate),
+        .o_x1(sq_4a_x1), .o_x2(sq_4a_x2), .o_y1(sq_4a_y1), .o_y2(sq_4a_y2)
+    );
+	 
+	 square #(.IX(250), .IY(rw4y), .H_WIDTH(rw2width), .IX_DIR(rw4dir)) sq_4b_anim (
+        .i_clk(CLK), .i_ani_stb(pix_stb), .i_rst(rst), .i_animate(animate),
+        .o_x1(sq_4b_x1), .o_x2(sq_4b_x2), .o_y1(sq_4b_y1), .o_y2(sq_4b_y2)
+    );
+	 
+	 square #(.IX(500), .IY(rw4y), .H_WIDTH(rw2width), .IX_DIR(rw4dir)) sq_4c_anim (
+        .i_clk(CLK), .i_ani_stb(pix_stb), .i_rst(rst), .i_animate(animate),
+        .o_x1(sq_4c_x1), .o_x2(sq_4c_x2), .o_y1(sq_4c_y1), .o_y2(sq_4c_y2)
+    );
+	 
+	 //*****************Row 5 squares*******************************
+    wire sq_5a, sq_5b, sq_5c, sq_5d;
+    wire [11:0] sq_5a_x1, sq_5a_x2, sq_5a_y1, sq_5a_y2;  // 12-bit values: 0-4095 
+    wire [11:0] sq_5b_x1, sq_5b_x2, sq_5b_y1, sq_5b_y2;
+    wire [11:0] sq_5c_x1, sq_5c_x2, sq_5c_y1, sq_5c_y2;
+	 wire [11:0] sq_5d_x1, sq_5d_x2, sq_5d_y1, sq_5d_y2;
+	 
+	 parameter rw5y = rw4y + 48;
+	 parameter rw5dir = 0;
+
+    square #(.IX(0), .IY(rw5y), .H_WIDTH(rw1width), .IX_DIR(rw5dir)) sq_5a_anim (
+        .i_clk(CLK), 
+        .i_ani_stb(pix_stb),
+        .i_rst(rst),
+        .i_animate(animate),
+        .o_x1(sq_5a_x1),
+        .o_x2(sq_5a_x2),
+        .o_y1(sq_5a_y1),
+        .o_y2(sq_5a_y2)
+    );
+
+    square #(.IX(160), .IY(rw5y), .H_WIDTH(rw1width), .IX_DIR(rw5dir)) sq_5b_anim (
+        .i_clk(CLK), 
+        .i_ani_stb(pix_stb),
+        .i_rst(rst),
+        .i_animate(animate),
+        .o_x1(sq_5b_x1),
+        .o_x2(sq_5b_x2),
+        .o_y1(sq_5b_y1),
+        .o_y2(sq_5b_y2)
+    );    
+
+    square #(.IX(320), .IY(rw5y), .H_WIDTH(rw1width), .IX_DIR(rw5dir)) sq_5c_anim (
+        .i_clk(CLK), 
+        .i_ani_stb(pix_stb),
+        .i_rst(rst),
+        .i_animate(animate),
+        .o_x1(sq_5c_x1),
+        .o_x2(sq_5c_x2),
+        .o_y1(sq_5c_y1),
+        .o_y2(sq_5c_y2)
+    );
+	 
+    square #(.IX(480), .IY(rw5y), .H_WIDTH(rw1width), .IX_DIR(rw5dir)) sq_5d_anim (
+        .i_clk(CLK), 
+        .i_ani_stb(pix_stb),
+        .i_rst(rst),
+        .i_animate(animate),
+        .o_x1(sq_5d_x1),
+        .o_x2(sq_5d_x2),
+        .o_y1(sq_5d_y1),
+        .o_y2(sq_5d_y2)
+    );
 	 //*****************Frog animation******************************
 	 wire fr;
 	 wire [11:0] frog_x1, frog_x2, frog_y1, frog_y2;
 	 
-	 frog #(.IX(320), .IY(456)) frog_anim (
+	 frog #(.IX(320), .IY(rw3y)) frog_anim (
 			.i_clk(CLK),
 			.i_ani_stb(pix_stb),
 			.i_rst(rst),
@@ -205,7 +283,7 @@ module top(
 	 assign sq_2c = ((x > sq_2c_x1) & (y > sq_2c_y1) &
         (x < sq_2c_x2) & (y < sq_2c_y2)) ? 1 : 0;
 		  
-	//rw2 squares
+	//rw3 squares
 	 assign sq_3a = ((x > sq_3a_x1) & (y > sq_3a_y1) &
         (x < sq_3a_x2) & (y < sq_3a_y2)) ? 1 : 0;
 	 assign sq_3b = ((x > sq_3b_x1) & (y > sq_3b_y1) &
@@ -219,11 +297,29 @@ module top(
 	 assign sq_3f = ((x > sq_3f_x1) & (y > sq_3f_y1) &
         (x < sq_3f_x2) & (y < sq_3f_y2)) ? 1 : 0;
 		  
+	 //rw4 squares
+	 assign sq_4a = ((x > sq_4a_x1) & (y > sq_4a_y1) &
+        (x < sq_4a_x2) & (y < sq_4a_y2)) ? 1 : 0;
+	 assign sq_4b = ((x > sq_4b_x1) & (y > sq_4b_y1) &
+        (x < sq_4b_x2) & (y < sq_4b_y2)) ? 1 : 0;
+	 assign sq_4c = ((x > sq_4c_x1) & (y > sq_4c_y1) &
+        (x < sq_4c_x2) & (y < sq_4c_y2)) ? 1 : 0;
+		  
+	//rw5 squares
+    assign sq_5a = ((x > sq_5a_x1) & (y > sq_5a_y1) &
+        (x < sq_5a_x2) & (y < sq_5a_y2)) ? 1 : 0;
+    assign sq_5b = ((x > sq_5b_x1) & (y > sq_5b_y1) &
+        (x < sq_5b_x2) & (y < sq_5b_y2)) ? 1 : 0;
+    assign sq_5c = ((x > sq_5c_x1) & (y > sq_5c_y1) &
+        (x < sq_5c_x2) & (y < sq_5c_y2)) ? 1 : 0;
+	 assign sq_5d = ((x > sq_5d_x1) & (y > sq_5d_y1) &
+        (x < sq_5d_x2) & (y < sq_5d_y2)) ? 1 : 0;
+		  
 		  
 	 assign fr = ((x > frog_x1) & (y > frog_y1) &
 		  (x < frog_x2) & (y < frog_y2)) ? 1 : 0;
 		  
-	 parameter rw1top = rw1y - 15;
+/*	 parameter rw1top = rw1y - 15;
 	 parameter rw1bot = rw1y + 15;
 	  always @(posedge CLK)
 		if (((frog_y1 > rw1top) && (frog_y1 < rw1bot)) || ((frog_y2 > rw1top) && (frog_y2 < rw1bot)))	//Collisions with square 1
@@ -236,9 +332,15 @@ module top(
 			else if (((frog_x1 > sq_d_x1) && (frog_x1 < sq_d_x2)) || ((frog_x2 > sq_d_x1) && (frog_x2 < sq_d_x2)))
 				dead <= 1;
 			else	dead <= 0;
-		else	dead <= 0;
+		else	dead <= 0;*/
+		
+		wire any_square;
+		assign any_square = sq_a | sq_b | sq_c;
+		always @(posedge CLK)
+			if (fr & any_square)	dead <= 1;
+			else dead <= 0;
 
-    assign VGA_R[1:0] = {2{sq_2a | sq_2b | sq_2c}};  // square a is red
+    assign VGA_R[1:0] = {2{sq_2a | sq_2b | sq_2c | sq_4a | sq_4b | sq_4c}};  // blue squares
     assign VGA_G[2:0] = {fr, fr, fr};  // frog is green
-    assign VGA_B[2:0] = {3{sq_a | sq_b | sq_c | sq_d | sq_3a | sq_3b | sq_3c | sq_3d | sq_3e | sq_3f}};  // square c is blue
+    assign VGA_B[2:0] = {3{sq_a | sq_b | sq_c | sq_d | sq_3a | sq_3b | sq_3c | sq_3d | sq_3e | sq_3f | sq_5a | sq_5b | sq_5c}};  // red squares
 endmodule

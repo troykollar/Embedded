@@ -236,33 +236,98 @@ WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 36: Resu
 WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:1127 - "/home/ise/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
 
-Elaborating module <frog(IX=320,IY=456)>.
+Elaborating module <square(IX=0,IY=264,H_WIDTH=60,IX_DIR=1)>.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 33: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 34: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 35: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 36: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
+
+Elaborating module <square(IX=250,IY=264,H_WIDTH=60,IX_DIR=1)>.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 33: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 34: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 35: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 36: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
+
+Elaborating module <square(IX=500,IY=264,H_WIDTH=60,IX_DIR=1)>.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 33: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 34: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 35: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 36: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
+
+Elaborating module <square(IX=0,IY=312,H_WIDTH=40,IX_DIR=0)>.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 33: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 34: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 35: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 36: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
+
+Elaborating module <square(IX=160,IY=312,H_WIDTH=40,IX_DIR=0)>.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 33: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 34: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 35: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 36: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
+
+Elaborating module <square(IX=320,IY=312,H_WIDTH=40,IX_DIR=0)>.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 33: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 34: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 35: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 36: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
+
+Elaborating module <square(IX=480,IY=312,H_WIDTH=40,IX_DIR=0)>.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 33: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 34: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 35: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 36: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/square.v" Line 49: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/Embedded/Finalproj1/square.v" Line 38: Assignment to y_dir ignored, since the identifier is never used
+
+Elaborating module <frog(IX=320,IY=168)>.
 WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 38: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 39: Result of 13-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 40: Result of 32-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 41: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 118: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 119: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 120: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 121: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 129: Result of 32-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 130: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 138: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 139: Result of 32-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 191: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 193: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 195: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 197: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 201: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 203: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 205: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 209: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 211: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 213: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 215: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 217: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 219: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 223: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 135: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 136: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 137: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 138: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 146: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 147: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 155: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/frog.v" Line 156: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 269: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 271: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 273: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 275: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 279: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 281: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 283: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 287: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 289: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 291: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 293: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 295: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 297: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 301: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 303: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 305: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 309: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 311: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 313: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 315: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/Embedded/Finalproj1/top.v" Line 315: Assignment to sq_5d ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/ise/Embedded/Finalproj1/top.v" Line 319: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:Xst:2972 - "/home/ise/Embedded/Finalproj1/top.v" line 238. All outputs of instance <sq_5d_anim> of block <square> are unconnected in block <top>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -279,96 +344,106 @@ Synthesizing Unit <top>.
         rw3y = 168
         rw3width = 20
         rw3dir = 1
-        rw1top = 57
-        rw1bot = 87
+        rw4y = 264
+        rw4width = 60
+        rw4dir = 1
+        rw5y = 312
+        rw5dir = 0
 INFO:Xst:3210 - "/home/ise/Embedded/Finalproj1/top.v" line 36: Output port <o_blanking> of the instance <display> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/home/ise/Embedded/Finalproj1/top.v" line 36: Output port <o_active> of the instance <display> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/home/ise/Embedded/Finalproj1/top.v" line 36: Output port <o_screenend> of the instance <display> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Embedded/Finalproj1/top.v" line 238: Output port <o_x1> of the instance <sq_5d_anim> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Embedded/Finalproj1/top.v" line 238: Output port <o_x2> of the instance <sq_5d_anim> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Embedded/Finalproj1/top.v" line 238: Output port <o_y1> of the instance <sq_5d_anim> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Embedded/Finalproj1/top.v" line 238: Output port <o_y2> of the instance <sq_5d_anim> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <pix_stb>.
     Found 1-bit register for signal <dead>.
     Found 16-bit register for signal <cnt>.
-    Found 17-bit adder for signal <n0303> created at line 34.
-    Found 12-bit comparator greater for signal <sq_a_x1[11]_GND_1_o_LessThan_4_o> created at line 191
-    Found 12-bit comparator greater for signal <sq_a_y1[11]_GND_1_o_LessThan_5_o> created at line 191
-    Found 12-bit comparator greater for signal <GND_1_o_sq_a_x2[11]_LessThan_6_o> created at line 192
-    Found 12-bit comparator greater for signal <GND_1_o_sq_a_y2[11]_LessThan_7_o> created at line 192
-    Found 12-bit comparator greater for signal <sq_b_x1[11]_GND_1_o_LessThan_9_o> created at line 193
-    Found 12-bit comparator greater for signal <sq_b_y1[11]_GND_1_o_LessThan_10_o> created at line 193
-    Found 12-bit comparator greater for signal <GND_1_o_sq_b_x2[11]_LessThan_11_o> created at line 194
-    Found 12-bit comparator greater for signal <GND_1_o_sq_b_y2[11]_LessThan_12_o> created at line 194
-    Found 12-bit comparator greater for signal <sq_c_x1[11]_GND_1_o_LessThan_14_o> created at line 195
-    Found 12-bit comparator greater for signal <sq_c_y1[11]_GND_1_o_LessThan_15_o> created at line 195
-    Found 12-bit comparator greater for signal <GND_1_o_sq_c_x2[11]_LessThan_16_o> created at line 196
-    Found 12-bit comparator greater for signal <GND_1_o_sq_c_y2[11]_LessThan_17_o> created at line 196
-    Found 12-bit comparator greater for signal <sq_d_x1[11]_GND_1_o_LessThan_19_o> created at line 197
-    Found 12-bit comparator greater for signal <sq_d_y1[11]_GND_1_o_LessThan_20_o> created at line 197
-    Found 12-bit comparator greater for signal <GND_1_o_sq_d_x2[11]_LessThan_21_o> created at line 198
-    Found 12-bit comparator greater for signal <GND_1_o_sq_d_y2[11]_LessThan_22_o> created at line 198
-    Found 12-bit comparator greater for signal <sq_2a_x1[11]_GND_1_o_LessThan_24_o> created at line 201
-    Found 12-bit comparator greater for signal <sq_2a_y1[11]_GND_1_o_LessThan_25_o> created at line 201
-    Found 12-bit comparator greater for signal <GND_1_o_sq_2a_x2[11]_LessThan_26_o> created at line 202
-    Found 12-bit comparator greater for signal <GND_1_o_sq_2a_y2[11]_LessThan_27_o> created at line 202
-    Found 12-bit comparator greater for signal <sq_2b_x1[11]_GND_1_o_LessThan_29_o> created at line 203
-    Found 12-bit comparator greater for signal <sq_2b_y1[11]_GND_1_o_LessThan_30_o> created at line 203
-    Found 12-bit comparator greater for signal <GND_1_o_sq_2b_x2[11]_LessThan_31_o> created at line 204
-    Found 12-bit comparator greater for signal <GND_1_o_sq_2b_y2[11]_LessThan_32_o> created at line 204
-    Found 12-bit comparator greater for signal <sq_2c_x1[11]_GND_1_o_LessThan_34_o> created at line 205
-    Found 12-bit comparator greater for signal <sq_2c_y1[11]_GND_1_o_LessThan_35_o> created at line 205
-    Found 12-bit comparator greater for signal <GND_1_o_sq_2c_x2[11]_LessThan_36_o> created at line 206
-    Found 12-bit comparator greater for signal <GND_1_o_sq_2c_y2[11]_LessThan_37_o> created at line 206
-    Found 12-bit comparator greater for signal <sq_3a_x1[11]_GND_1_o_LessThan_39_o> created at line 209
-    Found 12-bit comparator greater for signal <sq_3a_y1[11]_GND_1_o_LessThan_40_o> created at line 209
-    Found 12-bit comparator greater for signal <GND_1_o_sq_3a_x2[11]_LessThan_41_o> created at line 210
-    Found 12-bit comparator greater for signal <GND_1_o_sq_3a_y2[11]_LessThan_42_o> created at line 210
-    Found 12-bit comparator greater for signal <sq_3b_x1[11]_GND_1_o_LessThan_44_o> created at line 211
-    Found 12-bit comparator greater for signal <sq_3b_y1[11]_GND_1_o_LessThan_45_o> created at line 211
-    Found 12-bit comparator greater for signal <GND_1_o_sq_3b_x2[11]_LessThan_46_o> created at line 212
-    Found 12-bit comparator greater for signal <GND_1_o_sq_3b_y2[11]_LessThan_47_o> created at line 212
-    Found 12-bit comparator greater for signal <sq_3c_x1[11]_GND_1_o_LessThan_49_o> created at line 213
-    Found 12-bit comparator greater for signal <sq_3c_y1[11]_GND_1_o_LessThan_50_o> created at line 213
-    Found 12-bit comparator greater for signal <GND_1_o_sq_3c_x2[11]_LessThan_51_o> created at line 214
-    Found 12-bit comparator greater for signal <GND_1_o_sq_3c_y2[11]_LessThan_52_o> created at line 214
-    Found 12-bit comparator greater for signal <sq_3d_x1[11]_GND_1_o_LessThan_54_o> created at line 215
-    Found 12-bit comparator greater for signal <sq_3d_y1[11]_GND_1_o_LessThan_55_o> created at line 215
-    Found 12-bit comparator greater for signal <GND_1_o_sq_3d_x2[11]_LessThan_56_o> created at line 216
-    Found 12-bit comparator greater for signal <GND_1_o_sq_3d_y2[11]_LessThan_57_o> created at line 216
-    Found 12-bit comparator greater for signal <sq_3e_x1[11]_GND_1_o_LessThan_59_o> created at line 217
-    Found 12-bit comparator greater for signal <sq_3e_y1[11]_GND_1_o_LessThan_60_o> created at line 217
-    Found 12-bit comparator greater for signal <GND_1_o_sq_3e_x2[11]_LessThan_61_o> created at line 218
-    Found 12-bit comparator greater for signal <GND_1_o_sq_3e_y2[11]_LessThan_62_o> created at line 218
-    Found 12-bit comparator greater for signal <sq_3f_x1[11]_GND_1_o_LessThan_64_o> created at line 219
-    Found 12-bit comparator greater for signal <sq_3f_y1[11]_GND_1_o_LessThan_65_o> created at line 219
-    Found 12-bit comparator greater for signal <GND_1_o_sq_3f_x2[11]_LessThan_66_o> created at line 220
-    Found 12-bit comparator greater for signal <GND_1_o_sq_3f_y2[11]_LessThan_67_o> created at line 220
-    Found 12-bit comparator greater for signal <frog_x1[11]_GND_1_o_LessThan_69_o> created at line 223
-    Found 12-bit comparator greater for signal <frog_y1[11]_GND_1_o_LessThan_70_o> created at line 223
-    Found 12-bit comparator greater for signal <GND_1_o_frog_x2[11]_LessThan_71_o> created at line 224
-    Found 12-bit comparator greater for signal <GND_1_o_frog_y2[11]_LessThan_72_o> created at line 224
-    Found 12-bit comparator greater for signal <GND_1_o_frog_y1[11]_LessThan_75_o> created at line 229
-    Found 12-bit comparator greater for signal <frog_y1[11]_GND_1_o_LessThan_76_o> created at line 229
-    Found 12-bit comparator greater for signal <GND_1_o_frog_y2[11]_LessThan_77_o> created at line 229
-    Found 12-bit comparator greater for signal <frog_y2[11]_GND_1_o_LessThan_78_o> created at line 229
-    Found 12-bit comparator greater for signal <sq_a_x1[11]_frog_x1[11]_LessThan_79_o> created at line 230
-    Found 12-bit comparator greater for signal <frog_x1[11]_sq_a_x2[11]_LessThan_80_o> created at line 230
-    Found 12-bit comparator greater for signal <sq_a_x1[11]_frog_x2[11]_LessThan_81_o> created at line 230
-    Found 12-bit comparator greater for signal <frog_x2[11]_sq_a_x2[11]_LessThan_82_o> created at line 230
-    Found 12-bit comparator greater for signal <sq_b_x1[11]_frog_x1[11]_LessThan_83_o> created at line 232
-    Found 12-bit comparator greater for signal <frog_x1[11]_sq_b_x2[11]_LessThan_84_o> created at line 232
-    Found 12-bit comparator greater for signal <sq_b_x1[11]_frog_x2[11]_LessThan_85_o> created at line 232
-    Found 12-bit comparator greater for signal <frog_x2[11]_sq_b_x2[11]_LessThan_86_o> created at line 232
-    Found 12-bit comparator greater for signal <sq_c_x1[11]_frog_x1[11]_LessThan_87_o> created at line 234
-    Found 12-bit comparator greater for signal <frog_x1[11]_sq_c_x2[11]_LessThan_88_o> created at line 234
-    Found 12-bit comparator greater for signal <sq_c_x1[11]_frog_x2[11]_LessThan_89_o> created at line 234
-    Found 12-bit comparator greater for signal <frog_x2[11]_sq_c_x2[11]_LessThan_90_o> created at line 234
-    Found 12-bit comparator greater for signal <sq_d_x1[11]_frog_x1[11]_LessThan_91_o> created at line 236
-    Found 12-bit comparator greater for signal <frog_x1[11]_sq_d_x2[11]_LessThan_92_o> created at line 236
-    Found 12-bit comparator greater for signal <sq_d_x1[11]_frog_x2[11]_LessThan_93_o> created at line 236
-    Found 12-bit comparator greater for signal <frog_x2[11]_sq_d_x2[11]_LessThan_94_o> created at line 236
+    Found 17-bit adder for signal <n0373> created at line 34.
+    Found 12-bit comparator greater for signal <sq_a_x1[11]_GND_1_o_LessThan_4_o> created at line 269
+    Found 12-bit comparator greater for signal <sq_a_y1[11]_GND_1_o_LessThan_5_o> created at line 269
+    Found 12-bit comparator greater for signal <GND_1_o_sq_a_x2[11]_LessThan_6_o> created at line 270
+    Found 12-bit comparator greater for signal <GND_1_o_sq_a_y2[11]_LessThan_7_o> created at line 270
+    Found 12-bit comparator greater for signal <sq_b_x1[11]_GND_1_o_LessThan_9_o> created at line 271
+    Found 12-bit comparator greater for signal <sq_b_y1[11]_GND_1_o_LessThan_10_o> created at line 271
+    Found 12-bit comparator greater for signal <GND_1_o_sq_b_x2[11]_LessThan_11_o> created at line 272
+    Found 12-bit comparator greater for signal <GND_1_o_sq_b_y2[11]_LessThan_12_o> created at line 272
+    Found 12-bit comparator greater for signal <sq_c_x1[11]_GND_1_o_LessThan_14_o> created at line 273
+    Found 12-bit comparator greater for signal <sq_c_y1[11]_GND_1_o_LessThan_15_o> created at line 273
+    Found 12-bit comparator greater for signal <GND_1_o_sq_c_x2[11]_LessThan_16_o> created at line 274
+    Found 12-bit comparator greater for signal <GND_1_o_sq_c_y2[11]_LessThan_17_o> created at line 274
+    Found 12-bit comparator greater for signal <sq_d_x1[11]_GND_1_o_LessThan_19_o> created at line 275
+    Found 12-bit comparator greater for signal <sq_d_y1[11]_GND_1_o_LessThan_20_o> created at line 275
+    Found 12-bit comparator greater for signal <GND_1_o_sq_d_x2[11]_LessThan_21_o> created at line 276
+    Found 12-bit comparator greater for signal <GND_1_o_sq_d_y2[11]_LessThan_22_o> created at line 276
+    Found 12-bit comparator greater for signal <sq_2a_x1[11]_GND_1_o_LessThan_24_o> created at line 279
+    Found 12-bit comparator greater for signal <sq_2a_y1[11]_GND_1_o_LessThan_25_o> created at line 279
+    Found 12-bit comparator greater for signal <GND_1_o_sq_2a_x2[11]_LessThan_26_o> created at line 280
+    Found 12-bit comparator greater for signal <GND_1_o_sq_2a_y2[11]_LessThan_27_o> created at line 280
+    Found 12-bit comparator greater for signal <sq_2b_x1[11]_GND_1_o_LessThan_29_o> created at line 281
+    Found 12-bit comparator greater for signal <sq_2b_y1[11]_GND_1_o_LessThan_30_o> created at line 281
+    Found 12-bit comparator greater for signal <GND_1_o_sq_2b_x2[11]_LessThan_31_o> created at line 282
+    Found 12-bit comparator greater for signal <GND_1_o_sq_2b_y2[11]_LessThan_32_o> created at line 282
+    Found 12-bit comparator greater for signal <sq_2c_x1[11]_GND_1_o_LessThan_34_o> created at line 283
+    Found 12-bit comparator greater for signal <sq_2c_y1[11]_GND_1_o_LessThan_35_o> created at line 283
+    Found 12-bit comparator greater for signal <GND_1_o_sq_2c_x2[11]_LessThan_36_o> created at line 284
+    Found 12-bit comparator greater for signal <GND_1_o_sq_2c_y2[11]_LessThan_37_o> created at line 284
+    Found 12-bit comparator greater for signal <sq_3a_x1[11]_GND_1_o_LessThan_39_o> created at line 287
+    Found 12-bit comparator greater for signal <sq_3a_y1[11]_GND_1_o_LessThan_40_o> created at line 287
+    Found 12-bit comparator greater for signal <GND_1_o_sq_3a_x2[11]_LessThan_41_o> created at line 288
+    Found 12-bit comparator greater for signal <GND_1_o_sq_3a_y2[11]_LessThan_42_o> created at line 288
+    Found 12-bit comparator greater for signal <sq_3b_x1[11]_GND_1_o_LessThan_44_o> created at line 289
+    Found 12-bit comparator greater for signal <sq_3b_y1[11]_GND_1_o_LessThan_45_o> created at line 289
+    Found 12-bit comparator greater for signal <GND_1_o_sq_3b_x2[11]_LessThan_46_o> created at line 290
+    Found 12-bit comparator greater for signal <GND_1_o_sq_3b_y2[11]_LessThan_47_o> created at line 290
+    Found 12-bit comparator greater for signal <sq_3c_x1[11]_GND_1_o_LessThan_49_o> created at line 291
+    Found 12-bit comparator greater for signal <sq_3c_y1[11]_GND_1_o_LessThan_50_o> created at line 291
+    Found 12-bit comparator greater for signal <GND_1_o_sq_3c_x2[11]_LessThan_51_o> created at line 292
+    Found 12-bit comparator greater for signal <GND_1_o_sq_3c_y2[11]_LessThan_52_o> created at line 292
+    Found 12-bit comparator greater for signal <sq_3d_x1[11]_GND_1_o_LessThan_54_o> created at line 293
+    Found 12-bit comparator greater for signal <sq_3d_y1[11]_GND_1_o_LessThan_55_o> created at line 293
+    Found 12-bit comparator greater for signal <GND_1_o_sq_3d_x2[11]_LessThan_56_o> created at line 294
+    Found 12-bit comparator greater for signal <GND_1_o_sq_3d_y2[11]_LessThan_57_o> created at line 294
+    Found 12-bit comparator greater for signal <sq_3e_x1[11]_GND_1_o_LessThan_59_o> created at line 295
+    Found 12-bit comparator greater for signal <sq_3e_y1[11]_GND_1_o_LessThan_60_o> created at line 295
+    Found 12-bit comparator greater for signal <GND_1_o_sq_3e_x2[11]_LessThan_61_o> created at line 296
+    Found 12-bit comparator greater for signal <GND_1_o_sq_3e_y2[11]_LessThan_62_o> created at line 296
+    Found 12-bit comparator greater for signal <sq_3f_x1[11]_GND_1_o_LessThan_64_o> created at line 297
+    Found 12-bit comparator greater for signal <sq_3f_y1[11]_GND_1_o_LessThan_65_o> created at line 297
+    Found 12-bit comparator greater for signal <GND_1_o_sq_3f_x2[11]_LessThan_66_o> created at line 298
+    Found 12-bit comparator greater for signal <GND_1_o_sq_3f_y2[11]_LessThan_67_o> created at line 298
+    Found 12-bit comparator greater for signal <sq_4a_x1[11]_GND_1_o_LessThan_69_o> created at line 301
+    Found 12-bit comparator greater for signal <sq_4a_y1[11]_GND_1_o_LessThan_70_o> created at line 301
+    Found 12-bit comparator greater for signal <GND_1_o_sq_4a_x2[11]_LessThan_71_o> created at line 302
+    Found 12-bit comparator greater for signal <GND_1_o_sq_4a_y2[11]_LessThan_72_o> created at line 302
+    Found 12-bit comparator greater for signal <sq_4b_x1[11]_GND_1_o_LessThan_74_o> created at line 303
+    Found 12-bit comparator greater for signal <sq_4b_y1[11]_GND_1_o_LessThan_75_o> created at line 303
+    Found 12-bit comparator greater for signal <GND_1_o_sq_4b_x2[11]_LessThan_76_o> created at line 304
+    Found 12-bit comparator greater for signal <GND_1_o_sq_4b_y2[11]_LessThan_77_o> created at line 304
+    Found 12-bit comparator greater for signal <sq_4c_x1[11]_GND_1_o_LessThan_79_o> created at line 305
+    Found 12-bit comparator greater for signal <sq_4c_y1[11]_GND_1_o_LessThan_80_o> created at line 305
+    Found 12-bit comparator greater for signal <GND_1_o_sq_4c_x2[11]_LessThan_81_o> created at line 306
+    Found 12-bit comparator greater for signal <GND_1_o_sq_4c_y2[11]_LessThan_82_o> created at line 306
+    Found 12-bit comparator greater for signal <sq_5a_x1[11]_GND_1_o_LessThan_84_o> created at line 309
+    Found 12-bit comparator greater for signal <sq_5a_y1[11]_GND_1_o_LessThan_85_o> created at line 309
+    Found 12-bit comparator greater for signal <GND_1_o_sq_5a_x2[11]_LessThan_86_o> created at line 310
+    Found 12-bit comparator greater for signal <GND_1_o_sq_5a_y2[11]_LessThan_87_o> created at line 310
+    Found 12-bit comparator greater for signal <sq_5b_x1[11]_GND_1_o_LessThan_89_o> created at line 311
+    Found 12-bit comparator greater for signal <sq_5b_y1[11]_GND_1_o_LessThan_90_o> created at line 311
+    Found 12-bit comparator greater for signal <GND_1_o_sq_5b_x2[11]_LessThan_91_o> created at line 312
+    Found 12-bit comparator greater for signal <GND_1_o_sq_5b_y2[11]_LessThan_92_o> created at line 312
+    Found 12-bit comparator greater for signal <sq_5c_x1[11]_GND_1_o_LessThan_94_o> created at line 313
+    Found 12-bit comparator greater for signal <sq_5c_y1[11]_GND_1_o_LessThan_95_o> created at line 313
+    Found 12-bit comparator greater for signal <GND_1_o_sq_5c_x2[11]_LessThan_96_o> created at line 314
+    Found 12-bit comparator greater for signal <GND_1_o_sq_5c_y2[11]_LessThan_97_o> created at line 314
+    Found 12-bit comparator greater for signal <frog_x1[11]_GND_1_o_LessThan_104_o> created at line 319
+    Found 12-bit comparator greater for signal <frog_y1[11]_GND_1_o_LessThan_105_o> created at line 319
+    Found 12-bit comparator greater for signal <GND_1_o_frog_x2[11]_LessThan_106_o> created at line 320
+    Found 12-bit comparator greater for signal <GND_1_o_frog_y2[11]_LessThan_107_o> created at line 320
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  18 D-type flip-flop(s).
-	inferred  76 Comparator(s).
-	inferred   2 Multiplexer(s).
+	inferred  80 Comparator(s).
 Unit <top> synthesized.
 
 Synthesizing Unit <vga640x480>.
@@ -736,35 +811,206 @@ Synthesizing Unit <square_13>.
 	inferred   2 Multiplexer(s).
 Unit <square_13> synthesized.
 
+Synthesizing Unit <square_14>.
+    Related source file is "/home/ise/Embedded/Finalproj1/square.v".
+        H_WIDTH = 60
+        H_HEIGHT = 20
+        IX = 0
+        IY = 264
+        IX_DIR = 1
+        IY_DIR = 1
+        D_WIDTH = 640
+        D_HEIGHT = 480
+    Found 12-bit register for signal <y>.
+    Found 12-bit register for signal <x>.
+    Found 12-bit adder for signal <o_x2> created at line 34.
+    Found 12-bit adder for signal <o_y2> created at line 36.
+    Found 13-bit adder for signal <n0045[12:0]> created at line 49.
+    Found 12-bit subtractor for signal <o_x1> created at line 22.
+    Found 12-bit subtractor for signal <o_y1> created at line 24.
+    Found 12-bit comparator lessequal for signal <n0011> created at line 52
+    Found 12-bit comparator lessequal for signal <n0014> created at line 54
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <square_14> synthesized.
+
+Synthesizing Unit <square_15>.
+    Related source file is "/home/ise/Embedded/Finalproj1/square.v".
+        H_WIDTH = 60
+        H_HEIGHT = 20
+        IX = 250
+        IY = 264
+        IX_DIR = 1
+        IY_DIR = 1
+        D_WIDTH = 640
+        D_HEIGHT = 480
+    Found 12-bit register for signal <y>.
+    Found 12-bit register for signal <x>.
+    Found 12-bit adder for signal <o_x2> created at line 34.
+    Found 12-bit adder for signal <o_y2> created at line 36.
+    Found 13-bit adder for signal <n0045[12:0]> created at line 49.
+    Found 12-bit subtractor for signal <o_x1> created at line 22.
+    Found 12-bit subtractor for signal <o_y1> created at line 24.
+    Found 12-bit comparator lessequal for signal <n0011> created at line 52
+    Found 12-bit comparator lessequal for signal <n0014> created at line 54
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <square_15> synthesized.
+
+Synthesizing Unit <square_16>.
+    Related source file is "/home/ise/Embedded/Finalproj1/square.v".
+        H_WIDTH = 60
+        H_HEIGHT = 20
+        IX = 500
+        IY = 264
+        IX_DIR = 1
+        IY_DIR = 1
+        D_WIDTH = 640
+        D_HEIGHT = 480
+    Found 12-bit register for signal <y>.
+    Found 12-bit register for signal <x>.
+    Found 12-bit adder for signal <o_x2> created at line 34.
+    Found 12-bit adder for signal <o_y2> created at line 36.
+    Found 13-bit adder for signal <n0045[12:0]> created at line 49.
+    Found 12-bit subtractor for signal <o_x1> created at line 22.
+    Found 12-bit subtractor for signal <o_y1> created at line 24.
+    Found 12-bit comparator lessequal for signal <n0011> created at line 52
+    Found 12-bit comparator lessequal for signal <n0014> created at line 54
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <square_16> synthesized.
+
+Synthesizing Unit <square_17>.
+    Related source file is "/home/ise/Embedded/Finalproj1/square.v".
+        H_WIDTH = 40
+        H_HEIGHT = 20
+        IX = 0
+        IY = 312
+        IX_DIR = 0
+        IY_DIR = 1
+        D_WIDTH = 640
+        D_HEIGHT = 480
+    Found 12-bit register for signal <y>.
+    Found 1-bit register for signal <x_dir>.
+    Found 12-bit register for signal <x>.
+    Found 13-bit subtractor for signal <GND_19_o_GND_19_o_sub_9_OUT> created at line 49.
+    Found 12-bit adder for signal <o_x2> created at line 34.
+    Found 12-bit adder for signal <o_y2> created at line 36.
+    Found 13-bit adder for signal <n0045[12:0]> created at line 49.
+    Found 12-bit subtractor for signal <o_x1> created at line 22.
+    Found 12-bit subtractor for signal <o_y1> created at line 24.
+    Found 12-bit comparator lessequal for signal <n0011> created at line 52
+    Found 12-bit comparator lessequal for signal <n0014> created at line 54
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <square_17> synthesized.
+
+Synthesizing Unit <square_18>.
+    Related source file is "/home/ise/Embedded/Finalproj1/square.v".
+        H_WIDTH = 40
+        H_HEIGHT = 20
+        IX = 160
+        IY = 312
+        IX_DIR = 0
+        IY_DIR = 1
+        D_WIDTH = 640
+        D_HEIGHT = 480
+    Found 12-bit register for signal <y>.
+    Found 1-bit register for signal <x_dir>.
+    Found 12-bit register for signal <x>.
+    Found 13-bit subtractor for signal <GND_20_o_GND_20_o_sub_9_OUT> created at line 49.
+    Found 12-bit adder for signal <o_x2> created at line 34.
+    Found 12-bit adder for signal <o_y2> created at line 36.
+    Found 13-bit adder for signal <n0045[12:0]> created at line 49.
+    Found 12-bit subtractor for signal <o_x1> created at line 22.
+    Found 12-bit subtractor for signal <o_y1> created at line 24.
+    Found 12-bit comparator lessequal for signal <n0011> created at line 52
+    Found 12-bit comparator lessequal for signal <n0014> created at line 54
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <square_18> synthesized.
+
+Synthesizing Unit <square_19>.
+    Related source file is "/home/ise/Embedded/Finalproj1/square.v".
+        H_WIDTH = 40
+        H_HEIGHT = 20
+        IX = 320
+        IY = 312
+        IX_DIR = 0
+        IY_DIR = 1
+        D_WIDTH = 640
+        D_HEIGHT = 480
+    Found 12-bit register for signal <y>.
+    Found 1-bit register for signal <x_dir>.
+    Found 12-bit register for signal <x>.
+    Found 13-bit subtractor for signal <GND_21_o_GND_21_o_sub_9_OUT> created at line 49.
+    Found 12-bit adder for signal <o_x2> created at line 34.
+    Found 12-bit adder for signal <o_y2> created at line 36.
+    Found 13-bit adder for signal <n0045[12:0]> created at line 49.
+    Found 12-bit subtractor for signal <o_x1> created at line 22.
+    Found 12-bit subtractor for signal <o_y1> created at line 24.
+    Found 12-bit comparator lessequal for signal <n0011> created at line 52
+    Found 12-bit comparator lessequal for signal <n0014> created at line 54
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <square_19> synthesized.
+
 Synthesizing Unit <frog>.
     Related source file is "/home/ise/Embedded/Finalproj1/frog.v".
         H_WIDTH = 11
         H_HEIGHT = 11
         IX = 320
-        IY = 456
+        IY = 168
         IX_DIR = 1
         IY_DIR = 1
         D_WIDTH = 640
         D_HEIGHT = 480
+    Found 12-bit register for signal <prevY>.
     Found 1-bit register for signal <down_inProg>.
+    Found 12-bit register for signal <prevX>.
     Found 1-bit register for signal <right_inProg>.
     Found 1-bit register for signal <left_inProg>.
-    Found 6-bit register for signal <distance>.
     Found 12-bit register for signal <y>.
     Found 12-bit register for signal <x>.
     Found 1-bit register for signal <up_inProg>.
+    Found 13-bit subtractor for signal <GND_23_o_GND_23_o_sub_10_OUT> created at line 81.
+    Found 13-bit subtractor for signal <GND_23_o_GND_23_o_sub_29_OUT> created at line 127.
     Found 12-bit adder for signal <o_x2> created at line 39.
     Found 12-bit adder for signal <o_y2> created at line 41.
-    Found 6-bit adder for signal <distance[5]_GND_16_o_add_20_OUT> created at line 121.
-    Found 12-bit adder for signal <y[11]_GND_16_o_add_32_OUT> created at line 130.
-    Found 12-bit adder for signal <x[11]_GND_16_o_add_40_OUT> created at line 138.
+    Found 13-bit adder for signal <_n0268> created at line 99.
+    Found 13-bit adder for signal <_n0271> created at line 117.
+    Found 12-bit adder for signal <y[11]_GND_23_o_add_46_OUT> created at line 147.
+    Found 12-bit adder for signal <x[11]_GND_23_o_add_54_OUT> created at line 155.
     Found 12-bit subtractor for signal <o_x1> created at line 27.
     Found 12-bit subtractor for signal <o_y1> created at line 29.
-    Found 12-bit subtractor for signal <GND_16_o_GND_16_o_sub_32_OUT<11:0>> created at line 129.
-    Found 12-bit subtractor for signal <GND_16_o_GND_16_o_sub_42_OUT<11:0>> created at line 139.
+    Found 12-bit subtractor for signal <GND_23_o_GND_23_o_sub_46_OUT<11:0>> created at line 146.
+    Found 12-bit subtractor for signal <GND_23_o_GND_23_o_sub_56_OUT<11:0>> created at line 156.
+    Found 32-bit comparator equal for signal <GND_23_o_GND_23_o_equal_11_o> created at line 81
+    Found 32-bit comparator equal for signal <GND_23_o_GND_23_o_equal_30_o> created at line 127
+    Found 13-bit comparator equal for signal <GND_23_o_GND_23_o_equal_19_o> created at line 99
+    Found 13-bit comparator equal for signal <GND_23_o_GND_23_o_equal_27_o> created at line 117
     Summary:
-	inferred   7 Adder/Subtractor(s).
-	inferred  34 D-type flip-flop(s).
+	inferred  10 Adder/Subtractor(s).
+	inferred  52 D-type flip-flop(s).
+	inferred   4 Comparator(s).
 	inferred   2 Multiplexer(s).
 Unit <frog> synthesized.
 
@@ -772,32 +1018,31 @@ Unit <frog> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 79
+# Adders/Subtractors                                   : 115
  10-bit adder                                          : 2
  11-bit subtractor                                     : 1
- 12-bit adder                                          : 28
+ 12-bit adder                                          : 40
  12-bit addsub                                         : 2
- 12-bit subtractor                                     : 28
- 13-bit adder                                          : 13
- 13-bit subtractor                                     : 3
+ 12-bit subtractor                                     : 40
+ 13-bit adder                                          : 21
+ 13-bit subtractor                                     : 8
  17-bit adder                                          : 1
- 6-bit adder                                           : 1
-# Registers                                            : 40
- 1-bit register                                        : 8
+# Registers                                            : 56
+ 1-bit register                                        : 11
  10-bit register                                       : 2
- 12-bit register                                       : 28
+ 12-bit register                                       : 42
  17-bit register                                       : 1
- 6-bit register                                        : 1
-# Comparators                                          : 109
+# Comparators                                          : 129
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 3
- 12-bit comparator greater                             : 76
- 12-bit comparator lessequal                           : 26
-# Multiplexers                                         : 34
- 1-bit 2-to-1 multiplexer                              : 2
+ 12-bit comparator greater                             : 80
+ 12-bit comparator lessequal                           : 38
+ 13-bit comparator equal                               : 2
+ 32-bit comparator equal                               : 2
+# Multiplexers                                         : 45
  10-bit 2-to-1 multiplexer                             : 2
- 12-bit 2-to-1 multiplexer                             : 25
- 32-bit 2-to-1 multiplexer                             : 5
+ 12-bit 2-to-1 multiplexer                             : 35
+ 32-bit 2-to-1 multiplexer                             : 8
 
 =========================================================================
 
@@ -805,52 +1050,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 1 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 1 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 1 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 1 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 1 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_3f_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_3f_anim>. This FF/Latch will be trimmed during the optimization process.
@@ -864,6 +1063,24 @@ WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_3f_anim
 WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_3f_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_3f_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_3f_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_4a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_4a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_4a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_4a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_4a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 0 in block <sq_4a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_4a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_4a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 1 in block <sq_4a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_4a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_4a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_4a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_4b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_4b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_4b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_4b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 1 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
@@ -884,15 +1101,72 @@ WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_3e_anim
 WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 1 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_3e_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <x_dir> has a constant value of 0 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 1 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 1 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_5b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <x_dir> has a constant value of 0 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 1 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 1 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_5c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_4b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 0 in block <sq_4b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_4b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_4b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 1 in block <sq_4b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_4b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_4b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_4b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_4c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_4c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_4c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_4c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_4c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 0 in block <sq_4c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_4c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_4c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 1 in block <sq_4c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_4c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_4c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_4c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <x_dir> has a constant value of 0 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 1 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 1 in block <sq_5a_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 1 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
@@ -904,6 +1178,24 @@ WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_d_anim>
 WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 1 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <x_dir> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 1 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 1 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_a_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_a_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_a_anim>. This FF/Latch will be trimmed during the optimization process.
@@ -924,6 +1216,46 @@ WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_b_anim>
 WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 1 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 1 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 1 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_3b_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_3c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <x_dir> has a constant value of 0 in block <sq_2b_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_2b_anim>. This FF/Latch will be trimmed during the optimization process.
@@ -944,34 +1276,22 @@ WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_2c_anim
 WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 1 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 1 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_d_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <x_dir> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_1> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_2> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_3> has a constant value of 1 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_4> has a constant value of 1 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 1 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_2a_anim>. This FF/Latch will be trimmed during the optimization process.
-
-Synthesizing (advanced) Unit <frog>.
-The following registers are absorbed into accumulator <distance>: 1 register on signal <distance>.
-Unit <frog> synthesized (advanced).
+WARNING:Xst:1293 - FF/Latch <y_5> has a constant value of 1 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_6> has a constant value of 1 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_7> has a constant value of 0 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_8> has a constant value of 0 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_9> has a constant value of 0 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_10> has a constant value of 0 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_11> has a constant value of 0 in block <sq_2c_anim>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <sq_3a_anim>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <square_1>.
 The following registers are absorbed into counter <x>: 1 register on signal <x>.
 Unit <square_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <square_14>.
+The following registers are absorbed into counter <x>: 1 register on signal <x>.
+Unit <square_14> synthesized (advanced).
 
 Synthesizing (advanced) Unit <square_8>.
 The following registers are absorbed into counter <x>: 1 register on signal <x>.
@@ -985,32 +1305,31 @@ Unit <vga640x480> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 75
+# Adders/Subtractors                                   : 111
  10-bit adder                                          : 1
  11-bit subtractor                                     : 1
- 12-bit adder                                          : 36
+ 12-bit adder                                          : 50
  12-bit addsub                                         : 2
- 12-bit subtractor                                     : 28
- 13-bit adder                                          : 3
- 13-bit subtractor                                     : 3
+ 12-bit subtractor                                     : 40
+ 13-bit adder                                          : 8
+ 13-bit subtractor                                     : 8
  17-bit adder                                          : 1
-# Counters                                             : 3
+# Counters                                             : 4
  10-bit up counter                                     : 1
- 12-bit up counter                                     : 2
-# Accumulators                                         : 1
- 6-bit up accumulator                                  : 1
-# Registers                                            : 347
- Flip-Flops                                            : 347
-# Comparators                                          : 109
+ 12-bit up counter                                     : 3
+# Registers                                            : 506
+ Flip-Flops                                            : 506
+# Comparators                                          : 129
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 3
- 12-bit comparator greater                             : 76
- 12-bit comparator lessequal                           : 26
-# Multiplexers                                         : 32
- 1-bit 2-to-1 multiplexer                              : 2
+ 12-bit comparator greater                             : 80
+ 12-bit comparator lessequal                           : 38
+ 13-bit comparator equal                               : 2
+ 32-bit comparator equal                               : 2
+# Multiplexers                                         : 42
  10-bit 2-to-1 multiplexer                             : 2
- 12-bit 2-to-1 multiplexer                             : 23
- 32-bit 2-to-1 multiplexer                             : 5
+ 12-bit 2-to-1 multiplexer                             : 32
+ 32-bit 2-to-1 multiplexer                             : 8
 
 =========================================================================
 
@@ -1176,8 +1495,81 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_8> has a constant
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_9> has a constant value of 0 in block <square_13>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_10> has a constant value of 0 in block <square_13>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_11> has a constant value of 0 in block <square_13>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <distance_0> has a constant value of 0 in block <frog>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <distance_1> has a constant value of 0 in block <frog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <square_14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_1> has a constant value of 0 in block <square_14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_2> has a constant value of 0 in block <square_14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_3> has a constant value of 1 in block <square_14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_4> has a constant value of 0 in block <square_14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_5> has a constant value of 0 in block <square_14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_6> has a constant value of 0 in block <square_14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_7> has a constant value of 0 in block <square_14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_8> has a constant value of 1 in block <square_14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_9> has a constant value of 0 in block <square_14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_10> has a constant value of 0 in block <square_14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_11> has a constant value of 0 in block <square_14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <square_15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_1> has a constant value of 0 in block <square_15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_2> has a constant value of 0 in block <square_15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_3> has a constant value of 1 in block <square_15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_4> has a constant value of 0 in block <square_15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_5> has a constant value of 0 in block <square_15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_6> has a constant value of 0 in block <square_15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_7> has a constant value of 0 in block <square_15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_8> has a constant value of 1 in block <square_15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_9> has a constant value of 0 in block <square_15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_10> has a constant value of 0 in block <square_15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_11> has a constant value of 0 in block <square_15>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <y_0> has a constant value of 0 in block <square_16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_1> has a constant value of 0 in block <square_16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_2> has a constant value of 0 in block <square_16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_3> has a constant value of 1 in block <square_16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_4> has a constant value of 0 in block <square_16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_5> has a constant value of 0 in block <square_16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_6> has a constant value of 0 in block <square_16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_7> has a constant value of 0 in block <square_16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_8> has a constant value of 1 in block <square_16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_9> has a constant value of 0 in block <square_16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_10> has a constant value of 0 in block <square_16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_11> has a constant value of 0 in block <square_16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <x_dir> has a constant value of 0 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_0> has a constant value of 0 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_1> has a constant value of 0 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_2> has a constant value of 0 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_3> has a constant value of 1 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_4> has a constant value of 1 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_5> has a constant value of 1 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_6> has a constant value of 0 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_7> has a constant value of 0 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_8> has a constant value of 1 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_9> has a constant value of 0 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_10> has a constant value of 0 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_11> has a constant value of 0 in block <square_17>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <x_dir> has a constant value of 0 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_0> has a constant value of 0 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_1> has a constant value of 0 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_2> has a constant value of 0 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_3> has a constant value of 1 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_4> has a constant value of 1 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_5> has a constant value of 1 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_6> has a constant value of 0 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_7> has a constant value of 0 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_8> has a constant value of 1 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_9> has a constant value of 0 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_10> has a constant value of 0 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_11> has a constant value of 0 in block <square_18>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <x_dir> has a constant value of 0 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_0> has a constant value of 0 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_1> has a constant value of 0 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_2> has a constant value of 0 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_3> has a constant value of 1 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_4> has a constant value of 1 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_5> has a constant value of 1 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_6> has a constant value of 0 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_7> has a constant value of 0 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_8> has a constant value of 1 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_9> has a constant value of 0 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_10> has a constant value of 0 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <y_11> has a constant value of 0 in block <square_19>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <pix_stb> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <cnt_0> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <cnt_1> of sequential type is unconnected in block <top>.
@@ -1219,46 +1611,80 @@ Optimizing unit <square_12> ...
 
 Optimizing unit <square_13> ...
 
+Optimizing unit <square_15> ...
+
+Optimizing unit <square_16> ...
+
+Optimizing unit <square_17> ...
+
+Optimizing unit <square_18> ...
+
+Optimizing unit <square_19> ...
+
 Optimizing unit <frog> ...
-WARNING:Xst:1293 - FF/Latch <frog_anim/y_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/y_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/x_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/x_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3f_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3f_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3e_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3e_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sq_3d_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3d_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3d_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3b_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_2c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_2c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_2b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_2b_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_2a_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_2a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_d_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_d_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3a_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3e_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3e_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3f_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3f_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_4b_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_4b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_4c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_4c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_5a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_5a_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_5b_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_5b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_5c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_5c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <frog_anim/prevX_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <frog_anim/prevY_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/x_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/x_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/y_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <frog_anim/y_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_a_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_0> in Unit <top> is equivalent to the following 10 FFs/Latches, which will be removed : <sq_c_anim/x_0> <sq_d_anim/x_0> <sq_2a_anim/x_0> <sq_2b_anim/x_0> <sq_2c_anim/x_0> <sq_3b_anim/x_0> <sq_3c_anim/x_0> <sq_3d_anim/x_0> <sq_3e_anim/x_0> <sq_3f_anim/x_0> 
-INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_1> in Unit <top> is equivalent to the following 7 FFs/Latches, which will be removed : <sq_c_anim/x_1> <sq_d_anim/x_1> <sq_3b_anim/x_1> <sq_3c_anim/x_1> <sq_3d_anim/x_1> <sq_3e_anim/x_1> <sq_3f_anim/x_1> 
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3a_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_4a_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_4a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_d_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_d_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_2a_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_2a_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_2b_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_2b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_2c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_2c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3b_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3b_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3c_anim/x_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sq_3c_anim/x_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <frog_anim/prevX_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <frog_anim/prevY_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_0> in Unit <top> is equivalent to the following 15 FFs/Latches, which will be removed : <sq_c_anim/x_0> <sq_d_anim/x_0> <sq_2a_anim/x_0> <sq_2b_anim/x_0> <sq_2c_anim/x_0> <sq_3b_anim/x_0> <sq_3c_anim/x_0> <sq_3d_anim/x_0> <sq_3e_anim/x_0> <sq_3f_anim/x_0> <sq_4b_anim/x_0> <sq_4c_anim/x_0> <sq_5a_anim/x_0> <sq_5b_anim/x_0> <sq_5c_anim/x_0> 
+INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_1> in Unit <top> is equivalent to the following 8 FFs/Latches, which will be removed : <sq_c_anim/x_1> <sq_d_anim/x_1> <sq_3b_anim/x_1> <sq_3c_anim/x_1> <sq_3d_anim/x_1> <sq_3e_anim/x_1> <sq_3f_anim/x_1> <sq_4c_anim/x_1> 
 INFO:Xst:2261 - The FF/Latch <sq_b_anim/x_2> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <sq_c_anim/x_2> <sq_d_anim/x_2> 
-INFO:Xst:2261 - The FF/Latch <sq_2a_anim/x_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <sq_2c_anim/x_1> 
+INFO:Xst:2261 - The FF/Latch <sq_2a_anim/x_1> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <sq_2c_anim/x_1> <sq_5a_anim/x_1> <sq_5b_anim/x_1> <sq_5c_anim/x_1> 
+INFO:Xst:2261 - The FF/Latch <sq_5a_anim/x_2> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <sq_5b_anim/x_2> <sq_5c_anim/x_2> 
+INFO:Xst:3203 - The FF/Latch <sq_b_anim/x_1> in Unit <top> is the opposite to the following FF/Latch, which will be removed : <sq_4b_anim/x_1> 
 INFO:Xst:3203 - The FF/Latch <sq_2a_anim/x_1> in Unit <top> is the opposite to the following FF/Latch, which will be removed : <sq_2b_anim/x_1> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 31.
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 39.
+FlipFlop display/v_count_4 has been replicated 2 time(s)
+FlipFlop display/v_count_5 has been replicated 3 time(s)
+FlipFlop display/v_count_6 has been replicated 2 time(s)
+FlipFlop display/v_count_7 has been replicated 3 time(s)
+FlipFlop display/v_count_8 has been replicated 2 time(s)
+FlipFlop display/v_count_9 has been replicated 3 time(s)
 
 Final Macro Processing ...
 
@@ -1266,8 +1692,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 161
- Flip-Flops                                            : 161
+# Registers                                            : 240
+ Flip-Flops                                            : 240
 
 =========================================================================
 
@@ -1290,24 +1716,24 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2170
+# BELS                             : 2671
 #      GND                         : 1
-#      INV                         : 76
-#      LUT1                        : 107
-#      LUT2                        : 165
-#      LUT3                        : 108
-#      LUT4                        : 557
-#      LUT5                        : 164
-#      LUT6                        : 243
-#      MUXCY                       : 561
-#      MUXF7                       : 8
+#      INV                         : 111
+#      LUT1                        : 128
+#      LUT2                        : 208
+#      LUT3                        : 176
+#      LUT4                        : 539
+#      LUT5                        : 261
+#      LUT6                        : 359
+#      MUXCY                       : 654
+#      MUXF7                       : 6
 #      VCC                         : 1
-#      XORCY                       : 179
-# FlipFlops/Latches                : 161
-#      FD                          : 116
-#      FDR                         : 1
-#      FDRE                        : 38
-#      FDSE                        : 6
+#      XORCY                       : 227
+# FlipFlops/Latches                : 240
+#      FD                          : 165
+#      FDE                         : 20
+#      FDRE                        : 50
+#      FDSE                        : 5
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 15
@@ -1321,16 +1747,16 @@ Selected Device : 6slx9csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             161  out of  11440     1%  
- Number of Slice LUTs:                 1420  out of   5720    24%  
-    Number used as Logic:              1420  out of   5720    24%  
+ Number of Slice Registers:             240  out of  11440     2%  
+ Number of Slice LUTs:                 1782  out of   5720    31%  
+    Number used as Logic:              1782  out of   5720    31%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1420
-   Number with an unused Flip Flop:    1259  out of   1420    88%  
-   Number with an unused LUT:             0  out of   1420     0%  
-   Number of fully used LUT-FF pairs:   161  out of   1420    11%  
-   Number of unique control sets:         7
+ Number of LUT Flip Flop pairs used:   1805
+   Number with an unused Flip Flop:    1565  out of   1805    86%  
+   Number with an unused LUT:            23  out of   1805     1%  
+   Number of fully used LUT-FF pairs:   217  out of   1805    12%  
+   Number of unique control sets:         6
 
 IO Utilization: 
  Number of IOs:                          16
@@ -1360,7 +1786,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 161   |
+CLK                                | BUFGP                  | 240   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1371,9 +1797,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.718ns (Maximum Frequency: 148.859MHz)
-   Minimum input arrival time before clock: 4.841ns
-   Maximum output required time after clock: 12.462ns
+   Minimum period: 6.702ns (Maximum Frequency: 149.212MHz)
+   Minimum input arrival time before clock: 5.297ns
+   Maximum output required time after clock: 12.370ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1382,36 +1808,38 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 6.718ns (frequency: 148.859MHz)
-  Total number of paths / destination ports: 14154 / 230
+  Clock period: 6.702ns (frequency: 149.212MHz)
+  Total number of paths / destination ports: 18332 / 350
 -------------------------------------------------------------------------
-Delay:               6.718ns (Levels of Logic = 6)
-  Source:            display/h_count_6 (FF)
-  Destination:       sq_a_anim/x_1 (FF)
+Delay:               6.702ns (Levels of Logic = 8)
+  Source:            display/h_count_8 (FF)
+  Destination:       dead (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: display/h_count_6 to sq_a_anim/x_1
+  Data Path: display/h_count_8 to dead
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            13   0.447   1.180  display/h_count_6 (display/h_count_6)
-     LUT5:I1->O            1   0.203   0.580  display/GND_2_o_GND_2_o_equal_15_o<9>_SW0 (N20)
-     LUT6:I5->O           18   0.205   1.050  display/GND_2_o_GND_2_o_equal_15_o<9> (display/GND_2_o_GND_2_o_equal_15_o)
-     LUT6:I5->O            4   0.205   0.684  display/o_animate_1 (display/o_animate)
-     LUT6:I5->O            2   0.205   0.617  sq_a_anim/x_cst (sq_a_anim/x_cst)
-     LUT4:I3->O            9   0.205   0.830  sq_a_anim/Mcount_x_val1 (sq_a_anim/Mcount_x_val)
-     LUT4:I3->O            1   0.205   0.000  sq_a_anim/x_1_rstpot (sq_a_anim/x_1_rstpot)
-     FD:D                      0.102          sq_a_anim/x_1
+     FDRE:C->Q            18   0.447   1.394  display/h_count_8 (display/h_count_8)
+     LUT6:I1->O           80   0.203   1.974  display/Mmux_n003651 (x<4>)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_GND_1_o_sq_a_x2[11]_LessThan_6_o_lut<2> (Mcompar_GND_1_o_sq_a_x2[11]_LessThan_6_o_lut<2>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_sq_a_x2[11]_LessThan_6_o_cy<2> (Mcompar_GND_1_o_sq_a_x2[11]_LessThan_6_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_sq_a_x2[11]_LessThan_6_o_cy<3> (Mcompar_GND_1_o_sq_a_x2[11]_LessThan_6_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_sq_a_x2[11]_LessThan_6_o_cy<4> (Mcompar_GND_1_o_sq_a_x2[11]_LessThan_6_o_cy<4>)
+     MUXCY:CI->O           1   0.213   0.684  Mcompar_GND_1_o_sq_a_x2[11]_LessThan_6_o_cy<5> (Mcompar_GND_1_o_sq_a_x2[11]_LessThan_6_o_cy<5>)
+     LUT6:I4->O            2   0.203   0.864  fr_any_square_AND_118_o11 (fr_any_square_AND_118_o11)
+     LUT6:I2->O            1   0.203   0.000  fr_any_square_AND_118_o1 (fr_any_square_AND_118_o)
+     FD:D                      0.102          dead
     ----------------------------------------
-    Total                      6.718ns (1.777ns logic, 4.941ns route)
-                                       (26.5% logic, 73.5% route)
+    Total                      6.702ns (1.786ns logic, 4.916ns route)
+                                       (26.6% logic, 73.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 153 / 153
+  Total number of paths / destination ports: 260 / 236
 -------------------------------------------------------------------------
-Offset:              4.841ns (Levels of Logic = 3)
+Offset:              5.297ns (Levels of Logic = 3)
   Source:            RST_BTN (PAD)
   Destination:       sq_b_anim/x_9 (FF)
   Destination Clock: CLK rising
@@ -1420,42 +1848,44 @@ Offset:              4.841ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            31   1.222   1.506  RST_BTN_IBUF (RST_BTN_IBUF)
-     LUT3:I0->O           58   0.205   1.601  sq_3a_anim/_n00501 (sq_3a_anim/_n0050)
-     LUT5:I4->O            1   0.205   0.000  sq_a_anim/x_0_rstpot (sq_a_anim/x_0_rstpot)
-     FD:D                      0.102          sq_a_anim/x_0
+     IBUF:I->O            49   1.222   1.762  RST_BTN_IBUF (RST_BTN_IBUF)
+     LUT3:I0->O           73   0.205   1.804  sq_3a_anim/Mcount_x_val41 (sq_3a_anim/Mcount_x_val4)
+     LUT6:I4->O            1   0.203   0.000  sq_2b_anim/x_7_rstpot (sq_2b_anim/x_7_rstpot)
+     FD:D                      0.102          sq_2b_anim/x_7
     ----------------------------------------
-    Total                      4.841ns (1.734ns logic, 3.107ns route)
-                                       (35.8% logic, 64.2% route)
+    Total                      5.297ns (1.732ns logic, 3.565ns route)
+                                       (32.7% logic, 67.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
-  Total number of paths / destination ports: 22761 / 10
+  Total number of paths / destination ports: 29305 / 10
 -------------------------------------------------------------------------
-Offset:              12.462ns (Levels of Logic = 11)
-  Source:            display/v_count_8 (FF)
+Offset:              12.370ns (Levels of Logic = 13)
+  Source:            display/v_count_9 (FF)
   Destination:       VGA_B<2> (PAD)
   Source Clock:      CLK rising
 
-  Data Path: display/v_count_8 to VGA_B<2>
+  Data Path: display/v_count_9 to VGA_B<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            55   0.447   1.828  display/v_count_8 (display/v_count_8)
-     LUT6:I2->O           31   0.203   1.642  display/Mmux_n003751 (y<4>)
-     LUT6:I0->O            1   0.203   0.000  Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_lut<2>1 (Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_lut<2>)
-     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_cy<2> (Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_cy<3> (Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_cy<3>)
-     MUXCY:CI->O           1   0.213   0.808  Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_cy<4> (Mcompar_GND_1_o_sq_3f_y2[11]_LessThan_67_o_cy<4>)
-     LUT3:I0->O            1   0.205   0.580  VGA_B<2>7_SW0 (N72)
+     FDRE:C->Q            86   0.447   1.785  display/v_count_9 (display/v_count_9)
+     LUT6:I5->O           43   0.205   1.553  display/Mmux_n003711 (y<0>)
+     LUT2:I0->O            1   0.203   0.000  Mcompar_GND_1_o_sq_3d_y2[11]_LessThan_57_o_lut<0>1 (Mcompar_GND_1_o_sq_3d_y2[11]_LessThan_57_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_sq_3d_y2[11]_LessThan_57_o_cy<0> (Mcompar_GND_1_o_sq_3d_y2[11]_LessThan_57_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_sq_3d_y2[11]_LessThan_57_o_cy<1> (Mcompar_GND_1_o_sq_3d_y2[11]_LessThan_57_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_sq_3d_y2[11]_LessThan_57_o_cy<2> (Mcompar_GND_1_o_sq_3d_y2[11]_LessThan_57_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_sq_3d_y2[11]_LessThan_57_o_cy<3> (Mcompar_GND_1_o_sq_3d_y2[11]_LessThan_57_o_cy<3>)
+     MUXCY:CI->O           1   0.213   0.808  Mcompar_GND_1_o_sq_3d_y2[11]_LessThan_57_o_cy<4> (Mcompar_GND_1_o_sq_3d_y2[11]_LessThan_57_o_cy<4>)
+     LUT3:I0->O            1   0.205   0.580  VGA_B<2>7_SW0 (N130)
      LUT6:I5->O            1   0.205   0.580  VGA_B<2>7 (VGA_B<2>6)
-     LUT6:I5->O            1   0.205   0.944  VGA_B<2>11_SW0 (N74)
-     LUT6:I0->O            1   0.203   0.580  VGA_B<2>11 (VGA_B<2>10)
-     LUT6:I5->O            3   0.205   0.650  VGA_B<2>16 (VGA_B_0_OBUF)
-     OBUF:I->O                 2.571          VGA_B_2_OBUF (VGA_B<2>15)
+     LUT5:I4->O            1   0.205   0.944  VGA_B<2>10_SW0 (N132)
+     LUT6:I0->O            1   0.203   0.580  VGA_B<2>10 (VGA_B<2>9)
+     LUT6:I5->O            3   0.205   0.650  VGA_B<2>17 (VGA_B_0_OBUF)
+     OBUF:I->O                 2.571          VGA_B_2_OBUF (VGA_B<2>)
     ----------------------------------------
-    Total                     12.462ns (4.851ns logic, 7.611ns route)
-                                       (38.9% logic, 61.1% route)
+    Total                     12.370ns (4.891ns logic, 7.479ns route)
+                                       (39.5% logic, 60.5% route)
 
 =========================================================================
 
@@ -1467,21 +1897,21 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    6.718|         |         |         |
+CLK            |    6.702|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 17.61 secs
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 25.12 secs
  
 --> 
 
 
-Total memory usage is 487320 kilobytes
+Total memory usage is 490168 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  473 (   0 filtered)
-Number of infos    :    8 (   0 filtered)
+Number of warnings :  688 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
 
