@@ -13,9 +13,9 @@ module top(
 	 input wire left_btn, 		  // left button
     output wire VGA_HS_O,       // horizontal sync output
     output wire VGA_VS_O,       // vertical sync output
-    output wire [1:0] VGA_R,    // 4-bit VGA red output
-    output wire [2:0] VGA_G,    // 4-bit VGA green output
-    output wire [2:0] VGA_B     // 4-bit VGA blue output
+    output reg [1:0] VGA_R,    // 4-bit VGA red output
+    output reg [2:0] VGA_G,    // 4-bit VGA green output
+    output reg [2:0] VGA_B     // 4-bit VGA blue output
     );
 
 	reg dead = 0;
@@ -274,8 +274,9 @@ module top(
 	 wire fr;
 	 wire [11:0] frog_x1, frog_x2, frog_y1, frog_y2;
 	 parameter fr_y = rw6y + 48;
+	 wire win;
 	 
-	 frog #(.IX(320), .IY(fr_y)) frog_anim (
+	 frog #(.IX(320), .RW1_Y(rw1y)) frog_anim (
 			.i_clk(CLK),
 			.i_ani_stb(pix_stb),
 			.i_rst(rst),
@@ -288,7 +289,8 @@ module top(
 			.i_down_btn(down_btn),
 			.i_right_btn(right_btn),
 			.i_left_btn(left_btn),
-			.i_dead(dead)
+			.i_dead(dead),
+			.win(win)
 		);
 	
 	//rw1 squares
@@ -352,28 +354,49 @@ module top(
 	 assign fr = ((x > frog_x1) & (y > frog_y1) &
 		  (x < frog_x2) & (y < frog_y2)) ? 1 : 0;
 		  
-/*	 parameter rw1top = rw1y - 15;
-	 parameter rw1bot = rw1y + 15;
-	  always @(posedge CLK)
-		if (((frog_y1 > rw1top) && (frog_y1 < rw1bot)) || ((frog_y2 > rw1top) && (frog_y2 < rw1bot)))	//Collisions with square 1
-			if (((frog_x1 > sq_a_x1) && (frog_x1 < sq_a_x2)) || ((frog_x2 > sq_a_x1) && (frog_x2 < sq_a_x2)))
-				dead <= 1;
-			else if (((frog_x1 > sq_b_x1) && (frog_x1 < sq_b_x2)) || ((frog_x2 > sq_b_x1) && (frog_x2 < sq_b_x2)))
-				dead <= 1;
-			else if (((frog_x1 > sq_c_x1) && (frog_x1 < sq_c_x2)) || ((frog_x2 > sq_c_x1) && (frog_x2 < sq_c_x2)))
-				dead <= 1;
-			else if (((frog_x1 > sq_d_x1) && (frog_x1 < sq_d_x2)) || ((frog_x2 > sq_d_x1) && (frog_x2 < sq_d_x2)))
-				dead <= 1;
-			else	dead <= 0;
-		else	dead <= 0;*/
+		
+		reg [1:0] mode = 0;	//0 = play, 1 = dead, 2 = win
 		
 		wire any_square;
-		assign any_square = sq_a | sq_b | sq_c;
+		assign any_square = (sq_a | sq_b | sq_c | sq_c | sq_2a | sq_2b | sq_2c | sq_4a | sq_4b | sq_4c | sq_6a | sq_6b | sq_6c | sq_3a | sq_3b | sq_3c | sq_3d | sq_3e | sq_3f | sq_5a | sq_5b | sq_5c);
 		always @(posedge CLK)
 			if (fr & any_square)	dead <= 1;
 			else dead <= 0;
-
-    assign VGA_R[1:0] = {2{sq_2a | sq_2b | sq_2c | sq_4a | sq_4b | sq_4c | sq_6a | sq_6b | sq_6c}};  // blue squares
-    assign VGA_G[2:0] = {fr, fr, fr};  // frog is green
-    assign VGA_B[2:0] = {3{sq_a | sq_b | sq_c | sq_d | sq_3a | sq_3b | sq_3c | sq_3d | sq_3e | sq_3f | sq_5a | sq_5b | sq_5c}};  // red squares
+			
+		reg [28:0] three_sec_counter = 0;
+			
+		always @(posedge CLK)
+			if (dead) mode <= 1;
+			else if (win)	mode <= 2;
+			else if (three_sec_counter == 300000000)	mode <= 0;
+			
+		always @(posedge CLK)
+			if ((mode == 1) || (mode == 2))
+				three_sec_counter <= three_sec_counter + 1;
+			else	three_sec_counter <= 0;
+			
+		wire win_square;
+		assign win_square = ((x > 0) & (y >  0) & (x < 640) & (y < 480)) ? 1 : 0;
+		wire dead_square;
+		assign dead_square = ((x > 0) & (y >  0) & (x < 640) & (y < 480)) ? 1 : 0;
+			
+	always @ (posedge CLK)
+		if (mode == 0)
+		begin
+			VGA_R[1:0] <= {2{sq_2a | sq_2b | sq_2c | sq_4a | sq_4b | sq_4c | sq_6a | sq_6b | sq_6c}};  // blue squares
+			VGA_G[2:0] <= {fr, fr, fr};  // frog is green
+			VGA_B[2:0] <= {3{sq_a | sq_b | sq_c | sq_d | sq_3a | sq_3b | sq_3c | sq_3d | sq_3e | sq_3f | sq_5a | sq_5b | sq_5c}};  // red squares
+		end
+		else if (mode == 1)
+		begin
+			VGA_R[1:0] <= 2'b00;
+			VGA_G[2:0] <= 3'b000;
+			VGA_B[2:0] <= {3{dead_square}};
+		end
+		else if (mode == 2)
+		begin
+			VGA_R[1:0] <= 2'b00;
+			VGA_G[2:0] <= {3{win_square}};
+			VGA_B[2:0] <= 3'b000;
+		end
 endmodule

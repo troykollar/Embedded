@@ -8,7 +8,6 @@ module frog #(
     H_WIDTH=11,      // half obstacle width (for ease of co-ordinate calculations)
 	 H_HEIGHT = 11,		// half obstacle height
     IX=320,         // initial horizontal position of square centre
-    IY=469,         // initial vertical position of square centre
     IX_DIR=1,       // initial horizontal direction: 1 is right, 0 is left
     IY_DIR=1,       // initial vertical direction: 1 is down, 0 is up
     D_WIDTH=640,    // width of display
@@ -28,19 +27,20 @@ module frog #(
     output wire [11:0] o_x1,  // square left edge: 12-bit value: 0-4095
     output wire [11:0] o_x2,  // square right edge
     output wire [11:0] o_y1,  // square top edge
-    output wire [11:0] o_y2   // square bottom edge
+    output wire [11:0] o_y2,   // square bottom edge
+	 output wire win				// at top of level
     );
 	 
-	 parameter RW0_Y = RW1_Y - 48;
-	 parameter RW2_Y = RW1_Y + 48;
-	 parameter RW3_Y = RW2_Y + 48;
-	 parameter RW4_Y = RW3_Y + 48;
-	 parameter RW5_Y = RW4_Y + 48;
-	 parameter RW6_Y = RW5_Y + 48;
-	 parameter RW7_Y = RW6_Y + 48;
-	 parameter RW8_Y = RW7_Y + 48;
-	 parameter RW9_Y = RW8_Y + 48;
-	 parameter RW10_Y = RW9_Y + 48;
+	 parameter RW0_Y = RW1_Y - 48;	//24
+	 parameter RW2_Y = RW1_Y + 48;	//120
+	 parameter RW3_Y = RW2_Y + 48;	//168
+	 parameter RW4_Y = RW3_Y + 48;	//216
+	 parameter RW5_Y = RW4_Y + 48;	//264
+	 parameter RW6_Y = RW5_Y + 48;	//312
+	 parameter RW7_Y = RW6_Y + 48;	//360
+	 parameter RW8_Y = RW7_Y + 48;	//408
+	 parameter RW9_Y = RW8_Y + 48;	//456
+	 parameter IY = RW9_Y;
 
     reg [11:0] x = IX;   // horizontal position of square centre
     reg [11:0] y = IY;   // vertical position of square centre
@@ -51,140 +51,78 @@ module frog #(
     assign o_x2 = x + H_WIDTH;  // right
     assign o_y1 = y - H_HEIGHT;  // top
     assign o_y2 = y + H_HEIGHT;  // bottom
+	 assign win = (y == RW0_Y);
 	 
 	 wire up = i_up_btn ? 0: 1;
 	 wire down = i_down_btn ? 0: 1;
 	 wire left = i_left_btn ? 0: 1;
 	 wire right = i_right_btn ? 0: 1;
 	 
-	 
-/*	 always @ (posedge i_clk)
-		if (!i_up_btn)		up <= 1;
-		else					up <= 0;
-		
-	 always @ (posedge i_clk)
-		if (!i_down_btn)	down <= 1;
-		else					down <= 0;
-		
-	 always @ (posedge i_clk)
-		if (!i_right_btn) right <= 1;
-		else					right <= 0;
-		
-	 always @ (posedge i_clk)
-		if (!i_left_btn)  left <= 1;
-		else					left <= 0;*/
-		
-	reg up_inProg = 0;
-	reg down_inProg = 0;
-	reg right_inProg = 0;
-	reg left_inProg = 0;
-	reg [5:0] distance = 0;
-	parameter HOP_DIS = 48;
-	parameter HOP_DIS_4 = 4;
-	reg [11:0] prevY;
-	reg [11:0] prevX;
+	reg [11:0] nextX;	
+	reg [11:0] nextY;
 	
 	always @(posedge i_clk)
-		if (i_animate && i_ani_stb)
-			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
-				if (up)	up_inProg <= 1;
-				else		up_inProg <= 0;
-			else if (i_dead)	up_inProg <= 0;
-			else if (y == prevY - HOP_DIS) up_inProg <= 0;
-			else	up_inProg <= up_inProg;
-		else	up_inProg <= up_inProg;
+		if (i_rst) nextY <= IY;
+		else if (i_dead) nextY <= IY;
+		else if (win)	nextY <= IY;
+		else if (up)
+			case (y)
+			RW0_Y:	nextY <= y;
+			RW1_Y:	nextY <= RW0_Y;
+			RW2_Y:	nextY <= RW1_Y;
+			RW3_Y:	nextY <=	RW2_Y;
+			RW4_Y:	nextY <=	RW3_Y;
+			RW5_Y:	nextY <=	RW4_Y;
+			RW6_Y:	nextY <=	RW5_Y;
+			RW7_Y:	nextY <=	RW6_Y;
+			RW8_Y:	nextY <=	RW7_Y;
+			RW9_Y:	nextY <=	RW8_Y;
+			endcase
+		else if (down)
+			case (y)
+			RW0_Y:	nextY <= RW1_Y;
+			RW1_Y:	nextY <= RW2_Y;
+			RW2_Y:	nextY <= RW3_Y;
+			RW3_Y:	nextY <=	RW4_Y;
+			RW4_Y:	nextY <=	RW5_Y;
+			RW5_Y:	nextY <=	RW6_Y;
+			RW6_Y:	nextY <=	RW7_Y;
+			RW7_Y:	nextY <=	RW8_Y;
+			RW8_Y:	nextY <=	RW9_Y;
+			RW9_Y:	nextY <=	y;
+			endcase
+		else	nextY <= nextY;
 		
 	always @(posedge i_clk)
-		if (i_animate && i_ani_stb)
-			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
-				if (up || down)	prevY <= y;
-				else					prevY <= prevY;
-			else	prevY <= prevY;
-		else prevY <= prevY;
+		if (i_rst) nextX <= IX;
+		else if (i_dead) nextX <= IX;
+		else if (win) nextX <= IX;
+		else if (right)
+			if (x == 620)	nextX <= x;
+			else nextX <= x + 20;
+		else if (left)
+			if (x == 20) nextX <= x;
+			else nextX <= x - 20;
+		else nextX <= nextX;
 		
 	always @(posedge i_clk)
-		if (i_animate && i_ani_stb)
-			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
-				if (down)	down_inProg <= 1;
-				else		down_inProg <= 0;
-			else if (i_dead)		down_inProg <= 0;
-			else if (y == prevY + HOP_DIS) down_inProg <= 0;
-			else	down_inProg <= down_inProg;
-		else	down_inProg <= down_inProg;
-		
-	always @(posedge i_clk)
-		if (i_animate && i_ani_stb)
-			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
-				if (right || left)	prevX <= x;
-				else						prevX <= prevX;
-			else 	prevX <= prevX;
-		else prevX <= prevX;
-		
-	always @(posedge i_clk)
-		if (i_animate && i_ani_stb)
-			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
-				if (right)	right_inProg <= 1;
-				else		right_inProg <= 0;
-			else if (i_dead)	right_inProg <= 0;
-			else if (x == prevX + HOP_DIS) right_inProg <= 0;
-			else	right_inProg <= right_inProg;
-		else	right_inProg <= right_inProg;
-		
-	always @(posedge i_clk)
-		if (i_animate && i_ani_stb)
-			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
-				if (left)	left_inProg <= 1;
-				else		left_inProg <= 0;
-			else if (i_dead) left_inProg <= 0;
-			else if (x == prevX - HOP_DIS) left_inProg <= 0;
-			else	left_inProg <= left_inProg;
-		else	left_inProg <= left_inProg;
-		
-	always @(posedge i_clk)
-		if (i_animate && i_ani_stb)
-			if (!up_inProg && !down_inProg && !right_inProg && !left_inProg)
-				distance <= 0;
-			else if (up_inProg) distance <= distance + HOP_DIS_4;
-			else if (down_inProg) distance <= distance + HOP_DIS_4;
-			else if (right_inProg) distance <= distance + HOP_DIS_4;
-			else if (left_inProg) distance <= distance + HOP_DIS_4;
-			else if (distance == HOP_DIS)	distance <= 0;
-			else distance <= distance;
-			
-	 always @(posedge i_clk)
-		if (i_rst)			 y <= IY;
+		if (i_rst) y <= IY;
+		else if (i_dead) y <= IY;
+		else if (win)	  y <= IY;
 		else if (i_animate && i_ani_stb)
-			if (i_dead)	 y <= IY;
-			else if (up_inProg)	y <= y - HOP_DIS_4;
-			else if (down_inProg) y <= y + HOP_DIS_4;
+			if (y < nextY) y <= y + 4;
+			else if (y > nextY) y <= y - 4;
 			else	y <= y;
 		else y <= y;
 		
-	 always @(posedge i_clk)
-		if (i_rst)			x <= IX;
+	always @(posedge i_clk)
+		if (i_rst) x <= IX;
+		else if (i_dead) x <= IX;
+		else if (win)	x <= IX;
 		else if (i_animate && i_ani_stb)
-			if (i_dead)	x <= IX;
-			else if (right_inProg) x <= x + HOP_DIS_4;
-			else if (left_inProg) x <= x - HOP_DIS_4;
-			else x <= x;
+			if (x < nextX) x <= x + 4;
+			else if (x > nextX) x <= x - 4;
+			else	x <= x;
 		else x <= x;
-		
-	 
-	 //constant movement
-/*	 always @(posedge i_clk)
-		if (i_animate && i_ani_stb)
-			if (i_rst)	y <= IY;
-			else if (i_dead) y <= IY;
-			else if (up)	y <= y - 2;
-			else if (down)	y <= y + 2;
-			else	y <= y;
-	 
-	 always @(posedge i_clk)
-		if (i_animate && i_ani_stb)
-			if (i_rst)	x <= IX;
-			else if (i_dead) x <= IX;
-			else if (left) x <= x-2;
-			else if (right) x <= x + 2;
-			else x <= x;*/
 		
 endmodule
